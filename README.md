@@ -31,6 +31,8 @@ Portal społecznościowy dla osób zajmujących się ogrodnictwem zawodowo i hob
 
 ## Makieta portalu
 
+Wykonana w Adobe XD.
+
 [Link do makiety &raquo;](https://xd.adobe.com/view/8eecd93f-2703-4156-4740-d66cea4ff204-f8dd/?fullscreen&hints=off)
 
 ### Wersja
