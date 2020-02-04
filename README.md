@@ -1,6 +1,6 @@
 # gardenbook - Ogrodniczy Serwis Społecznościowy
 
-!!! PROJEKT W TRAKCIE REALIZACJI !!!
+### projekt w trakcie realizacji
 
 Portal społecznościowy dla osób zajmujących się ogrodnictwem zawodowo i hobbystycznie.
 
@@ -18,6 +18,16 @@ Portal społecznościowy dla osób zajmujących się ogrodnictwem zawodowo i hob
 - statystyki,
 - plan ogrodu,
 - wyszukiwrka wykonawców prac ogrodniczych w pobliżu.
+
+## Planowane technologie do realizacji projektu
+
+- HTML5
+- CSS3 with SASS
+- JavaScript (ES6)
+- React
+- Google Calendar API
+- Google Maps API
+- Mongo DB
 
 ## Makieta portalu
 
