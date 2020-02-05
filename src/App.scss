@@ -21,6 +21,23 @@ $limone-color: #dfef9b;
   header {
     width: 100vw;
     background-color: $green-color;
-    height: 100px;
+    height: 102px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+    align-content: center;
+    flex-wrap: wrap;
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 30px;
+      opacity: 80%;
+      line-height: 40px;
+    }
+
+    nav a:hover {
+      opacity: 100%;
+    }
   }
 }
