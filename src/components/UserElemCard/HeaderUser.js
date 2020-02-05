@@ -15,7 +15,9 @@ const HeaderUser = () => {
   return (
     <header>
       <div className="logo">
-        <img src={logo} alt="gardenbook" id="logo" />
+        <a href="./">
+          <img src={logo} alt="gardenbook" id="logo" />
+        </a>
       </div>
       <nav>
         <a href="#">
