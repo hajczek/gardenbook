@@ -11,6 +11,10 @@ $limone-color: #dfef9b;
   box-sizing: border-box;
 }
 
+body {
+  font-family: "PT Sans", sans-serif;
+}
+
 #root {
   background: $green-color url("assets/img/gardenbook-bg.jpg") no-repeat center
     center fixed;
@@ -27,6 +31,9 @@ $limone-color: #dfef9b;
     padding: 0 100px;
     align-content: center;
     flex-wrap: wrap;
+    -webkit-box-shadow: 0px 26px 43px -16px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 26px 43px -16px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 26px 43px -16px rgba(0, 0, 0, 0.75);
 
     nav a {
       color: #fff;
@@ -34,6 +41,7 @@ $limone-color: #dfef9b;
       margin-left: 30px;
       opacity: 80%;
       line-height: 40px;
+      font-size: 1.2rem;
     }
 
     nav a:hover {
