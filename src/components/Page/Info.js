@@ -1,5 +1,4 @@
 import React from "react";
-import MoreInfo from "./MoreInfo";
 
 const Info = () => {
   return (
@@ -15,7 +14,6 @@ const Info = () => {
       <p className="slogan">
         Założ konto! Korzystaj z zasobów i narzędzi gardenbook'a.
       </p>
-      <MoreInfo />
     </div>
   );
 };

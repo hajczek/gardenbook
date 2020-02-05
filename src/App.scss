@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  background: #1e4801 url("assets/img/gardenbook-bg.jpg") no-repeat center
+    center fixed;
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+
+  header {
+    width: 100vw;
+    background-color: #1e4801;
+    height: 100px;
+  }
+}
