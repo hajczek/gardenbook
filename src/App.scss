@@ -1,3 +1,10 @@
+$green-color: #1e4801;
+$white-color: #fff;
+$light-green-color: #488106;
+$grey-color: #444444;
+$light-grey-color: #5b5858;
+$limone-color: #dfef9b;
+
 * {
   padding: 0;
   margin: 0;
@@ -5,7 +12,7 @@
 }
 
 #root {
-  background: #1e4801 url("assets/img/gardenbook-bg.jpg") no-repeat center
+  background: $green-color url("assets/img/gardenbook-bg.jpg") no-repeat center
     center fixed;
   background-size: cover;
   height: 100vh;
@@ -13,7 +20,7 @@
 
   header {
     width: 100vw;
-    background-color: #1e4801;
+    background-color: $green-color;
     height: 100px;
   }
 }
