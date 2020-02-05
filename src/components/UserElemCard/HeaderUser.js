@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../../assets/img/gardenbook-logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBell,
@@ -14,7 +15,7 @@ const HeaderUser = () => {
   return (
     <header>
       <div className="logo">
-        <img src="#" alt="gardenbook" id="logo" />
+        <img src={logo} alt="gardenbook" id="logo" />
       </div>
       <nav>
         <a href="#">
