@@ -7,4 +7,36 @@ footer {
   -webkit-box-shadow: 0px -26px 43px -16px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px -26px 43px -16px rgba(0, 0, 0, 0.75);
   box-shadow: 0px -26px 43px -16px rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 100px;
+  align-content: center;
+  flex-wrap: wrap;
+
+  p {
+    color: $lightest-green-color;
+
+    a {
+      color: $lightest-green-color;
+      text-decoration: none;
+
+      &:hover {
+        color: $white-color;
+      }
+    }
+  }
+
+  nav {
+    a {
+      color: $lightest-grey-color;
+      opacity: 60%;
+      margin-left: 30px;
+      text-decoration: none;
+
+      &:hover {
+        color: $white-color;
+        opacity: 1;
+      }
+    }
+  }
 }
