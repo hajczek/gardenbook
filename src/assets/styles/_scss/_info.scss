@@ -1,0 +1,49 @@
+.info {
+  width: 45%;
+  padding: 30px 30px 40px 30px;
+  background-color: $white-color-opacity-08;
+  position: absolute;
+  top: 165px;
+  right: 100px;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: $grey-color;
+
+  .title {
+    display: flex;
+
+    #logo {
+      width: 83px;
+    }
+
+    h1 {
+      text-transform: uppercase;
+      color: $lighter-green-color;
+      padding: 15px 0 0 15px;
+    }
+  }
+
+  ul {
+    font-size: 1.5rem;
+    width: 80%;
+    margin: 30px 0 50px 8%;
+
+    li {
+      line-height: 2;
+
+      .important {
+        color: $light-green-color;
+      }
+    }
+  }
+
+  p {
+    font-size: 1.6rem;
+    padding: 0 0 10px 20px;
+  }
+
+  .slogan-green {
+    color: $light-green-color;
+  }
+}

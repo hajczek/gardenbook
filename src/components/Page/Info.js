@@ -4,15 +4,26 @@ import logo from "../../assets/img/lotus.png";
 const Info = () => {
   return (
     <div className="info">
-      <img src={logo} alt="gardenbook logo" />
-      <h1>Ogrodniczy serwis społecznościowy</h1>
+      <div className="title">
+        <img id="logo" src={logo} alt="gardenbook logo" />
+        <h1>Ogrodniczy serwis społecznościowy</h1>
+      </div>
       <ul>
-        <li>umożliwia łatwą wymianę wiedzy i doświadczeń</li>
-        <li>ułatwia nawiązanie kontaktów z innymi ogrodnikami</li>
-        <li>udostępnia narzędzia przydatne w zarządzaniu ogrodem</li>
+        <li>
+          <span className="important">umożliwia</span> łatwą wymianę wiedzy i
+          doświadczeń
+        </li>
+        <li>
+          <span className="important">ułatwia</span> nawiązanie kontaktów z
+          innymi ogrodnikami
+        </li>
+        <li>
+          <span className="important">udostępnia</span> narzędzia przydatne w
+          zarządzaniu ogrodem
+        </li>
       </ul>
       <p>Wszystko w jednym miejscu!</p>
-      <p className="slogan">
+      <p className="slogan-green">
         Założ konto! Korzystaj z zasobów i narzędzi gardenbook'a.
       </p>
     </div>
