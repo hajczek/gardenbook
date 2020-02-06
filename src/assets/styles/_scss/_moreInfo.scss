@@ -15,5 +15,11 @@
     width: 220px;
     text-align: center;
     padding: 30px 40px;
+
+    &:hover {
+      background-color: $limone-color;
+      color: $lighter-green-color;
+      cursor: pointer;
+    }
   }
 }
