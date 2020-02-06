@@ -1,9 +1,10 @@
 import React from "react";
+import logo from "../../assets/img/lotus.png";
 
 const Info = () => {
   return (
     <div className="info">
-      <img src="#" alt="gardenbook logo" />
+      <img src={logo} alt="gardenbook logo" />
       <h1>Ogrodniczy serwis społecznościowy</h1>
       <ul>
         <li>umożliwia łatwą wymianę wiedzy i doświadczeń</li>
