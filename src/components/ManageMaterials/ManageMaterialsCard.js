@@ -6,7 +6,7 @@ import Footer from "../Footer";
 
 const ManageMaterialsCard = () => {
   return (
-    <div class="container">
+    <div className="contentUser">
       <HeaderUser />
       <LeftMenuUser />
       <div className="content">

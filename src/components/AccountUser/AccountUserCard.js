@@ -7,7 +7,7 @@ import Footer from "../Footer";
 
 const AccountUserCard = () => {
   return (
-    <div class="container">
+    <div className="contentUser">
       <HeaderUser />
       <LeftMenuUser />
       <AccountUserDataBox />

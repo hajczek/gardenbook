@@ -7,7 +7,7 @@ import Footer from "../Footer";
 
 const AddPlantCard = () => {
   return (
-    <div class="container">
+    <div className="contentUser">
       <HeaderUser />
       <LeftMenuUser />
       <div className="content">

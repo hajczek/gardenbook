@@ -7,7 +7,7 @@ import Footer from "../Footer";
 
 const AlertsCard = () => {
   return (
-    <div class="container">
+    <div className="contentUser">
       <HeaderUser />
       <LeftMenuUser />
       <AlertsBox />
