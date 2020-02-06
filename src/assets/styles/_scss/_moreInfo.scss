@@ -1,0 +1,19 @@
+.more-info {
+  position: absolute;
+  bottom: 130px;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  padding: 0 100px;
+
+  .title {
+    display: flex;
+    background-color: $limone-color-opacity-06;
+    font-size: 1.5rem;
+    color: $light-grey-color;
+    font-weight: bold;
+    width: 220px;
+    text-align: center;
+    padding: 30px 40px;
+  }
+}
