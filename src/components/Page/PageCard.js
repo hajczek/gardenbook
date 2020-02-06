@@ -6,7 +6,7 @@ import Footer from "./Footer";
 
 const PageCard = () => {
   return (
-    <div className="content">
+    <div className="contentPage">
       <Header />
       <Info />
       <MoreInfo />
