@@ -2,13 +2,14 @@
   width: 45%;
   padding: 30px 30px 40px 30px;
   background-color: $white-color-opacity-08;
-  position: absolute;
-  top: 165px;
-  right: 100px;
   display: flex;
   flex-direction: column;
   font-weight: bold;
   color: $grey-color;
+  align-self: flex-end;
+  margin-right: 100px;
+  margin-top: 60px;
+  margin-bottom: 50px;
 
   .title {
     display: flex;
