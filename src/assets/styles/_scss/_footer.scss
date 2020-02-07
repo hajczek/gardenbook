@@ -40,3 +40,9 @@ footer {
     }
   }
 }
+
+@media screen and (max-height: 850px) {
+  footer {
+    position: relative;
+  }
+}

@@ -2,6 +2,7 @@
   position: absolute;
   bottom: 130px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 100vw;
   padding: 0 100px;
@@ -12,14 +13,92 @@
     font-size: 1.5rem;
     color: $light-grey-color;
     font-weight: bold;
-    width: 220px;
+    width: 210px;
     text-align: center;
     padding: 30px 40px;
+    justify-content: center;
 
     &:hover {
       background-color: $limone-color;
       color: $lighter-green-color;
       cursor: pointer;
     }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .more-info .title {
+    font-size: 1.3rem;
+    width: 190px;
+  }
+}
+
+@media screen and (max-width: 1365px) {
+  .more-info {
+    bottom: 80px;
+    width: 100vw;
+    margin: 0 auto;
+
+    .title {
+      font-size: 1.2rem;
+      //  width: 180px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .more-info {
+    justify-content: center;
+    padding: 0;
+
+    .title {
+      // width: 200px;
+      margin-right: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 924px) {
+  .more-info {
+    .title {
+      padding: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .more-info {
+    margin-bottom: 20px;
+
+    .title {
+      width: 150px;
+      font-size: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .more-info {
+    .title {
+      width: 120px;
+    }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .more-info {
+    .title {
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media screen and (max-height: 850px) {
+  .more-info {
+    position: relative;
+    bottom: 0;
   }
 }
