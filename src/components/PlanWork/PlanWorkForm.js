@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
 export const PlanWorkForm = () => {
-  const [name, setName] = useState("");
-  const [material, setMaterial] = useState("");
-  const [matQuant, setMatQuant] = useState(0);
-  const [date, setDate] = useState("");
-  const [details, setDetails] = useState("");
-  const [unit, setUnit] = useState("");
+  const [workName, setWorkName] = useState("");
+  const [workMaterial, setWorkMaterial] = useState("");
+  const [workMatQuant, setWorkMatQuant] = useState(0);
+  const [workDate, setWorkDate] = useState("");
+  const [workMatUnit, setWorkMatUnit] = useState("");
+  const [workDetails, setWorkDetails] = useState("");
 
   /* Needed function:
     1. addMaterials() - display added materials to planned work at list
@@ -16,30 +16,30 @@ export const PlanWorkForm = () => {
   */
 
   function addPlannedWork(e) {
-    console.log(name);
-    console.log(material);
-    console.log(matQuant);
-    console.log(unit);
-    console.log(date);
-    console.log(details);
+    console.log(workName);
+    console.log(workMaterial);
+    console.log(workMatQuant);
+    console.log(workDate);
+    console.log(workMatUnit);
+    console.log(workDetails);
     e.preventDefault();
   }
   return (
     <form id="plan-work" action="#">
-      <label htmlFor="name">Nazwa planowanej pracy</label>
+      <label htmlFor="work-name">Nazwa planowanej pracy</label>
       <input
         type="text"
-        name="name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
+        name="work-name"
+        value={workName}
+        onChange={(e) => setWorkName(e.target.value)}
       />
 
-      <label htmlFor="material">Potrzebne materiały</label>
+      <label htmlFor="work-material">Potrzebne materiały</label>
       <select
-        name="material"
-        id="add-material"
-        value={material}
-        onChange={(e) => setMaterial(e.target.value)}
+        name="work-material"
+        id="work-material"
+        value={workMaterial}
+        onChange={(e) => setWorkMaterial(e.target.value)}
       >
         <option value="wybierz">Wybierz materiał i kliknij +</option>
         <option value="azofoska">Azofoska</option>
@@ -47,23 +47,23 @@ export const PlanWorkForm = () => {
         <option value="nawoz-do-trawnika">Nawóz do trawnika</option>
       </select>
 
-      <label htmlFor="material-quant">Ilość</label>
+      <label htmlFor="work-mat-quant">Ilość</label>
       <input
         type="number"
-        name="material-quant"
-        id="material-quant"
+        name="work-mat-quant"
+        id="work-mat-quant"
         min="0"
         placeholder="0"
-        value={matQuant}
-        onChange={(e) => setMatQuant(e.target.value)}
+        value={workMatQuant}
+        onChange={(e) => setWorkMatQuant(e.target.value)}
       />
 
-      <label htmlFor="unit">Jednostka</label>
+      <label htmlFor="work-mat-unit">Jednostka</label>
       <select
-        name="unit"
-        id="unit"
-        value={unit}
-        onChange={(e) => setUnit(e.target.value)}
+        name="work-mat-unit"
+        id="work-mat-unit"
+        value={workMatUnit}
+        onChange={(e) => setWorkMatUnit(e.target.value)}
       >
         <option value="wybierz">Wybierz jednostkę</option>
         <option value="litr">Litr</option>
@@ -71,21 +71,22 @@ export const PlanWorkForm = () => {
       </select>
       <span id="add-material-btn">Dodaj materiał +</span>
 
-      <label htmlFor="add-term">Wybierz termin</label>
+      <label htmlFor="work-date">Wybierz termin</label>
       <input
         type="date"
-        name="add-term"
-        value={date}
-        onChange={(e) => setDate(e.target.value)}
+        name="work-date"
+        id="work-date"
+        value={workDate}
+        onChange={(e) => setWorkDate(e.target.value)}
       />
       <span id="add-work-term">Dodaj termin do kalendarza &raquo;</span>
 
-      <label htmlFor="commnents">Uwagi</label>
+      <label htmlFor="work-details">Uwagi</label>
       <textarea
-        id="comments"
-        name="comments"
-        value={details}
-        onChange={(e) => setDetails(e.target.value)}
+        id="work-details"
+        name="work-details"
+        value={workDetails}
+        onChange={(e) => setWorkDetails(e.target.value)}
       ></textarea>
 
       <button id="plan-work-btn" onClick={addPlannedWork}>
