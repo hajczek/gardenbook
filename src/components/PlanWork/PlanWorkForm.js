@@ -11,8 +11,9 @@ export const PlanWorkForm = () => {
   /* Needed function:
     1. addMaterials() - display added materials to planned work at list
     2. checkDate() - can't set date ealier than current date
-    3. addPlannedWork() - save all information about new planned work in database
+    3. setDateOnCalendar() - for span with id 'add-work-term' to add term to Google Callendar - function uses Google Callendar API
     4. materialsList() - get materials from database and display as a select option in field 'material'
+    5. addPlannedWork() - save all information about new planned work in database
   */
 
   function addPlannedWork(e) {

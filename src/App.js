@@ -1,6 +1,7 @@
 import React from "react";
 //import PageCard from "./components/Page/PageCard";
 import PlanWorkCard from "./components/PlanWork/PlanWorkCard";
+// import AddMaterialCard from "./components/AddMaterial/AddMaterialCard";
 import "./App.scss";
 
 const App = () => {
@@ -8,6 +9,7 @@ const App = () => {
     <div className="App">
       {/* <PageCard /> */}
       <PlanWorkCard />
+      {/* <AddMaterialCard /> */}
     </div>
   );
 };
