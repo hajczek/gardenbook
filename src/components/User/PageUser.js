@@ -4,7 +4,8 @@ import LeftMenuUser from "./LeftMenuUser";
 import Footer from "../Page/Footer";
 // import AlertsCard from "../Alerts/AlertsCard";
 // import AccountUserCard from "../AccountUser/AccountUserCard";
-import ManageWorksCard from "../ManageWorks/ManageWorksCard";
+// import ManageWorksCard from "../ManageWorks/ManageWorksCard";
+import ManageMaterialsCard from "../ManageMaterials/ManageMaterialsCard";
 
 const PageCard = () => {
   return (
@@ -13,7 +14,8 @@ const PageCard = () => {
       <LeftMenuUser />
       {/* <AlertsCard /> */}
       {/* <AccountUserCard /> */}
-      <ManageWorksCard />
+      {/* <ManageWorksCard /> */}
+      <ManageMaterialsCard />
       <Footer />
     </div>
   );

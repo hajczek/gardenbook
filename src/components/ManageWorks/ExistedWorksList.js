@@ -107,7 +107,7 @@ const PlannedWorkList = () => {
             </tr>
           </tbody>
         </table>
-        <button id="change-works">Zapisz</button>
+        <button id="change-works-btn">Zapisz</button>
       </form>
     </div>
   );
