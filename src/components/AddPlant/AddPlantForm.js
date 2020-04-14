@@ -1,58 +1,113 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 const AddPlantForm = () => {
+  /* Needed function:
+    onSubmit() - to put all data from form in database
+ */
+
+  const [plantName, setPlantName] = useState("");
+  const [plantQuant, setPlantQuant] = useState(0);
+  const [plantPhoto, setPlantPhoto] = useState("");
+  const [plantWateringFrag, setPlantWateringFrag] = useState(0);
+  const [plantFertilizer, setPlantFertilizer] = useState("");
+  const [plantFertilizerFreq, setPlantFertilizerFreq] = useState(0);
+  const [plantPrice, setPlantPrice] = useState(0);
+  const [plantFertilizerDose, setPlantFertilizerDose] = useState(0);
+
+  function onSubmit(e) {
+    console.log(plantName);
+    console.log(plantQuant);
+    console.log(plantPhoto);
+    console.log(plantWateringFrag);
+    console.log(plantFertilizer);
+    console.log(plantFertilizerFreq);
+    console.log(plantPrice);
+    console.log(plantFertilizerDose);
+    e.preventDefault();
+  }
+
   return (
-    <form id="add-plant" action="">
-      <label htmlFor="name">Nazwa rośliny</label>
-      <input type="text" name="name" id="name" />
-      <label htmlFor="plant-number">Ilość szt.</label>
-      <input type="number" name="plant-number" />
+    <form id="add-plant" action="" onSubmit={onSubmit}>
+      <label htmlFor="plant-name">Nazwa rośliny</label>
+      <input
+        type="text"
+        name="plant-name"
+        id="plant-name"
+        value={plantName}
+        onChange={(e) => setPlantName(e.target.value)}
+      />
+      <label htmlFor="plant-quant">Ilość szt.</label>
+      <input
+        type="number"
+        name="plant-quant"
+        id="plant-quant"
+        value={plantQuant}
+        onChange={(e) => setPlantQuant(e.target.value)}
+      />
+
       <label htmlFor="plant-photo">Zdjęcie rośliny</label>
       <input
         type="file"
         name="plant-photo"
+        id="plant-photo"
+        value={plantPhoto}
+        onChange={(e) => setPlantPhoto(e.target.value)}
         placeholder="Wybierz plik ze zdjęciem"
       />
       <FontAwesomeIcon icon={faDownload} />
-      <label htmlFor="watering-frequency">
+      <label htmlFor="plant-watering-frequency">
         Częstotoliwość podlewania [co ile dni]:
       </label>
       <input
         type="number"
-        name="watering-frequency"
-        id="watering-frequency"
+        name="plant-watering-frequency"
+        id="plant-watering-frequency"
         min="0"
-        placeholder="0"
+        value={plantWateringFrag}
+        onChange={(e) => setPlantWateringFrag(e.target.value)}
       />
-      <label htmlFor="fertilizer">Rodzaj nawozu</label>
-      <input type="text" name="fertilizer" id="fertilizer" />
-      <label htmlFor="fertilizer-frequency">
+      <label htmlFor="plant-fertilizer">Rodzaj nawozu</label>
+      <input
+        type="text"
+        name="plant-fertilizer"
+        id="plant-fertilizer"
+        value={plantFertilizer}
+        onChange={(e) => setPlantFertilizer(e.target.value)}
+      />
+
+      <label htmlFor="plant-fertilizer-frequency">
         Częstotoliwość nawożenia [ile razy w roku]:
       </label>
       <input
         type="number"
-        name="fertilizer-frequency"
-        id="fertilizer-frequency"
+        name="plant-fertilizer-frequency"
+        id="plant-fertilizer-frequency"
         min="0"
-        placeholder="0"
+        value={plantFertilizerFreq}
+        onChange={(e) => setPlantFertilizerFreq(e.target.value)}
       />
-      <label htmlFor="plant-pricer">Cena jedn. [zł]</label>
+      <label htmlFor="plant-price">Cena jednej rośliny [zł]</label>
       <input
         type="number"
         name="plant-price"
         id="plant-price"
         min="0"
-        placeholder="0.00"
+        value={plantPrice}
+        onChange={(e) => setPlantPrice(e.target.value)}
       />
-      <label htmlFor="fertilizer-dose">Zalecana dawka nawozu</label>
+
+      <label htmlFor="plant-fertilizer-dose">
+        Zalecana dawka nawozu [gr lub ml]
+      </label>
       <input
         type="number"
-        name="fertilizer-dose"
-        id="fertilizer-dose"
+        name="plant-fertilizer-dose"
+        id="plant-fertilizer-dose"
         min="0"
-        placeholder="0"
+        value={plantFertilizerDose}
+        onChange={(e) => setPlantFertilizerDose(e.target.value)}
       />
       <button id="add-plant-btn">Zapisz</button>
     </form>
