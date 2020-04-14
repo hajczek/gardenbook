@@ -3,7 +3,7 @@ import HeaderUser from "../UserElemCard/HeaderUser";
 import LeftMenuUser from "../UserElemCard/LeftMenuUser";
 import PlanWorkForm from "./PlanWorkForm";
 import PlannedWorksWithAlertsBox from "./PlannedWorksWithAlertsBox";
-import Footer from "../Footer";
+import Footer from "../Page/Footer";
 
 const PlanWorkCard = () => {
   return (

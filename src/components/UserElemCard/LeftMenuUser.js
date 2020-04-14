@@ -6,7 +6,7 @@ import {
   faCalendarAlt,
   faMap,
   faChartLine,
-  faEye
+  faEye,
 } from "@fortawesome/free-solid-svg-icons";
 
 const LeftMenuUser = () => {
@@ -16,7 +16,7 @@ const LeftMenuUser = () => {
         <a id="plants" href="#">
           <FontAwesomeIcon icon={faSpa} />
         </a>
-        <a class="addBtn" href="#" id="add-plant">
+        <a className="addBtn" href="#" id="add-plant">
           +
         </a>
       </div>
@@ -24,7 +24,7 @@ const LeftMenuUser = () => {
         <a href="#">
           <FontAwesomeIcon icon={faPen} />
         </a>
-        <a class="addBtn" href="#" uid="add-material">
+        <a className="addBtn" href="#" uid="add-material">
           +
         </a>
       </div>
@@ -32,7 +32,7 @@ const LeftMenuUser = () => {
         <a href="#">
           <FontAwesomeIcon icon={faCalendarAlt} />
         </a>
-        <a class="addBtn" href="#" id="add-work">
+        <a className="addBtn" href="#" id="add-work">
           +
         </a>
       </div>
