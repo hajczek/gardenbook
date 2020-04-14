@@ -3,7 +3,7 @@ import HeaderUser from "../UserElemCard/HeaderUser";
 import LeftMenuUser from "../UserElemCard/LeftMenuUser";
 import AddMaterialForm from "./AddMaterialForm";
 import ExistedMaterialsBox from "./ExistedMaterialsBox";
-import Footer from "../Footer";
+import Footer from "../Page/Footer";
 
 const AddMaterialCard = () => {
   return (

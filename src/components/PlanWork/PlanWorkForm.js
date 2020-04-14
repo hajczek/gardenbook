@@ -13,10 +13,10 @@ export const PlanWorkForm = () => {
     2. checkDate() - can't set date ealier than current date
     3. setDateOnCalendar() - for span with id 'add-work-term' to add term to Google Callendar - function uses Google Callendar API
     4. materialsList() - get materials from database and display as a select option in field 'material'
-    5. addPlannedWork() - save all information about new planned work in database
+    5. onSubmit() - save all information from form about new planned work in database
   */
 
-  function addPlannedWork(e) {
+  function onSubmit(e) {
     console.log(workName);
     console.log(workMaterial);
     console.log(workMatQuant);
@@ -26,7 +26,7 @@ export const PlanWorkForm = () => {
     e.preventDefault();
   }
   return (
-    <form id="plan-work" action="#">
+    <form id="plan-work" action="#" onSubmit={onSubmit}>
       <label htmlFor="work-name">Nazwa planowanej pracy</label>
       <input
         type="text"
@@ -90,9 +90,7 @@ export const PlanWorkForm = () => {
         onChange={(e) => setWorkDetails(e.target.value)}
       ></textarea>
 
-      <button id="plan-work-btn" onClick={addPlannedWork}>
-        Zapisz
-      </button>
+      <button id="plan-work-btn">Zapisz</button>
     </form>
   );
 };

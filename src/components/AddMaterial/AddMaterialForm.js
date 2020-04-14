@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 const AddMaterialForm = () => {
+  function addMaterial(e) {
+    e.preventDefault();
+  }
   return (
     <form id="add-plant" action="">
       <label htmlFor="name">Nazwa materiału</label>
