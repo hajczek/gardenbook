@@ -1,14 +1,9 @@
 import React from "react";
-import HeaderUser from "../UserElemCard/HeaderUser";
-import LeftMenuUser from "../UserElemCard/LeftMenuUser";
 import ExistedPlantsList from "./ExistedPlantsList";
-import Footer from "../Footer";
 
 const ManagePlantsCard = () => {
   return (
     <div className="contentUser">
-      <HeaderUser />
-      <LeftMenuUser />
       <div className="content">
         <h2>Zarządzaj roślinami</h2>
         <span className="plus-link" id="add-plant-link">
@@ -20,7 +15,6 @@ const ManagePlantsCard = () => {
         </p>
         <ExistedPlantsList />
       </div>
-      <Footer />
     </div>
   );
 };

@@ -52,7 +52,7 @@ const AddPlantForm = () => {
         type="file"
         name="plant-photo"
         id="plant-photo"
-        value={plantPhoto}
+        filename={plantPhoto}
         onChange={(e) => setPlantPhoto(e.target.value)}
         placeholder="Wybierz plik ze zdjęciem"
       />
