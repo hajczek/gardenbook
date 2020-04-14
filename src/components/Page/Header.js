@@ -11,7 +11,7 @@ const Header = () => {
       </div>
       <nav>
         <a href="#">Home</a>
-        <a href="#">Rejestracja</a>
+        <a href="#">Zarejestruj</a>
         <a href="#">Zaloguj</a>
       </nav>
     </header>
