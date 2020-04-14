@@ -9,9 +9,10 @@ export const PlanWorkForm = () => {
   const [unit, setUnit] = useState("");
 
   /* Needed function:
-    addMaterials() - display added materials to planned work at list
-    checkDate() - can't set date ealier than current date
-    addPlannedWork() - save all information about new planned work in database
+    1. addMaterials() - display added materials to planned work at list
+    2. checkDate() - can't set date ealier than current date
+    3. addPlannedWork() - save all information about new planned work in database
+    4. materialsList() - get materials from database and display as a select option in field 'material'
   */
 
   function addPlannedWork(e) {
