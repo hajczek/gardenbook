@@ -118,6 +118,7 @@ const initialState = {
       userPass: "haslo",
       userTel: "+48658888888",
       userPlace: "Milanówek",
+      userLogged: false,
       accountSets: {
         workPlanner: false,
         alertTime: 1,
