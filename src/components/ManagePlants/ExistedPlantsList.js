@@ -5,12 +5,7 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const ExistedPlantsList = () => {
   const { plants } = useContext(GlobalContext);
-
-  // Delete all position from table and from database
-  function deletePlant(e) {
-    console.log("Delete");
-    e.preventDefault();
-  }
+  const { deletePlant } = useContext(GlobalContext);
 
   return (
     <div className="content">
@@ -62,7 +57,7 @@ const ExistedPlantsList = () => {
               <td>
                 <img
                   src={plant.plantPhoto}
-                  id="plant-photoe"
+                  id="plant-photo"
                   alt={plant.plantName}
                   style={{ maxHeight: 100 }}
                 />
@@ -78,7 +73,7 @@ const ExistedPlantsList = () => {
                 <FontAwesomeIcon
                   id="delete-plant"
                   icon={faTrash}
-                  onClick={deletePlant}
+                  onClick={() => deletePlant(plant.id)}
                 />
               </td>
             </tr>

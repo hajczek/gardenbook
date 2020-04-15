@@ -7,6 +7,11 @@ export default (state, action) => {
           (material) => material.id !== action.payload
         ),
       };
+    case "DELETE_PLANT":
+      return {
+        ...state,
+        plants: state.plants.filter((plant) => plant.id !== action.payload),
+      };
     default:
       return state;
   }

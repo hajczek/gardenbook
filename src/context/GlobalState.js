@@ -146,6 +146,13 @@ export const GlobalProvider = ({ children }) => {
     });
   }
 
+  function deletePlant(id) {
+    dispatch({
+      type: "DELETE_PLANT",
+      payload: id,
+    });
+  }
+
   // async function addMaterial(material) {
   //   const config = {
   //     headers: {
@@ -176,6 +183,7 @@ export const GlobalProvider = ({ children }) => {
         userData: state.userData,
         accountSets: state.accountSets,
         deleteMaterial,
+        deletePlant,
         // addMaterial
       }}
     >
