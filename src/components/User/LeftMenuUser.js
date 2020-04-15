@@ -13,36 +13,36 @@ const LeftMenuUser = () => {
   return (
     <nav>
       <div className="dobuleBtn">
-        <a id="plants" href="#">
+        <a id="plants" href="#" className="menuLeftBtn">
           <FontAwesomeIcon icon={faSpa} />
         </a>
         <a className="addBtn" href="#" id="add-plant">
           +
         </a>
       </div>
-      <div id="materials" className="dobuleBtn">
-        <a href="#">
+      <div className="dobuleBtn">
+        <a id="materials" href="#" className="menuLeftBtn">
           <FontAwesomeIcon icon={faPen} />
         </a>
         <a className="addBtn" href="#" uid="add-material">
           +
         </a>
       </div>
-      <div id="works" className="dobuleBtn">
-        <a href="#">
+      <div className="dobuleBtn">
+        <a id="works" href="#">
           <FontAwesomeIcon icon={faCalendarAlt} />
         </a>
         <a className="addBtn" href="#" id="add-work">
           +
         </a>
       </div>
-      <a id="plan" href="#">
+      <a id="plan" href="#" className="menuLeftBtn notActive">
         <FontAwesomeIcon icon={faMap} />
       </a>
-      <a id="statistic" href="#">
+      <a id="statistic" href="#" className="menuLeftBtn notActive">
         <FontAwesomeIcon icon={faChartLine} />
       </a>
-      <a id="search" href="#">
+      <a id="search" href="#" className="menuLeftBtn notActive">
         <FontAwesomeIcon icon={faEye} />
       </a>
     </nav>
