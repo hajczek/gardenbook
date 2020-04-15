@@ -8,6 +8,10 @@ const PlannedWorkList = () => {
   const [workDone, setWorkDone] = useState(false);
   const [workTime, setWorkTime] = useState(0);
   const [workValue, setWorkValue] = useState(0);
+  const [workDetails, setWorkDetails] = useState("Uwagi do planowanej pracy");
+  const [workMaterial, setWorkMaterial] = useState("azofoska");
+  const [workMatQuant, setWorkMatQuant] = useState(5);
+  const [workMatUnit, setWorkMatUnit] = useState("kg");
 
   /* Needed functionality: 
   1. onSubmit() - set data from form to database
@@ -21,6 +25,10 @@ const PlannedWorkList = () => {
     console.log(workDone);
     console.log(workTime);
     console.log(workValue);
+    console.log(workDetails);
+    console.log(workMaterial);
+    console.log(workMatQuant);
+    console.log(workMatUnit);
 
     e.preventDefault();
   }
@@ -48,6 +56,8 @@ const PlannedWorkList = () => {
               <th>Wykonana</th>
               <th>Czas pracy [godz.]</th>
               <th>Wartość [zł.]</th>
+              <th>Materiał</th>
+              <th>Uwagi</th>
               <th>Usuń</th>
             </tr>
             <tr>
@@ -96,6 +106,40 @@ const PlannedWorkList = () => {
                   checked={workValue}
                   onChange={(e) => setWorkValue(e.target.value)}
                 />
+              </td>
+              <td>
+                <label htmlFor="work-material">Nazwa</label>
+                <input
+                  type="string"
+                  id="work-material"
+                  name="work-material"
+                  checked={workMaterial}
+                  onChange={(e) => setWorkMaterial(e.target.value)}
+                />
+                <label htmlFor="work-mat-quant">Ilość</label>
+                <input
+                  type="number"
+                  id="work-mat-quant"
+                  name="work-mat-quant"
+                  checked={workMatQuant}
+                  onChange={(e) => setWorkMatQuant(e.target.value)}
+                />
+                <label htmlFor="work-mat-unit">Jedn.</label>
+                <input
+                  type="number"
+                  id="work-mat-unit"
+                  name="work-mat-unit"
+                  checked={workMatUnit}
+                  onChange={(e) => setWorkMatUnit(e.target.value)}
+                />
+              </td>
+              <td>
+                <textarea
+                  id="work-details"
+                  name="work-details"
+                  value={workDetails}
+                  onChange={(e) => setWorkDetails(e.target.value)}
+                ></textarea>
               </td>
               <td>
                 <FontAwesomeIcon
