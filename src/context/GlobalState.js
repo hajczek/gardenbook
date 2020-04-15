@@ -114,7 +114,7 @@ const initialState = {
     {
       id: 1,
       userName: "Jan",
-      useEmail: "jan@kowalski.pl",
+      userEmail: "jan@kowalski.pl",
       userPass: "haslo",
       userTel: "+48658888888",
       accountSets: {
