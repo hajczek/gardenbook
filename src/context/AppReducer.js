@@ -29,6 +29,11 @@ export default (state, action) => {
         ...state,
         plants: [action.payload, ...state.plants],
       };
+    case "ADD_WORK":
+      return {
+        ...state,
+        plannedWorks: [action.payload, ...state.plannedWorks],
+      };
     default:
       return state;
   }

@@ -1,28 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { GlobalContext } from "../../context/GlobalState";
 
 export const PlanWorkForm = () => {
   const [workName, setWorkName] = useState("");
-  const [workMaterial, setWorkMaterial] = useState("");
+  const [workMatName, setWorkMatName] = useState("");
   const [workMatQuant, setWorkMatQuant] = useState(0);
   const [workDate, setWorkDate] = useState("");
   const [workMatUnit, setWorkMatUnit] = useState("");
   const [workDetails, setWorkDetails] = useState("");
 
-  /* Needed function:
-    1. addMaterials() - display added materials to planned work at list
-    2. checkDate() - can't set date ealier than current date
-    3. setDateOnCalendar() - for span with id 'add-work-term' to add term to Google Callendar - function uses Google Callendar API
-    4. materialsList() - get materials from database and display as a select option in field 'material'
-    5. onSubmit() - save all information from form about new planned work in database
-  */
+  const { addWork } = useContext(GlobalContext);
 
   function onSubmit(e) {
-    console.log(workName);
-    console.log(workMaterial);
-    console.log(workMatQuant);
-    console.log(workDate);
-    console.log(workMatUnit);
-    console.log(workDetails);
+    const newWork = {
+      id: Math.floor(Math.random() * 100000000),
+      workName,
+      workMaterial: { workMatName, workMatQuant, workMatUnit },
+      workDate,
+      workMatUnit,
+      workDetails,
+    };
+
+    addWork(newWork);
+    console.log(newWork);
+
     e.preventDefault();
   }
   return (
@@ -39,8 +40,8 @@ export const PlanWorkForm = () => {
       <select
         name="work-material"
         id="work-material"
-        value={workMaterial}
-        onChange={(e) => setWorkMaterial(e.target.value)}
+        value={workMatName}
+        onChange={(e) => setWorkMatName(e.target.value)}
       >
         <option value="wybierz">Wybierz materiał</option>
         <option value="azofoska">Azofoska</option>

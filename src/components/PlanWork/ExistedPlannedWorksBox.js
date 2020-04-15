@@ -7,7 +7,7 @@ const ExistedPlannedWorksBox = () => {
     <div className="existed-box">
       <ol>
         {plannedWorks.map((plannedWork) => (
-          <li>
+          <li key={plannedWork.id}>
             <a href="#">
               {plannedWork.workName} {plannedWork.workTerm} &raquo;
             </a>
