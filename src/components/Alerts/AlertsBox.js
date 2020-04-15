@@ -15,10 +15,10 @@ const AlertsBox = () => {
       <h2>2 ALERTY!!!</h2>
       <ul id="alerts-list">
         <li>
-          Nawożenie: <span>za 3 dni &raquo;</span>
+          Nawożenie: <span>za 2 dni &raquo;</span>
         </li>
         <li>
-          Nawożenie: <span>za 3 dni &raquo;</span>
+          Podlewanie: <span>za 3 dni &raquo;</span>
         </li>
       </ul>
     </div>
