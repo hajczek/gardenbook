@@ -77,14 +77,13 @@ const ExistedMaterialsList = () => {
                   alt={materialName}
                   style={{ maxHeight: 100 }}
                 />
-                <span>Zmień zdjęcie</span>
+                <span>Nowe zdjęcie</span>
                 <input
                   type="file"
                   name="material-photo"
                   id="material-photo"
                   filename={materialPhoto}
                   onChange={(e) => setMaterialPhoto(e.target.value)}
-                  placeholder="Wybierz plik ze zdjęciem"
                 />
               </td>
               <td>

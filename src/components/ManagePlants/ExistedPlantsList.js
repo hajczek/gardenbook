@@ -103,18 +103,17 @@ const ExistedPlantsList = () => {
               <td>
                 <img
                   src={plantPhoto}
-                  id="plant-image"
-                  alt="Floks 'biały'"
+                  id="plant-photoe"
+                  alt={plantName}
                   style={{ maxHeight: 100 }}
                 />
-                <span>Zmień zdjęcie</span>
+                <span>Nowe zdjęcie</span>
                 <input
                   type="file"
                   name="plant-photo"
                   id="plant-photo"
                   filename={plantPhoto}
                   onChange={(e) => setPlantPhoto(e.target.value)}
-                  placeholder="Wybierz plik ze zdjęciem"
                 />
               </td>
               <td>
