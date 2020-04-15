@@ -78,7 +78,32 @@ const initialState = {
       plantPrice: 3,
     },
   ],
-  materials: [{ id: 1 }],
+  materials: [
+    {
+      id: 1,
+      materialName: "Azofoska",
+      materialPhoto: "",
+      materialQuant: 50,
+      materialUnit: "kg",
+      materialPrice: 2,
+    },
+    {
+      id: 2,
+      materialName: "Kora",
+      materialPhoto: "",
+      materialQuant: 50,
+      materialUnit: "kg",
+      materialPrice: 0.6,
+    },
+    {
+      id: 3,
+      materialName: "Torf",
+      materialPhoto: "",
+      materialQuant: 100,
+      materialUnit: "kg",
+      materialPrice: 1.7,
+    },
+  ],
   userData: [{}],
   accountSets: [{}],
 };
