@@ -5,12 +5,7 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const ExistedMaterialsList = () => {
   const { materials } = useContext(GlobalContext);
-
-  // Delete all position from table and from database
-  function deleteMaterial(e) {
-    console.log("Delete");
-    e.preventDefault();
-  }
+  const { deleteMaterial } = useContext(GlobalContext);
 
   return (
     <div className="content">
@@ -51,11 +46,9 @@ const ExistedMaterialsList = () => {
                 {(material.materialQuant * material.materialPrice).toFixed(2)}
               </td>
               <td>
-                <FontAwesomeIcon
-                  id="delete-material"
-                  icon={faTrash}
-                  onClick={deleteMaterial}
-                />
+                <button onClick={() => deleteMaterial(material.id)}>
+                  <FontAwesomeIcon id="delete-material" icon={faTrash} />
+                </button>
               </td>
             </tr>
           ))}

@@ -139,6 +139,13 @@ export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
   // Functions
+  function deleteMaterial(id) {
+    dispatch({
+      type: "DELETE_MATERIAL",
+      payload: id,
+    });
+  }
+
   // async function addMaterial(material) {
   //   const config = {
   //     headers: {
@@ -168,6 +175,7 @@ export const GlobalProvider = ({ children }) => {
         materials: state.materials,
         userData: state.userData,
         accountSets: state.accountSets,
+        deleteMaterial,
         // addMaterial
       }}
     >
