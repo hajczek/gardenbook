@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { GlobalContext } from "../../context/GlobalState";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const ExistedMaterialsList = () => {
+  const { materials } = useContext(GlobalContext);
+
   const [materialName, setMaterialName] = useState("Azofoska");
   const [materialPhoto, setMaterialPhoto] = useState(
     "https://azofoska.pl/uploads/AZOFOSKA_granulat_500kg.jpg"
@@ -59,77 +62,80 @@ const ExistedMaterialsList = () => {
               <th>Wartość [zł.]</th>
               <th>Usuń</th>
             </tr>
-            <tr>
-              <td>1</td>
-              <td>
-                <input
-                  type="string"
-                  id="material-name"
-                  name="material-name"
-                  value={materialName}
-                  onChange={(e) => setMaterialName(e.target.value)}
-                  size="15"
-                />
-              </td>
-              <td>
-                <img
-                  src={materialPhoto}
-                  id="material-photo"
-                  alt={materialName}
-                  style={{ maxHeight: 100 }}
-                />
-                <span>Nowe zdjęcie</span>
-                <input
-                  type="file"
-                  name="material-photo"
-                  id="material-photo"
-                  filename={materialPhoto}
-                  onChange={(e) => setMaterialPhoto(e.target.value)}
-                />
-              </td>
-              <td>
-                <input
-                  className="inputNum"
-                  type="number"
-                  id="material-quant"
-                  name="material-quant"
-                  value={materialQuant}
-                  onChange={(e) => setMaterialQuant(e.target.value)}
-                />
-              </td>
-              <td>
-                <input
-                  type="string"
-                  id="material-unit"
-                  name="material-unit"
-                  value={materialUnit}
-                  onChange={(e) => setMaterialUnit(e.target.value)}
-                  size="10"
-                />
-              </td>
-              <td>
-                <input
-                  className="inputNum"
-                  type="number"
-                  id="material-price"
-                  name="material-price"
-                  value={materialPrice}
-                  onChange={(e) => setMaterialPrice(e.target.value)}
-                />
-              </td>
-              <td>
-                <span className="edited-value" id="material-value">
-                  {materialValue()}
-                </span>
-              </td>
-              <td>
-                <FontAwesomeIcon
-                  id="delete-material"
-                  icon={faTrash}
-                  onClick={deleteMaterial}
-                />
-              </td>
-            </tr>
+
+            {materials.map((material) => (
+              <tr>
+                <td>{material.id}</td>
+                <td>
+                  <input
+                    type="string"
+                    id="material-name"
+                    name="material-name"
+                    value={material.materialName}
+                    onChange={(e) => setMaterialName(e.target.value)}
+                    size="15"
+                  />
+                </td>
+                <td>
+                  <img
+                    src={material.materialPhoto}
+                    id="material-photo"
+                    alt={material.materialName}
+                    style={{ maxHeight: 100 }}
+                  />
+                  <span>Nowe zdjęcie</span>
+                  <input
+                    type="file"
+                    name="material-photo"
+                    id="material-photo"
+                    filename={material.materialPhoto}
+                    onChange={(e) => setMaterialPhoto(e.target.value)}
+                  />
+                </td>
+                <td>
+                  <input
+                    className="inputNum"
+                    type="number"
+                    id="material-quant"
+                    name="material-quant"
+                    value={material.materialQuant}
+                    onChange={(e) => setMaterialQuant(e.target.value)}
+                  />
+                </td>
+                <td>
+                  <input
+                    type="string"
+                    id="material-unit"
+                    name="material-unit"
+                    value={material.materialUnit}
+                    onChange={(e) => setMaterialUnit(e.target.value)}
+                    size="10"
+                  />
+                </td>
+                <td>
+                  <input
+                    className="inputNum"
+                    type="number"
+                    id="material-price"
+                    name="material-price"
+                    value={material.materialPrice}
+                    onChange={(e) => setMaterialPrice(e.target.value)}
+                  />
+                </td>
+                <td>
+                  <span className="edited-value" id="material-value">
+                    {material.materialQuant * material.materialPrice}
+                  </span>
+                </td>
+                <td>
+                  <FontAwesomeIcon
+                    id="delete-material"
+                    icon={faTrash}
+                    onClick={deleteMaterial}
+                  />
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
         <button id="changes-materials-btn">Zapisz</button>
