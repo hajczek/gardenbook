@@ -94,7 +94,7 @@ const initialState = {
     {
       id: 1,
       materialName: "Azofoska",
-      materialPhoto: "",
+      materialPhoto: "https://azofoska.pl/uploads/AZOFOSKA_granulat_500kg.jpg",
       materialQuant: 50,
       materialUnit: "kg",
       materialPrice: 2,
