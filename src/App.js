@@ -1,4 +1,5 @@
 import React from "react";
+import { GlobalProvider } from "./context/GlobalState";
 import PageCard from "./components/Page/PageCard";
 import PageUser from "./components/User/PageUser";
 // import PlanWorkCard from "./components/PlanWork/PlanWorkCard";
@@ -8,13 +9,15 @@ import "./App.scss";
 
 const App = () => {
   return (
-    <div className="App">
-      {/* <PageCard /> */}
-      <PageUser />
-      {/* <PlanWorkCard /> */}
-      {/* <AddMaterialCard /> */}
-      {/* <AddPlantCard /> */}
-    </div>
+    <GlobalProvider>
+      <div className="App">
+        {/* <PageCard /> */}
+        <PageUser />
+        {/* <PlanWorkCard /> */}
+        {/* <AddMaterialCard /> */}
+        {/* <AddPlantCard /> */}
+      </div>
+    </GlobalProvider>
   );
 };
 
