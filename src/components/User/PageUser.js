@@ -4,9 +4,9 @@ import LeftMenuUser from "./LeftMenuUser";
 import Footer from "../Page/Footer";
 // import AlertsCard from "../Alerts/AlertsCard";
 // import AccountUserCard from "../AccountUser/AccountUserCard";
-// import ManageWorksCard from "../ManageWorks/ManageWorksCard";
+import ManageWorksCard from "../ManageWorks/ManageWorksCard";
 // import ManageMaterialsCard from "../ManageMaterials/ManageMaterialsCard";
-import ManagePlantsCard from "../ManagePlants/ManagePlantsCard";
+// import ManagePlantsCard from "../ManagePlants/ManagePlantsCard";
 
 const PageCard = () => {
   return (
@@ -15,9 +15,9 @@ const PageCard = () => {
       <LeftMenuUser />
       {/* <AlertsCard /> */}
       {/* <AccountUserCard /> */}
-      {/* <ManageWorksCard /> */}
+      <ManageWorksCard />
       {/* <ManageMaterialsCard /> */}
-      <ManagePlantsCard />
+      {/* <ManagePlantsCard /> */}
       <Footer />
     </div>
   );
