@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 
 const PlannedWorkList = () => {
   const { plannedWorks } = useContext(GlobalContext);
@@ -51,6 +51,9 @@ const PlannedWorkList = () => {
                 {plannedWork.workMaterial.workMatUnit}
               </td>
               <td>{plannedWork.workDetails}</td>
+              <td>
+                <FontAwesomeIcon id="edit-work" icon={faEdit} />
+              </td>
               <td>
                 <FontAwesomeIcon
                   id="delete-work"

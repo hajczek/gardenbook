@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 
 const ExistedPlantsList = () => {
   const { plants } = useContext(GlobalContext);
@@ -69,6 +69,9 @@ const ExistedPlantsList = () => {
               <td>{plant.plantFetilizerDose}</td>
               <td>{plant.plantFetilizerFreq}</td>
               <td>{plant.plantWateringFreq}</td>
+              <td>
+                <FontAwesomeIcon id="edit-plant" icon={faEdit} />
+              </td>
               <td>
                 <FontAwesomeIcon
                   id="delete-plant"

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 
 const ExistedMaterialsList = () => {
   const { materials } = useContext(GlobalContext);
@@ -44,6 +44,9 @@ const ExistedMaterialsList = () => {
               <td>{material.materialPrice.toFixed(2)}</td>
               <td>
                 {(material.materialQuant * material.materialPrice).toFixed(2)}
+              </td>
+              <td>
+                <FontAwesomeIcon id="edit-material" icon={faEdit} />
               </td>
               <td>
                 <FontAwesomeIcon
