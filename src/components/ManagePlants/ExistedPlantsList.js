@@ -68,11 +68,11 @@ const ExistedPlantsList = () => {
                 />
               </td>
               <td>{plant.plantQuant}</td>
-              <td>{plant.plantPrice}</td>
-              <td>{plant.plantQuant * plant.plantPrice}</td>
-              <td>{plant.plantFertilizer}</td>
-              <td>{plant.plantFertilizerDoze}</td>
-              <td>{plant.plantFertilizerFreq}</td>
+              <td>{plant.plantPrice.toFixed(2)}</td>
+              <td>{(plant.plantQuant * plant.plantPrice).toFixed(2)}</td>
+              <td>{plant.plantFetilizer}</td>
+              <td>{plant.plantFetilizerDose}</td>
+              <td>{plant.plantFetilizerFreq}</td>
               <td>{plant.plantWateringFreq}</td>
               <td>
                 <FontAwesomeIcon

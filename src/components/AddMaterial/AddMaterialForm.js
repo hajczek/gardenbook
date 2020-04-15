@@ -1,24 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { GlobalContext } from "../../context/GlobalState";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 const AddMaterialForm = () => {
-  /* Needed function:
-  1. onSubmit() - put data from form to database
-  */
-
   const [materialName, setMaterialName] = useState("");
   const [materialPhoto, setMaterialPhoto] = useState("");
   const [materialQuant, setMaterialQuant] = useState(0);
   const [materialUnit, setMaterialUnit] = useState("");
   const [materialPrice, setMaterialPrice] = useState(0);
 
+  const { addMaterial } = useContext(GlobalContext);
+
   function onSubmit(e) {
-    console.log(materialName);
-    console.log(materialPhoto);
-    console.log(materialQuant);
-    console.log(materialUnit);
-    console.log(materialPrice);
+    const newMaterial = {
+      id: Math.floor(Math.random() * 100000000),
+      materialName,
+      materialPhoto,
+      materialQuant,
+      materialUnit,
+      materialPrice,
+    };
+
+    addMaterial(newMaterial);
+
     e.preventDefault();
   }
   return (

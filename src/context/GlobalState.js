@@ -54,7 +54,7 @@ const initialState = {
       plantQuant: 4,
       plantPhoto:
         "https://www.google.com/url?sa=i&url=https%3A%2F%2Fdrzewa.nk4.netmark.pl%2Fatlas%2Fbrzoza%2Fbrzoza_brodawkowata%2Fbrzoza_brodawkowata.php&psig=AOvVaw2MBe3JsU0AMasOjAiNZTEw&ust=1587024266947000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKDLzJ786egCFQAAAAAdAAAAABAD",
-      plantWateringFraq: 0,
+      plantWateringFreq: 0,
       plantFetilizer: "",
       plantFetilizerFreq: 0,
       plantFetilizerDose: 0,
@@ -66,7 +66,7 @@ const initialState = {
       plantQuant: 20,
       plantPhoto:
         "https://www.futuregardens.pl/uploads/fotosik/images8/2687/7b1028f302362bcb.jpg",
-      plantWateringFraq: 1,
+      plantWateringFreq: 1,
       plantFetilizer: "azofoska",
       plantFetilizerFreq: 3,
       plantFetilizerDose: 5,
@@ -77,7 +77,7 @@ const initialState = {
       plantName: "Forsycja żółta",
       plantQuant: 14,
       plantPhoto: "",
-      plantWateringFraq: 1,
+      plantWateringFreq: 1,
       plantFetilizer: "azofoska",
       plantFetilizerFreq: 3,
       plantFetilizerDose: 5,
@@ -138,6 +138,28 @@ export const GlobalContext = createContext(initialState);
 export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
+  // Functions
+  // async function addMaterial(material) {
+  //   const config = {
+  //     headers: {
+  //       "COntent-type": "application/json",
+  //     },
+  //   };
+  //   try {
+  //     const res = await axios.post("/materials", material, config);
+
+  //     dispatch({
+  //       type: "ADD_MATERIAL",
+  //       payload: res.data.data,
+  //     });
+  //   } catch (err) {
+  //     dispatch({
+  //       type: "MATERIAL_ERROR",
+  //       payload: err.response.data.error,
+  //     });
+  //   }
+  // }
+
   return (
     <GlobalContext.Provider
       value={{
@@ -146,6 +168,7 @@ export const GlobalProvider = ({ children }) => {
         materials: state.materials,
         userData: state.userData,
         accountSets: state.accountSets,
+        // addMaterial
       }}
     >
       {children}
