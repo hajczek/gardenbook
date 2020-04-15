@@ -20,7 +20,7 @@
     }
 
     .notActive {
-      opacity: 0.7;
+      opacity: 0.5;
     }
   }
 
@@ -29,10 +29,12 @@
 
     .addBtn {
       background-color: $more-lightnes-grey-color;
+      border-bottom: 1px solid $white-color;
       display: flex;
       font-size: 30px;
       text-decoration: none;
       width: 28px;
+      height: 61px;
       align-content: center;
       flex-wrap: wrap;
       justify-content: space-evenly;

@@ -14,32 +14,41 @@ const LeftMenuUser = () => {
     <nav id="left-menu">
       <div id="left-menu-first">
         <a id="plants" href="#" className="menuLeftBtn">
-          <FontAwesomeIcon icon={faSpa} fixedWidth />
+          <FontAwesomeIcon icon={faSpa} fixedWidth title="Rośliny" />
         </a>
         <a id="materials" href="#" className="menuLeftBtn">
-          <FontAwesomeIcon icon={faPen} fixedWidth />
+          <FontAwesomeIcon icon={faPen} fixedWidth title="Materiały" />
         </a>
         <a id="works" href="#" className="menuLeftBtn">
-          <FontAwesomeIcon icon={faCalendarAlt} fixedWidth />
+          <FontAwesomeIcon
+            icon={faCalendarAlt}
+            fixedWidth
+            title="Zaplanowane prace"
+          />
         </a>
         <a id="plan" href="#" className="menuLeftBtn notActive">
-          <FontAwesomeIcon icon={faMap} fixedWidth />
+          <FontAwesomeIcon icon={faMap} fixedWidth title="Plan ogrodu" />
         </a>
         <a id="statistic" href="#" className="menuLeftBtn notActive">
-          <FontAwesomeIcon icon={faChartLine} fixedWidth />
+          <FontAwesomeIcon icon={faChartLine} fixedWidth title="Statystyki" />
         </a>
         <a id="search" href="#" className="menuLeftBtn notActive">
-          <FontAwesomeIcon icon={faEye} fixedWidth />
+          <FontAwesomeIcon icon={faEye} fixedWidth title="Znajdź wykonawcę" />
         </a>
       </div>
       <div id="left-menu-second">
-        <a className="addBtn" href="#" id="add-plant">
+        <a className="addBtn" href="#" id="add-plant" title="Dodaj roślinę">
           +
         </a>
-        <a className="addBtn" href="#" uid="add-material">
+        <a
+          className="addBtn"
+          href="#"
+          uid="add-material"
+          title="Dodaj materiał"
+        >
           +
         </a>
-        <a className="addBtn" href="#" id="add-work">
+        <a className="addBtn" href="#" id="add-work" title="Zaplanuj pracę">
           +
         </a>
       </div>
