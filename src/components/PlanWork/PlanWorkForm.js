@@ -35,14 +35,14 @@ export const PlanWorkForm = () => {
         onChange={(e) => setWorkName(e.target.value)}
       />
 
-      <label htmlFor="work-material">Potrzebne materiały</label>
+      <label htmlFor="work-material">Potrzebny materiał</label>
       <select
         name="work-material"
         id="work-material"
         value={workMaterial}
         onChange={(e) => setWorkMaterial(e.target.value)}
       >
-        <option value="wybierz">Wybierz materiał i kliknij +</option>
+        <option value="wybierz">Wybierz materiał</option>
         <option value="azofoska">Azofoska</option>
         <option value="kora">Kora</option>
         <option value="nawoz-do-trawnika">Nawóz do trawnika</option>
@@ -70,7 +70,6 @@ export const PlanWorkForm = () => {
         <option value="litr">Litr</option>
         <option value="kg">Kg</option>
       </select>
-      <span id="add-material-btn">Dodaj materiał +</span>
 
       <label htmlFor="work-date">Wybierz termin</label>
       <input
