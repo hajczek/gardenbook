@@ -1,6 +1,9 @@
 import React from "react";
 
 const ExistedMaterialsBox = () => {
+  /* Needed functionality: 
+    1. displayExistedMaterialsList() - display list of existed materials - on list we must have links to card with details about these materials.
+  */
   return (
     <div className="existed-box">
       <h2>ISTNIEJĄCE MATERIAŁY</h2>

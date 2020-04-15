@@ -2,8 +2,7 @@ import React from "react";
 
 const PlannedWorksBox = () => {
   /* Needed functionality: 
-    1. display{PlannedWorksList() - display list of planned works (without these which are displays on alerts list!!!)
-       On list we must have links to card ith details about planned work.
+    1. displayPlannedWorksList() - display list of planned works - on list we must have links to card with details about planned work.
   */
   return (
     <div className="existed-box-user">

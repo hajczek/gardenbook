@@ -1,6 +1,9 @@
 import React from "react";
 
 const ExistedPlantsBox = () => {
+  /* Needed functionality: 
+    1. displayExistedPlantsList() - display list of existed plants - on list we must have links to card with details about these plants.
+  */
   return (
     <div className="existed-box">
       <h2>ISTNIEJĄCE ROŚLINY</h2>
