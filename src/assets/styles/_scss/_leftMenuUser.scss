@@ -1,0 +1,41 @@
+#left-menu {
+  display: flex;
+  flex-direction: row;
+  width: 94px;
+
+  #left-menu-first {
+    width: 66px;
+    background-color: $limone-color;
+
+    .menuLeftBtn {
+      display: flex;
+      font-size: 40px;
+      border-bottom: 1px solid $white-color;
+      color: $grey-color;
+      width: 66px;
+      padding: 10px 0 10px;
+      align-content: center;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+
+    .notActive {
+      opacity: 0.7;
+    }
+  }
+
+  #left-menu-second {
+    width: 28px;
+
+    .addBtn {
+      background-color: $more-lightnes-grey-color;
+      display: flex;
+      font-size: 30px;
+      text-decoration: none;
+      width: 28px;
+      align-content: center;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+  }
+}
