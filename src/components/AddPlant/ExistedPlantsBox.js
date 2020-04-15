@@ -2,7 +2,7 @@ import React from "react";
 
 const ExistedPlantsBox = () => {
   return (
-    <div id="planned-works-with-alerts-box">
+    <div className="existed-box">
       <h2>ISTNIEJĄCE ROŚLINY</h2>
       <ol>
         <li>

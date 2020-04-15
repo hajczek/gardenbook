@@ -2,7 +2,7 @@ import React from "react";
 
 const PlannedWorksWithAlertsBox = () => {
   return (
-    <div id="planned-works-with-alerts-box">
+    <div className="existed-box">
       <ol>
         <li>
           <a href="#">Cięcie krzewów: 01-05-202 &raquo;</a>

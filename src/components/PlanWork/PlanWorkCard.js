@@ -2,7 +2,7 @@ import React from "react";
 import HeaderUser from "../UserElemCard/HeaderUser";
 import LeftMenuUser from "../UserElemCard/LeftMenuUser";
 import PlanWorkForm from "./PlanWorkForm";
-import PlannedWorksWithAlertsBox from "./PlannedWorksWithAlertsBox";
+import ExistedPlannedWorksBox from "./ExistedPlannedWorksBox";
 import Footer from "../Page/Footer";
 
 const PlanWorkCard = () => {
@@ -13,7 +13,7 @@ const PlanWorkCard = () => {
       <div className="content">
         <h2>Zaplanuj pracę</h2>
         <PlanWorkForm />
-        <PlannedWorksWithAlertsBox />
+        <ExistedPlannedWorksBox />
         <Footer />
       </div>
     </div>

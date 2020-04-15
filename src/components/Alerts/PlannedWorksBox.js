@@ -6,7 +6,7 @@ const PlannedWorksBox = () => {
        On list we must have links to card ith details about planned work.
   */
   return (
-    <div id="planned-works">
+    <div className="existed-box-user">
       <h2>ZAPLANOWANE PRACE</h2>
       <ol id="planned-works-list">
         <li>
