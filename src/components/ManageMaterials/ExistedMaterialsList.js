@@ -46,8 +46,10 @@ const ExistedMaterialsList = () => {
               </td>
               <td>{material.materialQuant}</td>
               <td>{material.materialUnit}</td>
-              <td>{material.materialPrice}</td>
-              <td>{material.materialQuant * material.materialPrice}</td>
+              <td>{material.materialPrice.toFixed(2)}</td>
+              <td>
+                {(material.materialQuant * material.materialPrice).toFixed(2)}
+              </td>
               <td>
                 <FontAwesomeIcon
                   id="delete-material"
