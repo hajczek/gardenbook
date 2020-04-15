@@ -69,6 +69,7 @@ const PlannedWorkList = () => {
                   name="work-name"
                   value={workName}
                   onChange={(e) => setWorkName(e.target.value)}
+                  size="15"
                 />
               </td>
               <td>
@@ -91,6 +92,7 @@ const PlannedWorkList = () => {
               </td>
               <td>
                 <input
+                  className="inputNum"
                   type="number"
                   id="work-time"
                   name="work-time"
@@ -100,6 +102,7 @@ const PlannedWorkList = () => {
               </td>
               <td>
                 <input
+                  className="inputNum"
                   type="number"
                   id="work-value"
                   name="work-value"
@@ -115,9 +118,11 @@ const PlannedWorkList = () => {
                   name="work-material"
                   checked={workMatName}
                   onChange={(e) => setWorkMatName(e.target.value)}
+                  size="15"
                 />
                 <label htmlFor="work-mat-quant">Ilość</label>
                 <input
+                  className="inputNum"
                   type="number"
                   id="work-mat-quant"
                   name="work-mat-quant"
@@ -126,6 +131,7 @@ const PlannedWorkList = () => {
                 />
                 <label htmlFor="work-mat-unit">Jedn.</label>
                 <input
+                  className="inputNum"
                   type="number"
                   id="work-mat-unit"
                   name="work-mat-unit"

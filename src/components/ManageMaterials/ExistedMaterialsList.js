@@ -68,6 +68,7 @@ const ExistedMaterialsList = () => {
                   name="material-name"
                   value={materialName}
                   onChange={(e) => setMaterialName(e.target.value)}
+                  size="15"
                 />
               </td>
               <td>
@@ -88,6 +89,7 @@ const ExistedMaterialsList = () => {
               </td>
               <td>
                 <input
+                  className="inputNum"
                   type="number"
                   id="material-quant"
                   name="material-quant"
@@ -102,10 +104,12 @@ const ExistedMaterialsList = () => {
                   name="material-unit"
                   value={materialUnit}
                   onChange={(e) => setMaterialUnit(e.target.value)}
+                  size="10"
                 />
               </td>
               <td>
                 <input
+                  className="inputNum"
                   type="number"
                   id="material-price"
                   name="material-price"
