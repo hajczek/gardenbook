@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEdit } from "@fortawesome/free-solid-svg-icons";
 
 const AccountUserFunctionsBox = () => {
   const { userData } = useContext(GlobalContext);
@@ -24,6 +26,10 @@ const AccountUserFunctionsBox = () => {
           <br />
           Wyszukiwarka wykonawców:
           {data.accountSets.searchWorkers === false ? "wył." : "wł."}
+          <br />
+          <button>
+            Zmień ustawienia <FontAwesomeIcon id="edit-plant" icon={faEdit} />
+          </button>
         </p>
       ))}
     </div>

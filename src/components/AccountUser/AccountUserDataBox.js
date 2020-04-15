@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEdit } from "@fortawesome/free-solid-svg-icons";
 
 const AccountUserDataBox = () => {
   const { userData } = useContext(GlobalContext);
@@ -18,6 +20,10 @@ const AccountUserDataBox = () => {
           Telefon: {data.userTel}
           <br />
           Lokalizacja: {data.userPlace}
+          <br />
+          <button>
+            Zmień dane <FontAwesomeIcon id="edit-plant" icon={faEdit} />
+          </button>
         </p>
       ))}
     </div>
