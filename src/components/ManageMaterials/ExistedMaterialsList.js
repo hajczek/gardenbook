@@ -46,9 +46,11 @@ const ExistedMaterialsList = () => {
                 {(material.materialQuant * material.materialPrice).toFixed(2)}
               </td>
               <td>
-                <button onClick={() => deleteMaterial(material.id)}>
-                  <FontAwesomeIcon id="delete-material" icon={faTrash} />
-                </button>
+                <FontAwesomeIcon
+                  id="delete-material"
+                  icon={faTrash}
+                  onClick={() => deleteMaterial(material.id)}
+                />
               </td>
             </tr>
           ))}
