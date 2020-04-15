@@ -19,6 +19,11 @@ export default (state, action) => {
           (work) => work.id !== action.payload
         ),
       };
+    case "ADD_MATERIAL":
+      return {
+        ...state,
+        materials: [action.payload, ...state.materials],
+      };
     default:
       return state;
   }

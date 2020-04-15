@@ -23,6 +23,7 @@ const AddMaterialForm = () => {
     };
 
     addMaterial(newMaterial);
+    console.log(newMaterial);
 
     e.preventDefault();
   }
@@ -79,7 +80,7 @@ const AddMaterialForm = () => {
         value={materialPrice}
         onChange={(e) => setMaterialPrice(e.target.value)}
       />
-      <button id="add-material-btn">Zapisz</button>
+      <button id="add-material-btn">Dodaj</button>
     </form>
   );
 };

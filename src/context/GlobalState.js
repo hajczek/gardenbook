@@ -160,26 +160,12 @@ export const GlobalProvider = ({ children }) => {
     });
   }
 
-  // async function addMaterial(material) {
-  //   const config = {
-  //     headers: {
-  //       "COntent-type": "application/json",
-  //     },
-  //   };
-  //   try {
-  //     const res = await axios.post("/materials", material, config);
-
-  //     dispatch({
-  //       type: "ADD_MATERIAL",
-  //       payload: res.data.data,
-  //     });
-  //   } catch (err) {
-  //     dispatch({
-  //       type: "MATERIAL_ERROR",
-  //       payload: err.response.data.error,
-  //     });
-  //   }
-  // }
+  function addMaterial(material) {
+    dispatch({
+      type: "ADD_MATERIAL",
+      payload: material,
+    });
+  }
 
   return (
     <GlobalContext.Provider
@@ -192,7 +178,7 @@ export const GlobalProvider = ({ children }) => {
         deleteMaterial,
         deletePlant,
         deleteWork,
-        // addMaterial
+        addMaterial,
       }}
     >
       {children}
