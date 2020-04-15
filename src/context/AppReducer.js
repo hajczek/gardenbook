@@ -12,6 +12,13 @@ export default (state, action) => {
         ...state,
         plants: state.plants.filter((plant) => plant.id !== action.payload),
       };
+    case "DELETE_WORK":
+      return {
+        ...state,
+        plannedWorks: state.plannedWorks.filter(
+          (work) => work.id !== action.payload
+        ),
+      };
     default:
       return state;
   }

@@ -5,12 +5,7 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const PlannedWorkList = () => {
   const { plannedWorks } = useContext(GlobalContext);
-
-  // Delete all position from table and from database
-  function deleteWork(e) {
-    console.log("Delete");
-    e.preventDefault();
-  }
+  const { deleteWork } = useContext(GlobalContext);
 
   return (
     <div className="content">
@@ -60,7 +55,7 @@ const PlannedWorkList = () => {
                 <FontAwesomeIcon
                   id="delete-work"
                   icon={faTrash}
-                  onClick={deleteWork}
+                  onClick={() => deleteWork(plannedWork.id)}
                 />
               </td>
             </tr>
