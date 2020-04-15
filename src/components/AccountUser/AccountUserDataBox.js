@@ -16,9 +16,10 @@ const AccountUserDataBox = () => {
           Aktualne hasło: {data.userPass}
           <br />
           Telefon: {data.userTel}
+          <br />
+          Lokalizacja: {data.userPlace}
         </p>
       ))}
-      ;
     </div>
   );
 };

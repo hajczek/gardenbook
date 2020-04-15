@@ -117,6 +117,7 @@ const initialState = {
       userEmail: "jan@kowalski.pl",
       userPass: "haslo",
       userTel: "+48658888888",
+      userPlace: "Milanówek",
       accountSets: {
         workPlanner: false,
         alertTime: 1,
@@ -124,7 +125,6 @@ const initialState = {
         gardenStatistic: false,
         gardenHistory: false,
         searchWorkers: false,
-        localization: "Milanówek",
       },
     },
   ],
