@@ -26,8 +26,15 @@ const PlannedWorkList = () => {
             <th>Tytuł</th>
             <th>Termin</th>
             <th>Wykonana</th>
-            <th>Czas pracy [godz.]</th>
-            <th>Wartość [zł.]</th>
+            <th>
+              Czas pracy
+              <br />[ il. godz.]
+            </th>
+            <th>
+              Wartość
+              <br />
+              [zł.]
+            </th>
             <th>Materiał</th>
             <th>Uwagi</th>
             <th>Usuń</th>
@@ -38,13 +45,15 @@ const PlannedWorkList = () => {
               <td>{plannedWork.id}</td>
               <td>{plannedWork.workName}</td>
               <td>{plannedWork.workTerm}</td>
-              <td>{plannedWork.workDone}</td>
+              <td>{plannedWork.workDone === false ? "no" : "yes"}</td>
               <td>{plannedWork.workTime}</td>
               <td>{plannedWork.workValue}</td>
               <td>
-                {plannedWork.workMatName}
-                {plannedWork.workMatQuant}
-                {plannedWork.workMatUnit}
+                {plannedWork.workMaterial.workMatName}
+                <span className="mat">
+                  {plannedWork.workMaterial.workMatQuant}
+                </span>
+                {plannedWork.workMaterial.workMatUnit}
               </td>
               <td>{plannedWork.workDetails}</td>
               <td>

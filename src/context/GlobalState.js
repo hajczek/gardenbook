@@ -7,14 +7,12 @@ const initialState = {
     {
       id: 1,
       workName: "Cięcie krzewów",
-      workMaterials: [
-        {
-          workMatName: "",
-          workMatQuant: 0,
-          workMatUnit: "",
-        },
-      ],
-      workDate: "2020-05-01",
+      workMaterial: {
+        workMatName: "",
+        workMatQuant: 0,
+        workMatUnit: "",
+      },
+      workTerm: "2020-05-01",
       workDetails: "Wykonać do południa",
       workDone: false,
       workTime: 0,
@@ -23,14 +21,12 @@ const initialState = {
     {
       id: 2,
       workName: "Prace porządkowe",
-      workMaterials: [
-        {
-          workMatName: "",
-          workMatQuant: 0,
-          workMatUnit: "",
-        },
-      ],
-      workDate: "2020-05-02",
+      workMaterial: {
+        workMatName: "",
+        workMatQuant: 0,
+        workMatUnit: "",
+      },
+      workTerm: "2020-05-02",
       workDetails: "Sprzątnąć w garażu",
       workDone: false,
       workTime: 0,
@@ -39,14 +35,12 @@ const initialState = {
     {
       id: 3,
       workName: "Podlewanie",
-      workMaterials: [
-        {
-          workMatName: "woda",
-          workMatQuant: 100,
-          workMatUnit: "litr",
-        },
-      ],
-      workDate: "2020-04-25",
+      workMaterial: {
+        workMatName: "woda",
+        workMatQuant: 100,
+        workMatUnit: "l",
+      },
+      workTerm: "2020-04-25",
       workDetails: "Podlać połudionwe rabaty",
       workDone: false,
       workTime: 0,
