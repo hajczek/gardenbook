@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { GlobalContext } from "../../context/GlobalState";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 const AddPlantForm = () => {
-  /* Needed function:
-    onSubmit() - to put all data from form in database
- */
+  const { addMaterial } = useContext(GlobalContext);
 
   const [plantName, setPlantName] = useState("");
   const [plantQuant, setPlantQuant] = useState(0);
@@ -17,14 +16,20 @@ const AddPlantForm = () => {
   const [plantFertilizerDose, setPlantFertilizerDose] = useState(0);
 
   function onSubmit(e) {
-    console.log(plantName);
-    console.log(plantQuant);
-    console.log(plantPhoto);
-    console.log(plantWateringFrag);
-    console.log(plantFertilizer);
-    console.log(plantFertilizerFreq);
-    console.log(plantPrice);
-    console.log(plantFertilizerDose);
+    const newPlant = {
+      id: Math.floor(Math.random() * 100000000),
+      plantName,
+      plantQuant,
+      plantPhoto,
+      plantWateringFrag,
+      plantFertilizer,
+      plantFertilizerFreq,
+      plantPrice,
+      plantFertilizerDose,
+    };
+
+    addMaterial(newPlant);
+    console.log(newPlant);
     e.preventDefault();
   }
 

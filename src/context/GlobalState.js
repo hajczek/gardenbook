@@ -167,6 +167,13 @@ export const GlobalProvider = ({ children }) => {
     });
   }
 
+  function addPlant(plant) {
+    dispatch({
+      type: "ADD_PLANT",
+      payload: plant,
+    });
+  }
+
   return (
     <GlobalContext.Provider
       value={{
@@ -179,6 +186,7 @@ export const GlobalProvider = ({ children }) => {
         deletePlant,
         deleteWork,
         addMaterial,
+        addPlant,
       }}
     >
       {children}

@@ -24,6 +24,11 @@ export default (state, action) => {
         ...state,
         materials: [action.payload, ...state.materials],
       };
+    case "ADD_PLANT":
+      return {
+        ...state,
+        plants: [action.payload, ...state.plants],
+      };
     default:
       return state;
   }
