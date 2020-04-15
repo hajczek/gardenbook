@@ -4,7 +4,11 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const ExistedMaterialsList = () => {
   const [materialName, setMaterialName] = useState("Azofoska");
+  const [materialPhoto, setMaterialPhoto] = useState(
+    "https://azofoska.pl/uploads/AZOFOSKA_granulat_500kg.jpg"
+  );
   const [materialQuant, setMaterialQuant] = useState(50);
+  const [materialUnit, setMaterialUnit] = useState("kilo");
   const [materialPrice, setMaterialPrice] = useState(2);
 
   /* Needed functionality: 
@@ -16,7 +20,9 @@ const ExistedMaterialsList = () => {
 
   function onSubmit(e) {
     console.log(materialName);
+    console.log(materialPhoto);
     console.log(materialQuant);
+    console.log(materialUnit);
     console.log(materialPrice);
 
     e.preventDefault();
@@ -46,7 +52,9 @@ const ExistedMaterialsList = () => {
             <tr>
               <th>Lp.</th>
               <th>Nazwa</th>
-              <th>Ilość [kg/l]</th>
+              <th>Zdjęcie</th>
+              <th>Ilość</th>
+              <th>Jedn.</th>
               <th>Cena jedn. [zł.]</th>
               <th>Wartość [zł.]</th>
               <th>Usuń</th>
@@ -63,12 +71,38 @@ const ExistedMaterialsList = () => {
                 />
               </td>
               <td>
+                <img
+                  src={materialPhoto}
+                  id="material-photo"
+                  alt={materialName}
+                  style={{ maxHeight: 100 }}
+                />
+                <span>Zmień zdjęcie</span>
+                <input
+                  type="file"
+                  name="material-photo"
+                  id="material-photo"
+                  filename={materialPhoto}
+                  onChange={(e) => setMaterialPhoto(e.target.value)}
+                  placeholder="Wybierz plik ze zdjęciem"
+                />
+              </td>
+              <td>
                 <input
                   type="number"
                   id="material-quant"
                   name="material-quant"
                   value={materialQuant}
                   onChange={(e) => setMaterialQuant(e.target.value)}
+                />
+              </td>
+              <td>
+                <input
+                  type="string"
+                  id="material-unit"
+                  name="material-unit"
+                  value={materialUnit}
+                  onChange={(e) => setMaterialUnit(e.target.value)}
                 />
               </td>
               <td>
