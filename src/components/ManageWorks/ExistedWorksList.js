@@ -45,9 +45,9 @@ const PlannedWorkList = () => {
               <td>{plannedWork.id}</td>
               <td>{plannedWork.workName}</td>
               <td>{plannedWork.workTerm}</td>
-              <td>{plannedWork.workDone === false ? "no" : "yes"}</td>
+              <td>{plannedWork.workDone === false ? "-" : "+"}</td>
               <td>{plannedWork.workTime}</td>
-              <td>{plannedWork.workValue}</td>
+              <td>{plannedWork.workValue.toFixed(2)}</td>
               <td>
                 {plannedWork.workMaterial.workMatName}
                 <span className="mat">
