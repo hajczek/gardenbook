@@ -9,7 +9,7 @@ const PlannedWorkList = () => {
   const [workTime, setWorkTime] = useState(0);
   const [workValue, setWorkValue] = useState(0);
   const [workDetails, setWorkDetails] = useState("Uwagi do planowanej pracy");
-  const [workMaterial, setWorkMaterial] = useState("azofoska");
+  const [workMatName, setWorkMatName] = useState("azofoska");
   const [workMatQuant, setWorkMatQuant] = useState(5);
   const [workMatUnit, setWorkMatUnit] = useState("kg");
 
@@ -26,7 +26,7 @@ const PlannedWorkList = () => {
     console.log(workTime);
     console.log(workValue);
     console.log(workDetails);
-    console.log(workMaterial);
+    console.log(workMatName);
     console.log(workMatQuant);
     console.log(workMatUnit);
 
@@ -113,8 +113,8 @@ const PlannedWorkList = () => {
                   type="string"
                   id="work-material"
                   name="work-material"
-                  checked={workMaterial}
-                  onChange={(e) => setWorkMaterial(e.target.value)}
+                  checked={workMatName}
+                  onChange={(e) => setWorkMatName(e.target.value)}
                 />
                 <label htmlFor="work-mat-quant">Ilość</label>
                 <input
