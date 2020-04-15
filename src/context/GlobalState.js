@@ -104,8 +104,26 @@ const initialState = {
       materialPrice: 1.7,
     },
   ],
-  userData: [{}],
-  accountSets: [{}],
+  userData: [
+    {
+      id: 1,
+      userName: "Jan",
+      useEmail: "jan@kowalski.pl",
+      userPass: "haslo",
+      userTel: "+48658888888",
+    },
+  ],
+  accountSets: [
+    {
+      workPlanner: false,
+      alertTime: 1,
+      gardenPlan: false,
+      gardenStatistic: false,
+      gardenHistory: false,
+      searchWorkers: false,
+      localization: "Milanówek",
+    },
+  ],
 };
 
 // Create context
