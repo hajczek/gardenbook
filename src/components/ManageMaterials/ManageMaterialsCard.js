@@ -6,8 +6,10 @@ const ManageMaterialsCard = () => {
   return (
     <div className="contentUser">
       <div className="content">
-        <h2>Zarządzaj materiałami</h2>
-        <SearchExistedMaterial />
+        <div className="top-box">
+          <h2>Zarządzaj materiałami</h2>
+          <SearchExistedMaterial />
+        </div>
         <span className="plus-link" id="add-material-link">
           + Dodaj materiał
         </span>

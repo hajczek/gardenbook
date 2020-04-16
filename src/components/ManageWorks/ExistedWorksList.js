@@ -12,15 +12,15 @@ const PlannedWorkList = () => {
       <table>
         <tbody>
           <tr>
-            <td colSpan="7">
-              <h3>Lista zaplanowanych prac</h3>
+            <td colSpan="10">
+              <h3>Lista zadań</h3>
             </td>
           </tr>
           <tr>
             <th>Lp.</th>
             <th>Tytuł</th>
             <th>Termin</th>
-            <th>Wykonana</th>
+            <th>Status</th>
             <th>
               Czas pracy
               <br />[ il. godz.]
@@ -38,13 +38,15 @@ const PlannedWorkList = () => {
 
           {plannedWorks.map((plannedWork) => (
             <tr key={plannedWork.id}>
-              <td>{plannedWork.id}</td>
+              <td align="center">{plannedWork.id}</td>
               <td>{plannedWork.workName}</td>
-              <td>{plannedWork.workTerm}</td>
-              <td>{plannedWork.workDone === false ? "-" : "+"}</td>
-              <td>{plannedWork.workTime}</td>
-              <td>{plannedWork.workValue.toFixed(2)}</td>
-              <td>
+              <td align="center">{plannedWork.workTerm}</td>
+              <td align="center" className="center">
+                {plannedWork.workDone === false ? "-" : "+"}
+              </td>
+              <td align="center">{plannedWork.workTime}</td>
+              <td align="center">{plannedWork.workValue.toFixed(2)}</td>
+              <td align="center">
                 {plannedWork.workMaterial.workMatName}
                 <span className="mat">
                   {plannedWork.workMaterial.workMatQuant}
@@ -52,10 +54,10 @@ const PlannedWorkList = () => {
                 {plannedWork.workMaterial.workMatUnit}
               </td>
               <td>{plannedWork.workDetails}</td>
-              <td>
+              <td align="center">
                 <FontAwesomeIcon id="edit-work" icon={faEdit} />
               </td>
-              <td>
+              <td align="center">
                 <FontAwesomeIcon
                   id="delete-work"
                   icon={faTrash}

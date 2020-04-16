@@ -21,26 +21,26 @@ const HeaderUser = () => {
         </a>
       </div>
       <nav>
-        <a href="#">
+        <a href="#" title="Alerty">
           <CountAlerts />
           <FontAwesomeIcon icon={faBell} />
         </a>
-        <a href="#">
+        <a href="#" title="Zestawienie prac">
           <FontAwesomeIcon icon={faCheck} />
         </a>
-        <a href="#">
+        <a href="#" title="Portal społeczności">
           <FontAwesomeIcon icon={faDesktop} />
         </a>
-        <a href="#">
+        <a href="#" title="Konto użytkownika">
           <FontAwesomeIcon icon={faUser} />
         </a>
-        <a href="#">
+        <a href="#" title="Pomoc">
           <FontAwesomeIcon icon={faQuestion} />
         </a>
-        <a href="#">
+        <a href="#" title="Historia">
           <FontAwesomeIcon icon={faHistory} />
         </a>
-        <a href="#">
+        <a href="#" title="Wyloguj">
           <FontAwesomeIcon icon={faSignOutAlt} />
         </a>
       </nav>

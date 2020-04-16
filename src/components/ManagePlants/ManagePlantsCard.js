@@ -6,8 +6,10 @@ const ManagePlantsCard = () => {
   return (
     <div className="contentUser">
       <div className="content">
-        <h2>Zarządzaj roślinami</h2>
-        <SearchExistedPlant />
+        <div className="top-box">
+          <h2>Zarządzaj roślinami</h2>
+          <SearchExistedPlant />
+        </div>
         <span className="plus-link" id="add-plant-link">
           + Dodaj roślinę
         </span>

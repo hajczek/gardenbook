@@ -16,7 +16,7 @@ const SearchExistedPlant = () => {
         id="search-plant"
         type="text"
         onChange={(e) => onChange(e.target.value)}
-        placeholder="Wpisz nazwę szukanej rośliny"
+        placeholder="Wpisz nazwę rośliny"
       />
       <button>&raquo;</button>
     </form>

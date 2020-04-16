@@ -16,7 +16,7 @@ const SearchExistedMaterial = () => {
         id="search-material"
         type="text"
         onChange={(e) => onChange(e.target.value)}
-        placeholder="Wpisz nazwę szukanego materiału"
+        placeholder="Wpisz nazwę materiału"
       />
       <button>&raquo;</button>
     </form>

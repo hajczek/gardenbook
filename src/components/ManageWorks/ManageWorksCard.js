@@ -6,8 +6,10 @@ const ManageWorksCard = () => {
   return (
     <div className="contentUser">
       <div className="content">
-        <h2>Zarządzaj pracami</h2>
-        <SearchExistedWork />
+        <div className="top-box">
+          <h2>Zarządzaj zadaniami</h2>
+          <SearchExistedWork />
+        </div>
         <span className="plus-link" id="plan-work-link">
           + Zaplanuj pracę
         </span>
