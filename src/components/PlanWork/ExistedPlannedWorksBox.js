@@ -5,12 +5,12 @@ const ExistedPlannedWorksBox = () => {
   const { plannedWorks } = useContext(GlobalContext);
   return (
     <div className="existed-box">
+      <h2>Zaplanowane</h2>
       <ol>
         {plannedWorks.map((plannedWork) => (
           <li key={plannedWork.id}>
-            <a href="#">
-              {plannedWork.workName} {plannedWork.workTerm} &raquo;
-            </a>
+            {plannedWork.workName}:{" "}
+            <span className="greenText">{plannedWork.workTerm}</span> &raquo;
           </li>
         ))}
       </ol>

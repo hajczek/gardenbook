@@ -1,0 +1,71 @@
+.userSection {
+  display: flex;
+
+  .contentUser {
+    display: flex;
+    width: 80vw;
+    padding: 50px 10vw 0;
+
+    #alerts {
+      width: 50%;
+      background-color: $strong-grey-color;
+      padding: 40px 30px 30px 40px;
+
+      h2 {
+        color: $luminescence-green-color;
+        font-size: 24px;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+      }
+
+      #alerts-list {
+        color: $white-color;
+        font-weight: bold;
+        margin-left: 50px;
+        font-size: 22px;
+        li {
+          line-height: 1.8;
+          span {
+            color: $luminescence-green-color;
+          }
+
+          &:hover {
+            cursor: pointer;
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+
+    .existed-box {
+      background-color: $limone-color;
+      color: $strong-grey-color;
+      padding: 40px 30px 30px 40px;
+      width: 50%;
+
+      h2 {
+        font-size: 24px;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+      }
+
+      ol {
+        font-size: 22px;
+
+        li {
+          line-height: 1.8;
+          margin-left: 50px;
+
+          .greenText {
+            color: $strong-green-color;
+          }
+
+          &:hover {
+            cursor: pointer;
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+}

@@ -15,15 +15,17 @@ const PageCard = () => {
   return (
     <div className="userPage">
       <HeaderUser />
-      <LeftMenuUser />
-      <AlertsCard />
-      {/* <AccountUserCard /> */}
-      {/* <ManageWorksCard /> */}
-      {/* <ManageMaterialsCard /> */}
-      {/* <ManagePlantsCard /> */}
-      {/* <AddMaterialCard /> */}
-      {/* <AddPlantCard /> */}
-      {/* <PlanWorkCard /> */}
+      <section className="userSection">
+        <LeftMenuUser />
+        <AlertsCard />
+        {/* <AccountUserCard /> */}
+        {/* <ManageWorksCard /> */}
+        {/* <ManageMaterialsCard /> */}
+        {/* <ManagePlantsCard /> */}
+        {/* <AddMaterialCard /> */}
+        {/* <AddPlantCard /> */}
+        {/* <PlanWorkCard /> */}
+      </section>
       <Footer />
     </div>
   );
