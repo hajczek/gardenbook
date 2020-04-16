@@ -47,6 +47,7 @@ const ExistedPlantsList = () => {
               <br />
               [na rok] / [na tydz.]
             </th>
+            <th>Edytuj</th>
             <th>Usuń</th>
           </tr>
 

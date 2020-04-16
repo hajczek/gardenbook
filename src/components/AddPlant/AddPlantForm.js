@@ -1,10 +1,11 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
+import addedDateFunction from "../../common/AddedDateFunction";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 const AddPlantForm = () => {
-  const { addMaterial } = useContext(GlobalContext);
+  const { addPlant } = useContext(GlobalContext);
 
   const [plantName, setPlantName] = useState("");
   const [plantQuant, setPlantQuant] = useState(0);
@@ -14,6 +15,7 @@ const AddPlantForm = () => {
   const [plantFertilizerFreq, setPlantFertilizerFreq] = useState(0);
   const [plantPrice, setPlantPrice] = useState(0);
   const [plantFertilizerDose, setPlantFertilizerDose] = useState(0);
+  const [addedDate] = useState(addedDateFunction());
 
   function onSubmit(e) {
     const newPlant = {
@@ -26,10 +28,12 @@ const AddPlantForm = () => {
       plantFertilizerFreq,
       plantPrice,
       plantFertilizerDose,
+      addedDate,
     };
 
-    addMaterial(newPlant);
+    addPlant(newPlant);
     console.log(newPlant);
+
     e.preventDefault();
   }
 

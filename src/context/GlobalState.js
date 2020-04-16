@@ -17,6 +17,7 @@ const initialState = {
       workDone: false,
       workTime: 0,
       workValue: 0,
+      addedDate: "",
     },
     {
       id: 2,
@@ -31,6 +32,7 @@ const initialState = {
       workDone: false,
       workTime: 0,
       workValue: 0,
+      addedDate: "",
     },
     {
       id: 3,
@@ -45,6 +47,7 @@ const initialState = {
       workDone: false,
       workTime: 0,
       workValue: 0,
+      addedDate: "",
     },
   ],
   plants: [
@@ -59,6 +62,7 @@ const initialState = {
       plantFetilizerFreq: 0,
       plantFetilizerDose: 0,
       plantPrice: 0,
+      addedDate: "",
     },
     {
       id: 2,
@@ -71,6 +75,7 @@ const initialState = {
       plantFetilizerFreq: 3,
       plantFetilizerDose: 5,
       plantPrice: 5,
+      addedDate: "",
     },
     {
       id: 3,
@@ -82,6 +87,7 @@ const initialState = {
       plantFetilizerFreq: 3,
       plantFetilizerDose: 5,
       plantPrice: 3,
+      addedDate: "",
     },
   ],
   materials: [
@@ -92,6 +98,7 @@ const initialState = {
       materialQuant: 50,
       materialUnit: "kg",
       materialPrice: 2,
+      addedDate: "",
     },
     {
       id: 2,
@@ -100,6 +107,7 @@ const initialState = {
       materialQuant: 50,
       materialUnit: "kg",
       materialPrice: 0.6,
+      addedDate: "",
     },
     {
       id: 3,
@@ -108,6 +116,7 @@ const initialState = {
       materialQuant: 100,
       materialUnit: "kg",
       materialPrice: 1.7,
+      addedDate: "",
     },
   ],
   userData: [

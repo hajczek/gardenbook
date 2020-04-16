@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
+import addedDateFunction from "../../common/AddedDateFunction";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
@@ -9,6 +10,7 @@ const AddMaterialForm = () => {
   const [materialQuant, setMaterialQuant] = useState(0);
   const [materialUnit, setMaterialUnit] = useState("");
   const [materialPrice, setMaterialPrice] = useState(0);
+  const [addedDate] = useState(addedDateFunction());
 
   const { addMaterial } = useContext(GlobalContext);
 
@@ -20,6 +22,7 @@ const AddMaterialForm = () => {
       materialQuant,
       materialUnit,
       materialPrice,
+      addedDate,
     };
 
     addMaterial(newMaterial);

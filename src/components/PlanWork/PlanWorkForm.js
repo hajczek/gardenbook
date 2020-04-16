@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
+import addedDateFunction from "../../common/AddedDateFunction";
 
 export const PlanWorkForm = () => {
   const [workName, setWorkName] = useState("");
@@ -8,6 +9,7 @@ export const PlanWorkForm = () => {
   const [workDate, setWorkDate] = useState("");
   const [workMatUnit, setWorkMatUnit] = useState("");
   const [workDetails, setWorkDetails] = useState("");
+  const [addedDate] = useState(addedDateFunction());
 
   const { addWork } = useContext(GlobalContext);
 
@@ -19,6 +21,7 @@ export const PlanWorkForm = () => {
       workDate,
       workMatUnit,
       workDetails,
+      addedDate,
     };
 
     addWork(newWork);

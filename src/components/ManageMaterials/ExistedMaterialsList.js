@@ -24,6 +24,7 @@ const ExistedMaterialsList = () => {
             <th>Jedn.</th>
             <th>Cena jedn. [zł.]</th>
             <th>Wartość [zł.]</th>
+            <th>Edytuj</th>
             <th>Usuń</th>
           </tr>
 

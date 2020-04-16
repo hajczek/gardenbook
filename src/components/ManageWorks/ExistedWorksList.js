@@ -32,6 +32,7 @@ const PlannedWorkList = () => {
             </th>
             <th>Materiał</th>
             <th>Uwagi</th>
+            <th>Edytuj</th>
             <th>Usuń</th>
           </tr>
 
