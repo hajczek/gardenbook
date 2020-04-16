@@ -1,4 +1,5 @@
 import React from "react";
+import CountAlerts from "../Alerts/CountAlerts";
 import logo from "../../assets/img/gardenbook-logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,7 +9,7 @@ import {
   faUser,
   faQuestion,
   faHistory,
-  faSignOutAlt
+  faSignOutAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
 const HeaderUser = () => {
@@ -21,6 +22,7 @@ const HeaderUser = () => {
       </div>
       <nav>
         <a href="#">
+          <CountAlerts />
           <FontAwesomeIcon icon={faBell} />
         </a>
         <a href="#">

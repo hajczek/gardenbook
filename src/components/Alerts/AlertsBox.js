@@ -1,25 +1,28 @@
-import React from "react";
+import React, { useContext } from "react";
+import { GlobalContext } from "../../context/GlobalState";
+import { maxDateFormatted } from "./AlertsFunction";
+import CountAlerts from "./CountAlerts";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBell } from "@fortawesome/free-solid-svg-icons";
 
 const AlertsBox = () => {
-  /* Needed functions:
-    1. displayAlerts() - function displays alerts about planned works which must be done in 3 days.
-       Function check which planned works has maximum 3 days to finish and displays list of these works.
-       On list must be displays a links to card with details about these works. 
-       Function count how many works like this is on list and set number of alerts near on a bell icon at menu and on title of Box.
-  */
+  const { plannedWorks } = useContext(GlobalContext);
   return (
     <div id="alerts">
-      <FontAwesomeIcon icon={faBell} />
-      <h2>2 ALERTY!!!</h2>
+      <h2>
+        <FontAwesomeIcon icon={faBell} />
+        <CountAlerts /> ALERTY!!!
+      </h2>
       <ul id="alerts-list">
-        <li>
-          Nawożenie: <span>za 2 dni &raquo;</span>
-        </li>
-        <li>
-          Podlewanie: <span>za 3 dni &raquo;</span>
-        </li>
+        {plannedWorks
+          .filter((plannedWork) => plannedWork.workTerm <= maxDateFormatted)
+          .map((alert) => {
+            return (
+              <li key={alert.id}>
+                {alert.workName} <span>za 2 dni &raquo;</span>
+              </li>
+            );
+          })}
       </ul>
     </div>
   );
