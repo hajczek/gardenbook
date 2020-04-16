@@ -6,6 +6,7 @@
   #left-menu-first {
     width: 66px;
     background-color: $limone-color;
+    height: calc(100vh - 168px);
 
     .menuLeftBtn {
       display: flex;
