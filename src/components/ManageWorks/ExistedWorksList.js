@@ -36,7 +36,7 @@ const PlannedWorkList = () => {
           </tr>
 
           {plannedWorks.map((plannedWork) => (
-            <tr>
+            <tr key={plannedWork.id}>
               <td>{plannedWork.id}</td>
               <td>{plannedWork.workName}</td>
               <td>{plannedWork.workTerm}</td>

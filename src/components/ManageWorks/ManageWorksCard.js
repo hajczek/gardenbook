@@ -1,4 +1,5 @@
 import React from "react";
+import SearchExistedWork from "./SearchExistedWork";
 import ExistedWorksList from "./ExistedWorksList";
 
 const ManageWorksCard = () => {
@@ -6,6 +7,7 @@ const ManageWorksCard = () => {
     <div className="contentUser">
       <div className="content">
         <h2>Zarządzaj pracami</h2>
+        <SearchExistedWork />
         <span className="plus-link" id="plan-work-link">
           + Zaplanuj pracę
         </span>

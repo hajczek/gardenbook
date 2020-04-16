@@ -51,7 +51,7 @@ const ExistedPlantsList = () => {
           </tr>
 
           {plants.map((plant) => (
-            <tr>
+            <tr key={plant.id}>
               <td>{plant.id}</td>
               <td>{plant.plantName}</td>
               <td>

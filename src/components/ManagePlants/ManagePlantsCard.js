@@ -1,4 +1,5 @@
 import React from "react";
+import SearchExistedPlant from "./SearchExistedPlant";
 import ExistedPlantsList from "./ExistedPlantsList";
 
 const ManagePlantsCard = () => {
@@ -6,6 +7,7 @@ const ManagePlantsCard = () => {
     <div className="contentUser">
       <div className="content">
         <h2>Zarządzaj roślinami</h2>
+        <SearchExistedPlant />
         <span className="plus-link" id="add-plant-link">
           + Dodaj roślinę
         </span>
