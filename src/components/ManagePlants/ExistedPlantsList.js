@@ -53,9 +53,9 @@ const ExistedPlantsList = () => {
 
           {plants.map((plant) => (
             <tr key={plant.id}>
-              <td>{plant.id}</td>
+              <td align="center">{plant.id}</td>
               <td>{plant.plantName}</td>
-              <td>
+              <td align="center">
                 <img
                   src={plant.plantPhoto}
                   id="plant-photo"
@@ -63,17 +63,23 @@ const ExistedPlantsList = () => {
                   style={{ maxHeight: 100 }}
                 />
               </td>
-              <td>{plant.plantQuant}</td>
-              <td>{plant.plantPrice.toFixed(2)}</td>
-              <td>{(plant.plantQuant * plant.plantPrice).toFixed(2)}</td>
-              <td>{plant.plantFetilizer}</td>
-              <td>{plant.plantFetilizerDose}</td>
-              <td>{plant.plantFetilizerFreq}</td>
-              <td>{plant.plantWateringFreq}</td>
-              <td>
-                <FontAwesomeIcon id="edit-plant" icon={faEdit} />
+              <td align="center">{plant.plantQuant}</td>
+              <td align="right">{plant.plantPrice.toFixed(2)}</td>
+              <td align="right">
+                {(plant.plantQuant * plant.plantPrice).toFixed(2)}
               </td>
-              <td>
+              <td align="center">{plant.plantFetilizer}</td>
+              <td align="center">{plant.plantFetilizerDose}</td>
+              <td align="center">{plant.plantFetilizerFreq}</td>
+              <td align="center">{plant.plantWateringFreq}</td>
+              <td align="center">
+                <FontAwesomeIcon
+                  id="edit-plant"
+                  icon={faEdit}
+                  onClick={() => console.log(plant.id)}
+                />
+              </td>
+              <td align="center">
                 <FontAwesomeIcon
                   id="delete-plant"
                   icon={faTrash}

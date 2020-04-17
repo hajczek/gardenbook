@@ -6,10 +6,14 @@ import Footer from "../Page/Footer";
 // import AccountUserCard from "../AccountUser/AccountUserCard";
 // import ManageWorksCard from "../ManageWorks/ManageWorksCard";
 // import ManageMaterialsCard from "../ManageMaterials/ManageMaterialsCard";
-import ManagePlantsCard from "../ManagePlants/ManagePlantsCard";
+// import ManagePlantsCard from "../ManagePlants/ManagePlantsCard";
 // import AddMaterialCard from "../AddMaterial/AddMaterialCard";
 // import AddPlantCard from "../AddPlant/AddPlantCard";
 // import PlanWorkCard from "../PlanWork/PlanWorkCard";
+
+// import EditedPlant from "./../ManagePlants/EditedPlant";
+// import EditedMaterial from "./../ManageMaterials/EditedMaterial";
+import EditedWork from "./../ManageWorks/EditedWork";
 
 const PageCard = () => {
   return (
@@ -21,10 +25,13 @@ const PageCard = () => {
         {/* <AccountUserCard /> */}
         {/* <ManageWorksCard /> */}
         {/* <ManageMaterialsCard /> */}
-        <ManagePlantsCard />
+        {/* <ManagePlantsCard /> */}
         {/* <AddMaterialCard /> */}
         {/* <AddPlantCard /> */}
         {/* <PlanWorkCard /> */}
+        {/* <EditedPlant /> */}
+        {/* <EditedMaterial /> */}
+        <EditedWork />
       </section>
       <Footer />
     </div>

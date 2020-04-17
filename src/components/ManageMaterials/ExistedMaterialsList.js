@@ -30,9 +30,9 @@ const ExistedMaterialsList = () => {
 
           {materials.map((material) => (
             <tr key={material.id}>
-              <td>{material.id}</td>
+              <td align="center">{material.id}</td>
               <td>{material.materialName}</td>
-              <td>
+              <td align="center">
                 <img
                   src={material.materialPhoto}
                   id="material-photo"
@@ -40,16 +40,20 @@ const ExistedMaterialsList = () => {
                   style={{ maxHeight: 100 }}
                 />
               </td>
-              <td>{material.materialQuant}</td>
-              <td>{material.materialUnit}</td>
-              <td>{material.materialPrice.toFixed(2)}</td>
-              <td>
+              <td align="center">{material.materialQuant}</td>
+              <td align="center">{material.materialUnit}</td>
+              <td align="right">{material.materialPrice.toFixed(2)}</td>
+              <td align="right">
                 {(material.materialQuant * material.materialPrice).toFixed(2)}
               </td>
-              <td>
-                <FontAwesomeIcon id="edit-material" icon={faEdit} />
+              <td align="center">
+                <FontAwesomeIcon
+                  id="edit-material"
+                  icon={faEdit}
+                  onClick={() => console.log(material.id)}
+                />
               </td>
-              <td>
+              <td align="center">
                 <FontAwesomeIcon
                   id="delete-material"
                   icon={faTrash}

@@ -6,7 +6,7 @@ export const PlanWorkForm = () => {
   const [workName, setWorkName] = useState("");
   const [workMatName, setWorkMatName] = useState("");
   const [workMatQuant, setWorkMatQuant] = useState(0);
-  const [workDate, setWorkDate] = useState("");
+  const [workTerm, setWorkTerm] = useState("");
   const [workMatUnit, setWorkMatUnit] = useState("");
   const [workDetails, setWorkDetails] = useState("");
   const [addedDate] = useState(addedDateFunction());
@@ -18,8 +18,7 @@ export const PlanWorkForm = () => {
       id: Math.floor(Math.random() * 100000000),
       workName,
       workMaterial: { workMatName, workMatQuant, workMatUnit },
-      workDate,
-      workMatUnit,
+      workTerm,
       workDetails,
       addedDate,
     };
@@ -75,13 +74,13 @@ export const PlanWorkForm = () => {
         <option value="kg">Kg</option>
       </select>
 
-      <label htmlFor="work-date">Wybierz termin</label>
+      <label htmlFor="work-term">Wybierz termin</label>
       <input
         type="date"
-        name="work-date"
-        id="work-date"
-        value={workDate}
-        onChange={(e) => setWorkDate(e.target.value)}
+        name="work-term"
+        id="work-term"
+        value={workTerm}
+        onChange={(e) => setWorkTerm(e.target.value)}
       />
       <span id="add-work-term">Dodaj termin do kalendarza &raquo;</span>
 

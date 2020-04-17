@@ -45,7 +45,7 @@ const PlannedWorkList = () => {
                 {plannedWork.workDone === false ? "-" : "+"}
               </td>
               <td align="center">{plannedWork.workTime}</td>
-              <td align="center">{plannedWork.workValue.toFixed(2)}</td>
+              <td align="right">{plannedWork.workValue.toFixed(2)}</td>
               <td align="center">
                 {plannedWork.workMaterial.workMatName}
                 <span className="mat">
@@ -55,7 +55,11 @@ const PlannedWorkList = () => {
               </td>
               <td>{plannedWork.workDetails}</td>
               <td align="center">
-                <FontAwesomeIcon id="edit-work" icon={faEdit} />
+                <FontAwesomeIcon
+                  id="edit-work"
+                  icon={faEdit}
+                  onClick={() => console.log(plannedWork.id)}
+                />
               </td>
               <td align="center">
                 <FontAwesomeIcon
