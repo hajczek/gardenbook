@@ -66,6 +66,17 @@ const AddPlantForm = () => {
         placeholder="Wybierz plik ze zdjęciem"
       />
       <FontAwesomeIcon icon={faDownload} />
+
+      <label htmlFor="plant-price">Cena jednej rośliny [zł]</label>
+      <input
+        type="number"
+        name="plant-price"
+        id="plant-price"
+        min="0"
+        value={plantPrice}
+        onChange={(e) => setPlantPrice(e.target.value)}
+      />
+
       <label htmlFor="plant-watering-freq">
         Częstotoliwość podlewania [co ile dni]:
       </label>
@@ -96,15 +107,6 @@ const AddPlantForm = () => {
         min="0"
         value={plantFetilizerFreq}
         onChange={(e) => setPlantFetilizerFreq(e.target.value)}
-      />
-      <label htmlFor="plant-price">Cena jednej rośliny [zł]</label>
-      <input
-        type="number"
-        name="plant-price"
-        id="plant-price"
-        min="0"
-        value={plantPrice}
-        onChange={(e) => setPlantPrice(e.target.value)}
       />
 
       <label htmlFor="plant-fertilizer-dose">

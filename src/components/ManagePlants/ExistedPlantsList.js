@@ -7,6 +7,27 @@ const ExistedPlantsList = () => {
   const { plants } = useContext(GlobalContext);
   const { deletePlant } = useContext(GlobalContext);
 
+  let plantData;
+
+  function getPlantData() {
+    plantData = {
+      id: document.getElementById("plant-id").textContent,
+      plantName: document.getElementById("plant-name").textContent,
+      plantPhoto: document.getElementById("plant-photo").src,
+      plantQuant: document.getElementById("plant-quant").textContent,
+      plantPrice: document.getElementById("plant-price").textContent,
+      plantFetilizer: document.getElementById("plant-fetilizer").textContent,
+      plantFetilizerDose: document.getElementById("plant-fetilizer-dose")
+        .textContent,
+      plantFetilizerFreq: document.getElementById("plant-fetilizer-freq")
+        .textContent,
+      plantWateringFreq: document.getElementById("plant-watering-freq")
+        .textContent,
+    };
+    console.log(plantData);
+    return plantData;
+  }
+
   return (
     <div className="content">
       <table>
@@ -53,8 +74,10 @@ const ExistedPlantsList = () => {
 
           {plants.map((plant) => (
             <tr key={plant.id}>
-              <td align="center">{plant.id}</td>
-              <td>{plant.plantName}</td>
+              <td id="plant-id" align="center">
+                {plant.id}
+              </td>
+              <td id="plant-name">{plant.plantName}</td>
               <td align="center">
                 <img
                   src={plant.plantPhoto}
@@ -63,21 +86,34 @@ const ExistedPlantsList = () => {
                   style={{ maxHeight: 100 }}
                 />
               </td>
-              <td align="center">{plant.plantQuant}</td>
-              <td align="right">{plant.plantPrice.toFixed(2)}</td>
+              <td id="plant-quant" align="center">
+                {plant.plantQuant}
+              </td>
+              <td id="plant-price" align="right">
+                {plant.plantPrice.toFixed(2)}
+              </td>
               <td align="right">
                 {(plant.plantQuant * plant.plantPrice).toFixed(2)}
               </td>
-              <td align="center">{plant.plantFetilizer}</td>
-              <td align="center">{plant.plantFetilizerDose}</td>
-              <td align="center">{plant.plantFetilizerFreq}</td>
-              <td align="center">{plant.plantWateringFreq}</td>
+              <td id="plant-fetilizer" align="center">
+                {plant.plantFetilizer}
+              </td>
+              <td id="plant-fetilizer-dose" align="center">
+                {plant.plantFetilizerDose}
+              </td>
+              <td id="plant-fetilizer-freq" align="center">
+                {plant.plantFetilizerFreq}
+              </td>
+              <td id="plant-watering-freq" align="center">
+                {plant.plantWateringFreq}
+              </td>
               <td align="center">
                 <FontAwesomeIcon
                   id="edit-plant"
                   icon={faEdit}
-                  // This must go to EditedPlant component and set plant.id to this component
-                  onClick={() => console.log(plant.id)}
+                  // This action must open EditedPlant component and set plantData to this component
+                  // onClick={() => console.log(plant.id)}
+                  onClick={() => getPlantData()}
                 />
               </td>
               <td align="center">

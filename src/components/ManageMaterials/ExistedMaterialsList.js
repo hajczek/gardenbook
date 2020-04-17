@@ -7,6 +7,21 @@ const ExistedMaterialsList = () => {
   const { materials } = useContext(GlobalContext);
   const { deleteMaterial } = useContext(GlobalContext);
 
+  let materialData;
+
+  function getMaterialData() {
+    materialData = {
+      id: document.getElementById("material-id").textContent,
+      materialName: document.getElementById("material-name").textContent,
+      materialPhoto: document.getElementById("material-photo").src,
+      materialQuant: document.getElementById("material-quant").textContent,
+      materialUnit: document.getElementById("material-unit").textContent,
+      materialPrice: document.getElementById("material-name").textContent,
+    };
+    console.log(materialData);
+    return materialData;
+  }
+
   return (
     <div className="content">
       <table>
@@ -30,8 +45,10 @@ const ExistedMaterialsList = () => {
 
           {materials.map((material) => (
             <tr key={material.id}>
-              <td align="center">{material.id}</td>
-              <td>{material.materialName}</td>
+              <td id="material-id" align="center">
+                {material.id}
+              </td>
+              <td id="material-name">{material.materialName}</td>
               <td align="center">
                 <img
                   src={material.materialPhoto}
@@ -40,8 +57,12 @@ const ExistedMaterialsList = () => {
                   style={{ maxHeight: 100 }}
                 />
               </td>
-              <td align="center">{material.materialQuant}</td>
-              <td align="center">{material.materialUnit}</td>
+              <td id="material-quant" align="center">
+                {material.materialQuant}
+              </td>
+              <td id="material-unit" align="center">
+                {material.materialUnit}
+              </td>
               <td align="right">{material.materialPrice.toFixed(2)}</td>
               <td align="right">
                 {(material.materialQuant * material.materialPrice).toFixed(2)}
@@ -50,8 +71,9 @@ const ExistedMaterialsList = () => {
                 <FontAwesomeIcon
                   id="edit-material"
                   icon={faEdit}
-                  // This must go to EditedMatrial component and set material.id to this component
-                  onClick={() => console.log(material.id)}
+                  // This action must open EditedMatrial component and set materialData to this component
+                  // onClick={() => console.log(material.id)}
+                  onClick={() => getMaterialData()}
                 />
               </td>
               <td align="center">
