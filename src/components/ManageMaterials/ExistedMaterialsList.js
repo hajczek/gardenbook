@@ -3,24 +3,15 @@ import { GlobalContext } from "../../context/GlobalState";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 
+// Export id of edited material item to EditedPMaterial component
+export const getMaterialId = (id) => {
+  id = 2;
+  return id;
+};
+
 const ExistedMaterialsList = () => {
   const { materials } = useContext(GlobalContext);
   const { deleteMaterial } = useContext(GlobalContext);
-
-  let materialData;
-
-  function getMaterialData() {
-    materialData = {
-      id: document.getElementById("material-id").textContent,
-      materialName: document.getElementById("material-name").textContent,
-      materialPhoto: document.getElementById("material-photo").src,
-      materialQuant: document.getElementById("material-quant").textContent,
-      materialUnit: document.getElementById("material-unit").textContent,
-      materialPrice: document.getElementById("material-name").textContent,
-    };
-    console.log(materialData);
-    return materialData;
-  }
 
   return (
     <div className="content">
@@ -73,7 +64,7 @@ const ExistedMaterialsList = () => {
                   icon={faEdit}
                   // This action must open EditedMatrial component and set materialData to this component
                   // onClick={() => console.log(material.id)}
-                  onClick={() => getMaterialData()}
+                  onClick={(e) => getMaterialId(material.id)}
                 />
               </td>
               <td align="center">

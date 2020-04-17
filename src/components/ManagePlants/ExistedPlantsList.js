@@ -3,30 +3,15 @@ import { GlobalContext } from "../../context/GlobalState";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 
+// Export id of edited plant item to EditedPlant component
+export const getPlantId = (id) => {
+  id = 3;
+  return id;
+};
+
 const ExistedPlantsList = () => {
   const { plants } = useContext(GlobalContext);
   const { deletePlant } = useContext(GlobalContext);
-
-  let plantData;
-
-  function getPlantData() {
-    plantData = {
-      id: document.getElementById("plant-id").textContent,
-      plantName: document.getElementById("plant-name").textContent,
-      plantPhoto: document.getElementById("plant-photo").src,
-      plantQuant: document.getElementById("plant-quant").textContent,
-      plantPrice: document.getElementById("plant-price").textContent,
-      plantFetilizer: document.getElementById("plant-fetilizer").textContent,
-      plantFetilizerDose: document.getElementById("plant-fetilizer-dose")
-        .textContent,
-      plantFetilizerFreq: document.getElementById("plant-fetilizer-freq")
-        .textContent,
-      plantWateringFreq: document.getElementById("plant-watering-freq")
-        .textContent,
-    };
-    console.log(plantData);
-    return plantData;
-  }
 
   return (
     <div className="content">
@@ -113,7 +98,7 @@ const ExistedPlantsList = () => {
                   icon={faEdit}
                   // This action must open EditedPlant component and set plantData to this component
                   // onClick={() => console.log(plant.id)}
-                  onClick={() => getPlantData()}
+                  onClick={(e) => getPlantId(plant.id)}
                 />
               </td>
               <td align="center">

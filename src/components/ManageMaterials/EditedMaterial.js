@@ -1,6 +1,8 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
+// Function for get id of edited mayerial
+import { getMaterialId } from "./ExistedMaterialsList";
 
 const EditedMaterial = () => {
   const { materials } = useContext(GlobalContext);
@@ -46,7 +48,7 @@ const EditedMaterial = () => {
             </tr>
 
             {materials
-              .filter((material) => material.id === 3)
+              .filter((material) => material.id === getMaterialId())
               .map((editedMaterial) => {
                 return (
                   <tr key={editedMaterial.id}>

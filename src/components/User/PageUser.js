@@ -4,7 +4,7 @@ import LeftMenuUser from "./LeftMenuUser";
 import Footer from "../Page/Footer";
 // import AlertsCard from "../Alerts/AlertsCard";
 // import AccountUserCard from "../AccountUser/AccountUserCard";
-import ManageWorksCard from "../ManageWorks/ManageWorksCard";
+// import ManageWorksCard from "../ManageWorks/ManageWorksCard";
 // import ManageMaterialsCard from "../ManageMaterials/ManageMaterialsCard";
 // import ManagePlantsCard from "../ManagePlants/ManagePlantsCard";
 // import AddMaterialCard from "../AddMaterial/AddMaterialCard";
@@ -12,7 +12,7 @@ import ManageWorksCard from "../ManageWorks/ManageWorksCard";
 // import PlanWorkCard from "../PlanWork/PlanWorkCard";
 
 // import EditedPlant from "./../ManagePlants/EditedPlant";
-// import EditedMaterial from "./../ManageMaterials/EditedMaterial";
+import EditedMaterial from "./../ManageMaterials/EditedMaterial";
 // import EditedWork from "./../ManageWorks/EditedWork";
 
 const PageCard = () => {
@@ -23,14 +23,14 @@ const PageCard = () => {
         <LeftMenuUser />
         {/* <AlertsCard /> */}
         {/* <AccountUserCard /> */}
-        <ManageWorksCard />
+        {/* <ManageWorksCard /> */}
         {/* <ManageMaterialsCard /> */}
         {/* <ManagePlantsCard /> */}
         {/* <AddMaterialCard /> */}
         {/* <AddPlantCard /> */}
         {/* <PlanWorkCard /> */}
         {/* <EditedPlant /> */}
-        {/* <EditedMaterial /> */}
+        <EditedMaterial />
         {/* <EditedWork /> */}
       </section>
       <Footer />

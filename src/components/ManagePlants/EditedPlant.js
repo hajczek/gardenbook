@@ -1,6 +1,8 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
+// Function for get id of edited plant
+import { getPlantId } from "./ExistedPlantsList";
 
 const EditedPlant = () => {
   const { plants } = useContext(GlobalContext);
@@ -83,7 +85,7 @@ const EditedPlant = () => {
               </th>
             </tr>
             {plants
-              .filter((plant) => plant.id === 3)
+              .filter((plant) => plant.id === getPlantId())
               .map((editedPlant) => {
                 return (
                   <tr key={editedPlant.id}>

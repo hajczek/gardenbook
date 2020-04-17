@@ -3,29 +3,15 @@ import { GlobalContext } from "../../context/GlobalState";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 
+// Export id of edited work item to EditedWork component
+export const getWorkId = (id) => {
+  id = 3;
+  return id;
+};
+
 const PlannedWorkList = () => {
   const { plannedWorks } = useContext(GlobalContext);
   const { deleteWork } = useContext(GlobalContext);
-
-  let workData;
-
-  function getWorkData() {
-    workData = {
-      id: document.getElementById("work-id").textContent,
-      workName: document.getElementById("work-name").textContent,
-      workTerm: document.getElementById("work-term").textContent,
-      workDone: document.getElementById("work-done").textContent,
-      workTime: document.getElementById("work-time").textContent,
-      workValue: document.getElementById("work-value").textContent,
-      workMatName: document.getElementById("work-mat-name").textContent,
-      workMatQuant: document.getElementById("work-mat-quant").textContent,
-      workMatUnit: document.getElementById("work-mat-unit").textContent,
-      workDetails: document.getElementById("work-details").textContent,
-    };
-
-    console.log(workData);
-    return workData;
-  }
 
   return (
     <div className="content">
@@ -91,8 +77,8 @@ const PlannedWorkList = () => {
                   id="edit-work"
                   icon={faEdit}
                   // This action must open EditedWork component and set workData to this component
-                  // onClick={() => console.log(plannedWork.id)}
-                  onClick={() => getWorkData()}
+                  //onClick={() => console.log(plannedWork.id)}
+                  onClick={(e) => getWorkId(plannedWork.id)}
                 />
               </td>
               <td align="center">

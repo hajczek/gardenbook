@@ -1,9 +1,12 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
+// Function for get id of edited work
+import { getWorkId } from "./ExistedWorksList";
 
 const PlannedWorkList = () => {
   const { plannedWorks } = useContext(GlobalContext);
+  const { addWork } = useContext(GlobalContext);
 
   const [workName, setWorkName] = useState("");
   const [workTerm, setWorkTerm] = useState("");
@@ -15,8 +18,6 @@ const PlannedWorkList = () => {
   const [workMatQuant, setWorkMatQuant] = useState(0);
   const [workMatUnit, setWorkMatUnit] = useState("");
   const [addedDate] = useState(addedDateFunction());
-
-  const { addWork } = useContext(GlobalContext);
 
   function onSubmit(e) {
     console.log(document.getElementById("work-name").value);
@@ -49,7 +50,7 @@ const PlannedWorkList = () => {
 
   return (
     <div className="content">
-      <form action="" id="work-done-form" onSubmit={onSubmit}>
+      <form id="work-done-form" onSubmit={onSubmit}>
         <table>
           <tbody>
             <tr>
@@ -63,7 +64,7 @@ const PlannedWorkList = () => {
               <th>Uwagi</th>
             </tr>
             {plannedWorks
-              .filter((work) => work.id === 3)
+              .filter((work) => work.id === getWorkId())
               .map((editedWork) => {
                 return (
                   <tr key={editedWork.id}>
