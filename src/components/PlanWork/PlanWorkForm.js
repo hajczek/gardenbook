@@ -4,12 +4,15 @@ import addedDateFunction from "../../common/AddedDateFunction";
 
 export const PlanWorkForm = () => {
   const [workName, setWorkName] = useState("");
+  const [workTerm, setWorkTerm] = useState("");
   const [workMatName, setWorkMatName] = useState("");
   const [workMatQuant, setWorkMatQuant] = useState(0);
-  const [workTerm, setWorkTerm] = useState("");
   const [workMatUnit, setWorkMatUnit] = useState("");
   const [workDetails, setWorkDetails] = useState("");
   const [addedDate] = useState(addedDateFunction());
+  const [workDone] = useState(false);
+  const [workTime] = useState(0);
+  const [workValue] = useState(0);
 
   const { addWork } = useContext(GlobalContext);
 
@@ -21,6 +24,9 @@ export const PlanWorkForm = () => {
       workTerm,
       workDetails,
       addedDate,
+      workDone,
+      workTime,
+      workValue,
     };
 
     addWork(newWork);

@@ -50,6 +50,7 @@ const ExistedMaterialsList = () => {
                 <FontAwesomeIcon
                   id="edit-material"
                   icon={faEdit}
+                  // This must go to EditedMatrial component and set material.id to this component
                   onClick={() => console.log(material.id)}
                 />
               </td>

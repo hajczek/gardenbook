@@ -5,37 +5,38 @@ import addedDateFunction from "../../common/AddedDateFunction";
 const PlannedWorkList = () => {
   const { plannedWorks } = useContext(GlobalContext);
 
-  const [workName, setWorkName] = useState("Cięcie krzewów");
-  const [workTerm, setWorkTerm] = useState("2020-05-01");
+  const [workName, setWorkName] = useState("");
+  const [workTerm, setWorkTerm] = useState("");
   const [workDone, setWorkDone] = useState(false);
   const [workTime, setWorkTime] = useState(0);
   const [workValue, setWorkValue] = useState(0);
-  const [workDetails, setWorkDetails] = useState("Uwagi do planowanej pracy");
-  const [workMatName, setWorkMatName] = useState("azofoska");
-  const [workMatQuant, setWorkMatQuant] = useState(5);
-  const [workMatUnit, setWorkMatUnit] = useState("kg");
+  const [workDetails, setWorkDetails] = useState("");
+  const [workMatName, setWorkMatName] = useState("");
+  const [workMatQuant, setWorkMatQuant] = useState(0);
+  const [workMatUnit, setWorkMatUnit] = useState("");
   const [addedDate] = useState(addedDateFunction());
 
   const { addWork } = useContext(GlobalContext);
 
   function onSubmit(e) {
-    console.log(workName);
-    console.log(workTerm);
-    console.log(workDone);
-    console.log(workTime);
-    console.log(workValue);
-    console.log(workDetails);
-    console.log(workMatName);
-    console.log(workMatQuant);
-    console.log(workMatUnit);
+    console.log(document.getElementById("work-name").value);
+    console.log(document.getElementById("work-term").value);
+    console.log(document.getElementById("work-done").value);
+    console.log(document.getElementById("work-time").value);
+    console.log(document.getElementById("work-value").value);
+    console.log(document.getElementById("work-details").value);
+    console.log(document.getElementById("work-mat-name").value);
+    console.log(document.getElementById("work-mat-quant").value);
+    console.log(document.getElementById("work-mat-unit").value);
 
     const newWork = {
-      id: Math.floor(Math.random() * 100000000),
+      id: document.getElementById("work-id").textContent,
       workName,
       workMaterial: { workMatName, workMatQuant, workMatUnit },
+      workTime,
       workTerm,
       workDone,
-      workMatUnit,
+      workValue,
       workDetails,
       addedDate,
     };
@@ -66,7 +67,7 @@ const PlannedWorkList = () => {
               .map((editedWork) => {
                 return (
                   <tr key={editedWork.id}>
-                    <td>{editedWork.id}</td>
+                    <td id="work-id">{editedWork.id}</td>
                     <td>
                       <input
                         type="string"

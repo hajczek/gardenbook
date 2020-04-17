@@ -58,6 +58,7 @@ const PlannedWorkList = () => {
                 <FontAwesomeIcon
                   id="edit-work"
                   icon={faEdit}
+                  // This must go to EditedWork component and set plannedWork.id to this component
                   onClick={() => console.log(plannedWork.id)}
                 />
               </td>

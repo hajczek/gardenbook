@@ -76,6 +76,7 @@ const ExistedPlantsList = () => {
                 <FontAwesomeIcon
                   id="edit-plant"
                   icon={faEdit}
+                  // This must go to EditedPlant component and set plant.id to this component
                   onClick={() => console.log(plant.id)}
                 />
               </td>
