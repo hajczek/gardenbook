@@ -10,11 +10,11 @@ const AddPlantForm = () => {
   const [plantName, setPlantName] = useState("");
   const [plantQuant, setPlantQuant] = useState(0);
   const [plantPhoto, setPlantPhoto] = useState("");
-  const [plantWateringFrag, setPlantWateringFrag] = useState(0);
-  const [plantFertilizer, setPlantFertilizer] = useState("");
-  const [plantFertilizerFreq, setPlantFertilizerFreq] = useState(0);
+  const [plantWateringFreq, setPlantWateringFreq] = useState(0);
+  const [plantFetilizer, setPlantFetilizer] = useState("");
+  const [plantFetilizerFreq, setPlantFetilizerFreq] = useState(0);
   const [plantPrice, setPlantPrice] = useState(0);
-  const [plantFertilizerDose, setPlantFertilizerDose] = useState(0);
+  const [plantFetilizerDose, setPlantFetilizerDose] = useState(0);
   const [addedDate] = useState(addedDateFunction());
 
   function onSubmit(e) {
@@ -23,11 +23,11 @@ const AddPlantForm = () => {
       plantName,
       plantQuant,
       plantPhoto,
-      plantWateringFrag,
-      plantFertilizer,
-      plantFertilizerFreq,
+      plantWateringFreq,
+      plantFetilizer,
+      plantFetilizerFreq,
       plantPrice,
-      plantFertilizerDose,
+      plantFetilizerDose,
       addedDate,
     };
 
@@ -66,36 +66,36 @@ const AddPlantForm = () => {
         placeholder="Wybierz plik ze zdjęciem"
       />
       <FontAwesomeIcon icon={faDownload} />
-      <label htmlFor="plant-watering-frequency">
+      <label htmlFor="plant-watering-freq">
         Częstotoliwość podlewania [co ile dni]:
       </label>
       <input
         type="number"
-        name="plant-watering-frequency"
-        id="plant-watering-frequency"
+        name="plant-watering-freq"
+        id="plant-watering-freq"
         min="0"
-        value={plantWateringFrag}
-        onChange={(e) => setPlantWateringFrag(e.target.value)}
+        value={plantWateringFreq}
+        onChange={(e) => setPlantWateringFreq(e.target.value)}
       />
-      <label htmlFor="plant-fertilizer">Rodzaj nawozu</label>
+      <label htmlFor="plant-fetilizer">Rodzaj nawozu</label>
       <input
         type="text"
-        name="plant-fertilizer"
-        id="plant-fertilizer"
-        value={plantFertilizer}
-        onChange={(e) => setPlantFertilizer(e.target.value)}
+        name="plant-fetilizer"
+        id="plant-fetilizer"
+        value={plantFetilizer}
+        onChange={(e) => setPlantFetilizer(e.target.value)}
       />
 
-      <label htmlFor="plant-fertilizer-frequency">
+      <label htmlFor="plant-fetilizer-freq">
         Częstotoliwość nawożenia [ile razy w roku]:
       </label>
       <input
         type="number"
-        name="plant-fertilizer-frequency"
-        id="plant-fertilizer-frequency"
+        name="plant-fetilizer-freq"
+        id="plant-fetilizer-freq"
         min="0"
-        value={plantFertilizerFreq}
-        onChange={(e) => setPlantFertilizerFreq(e.target.value)}
+        value={plantFetilizerFreq}
+        onChange={(e) => setPlantFetilizerFreq(e.target.value)}
       />
       <label htmlFor="plant-price">Cena jednej rośliny [zł]</label>
       <input
@@ -115,8 +115,8 @@ const AddPlantForm = () => {
         name="plant-fertilizer-dose"
         id="plant-fertilizer-dose"
         min="0"
-        value={plantFertilizerDose}
-        onChange={(e) => setPlantFertilizerDose(e.target.value)}
+        value={plantFetilizerDose}
+        onChange={(e) => setPlantFetilizerDose(e.target.value)}
       />
       <button id="add-plant-btn">Zapisz</button>
     </form>

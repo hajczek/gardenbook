@@ -8,12 +8,12 @@ import Footer from "../Page/Footer";
 // import ManageMaterialsCard from "../ManageMaterials/ManageMaterialsCard";
 // import ManagePlantsCard from "../ManagePlants/ManagePlantsCard";
 // import AddMaterialCard from "../AddMaterial/AddMaterialCard";
-// import AddPlantCard from "../AddPlant/AddPlantCard";
+import AddPlantCard from "../AddPlant/AddPlantCard";
 // import PlanWorkCard from "../PlanWork/PlanWorkCard";
 
 // import EditedPlant from "./../ManagePlants/EditedPlant";
 // import EditedMaterial from "./../ManageMaterials/EditedMaterial";
-import EditedWork from "./../ManageWorks/EditedWork";
+// import EditedWork from "./../ManageWorks/EditedWork";
 
 const PageCard = () => {
   return (
@@ -27,11 +27,11 @@ const PageCard = () => {
         {/* <ManageMaterialsCard /> */}
         {/* <ManagePlantsCard /> */}
         {/* <AddMaterialCard /> */}
-        {/* <AddPlantCard /> */}
+        <AddPlantCard />
         {/* <PlanWorkCard /> */}
         {/* <EditedPlant /> */}
         {/* <EditedMaterial /> */}
-        <EditedWork />
+        {/* <EditedWork /> */}
       </section>
       <Footer />
     </div>
