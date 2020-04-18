@@ -34,6 +34,25 @@ export default (state, action) => {
         ...state,
         plannedWorks: [action.payload, ...state.plannedWorks],
       };
+    case "EDIT_MATERIAL":
+      return {
+        ...state,
+        materials: state.materials.filter(
+          (material) => material.id === action.payload
+        ),
+      };
+    case "EDIT_PLANT":
+      return {
+        ...state,
+        plants: state.plants.filter((plant) => plant.id === action.payload),
+      };
+    case "EDIT_WORK":
+      return {
+        ...state,
+        plannedWorks: state.plannedWorks.filter(
+          (work) => work.id === action.payload
+        ),
+      };
     default:
       return state;
   }

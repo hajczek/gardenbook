@@ -4,14 +4,14 @@ import addedDateFunction from "../../common/AddedDateFunction";
 // Function for get id of edited work
 import { getWorkId } from "./ExistedWorksList";
 
-const PlannedWorkList = () => {
+const EditedWork = ({ work }) => {
   const { plannedWorks } = useContext(GlobalContext);
-  const { addWork } = useContext(GlobalContext);
+  const { editWork } = useContext(GlobalContext);
 
   const [workName, setWorkName] = useState("");
   const [workTerm, setWorkTerm] = useState("");
   const [workDone, setWorkDone] = useState(false);
-  const [workTime, setWorkTime] = useState(0);
+  const [workTime, setWorkTime] = useState("");
   const [workValue, setWorkValue] = useState(0);
   const [workDetails, setWorkDetails] = useState("");
   const [workMatName, setWorkMatName] = useState("");
@@ -20,20 +20,14 @@ const PlannedWorkList = () => {
   const [addedDate] = useState(addedDateFunction());
 
   function onSubmit(e) {
-    console.log(document.getElementById("work-name").value);
-    console.log(document.getElementById("work-term").value);
-    console.log(document.getElementById("work-done").value);
-    console.log(document.getElementById("work-time").value);
-    console.log(document.getElementById("work-value").value);
-    console.log(document.getElementById("work-details").value);
-    console.log(document.getElementById("work-mat-name").value);
-    console.log(document.getElementById("work-mat-quant").value);
-    console.log(document.getElementById("work-mat-unit").value);
-
-    const newWork = {
+    const editWorkDetails = {
       id: document.getElementById("work-id").textContent,
       workName,
-      workMaterial: { workMatName, workMatQuant, workMatUnit },
+      workMaterial: {
+        workMatName,
+        workMatQuant,
+        workMatUnit,
+      },
       workTime,
       workTerm,
       workDone,
@@ -42,8 +36,8 @@ const PlannedWorkList = () => {
       addedDate,
     };
 
-    addWork(newWork);
-    console.log(newWork);
+    editWork(editWorkDetails);
+    console.log(editWorkDetails);
 
     e.preventDefault();
   }
@@ -75,7 +69,9 @@ const PlannedWorkList = () => {
                         id="work-name"
                         name="work-name"
                         value={editedWork.workName}
-                        onChange={(e) => setWorkName(e.target.value)}
+                        onChange={(e) =>
+                          setWorkName((editedWork.workName = e.target.value))
+                        }
                         size="15"
                       />
                     </td>
@@ -85,7 +81,9 @@ const PlannedWorkList = () => {
                         id="work-term"
                         name="work-term"
                         value={editedWork.workTerm}
-                        onChange={(e) => setWorkTerm(e.target.value)}
+                        onChange={(e) =>
+                          setWorkTerm((editedWork.workTerm = e.target.value))
+                        }
                       />
                     </td>
                     <td>
@@ -94,7 +92,9 @@ const PlannedWorkList = () => {
                         id="work-done"
                         name="work-done"
                         checked={editedWork.workDone}
-                        onChange={(e) => setWorkDone(e.target.value)}
+                        onChange={(e) =>
+                          setWorkDone((editedWork.workDone = e.target.value))
+                        }
                       />
                     </td>
                     <td>
@@ -104,7 +104,9 @@ const PlannedWorkList = () => {
                         id="work-time"
                         name="work-time"
                         value={editedWork.workTime}
-                        onChange={(e) => setWorkTime(e.target.value)}
+                        onChange={(e) =>
+                          setWorkTime((editedWork.workTime = e.target.value))
+                        }
                       />
                     </td>
                     <td>
@@ -114,7 +116,9 @@ const PlannedWorkList = () => {
                         id="work-value"
                         name="work-value"
                         value={editedWork.workValue}
-                        onChange={(e) => setWorkValue(e.target.value)}
+                        onChange={(e) =>
+                          setWorkValue((editedWork.workValue = e.target.value))
+                        }
                       />
                     </td>
                     <td>
@@ -124,7 +128,12 @@ const PlannedWorkList = () => {
                         id="work-material"
                         name="work-material"
                         value={editedWork.workMaterial.workMatName}
-                        onChange={(e) => setWorkMatName(e.target.value)}
+                        onChange={(e) =>
+                          setWorkMatName(
+                            (editedWork.workMaterial.workMatName =
+                              e.target.value)
+                          )
+                        }
                         size="15"
                       />
                       <label htmlFor="work-mat-quant">Ilość</label>
@@ -134,7 +143,12 @@ const PlannedWorkList = () => {
                         id="work-mat-quant"
                         name="work-mat-quant"
                         value={editedWork.workMaterial.workMatQuant}
-                        onChange={(e) => setWorkMatQuant(e.target.value)}
+                        onChange={(e) =>
+                          setWorkMatQuant(
+                            (editedWork.workMaterial.workMatQuant =
+                              e.target.value)
+                          )
+                        }
                       />
                       <label htmlFor="work-mat-unit">Jedn.</label>
                       <input
@@ -143,7 +157,12 @@ const PlannedWorkList = () => {
                         id="work-mat-unit"
                         name="work-mat-unit"
                         value={editedWork.workMaterial.workMatUnit}
-                        onChange={(e) => setWorkMatUnit(e.target.value)}
+                        onChange={(e) =>
+                          setWorkMatUnit(
+                            (editedWork.workMaterial.workMatUnit =
+                              e.target.value)
+                          )
+                        }
                       />
                     </td>
                     <td>
@@ -151,7 +170,11 @@ const PlannedWorkList = () => {
                         id="work-details"
                         name="work-details"
                         value={editedWork.workDetails}
-                        onChange={(e) => setWorkDetails(e.target.value)}
+                        onChange={(e) =>
+                          setWorkDetails(
+                            (editedWork.workDetails = e.target.value)
+                          )
+                        }
                       ></textarea>
                     </td>
                     <td>
@@ -167,4 +190,4 @@ const PlannedWorkList = () => {
   );
 };
 
-export default PlannedWorkList;
+export default EditedWork;
