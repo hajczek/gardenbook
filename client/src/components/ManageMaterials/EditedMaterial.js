@@ -6,6 +6,7 @@ import { getMaterialId } from "./ExistedMaterialsList";
 
 const EditedMaterial = () => {
   const { materials } = useContext(GlobalContext);
+  const { editMaterial } = useContext(GlobalContext);
 
   const [materialName, setMaterialName] = useState("");
   const [materialPhoto, setMaterialPhoto] = useState("");
@@ -14,10 +15,8 @@ const EditedMaterial = () => {
   const [materialPrice, setMaterialPrice] = useState(0);
   const [addedDate] = useState(addedDateFunction());
 
-  const { addMaterial } = useContext(GlobalContext);
-
   function onSubmit(e) {
-    const newMaterial = {
+    const editMaterialDetails = {
       id: document.getElementById("material-id").textContent,
       materialName,
       materialPhoto,
@@ -27,8 +26,8 @@ const EditedMaterial = () => {
       addedDate,
     };
 
-    addMaterial(newMaterial);
-    console.log(newMaterial);
+    editMaterial(editMaterialDetails);
+    console.log(editMaterialDetails);
 
     e.preventDefault();
   }
@@ -58,8 +57,12 @@ const EditedMaterial = () => {
                         type="string"
                         id="material-name"
                         name="material-name"
-                        onChange={(e) => setMaterialName(e.target.value)}
                         value={editedMaterial.materialName}
+                        onChange={(e) =>
+                          setMaterialName(
+                            (editedMaterial.materialName = e.target.value)
+                          )
+                        }
                         size="15"
                       />
                     </td>
@@ -75,7 +78,11 @@ const EditedMaterial = () => {
                         name="material-photo"
                         id="material-photo"
                         filename={editedMaterial.materialPhoto}
-                        onChange={(e) => setMaterialPhoto(e.target.value)}
+                        onChange={(e) =>
+                          setMaterialPhoto(
+                            (editedMaterial.materialPhoto = e.target.value)
+                          )
+                        }
                       />
                     </td>
                     <td>
@@ -85,7 +92,11 @@ const EditedMaterial = () => {
                         id="material-quant"
                         name="material-quant"
                         value={editedMaterial.materialQuant}
-                        onChange={(e) => setMaterialQuant(e.target.value)}
+                        onChange={(e) =>
+                          setMaterialQuant(
+                            (editedMaterial.materialQuant = e.target.value)
+                          )
+                        }
                       />
                     </td>
                     <td>
@@ -94,7 +105,11 @@ const EditedMaterial = () => {
                         id="material-unit"
                         name="material-unit"
                         value={editedMaterial.materialUnit}
-                        onChange={(e) => setMaterialUnit(e.target.value)}
+                        onChange={(e) =>
+                          setMaterialUnit(
+                            (editedMaterial.materialUnit = e.target.value)
+                          )
+                        }
                         size="10"
                       />
                     </td>
@@ -105,7 +120,11 @@ const EditedMaterial = () => {
                         id="material-price"
                         name="material-price"
                         value={editedMaterial.materialPrice}
-                        onChange={(e) => setMaterialPrice(e.target.value)}
+                        onChange={(e) =>
+                          setMaterialPrice(
+                            (editedMaterial.materialPrice = e.target.value)
+                          )
+                        }
                       />
                     </td>
                     <td>

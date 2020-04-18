@@ -190,6 +190,27 @@ export const GlobalProvider = ({ children }) => {
     });
   }
 
+  function editMaterial(id) {
+    dispatch({
+      type: "EDIT_MATERIAL",
+      payload: id,
+    });
+  }
+
+  function editPlant(id) {
+    dispatch({
+      type: "EDIT_PLANT",
+      payload: id,
+    });
+  }
+
+  function editWork(id) {
+    dispatch({
+      type: "EDIT_WORK",
+      payload: id,
+    });
+  }
+
   return (
     <GlobalContext.Provider
       value={{
@@ -204,6 +225,9 @@ export const GlobalProvider = ({ children }) => {
         addMaterial,
         addPlant,
         addWork,
+        editMaterial,
+        editPlant,
+        editWork,
       }}
     >
       {children}

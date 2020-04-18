@@ -4,50 +4,36 @@ import addedDateFunction from "../../common/AddedDateFunction";
 // Function for get id of edited plant
 import { getPlantId } from "./ExistedPlantsList";
 
-const EditedPlant = () => {
+const EditedPlant = ({ plant }) => {
   const { plants } = useContext(GlobalContext);
-  const { addPlant } = useContext(GlobalContext);
+  const { editPlant } = useContext(GlobalContext);
 
   const [plantName, setPlantName] = useState("");
   const [plantPhoto, setPlantPhoto] = useState("");
   const [plantQuant, setPlantQuant] = useState(0);
   const [plantPrice, setPlantPrice] = useState(0);
-  const [plantFertilizer, setPlantFertilizer] = useState("");
-  const [plantFertilizerDose, setPlantFertilizerDose] = useState(0);
-  const [plantFertilizerFreq, setPlantFertilizerFreq] = useState(0);
+  const [plantFetilizer, setPlantFetilizer] = useState("");
+  const [plantFetilizerDose, setPlantFetilizerDose] = useState(0);
+  const [plantFetilizerFreq, setPlantFetilizerFreq] = useState(0);
   const [plantWateringFreq, setPlantWateringFreq] = useState(0);
   const [addedDate] = useState(addedDateFunction());
 
-  /* Needed functionality: 
-  1. onChangePlant() - to change data from edited plant in database
-  */
-
   function onSubmit(e) {
-    console.log(plantName);
-    console.log(plantPhoto);
-    console.log(plantQuant);
-    console.log(plantPrice);
-    console.log(plantFertilizer);
-    console.log(plantFertilizerDose);
-    console.log(plantFertilizerFreq);
-    console.log(plantWateringFreq);
-    console.log(addedDate);
-
-    const newPlant = {
-      id: Math.floor(Math.random() * 100000000),
+    const editPlantDetails = {
+      id: document.getElementById("plant-id").textContent,
       plantName,
       plantQuant,
       plantPhoto,
       plantWateringFreq,
-      plantFertilizer,
-      plantFertilizerFreq,
+      plantFetilizer,
+      plantFetilizerFreq,
       plantPrice,
-      plantFertilizerDose,
+      plantFetilizerDose,
       addedDate,
     };
 
-    addPlant(newPlant);
-    console.log(newPlant);
+    editPlant(editPlantDetails);
+    console.log(editPlantDetails);
 
     e.preventDefault();
   }
@@ -89,21 +75,23 @@ const EditedPlant = () => {
               .map((editedPlant) => {
                 return (
                   <tr key={editedPlant.id}>
-                    <td>{editedPlant.id}</td>
+                    <td id="plant-id">{editedPlant.id}</td>
                     <td>
                       <input
                         type="string"
                         id="plant-name"
                         name="plant-name"
                         value={editedPlant.plantName}
-                        onChange={(e) => setPlantName(e.target.value)}
+                        onChange={(e) =>
+                          setPlantName((editedPlant.plantName = e.target.value))
+                        }
                         size="15"
                       />
                     </td>
                     <td>
                       <img
                         src={editedPlant.plantPhoto}
-                        id="plant-photoe"
+                        id="plant-photo"
                         alt={editedPlant.plantName}
                         style={{ maxHeight: 100 }}
                       />
@@ -112,7 +100,11 @@ const EditedPlant = () => {
                         name="plant-photo"
                         id="plant-photo"
                         filename={editedPlant.plantPhoto}
-                        onChange={(e) => setPlantPhoto(e.target.value)}
+                        onChange={(e) =>
+                          setPlantPhoto(
+                            (editedPlant.plantPhoto = e.target.value)
+                          )
+                        }
                       />
                     </td>
                     <td>
@@ -122,7 +114,11 @@ const EditedPlant = () => {
                         id="plant-quant"
                         name="plant-quant"
                         value={editedPlant.plantQuant}
-                        onChange={(e) => setPlantQuant(e.target.value)}
+                        onChange={(e) =>
+                          setPlantQuant(
+                            (editedPlant.plantQuant = e.target.value)
+                          )
+                        }
                         size="3"
                       />
                     </td>
@@ -133,16 +129,24 @@ const EditedPlant = () => {
                         id="plant-price"
                         name="plant-price"
                         value={editedPlant.plantPrice}
-                        onChange={(e) => setPlantPrice(e.target.value)}
+                        onChange={(e) =>
+                          setPlantPrice(
+                            (editedPlant.plantPrice = e.target.value)
+                          )
+                        }
                       />
                     </td>
                     <td>
                       <input
                         type="string"
-                        id="plant-fertilizer"
-                        name="plant-fertilizer"
+                        id="plant-fetilizer"
+                        name="plant-fetilizer"
                         value={editedPlant.plantFetilizer}
-                        onChange={(e) => setPlantFertilizer(e.target.value)}
+                        onChange={(e) =>
+                          setPlantFetilizer(
+                            (editedPlant.plantFetilizer = e.target.value)
+                          )
+                        }
                         size="15"
                       />
                     </td>
@@ -150,20 +154,28 @@ const EditedPlant = () => {
                       <input
                         className="inputNum"
                         type="number"
-                        id="plant-fertilizer-dose"
-                        name="plant-fertilizer-dose"
+                        id="plant-fetilizer-dose"
+                        name="plant-fetilizer-dose"
                         value={editedPlant.plantFetilizerDose}
-                        onChange={(e) => setPlantFertilizerDose(e.target.value)}
+                        onChange={(e) =>
+                          setPlantFetilizerDose(
+                            (editedPlant.plantFetilizerDose = e.target.value)
+                          )
+                        }
                       />
                     </td>
                     <td>
                       <input
                         className="inputNum"
                         type="number"
-                        id="plant-fertilizer-freq"
-                        name="plant-fertilizer-freq"
+                        id="plant-fetilizer-freq"
+                        name="plant-fetilizer-freq"
                         value={editedPlant.plantFetilizerFreq}
-                        onChange={(e) => setPlantFertilizerFreq(e.target.value)}
+                        onChange={(e) =>
+                          setPlantFetilizerFreq(
+                            (editedPlant.plantFetilizerFreq = e.target.value)
+                          )
+                        }
                       />
                     </td>
                     <td>
@@ -173,7 +185,11 @@ const EditedPlant = () => {
                         id="plant-watering-freq"
                         name="plant-watering-freq"
                         value={editedPlant.plantWateringFreq}
-                        onChange={(e) => setPlantWateringFreq(e.target.value)}
+                        onChange={(e) =>
+                          setPlantWateringFreq(
+                            (editedPlant.plantWateringFreq = e.target.value)
+                          )
+                        }
                       />
                     </td>
                     <td>
