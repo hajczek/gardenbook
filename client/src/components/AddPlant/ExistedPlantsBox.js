@@ -10,10 +10,8 @@ const ExistedPlantsBox = () => {
       <ol>
         {plants.map((plant) => (
           <li key={plant.id}>
-            <a href="#">
-              {plant.plantName}
-              <span className="quantity">{plant.plantQuant}</span> szt. &raquo;
-            </a>
+            {plant.plantName}
+            <span className="quantity">{plant.plantQuant}</span> szt. &raquo;
           </li>
         ))}
       </ol>

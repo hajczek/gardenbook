@@ -10,11 +10,9 @@ const ExistedMaterialsBox = () => {
       <ol>
         {materials.map((material) => (
           <li key={material.id}>
-            <a href="#">
-              {material.materialName}{" "}
-              <span className="quantity">{material.materialQuant}</span>
-              <span className="unit">{material.materialUnit}</span> &raquo;
-            </a>
+            {material.materialName}{" "}
+            <span className="quantity">{material.materialQuant}</span>
+            <span className="unit">{material.materialUnit}</span> &raquo;
           </li>
         ))}
       </ol>
