@@ -2,6 +2,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+
   .top-box {
     display: flex;
     justify-content: space-between;
@@ -25,14 +26,24 @@
     }
   }
 
+  p {
+    font-size: 1.2rem;
+  }
+
   table {
     background-color: $limone-color;
+    font-size: 1.2rem;
     margin-top: 1.2rem;
     padding: 0.6rem 0.6rem 1.1rem 0.6rem;
 
     tr {
+      th {
+        padding: 0.3rem;
+        color: #444;
+      }
       td {
-        padding: 5px;
+        padding: 0.3rem;
+        color: #444;
 
         h3 {
           text-transform: uppercase;
