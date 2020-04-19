@@ -2,7 +2,7 @@ import React from "react";
 import HeaderUser from "./HeaderUser";
 import LeftMenuUser from "./LeftMenuUser";
 import Footer from "../Page/Footer";
-// import AlertsCard from "../Alerts/AlertsCard";
+import AlertsCard from "../Alerts/AlertsCard";
 // import AccountUserCard from "../AccountUser/AccountUserCard";
 // import ManageWorksCard from "../ManageWorks/ManageWorksCard";
 // import ManageMaterialsCard from "../ManageMaterials/ManageMaterialsCard";
@@ -12,7 +12,7 @@ import Footer from "../Page/Footer";
 // import PlanWorkCard from "../PlanWork/PlanWorkCard";
 
 // import EditedPlant from "./../ManagePlants/EditedPlant";
-import EditedMaterial from "./../ManageMaterials/EditedMaterial";
+// import EditedMaterial from "./../ManageMaterials/EditedMaterial";
 // import EditedWork from "./../ManageWorks/EditedWork";
 
 const PageCard = () => {
@@ -21,7 +21,7 @@ const PageCard = () => {
       <HeaderUser />
       <section className="userSection">
         <LeftMenuUser />
-        {/* <AlertsCard /> */}
+        <AlertsCard />
         {/* <AccountUserCard /> */}
         {/* <ManageWorksCard /> */}
         {/* <ManageMaterialsCard /> */}
@@ -30,7 +30,7 @@ const PageCard = () => {
         {/* <AddPlantCard /> */}
         {/* <PlanWorkCard /> */}
         {/* <EditedPlant /> */}
-        <EditedMaterial />
+        {/* <EditedMaterial /> */}
         {/* <EditedWork /> */}
       </section>
       <Footer />
