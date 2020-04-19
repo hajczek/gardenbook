@@ -12,7 +12,9 @@
       color: $grey-color;
     }
 
-    #add-plant {
+    #add-plant,
+    #add-material,
+    #plan-work {
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;

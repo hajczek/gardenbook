@@ -31,7 +31,7 @@ const AddMaterialForm = () => {
     e.preventDefault();
   }
   return (
-    <form id="add-plant" action="" onSubmit={onSubmit}>
+    <form id="add-material" action="" onSubmit={onSubmit}>
       <label htmlFor="material-name">
         <span>Nazwa materiału</span>
         <input

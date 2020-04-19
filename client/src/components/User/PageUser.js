@@ -8,8 +8,8 @@ import Footer from "../Page/Footer";
 // import ManageMaterialsCard from "../ManageMaterials/ManageMaterialsCard";
 // import ManagePlantsCard from "../ManagePlants/ManagePlantsCard";
 // import AddMaterialCard from "../AddMaterial/AddMaterialCard";
-import AddPlantCard from "../AddPlant/AddPlantCard";
-// import PlanWorkCard from "../PlanWork/PlanWorkCard";
+// import AddPlantCard from "../AddPlant/AddPlantCard";
+import PlanWorkCard from "../PlanWork/PlanWorkCard";
 
 // import EditedPlant from "./../ManagePlants/EditedPlant";
 // import EditedMaterial from "./../ManageMaterials/EditedMaterial";
@@ -27,8 +27,8 @@ const PageCard = () => {
         {/* <ManageMaterialsCard /> */}
         {/* <ManagePlantsCard /> */}
         {/* <AddMaterialCard /> */}
-        <AddPlantCard />
-        {/* <PlanWorkCard /> */}
+        {/* <AddPlantCard /> */}
+        <PlanWorkCard />
         {/* <EditedPlant /> */}
         {/* <EditedMaterial /> */}
         {/* <EditedWork /> */}
