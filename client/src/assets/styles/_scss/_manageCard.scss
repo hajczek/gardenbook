@@ -63,14 +63,18 @@
 
     tr:nth-child(odd) {
       background: rgba(255, 255, 255, 0.3);
-
       &:hover {
         background: rgba(255, 255, 255, 0.7);
       }
     }
 
-    tr:first-child {
+    tr:first-child,
+    tr:nth-child(2) {
       background: rgba(255, 255, 255, 0);
+      &:hover {
+        color: #444;
+        background: rgba(255, 255, 255, 0);
+      }
     }
   }
 }
