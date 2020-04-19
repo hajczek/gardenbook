@@ -1,0 +1,51 @@
+.contentUserFormBox {
+  display: flex;
+  width: 100%;
+
+  .contentUserForm {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    h2 {
+      margin-bottom: 2rem;
+      color: $grey-color;
+    }
+
+    #add-plant {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      font-size: 1.2rem;
+      width: 100%;
+
+      label {
+        width: 50%;
+        margin-bottom: 1rem;
+
+        span {
+          display: flex;
+          width: 100%;
+          margin-bottom: 0.6rem;
+        }
+
+        input,
+        select {
+          width: 15vw;
+          padding: 0.4rem;
+          font-size: 1.2rem;
+        }
+      }
+
+      button {
+        color: $white-color;
+        border: none;
+        width: 15vw;
+        height: 2.4rem;
+        margin-top: 2.1rem;
+        font-size: 1.2rem;
+        background: $dark-grey-color;
+      }
+    }
+  }
+}

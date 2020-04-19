@@ -5,9 +5,11 @@ import ExistedPlantsBox from "./ExistedPlantsBox";
 const AddPlantCard = () => {
   return (
     <div className="contentUser">
-      <div className="content">
-        <h2>Dodaj roślinę</h2>
-        <AddPlantForm />
+      <div className="contentUserFormBox">
+        <div className="contentUserForm">
+          <h2>Dodaj roślinę</h2>
+          <AddPlantForm />
+        </div>
         <ExistedPlantsBox />
       </div>
     </div>
