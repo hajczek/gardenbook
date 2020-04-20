@@ -5,6 +5,7 @@
   width: 100%;
   justify-content: center;
   margin: 1rem 0 0 3%;
+
   label {
     display: flex;
     flex-wrap: wrap;
@@ -41,4 +42,22 @@
 
 .mat {
   margin: 0 0.5rem;
+}
+
+@media screen and (max-width: 550px) {
+  .info form {
+    margin: 0;
+
+    label {
+      span {
+        font-size: 1.1rem;
+      }
+    }
+
+    button {
+      width: 90%;
+      margin-top: 1rem;
+      font-size: 1.2rem;
+    }
+  }
 }

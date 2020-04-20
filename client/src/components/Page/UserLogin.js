@@ -17,22 +17,26 @@ const UserLogin = () => {
   return (
     <div className="info">
       <h1>Panel logowania</h1>
+      <div class="error-info">Podałeś nieprawidłowe dane.</div>
       <form onSubmit={onSubmit}>
-        <label htmlFor="user-email-login">Email</label>
-        <input
-          type="email"
-          name="user-email-login"
-          value={userEmailLogin}
-          onChange={(e) => setUserEmailLogin(e.target.value)}
-        />
-
-        <label htmlFor="user-pass-login">Hasło</label>
-        <input
-          type="password"
-          name="user-pass-login"
-          value={userPassLogin}
-          onChange={(e) => setUserPassLogin(e.target.value)}
-        />
+        <label htmlFor="user-email-login">
+          <span>Email</span>
+          <input
+            type="email"
+            name="user-email-login"
+            value={userEmailLogin}
+            onChange={(e) => setUserEmailLogin(e.target.value)}
+          />
+        </label>
+        <label htmlFor="user-pass-login">
+          <span>Hasło</span>
+          <input
+            type="password"
+            name="user-pass-login"
+            value={userPassLogin}
+            onChange={(e) => setUserPassLogin(e.target.value)}
+          />
+        </label>
         <button id="login-btn">Zaloguj</button>
       </form>
     </div>

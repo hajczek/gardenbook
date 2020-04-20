@@ -24,6 +24,9 @@ const UserRegistration = () => {
   return (
     <div className="info">
       <h1>Panel rejestracji</h1>
+      <div class="error-info">
+        Ten adres e-mail już istnieje. / Wpisane hasła są różne.
+      </div>
       <form action="" onSubmit={onSubmit}>
         <label htmlFor="user-name">
           <span>Imię</span>
