@@ -67,11 +67,14 @@
 
 @media screen and (max-width: 550px) {
   #left-menu {
-    width: 5rem;
+    width: 4.8rem;
     #left-menu-first .menuLeftBtn {
       font-size: 2rem;
-      width: 3.5rem;
+      width: 4rem;
       padding: 0.95rem 0 0.95rem;
+    }
+    #left-menu-second {
+      display: none;
     }
   }
 }
