@@ -64,3 +64,14 @@
     }
   }
 }
+
+@media screen and (max-width: 550px) {
+  #left-menu {
+    width: 5rem;
+    #left-menu-first .menuLeftBtn {
+      font-size: 2rem;
+      width: 3.5rem;
+      padding: 0.95rem 0 0.95rem;
+    }
+  }
+}
