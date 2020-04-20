@@ -24,13 +24,13 @@ header {
     color: #fff;
     text-decoration: none;
     margin-left: 2rem;
-    opacity: 80%;
+    opacity: 0.7;
     line-height: 2.5rem;
     font-size: 1.2rem;
   }
 
   nav a:hover {
-    opacity: 100%;
+    opacity: 1;
   }
 }
 
@@ -42,5 +42,19 @@ header {
     #logo {
       width: 10rem;
     }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  header nav a {
+    margin-left: 1.5rem;
+    opacity: 0.7;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header nav a {
+    margin-left: 1.1rem;
+    opacity: 0.7;
   }
 }
