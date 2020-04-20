@@ -7,22 +7,22 @@ const AccountUserDataBox = () => {
   const { userData } = useContext(GlobalContext);
 
   return (
-    <div>
+    <div className="user-data-box">
       <h2>Twoje dane</h2>
       {userData.map((data) => (
         <p>
-          Imię: {data.userName}
+          <span>Imię:</span> {data.userName}
           <br />
-          Email/login: {data.userEmail}
+          <span>Email/login:</span> {data.userEmail}
           <br />
-          Aktualne hasło: {data.userPass}
+          <span>Aktualne hasło:</span> {data.userPass}
           <br />
-          Telefon: {data.userTel}
+          <span>Telefon:</span> {data.userTel}
           <br />
-          Lokalizacja: {data.userPlace}
+          <span>Lokalizacja:</span> {data.userPlace}
           <br />
           <button>
-            Zmień dane <FontAwesomeIcon id="edit-plant" icon={faEdit} />
+            <FontAwesomeIcon id="edit-plant" icon={faEdit} /> Edytuj dane
           </button>
         </p>
       ))}

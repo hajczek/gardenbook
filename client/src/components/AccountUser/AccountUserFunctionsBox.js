@@ -6,29 +6,38 @@ import { faEdit } from "@fortawesome/free-solid-svg-icons";
 const AccountUserFunctionsBox = () => {
   const { userData } = useContext(GlobalContext);
   return (
-    <div>
+    <div className="user-functionality-box">
       <h2>Funkcje / Narzędzia</h2>
-      <p>Włącz / Wyłącz wybrane funkcje / narzędzia</p>
+      <p className="text-info">Włącz / Wyłącz wybrane funkcje / narzędzia</p>
 
       {userData.map((data) => (
         <p>
           Planner prac:
-          {data.accountSets.workPlanner === false ? "wył." : "wł."}
+          <span>{data.accountSets.workPlanner === false ? "wył." : "wł."}</span>
           <br />
-          Czas dla alertów (od 1 do 12 godz.): {data.accountSets.alertTime}
+          Czas dla alertów (od 1 do 12 godz.):
+          <span>{data.accountSets.alertTime}</span>
           <br />
-          Plan ogrodu: {data.accountSets.gardenPlan === false ? "wył." : "wł."}
+          Plan ogrodu:
+          <span>{data.accountSets.gardenPlan === false ? "wył." : "wł."}</span>
           <br />
           Statystyki:
-          {data.accountSets.gardenStatistic === false ? "wył." : "wł."}
+          <span>
+            {data.accountSets.gardenStatistic === false ? "wył." : "wł."}
+          </span>
           <br />
-          Historia: {data.accountSets.gardenHistory === false ? "wył." : "wł."}
+          Historia:
+          <span>
+            {data.accountSets.gardenHistory === false ? "wył." : "wł."}
+          </span>
           <br />
           Wyszukiwarka wykonawców:
-          {data.accountSets.searchWorkers === false ? "wył." : "wł."}
+          <span>
+            {data.accountSets.searchWorkers === false ? "wył." : "wł."}
+          </span>
           <br />
           <button>
-            Zmień ustawienia <FontAwesomeIcon id="edit-plant" icon={faEdit} />
+            <FontAwesomeIcon id="edit-plant" icon={faEdit} /> Zmień ustawienia
           </button>
         </p>
       ))}

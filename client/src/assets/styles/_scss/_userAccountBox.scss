@@ -1,0 +1,84 @@
+.user-data-box {
+  width: 50%;
+  background-color: $grey-color;
+  padding: 2.5rem;
+  position: relative;
+
+  h2 {
+    color: $white-color;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+    line-height: 2;
+    color: #ccc;
+
+    span {
+      color: $white-color;
+      font-weight: bold;
+    }
+  }
+
+  button {
+    width: 30%;
+    // margin-top: 3rem;
+    padding: 1rem 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: $grey-color;
+    border: none;
+    position: absolute;
+    bottom: 2.5rem;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+  }
+}
+.user-functionality-box {
+  width: 50%;
+  background-color: $limone-color;
+  padding: 2.5rem 2.5rem 5rem 2.5rem;
+  font-size: 1.3rem;
+  position: relative;
+
+  h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .text-info {
+    margin-bottom: 1rem;
+    padding-bottom: 0;
+  }
+
+  p {
+    line-height: 2;
+    padding-bottom: 5rem;
+
+    span {
+      margin-left: 1rem;
+      color: $strong-green-color;
+    }
+  }
+  button {
+    width: 30%;
+    // margin-top: 3rem;
+    padding: 1rem 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: $grey-color;
+    color: #ccc;
+    border: none;
+    position: absolute;
+    bottom: 2.5rem;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+  }
+}
