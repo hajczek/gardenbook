@@ -35,7 +35,6 @@
       width: 100%;
       -webkit-box-pack: end;
       -ms-flex-pack: end;
-      justify-content: flex-end;
 
       label {
         width: 50%;
@@ -62,7 +61,6 @@
         border: none;
         width: 15vw;
         height: 2.4rem;
-        margin-right: 6.2vw;
         margin-top: 2.1rem;
         font-size: 1.2rem;
         background: $dark-grey-color;
@@ -73,5 +71,86 @@
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .contentUserFormBox .contentUserForm {
+    #add-plant,
+    #add-material,
+    #plan-work {
+      flex-direction: column;
+
+      label {
+        width: 90%;
+
+        input {
+          width: 90%;
+        }
+      }
+
+      button {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  .userSection .contentUser .existed-box {
+    height: 95%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .contentUserFormBox {
+    flex-direction: column;
+
+    .contentUserForm {
+      width: 100%;
+      #add-plant,
+      #add-material,
+      #plan-work {
+        width: 100%;
+        flex-direction: row;
+        label {
+          width: 15.5rem;
+        }
+
+        button {
+          width: 14rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .contentUserFormBox .contentUserForm {
+    width: 100%;
+    #add-plant,
+    #add-material,
+    #plan-work {
+      label {
+        width: 90%;
+
+        select {
+          width: 90%;
+        }
+      }
+
+      button {
+        width: 81%;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .userSection .contentUser .existed-box ol li {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
   }
 }
