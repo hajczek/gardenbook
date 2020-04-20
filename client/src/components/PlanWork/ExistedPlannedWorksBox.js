@@ -10,7 +10,7 @@ const ExistedPlannedWorksBox = () => {
         {plannedWorks.map((plannedWork) => (
           <li key={plannedWork.id}>
             {plannedWork.workName}:{" "}
-            <span className="greenText">{plannedWork.workTerm}</span> &raquo;
+            <span className="greenText">{plannedWork.workTerm} &raquo;</span>
           </li>
         ))}
       </ol>

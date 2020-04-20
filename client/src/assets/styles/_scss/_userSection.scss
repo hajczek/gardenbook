@@ -26,10 +26,10 @@
       #alerts-list {
         color: $white-color;
         font-weight: bold;
-        margin-left: 3rem;
         font-size: 1.4rem;
         li {
           line-height: 1.8;
+          margin-left: 3rem;
           span {
             color: $luminescence-green-color;
           }
@@ -75,6 +75,46 @@
           }
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .userSection .contentUser #alerts #alerts-list li,
+  .userSection .contentUser .existed-box ol li {
+    margin-left: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .userSection .contentUser {
+    width: calc(100vw -5.9rem);
+    flex-direction: column;
+
+    #alerts,
+    .existed-box {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .userSection .contentUser #alerts,
+  .userSection .contentUser .existed-box {
+    padding: 2rem 1rem 2rem 2rem;
+
+    h2 {
+      font-size: 1.3rem;
+    }
+
+    ol li,
+    #alerts-list li {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.5rem;
+      margin-bottom: 1rem;
+      font-weight: normal;
+      font-size: 1.2rem;
     }
   }
 }
