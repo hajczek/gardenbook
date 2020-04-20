@@ -6,14 +6,6 @@ const UserRegistration = () => {
   const [userPass, setUserPass] = useState("");
   const [userPassAgain, setUserPassAgain] = useState("");
 
-  /* Needed funtions
-  1. onSubmit() - to put data from form in database
-  2. checkPassword() - to check, if password is strong enough
-  3. checkPasswords() - to check, if password and second password are the same
-  4. emailExist() - check, if email exist in database
-  5. clearForm() - clear for after send data
-  */
-
   function onSubmit(e) {
     console.log(userName);
     console.log(userEmail);

@@ -2,13 +2,18 @@ header {
   width: 100vw;
   background-color: $green-color;
   height: 6.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 0 5vw;
+  -ms-flex-line-pack: center;
   align-content: center;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-box-shadow: 0px 26px 43px -16px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 26px 43px -16px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 26px 43px -16px rgba(0, 0, 0, 0.75);
 
   #logo:hover {
