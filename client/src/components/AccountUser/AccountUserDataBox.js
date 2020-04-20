@@ -10,7 +10,7 @@ const AccountUserDataBox = () => {
     <div className="user-data-box">
       <h2>Twoje dane</h2>
       {userData.map((data) => (
-        <p>
+        <p key="user-data">
           <span>Imię:</span> {data.userName}
           <br />
           <span>Email/login:</span> {data.userEmail}

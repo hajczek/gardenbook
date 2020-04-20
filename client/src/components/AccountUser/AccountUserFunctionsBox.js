@@ -11,7 +11,7 @@ const AccountUserFunctionsBox = () => {
       <p className="text-info">Włącz / Wyłącz wybrane funkcje / narzędzia</p>
 
       {userData.map((data) => (
-        <p>
+        <p key="user-func">
           Planner prac:
           <span>{data.accountSets.workPlanner === false ? "wył." : "wł."}</span>
           <br />
