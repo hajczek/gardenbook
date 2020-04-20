@@ -7,9 +7,9 @@ import Footer from "../Page/Footer";
 // import ManageWorksCard from "../ManageWorks/ManageWorksCard";
 // import ManageMaterialsCard from "../ManageMaterials/ManageMaterialsCard";
 // import ManagePlantsCard from "../ManagePlants/ManagePlantsCard";
-// import AddMaterialCard from "../AddMaterial/AddMaterialCard";
+import AddMaterialCard from "../AddMaterial/AddMaterialCard";
 // import AddPlantCard from "../AddPlant/AddPlantCard";
-import PlanWorkCard from "../PlanWork/PlanWorkCard";
+// import PlanWorkCard from "../PlanWork/PlanWorkCard";
 
 // import EditedPlant from "./../ManagePlants/EditedPlant";
 // import EditedMaterial from "./../ManageMaterials/EditedMaterial";
@@ -26,9 +26,9 @@ const PageCard = () => {
         {/* <ManageWorksCard /> */}
         {/* <ManageMaterialsCard /> */}
         {/* <ManagePlantsCard /> */}
-        {/* <AddMaterialCard /> */}
+        <AddMaterialCard />
         {/* <AddPlantCard /> */}
-        <PlanWorkCard />
+        {/* <PlanWorkCard /> */}
         {/* <EditedPlant /> */}
         {/* <EditedMaterial /> */}
         {/* <EditedWork /> */}

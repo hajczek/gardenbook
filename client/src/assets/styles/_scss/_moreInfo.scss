@@ -1,11 +1,11 @@
 .more-info {
   position: absolute;
-  bottom: 130px;
+  bottom: 8.1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100vw;
-  padding: 0 100px;
+  padding: 0 6.2rem;
 
   .title {
     display: flex;
@@ -13,9 +13,9 @@
     font-size: 1.5rem;
     color: $light-grey-color;
     font-weight: bold;
-    width: 210px;
+    width: 14rem;
     text-align: center;
-    padding: 30px 40px;
+    padding: 2rem 2.5rem;
     justify-content: center;
 
     &:hover {
@@ -29,21 +29,20 @@
 @media screen and (max-width: 1500px) {
   .more-info .title {
     font-size: 1.3rem;
-    width: 190px;
+    width: 11.8rem;
   }
 }
 
 @media screen and (max-width: 1365px) {
   .more-info {
-    bottom: 80px;
+    bottom: 5rem;
     width: 100vw;
     margin: 0 auto;
 
     .title {
       font-size: 1.2rem;
-      //  width: 180px;
-      padding: 20px;
-      margin-bottom: 20px;
+      padding: 1.2rem;
+      margin-bottom: 1.2rem;
     }
   }
 }
@@ -83,6 +82,7 @@
   .more-info {
     .title {
       width: 120px;
+      line-height: 1rem;
     }
   }
 }
@@ -90,7 +90,6 @@
 @media screen and (max-width: 430px) {
   .more-info {
     .title {
-      padding: 5px;
       margin-bottom: 10px;
     }
   }

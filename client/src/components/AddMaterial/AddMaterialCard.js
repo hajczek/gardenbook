@@ -6,7 +6,7 @@ const AddMaterialCard = () => {
   return (
     <div className="contentUser">
       <div className="contentUserFormBox">
-        <div class="contentUserForm">
+        <div className="contentUserForm">
           <h2>Dodaj materiał</h2>
           <AddMaterialForm />
         </div>

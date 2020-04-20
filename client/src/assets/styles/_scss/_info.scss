@@ -1,33 +1,38 @@
 .info {
-  padding: 30px 40px 40px 30px;
+  padding: 2rem 3rem 3rem 2rem;
   background-color: $white-color-opacity-08;
   display: flex;
   flex-direction: column;
   font-weight: bold;
+  height: 50vh;
   color: $grey-color;
   align-self: flex-end;
-  margin-right: 100px;
-  margin-top: 60px;
-  margin-bottom: 50px;
+  margin-right: 5vw;
+  margin-top: 3.7rem;
+  width: 43vw;
 
   .title {
     display: flex;
 
     #logo {
-      width: 83px;
+      width: 5.2rem;
     }
 
     h1 {
-      text-transform: uppercase;
-      color: $lighter-green-color;
-      padding: 15px 0 0 15px;
+      padding-left: 1rem;
     }
+  }
+
+  h1 {
+    text-transform: uppercase;
+    color: $lighter-green-color;
+    padding: 1rem 0 2rem 0;
   }
 
   ul {
     font-size: 1.5rem;
     width: 90%;
-    margin: 30px 0 50px 8%;
+    margin: 2rem 0 3rem 8%;
 
     li {
       line-height: 2;
@@ -40,7 +45,7 @@
 
   p {
     font-size: 1.6rem;
-    padding: 0 0 10px 20px;
+    padding: 0 0 0.6rem 1.2rem;
   }
 
   .slogan-green {
@@ -51,22 +56,22 @@
 @media screen and (max-width: 1250px) {
   .info {
     width: 80vw;
-    margin: 60px auto;
+    margin: 3.7rem auto;
 
     ul {
-      margin: 20px 0 30px 8%;
+      margin: 1.2rem 0 2rem 8%;
     }
   }
 }
 
 @media screen and (max-width: 1000px) {
   .info {
-    margin: 40px auto;
+    margin: 2.5rem auto;
 
     .title {
       #logo {
-        width: 50px;
-        height: 50px;
+        width: 3.1rem;
+        height: 3.2rem;
       }
       h1 {
         font-size: 1.5rem;
@@ -75,7 +80,7 @@
 
     ul {
       font-size: 1.2rem;
-      margin: 10px 0 30px 8%;
+      margin: 6.2rem 0 2rem 8%;
     }
 
     p {
@@ -86,20 +91,40 @@
 
 @media screen and (max-width: 650px) {
   .info {
-    padding: 20px;
+    padding: 1.2rem;
 
     .title h1 {
       font-size: 1.2rem;
       padding-top: 0;
     }
     ul {
-      margin-bottom: 20px;
+      margin-bottom: 1.2rem;
       li {
         line-height: 1.6rem;
       }
     }
     p {
       font-size: 1.1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .info {
+    h1 {
+      font-size: 1.16rem;
+      padding: 1rem 0 1.5rem 0;
+    }
+    ul {
+      margin-bottom: 1.2rem;
+      margin: 0 0 1.5rem 8%;
+      li {
+        font-size: 1.06rem;
+        line-height: 1.2;
+      }
+    }
+    p {
+      font-size: 1.06rem;
     }
   }
 }

@@ -8,7 +8,7 @@ const MoreInfo = () => {
       <div className="title">Przydatne narzędzia</div>
       <div className="title">Magazyn danych</div>
       <div className="title">Baza firm ogrodniczych</div>
-      <div className="title">Wykonawca w pobliżu</div>
+      <div className="title">Znajdź wykonawcę</div>
     </div>
   );
 };
