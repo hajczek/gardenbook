@@ -26,6 +26,11 @@
 
 @media screen and (max-width: 950px) {
   .top-box form {
+    #search-material {
+      width: 80%;
+      padding: 0.3rem 0 0.3rem 0.3rem;
+      margin-left: 0;
+    }
     #date-from,
     #date-to {
       width: 8.5rem;

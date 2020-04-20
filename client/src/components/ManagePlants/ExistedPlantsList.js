@@ -15,7 +15,7 @@ const ExistedPlantsList = () => {
 
   return (
     <div className="content">
-      <table>
+      <table className="existed-plant-table">
         <tbody>
           <tr>
             <td colSpan="11">
