@@ -25,38 +25,43 @@ const UserRegistration = () => {
     <div className="info">
       <h1>Panel rejestracji</h1>
       <form action="" onSubmit={onSubmit}>
-        <label htmlFor="user-name">Imię</label>
-        <input
-          type="text"
-          name="user-name"
-          value={userName}
-          onChange={(e) => setUserName(e.target.value)}
-        />
+        <label htmlFor="user-name">
+          <span>Imię</span>
+          <input
+            type="text"
+            name="user-name"
+            value={userName}
+            onChange={(e) => setUserName(e.target.value)}
+          />
+        </label>
+        <label htmlFor="user-email">
+          <span>E-mail*</span>
+          <input
+            type="text"
+            name="user-email"
+            value={userEmail}
+            onChange={(e) => setUserEmail(e.target.value)}
+          />
+        </label>
 
-        <label htmlFor="user-email">E-mail*</label>
-        <input
-          type="text"
-          name="user-email"
-          value={userEmail}
-          onChange={(e) => setUserEmail(e.target.value)}
-        />
-
-        <label htmlFor="user-pass">Hasło*</label>
-        <input
-          type="text"
-          name="user-pass"
-          value={userPass}
-          onChange={(e) => setUserPass(e.target.value)}
-        />
-
-        <label htmlFor="user-pass-again">Powtórz hasło*</label>
-        <input
-          type="text"
-          name="user-pass-again"
-          value={userPassAgain}
-          onChange={(e) => setUserPassAgain(e.target.value)}
-        />
-
+        <label htmlFor="user-pass">
+          <span>Hasło*</span>
+          <input
+            type="text"
+            name="user-pass"
+            value={userPass}
+            onChange={(e) => setUserPass(e.target.value)}
+          />
+        </label>
+        <label htmlFor="user-pass-again">
+          <span>Powtórz hasło*</span>
+          <input
+            type="text"
+            name="user-pass-again"
+            value={userPassAgain}
+            onChange={(e) => setUserPassAgain(e.target.value)}
+          />
+        </label>
         <button id="register-btn">Zarejestruj</button>
       </form>
     </div>

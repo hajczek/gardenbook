@@ -1,3 +1,40 @@
+.info form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  margin: 1rem 0 0 3%;
+  label {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+
+    span {
+      width: 90%;
+      font-size: 1.2rem;
+      margin-bottom: 0.6rem;
+    }
+
+    input {
+      width: 90%;
+      margin-bottom: 1.2rem;
+      padding: 0.3rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  button {
+    width: 45%;
+    margin-top: 2rem;
+    padding: 0.7rem 0.5rem;
+    background: $dark-grey-color;
+    color: $white-color;
+    font-size: 1.4rem;
+    border: none;
+  }
+}
+
 .inputNum {
   width: 4rem;
 }
