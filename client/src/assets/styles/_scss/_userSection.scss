@@ -80,9 +80,21 @@
 }
 
 @media screen and (max-width: 1050px) {
-  .userSection .contentUser #alerts #alerts-list li,
-  .userSection .contentUser .existed-box ol li {
-    margin-left: 1.4rem;
+  .userSection .contentUser {
+    padding: 2rem 5vw 0 5vw;
+
+    #alerts {
+      padding-left: 2rem;
+      #alerts-list li {
+        margin-left: 1.4rem;
+      }
+    }
+    .existed-box {
+      padding-left: 2rem;
+      ol li {
+        margin-left: 1.4rem;
+      }
+    }
   }
 }
 
@@ -90,6 +102,7 @@
   .userSection .contentUser {
     width: calc(100vw -5.9rem);
     flex-direction: column;
+    margin-bottom: 2rem;
 
     #alerts,
     .existed-box {
@@ -115,6 +128,7 @@
       margin-bottom: 1rem;
       font-weight: normal;
       font-size: 1.2rem;
+      margin-left: 0;
     }
   }
 }
