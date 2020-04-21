@@ -3,6 +3,7 @@
   background-color: $grey-color;
   padding: 2.5rem;
   position: relative;
+  font-size: 1.3rem;
 
   h2 {
     color: $white-color;
@@ -13,7 +14,7 @@
   p {
     font-size: 1.3rem;
     line-height: 2;
-    color: #ccc;
+    color: $lighter-grey-color;
 
     span {
       color: $white-color;
@@ -71,7 +72,7 @@
     font-size: 1.2rem;
     font-weight: bold;
     background-color: $grey-color;
-    color: #ccc;
+    color: $lighter-grey-color;
     border: none;
     position: absolute;
     bottom: 2.5rem;

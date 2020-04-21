@@ -129,7 +129,7 @@ const initialState = {
       userPlace: "Milanówek",
       userLogged: false,
       accountSets: {
-        workPlanner: false,
+        workPlanner: true,
         alertTime: 1,
         gardenPlan: false,
         gardenStatistic: false,

@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
 import { getUserId } from "./AccountUserDataBox";
+import { displayErrorInfo } from "../../common/DisplayErrorInfo";
 
 const AccountUserDataEdit = () => {
   const [userName, setUserName] = useState("");
@@ -38,57 +39,75 @@ const AccountUserDataEdit = () => {
     e.preventDefault();
   }
   return (
-    <form id="user-data-edit" onSubmit={onSubmit}>
-      <h2>Twoje dane</h2>
-      {userData
-        .filter((data) => data.id === getUserId())
-        .map((newData) => {
-          return (
-            <div key="new-user-data">
-              <label htmlFor="user-name">Imię</label>
-              <input
-                type="text"
-                name="user-name"
-                value={newData.userName}
-                onChange={(e) =>
-                  setUserName((newData.userName = e.target.value))
-                }
-              />
-              <label htmlFor="user-email">E-mail (login)</label>
-              <input
-                type="email"
-                name="user-email"
-                value={newData.userEmail}
-                onChange={(e) =>
-                  setUserEmail((newData.userEmail = e.target.value))
-                }
-              />
-              <label htmlFor="user-pass">Aktualne hasło</label>
-              <input
-                type="password"
-                name="user-pass"
-                value={userPass}
-                onChange={(e) => setUserPass(e.target.value)}
-              />
-              <label htmlFor="user-pass-new">Nowe hasło</label>
-              <input
-                type="password"
-                name="user-pass-new"
-                value={newData.userPassNew}
-                onChange={(e) => setUserPassNew(e.target.value)}
-              />
-              <label htmlFor="user-tel">Telefon</label>
-              <input
-                type="phone"
-                name="user-tel"
-                value={newData.userTel}
-                onChange={(e) => setUserTel((newData.userTel = e.target.value))}
-              />
-            </div>
-          );
-        })}
-      <button id="change-btn">Zapisz zmiany</button>
-    </form>
+    <div className="user-data-box">
+      <form id="user-data-edit" onSubmit={onSubmit}>
+        <h2>Zmień wybrane dane</h2>
+        {userData
+          .filter((data) => data.id === getUserId())
+          .map((newData) => {
+            return (
+              <div key="new-user-data">
+                <div class="error-info">
+                  {displayErrorInfo(`Tan adres e-mail już istnieje. / Aktualne hasło jest
+                  niprawidłowe.`)}
+                </div>
+                <label htmlFor="user-name">
+                  <span>Imię</span>
+                  <input
+                    type="text"
+                    name="user-name"
+                    value={newData.userName}
+                    onChange={(e) =>
+                      setUserName((newData.userName = e.target.value))
+                    }
+                  />
+                </label>
+                <label htmlFor="user-email">
+                  <span>E-mail (login)</span>
+                  <input
+                    type="email"
+                    name="user-email"
+                    value={newData.userEmail}
+                    onChange={(e) =>
+                      setUserEmail((newData.userEmail = e.target.value))
+                    }
+                  />
+                </label>
+                <label htmlFor="user-pass">
+                  <span>Aktualne hasło</span>
+                  <input
+                    type="password"
+                    name="user-pass"
+                    value={userPass}
+                    onChange={(e) => setUserPass(e.target.value)}
+                  />
+                </label>
+                <label htmlFor="user-pass-new">
+                  <span>Nowe hasło</span>
+                  <input
+                    type="password"
+                    name="user-pass-new"
+                    value={newData.userPassNew}
+                    onChange={(e) => setUserPassNew(e.target.value)}
+                  />
+                </label>
+                <label htmlFor="user-tel">
+                  <span>Telefon</span>
+                  <input
+                    type="phone"
+                    name="user-tel"
+                    value={newData.userTel}
+                    onChange={(e) =>
+                      setUserTel((newData.userTel = e.target.value))
+                    }
+                  />
+                </label>
+              </div>
+            );
+          })}
+        <button id="change-btn">Zapisz zmiany</button>
+      </form>
+    </div>
   );
 };
 
