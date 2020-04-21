@@ -38,7 +38,7 @@ const AccountUserDataEdit = () => {
     e.preventDefault();
   }
   return (
-    <form id="user-data" onSubmit={onSubmit}>
+    <form id="user-data-edit" onSubmit={onSubmit}>
       <h2>Twoje dane</h2>
       {userData
         .filter((data) => data.id === getUserId())

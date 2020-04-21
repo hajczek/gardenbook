@@ -1,14 +1,16 @@
 import React from "react";
 // import AccountUserDataBox from "./AccountUserDataBox";
+// import AccountUserFunctionsBox from "./AccountUserFunctionsBox";
 import AccountUserDataEdit from "./AccountUserDataEdit";
-import AccountUserFunctionsBox from "./AccountUserFunctionsBox";
+import AccountUserFunctionsEdit from "./AccountUserFunctionsEdit";
 
 const AccountUserCard = () => {
   return (
     <div className="contentUser">
       {/* <AccountUserDataBox /> */}
-      <AccountUserFunctionsBox />
+      {/* <AccountUserFunctionsBox /> */}
       <AccountUserDataEdit />
+      <AccountUserFunctionsEdit />
     </div>
   );
 };
