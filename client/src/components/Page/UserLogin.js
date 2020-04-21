@@ -4,6 +4,7 @@ const UserLogin = () => {
   const [userEmailLogin, setUserEmailLogin] = useState("");
   const [userPassLogin, setUserPassLogin] = useState("");
   const [userIsLogged, setUserIsLogged] = useState(false);
+  import { displayErrorInfo } from "../../common/DisplayErrorInfo";
 
   function onSubmit(e) {
     console.log(userEmailLogin);
@@ -17,7 +18,7 @@ const UserLogin = () => {
   return (
     <div className="info">
       <h1>Panel logowania</h1>
-      <div class="error-info">Podałeś nieprawidłowe dane.</div>
+      {displayErrorInfo(`Podałeś nieprawidłowe dane.`)}
       <form onSubmit={onSubmit}>
         <label htmlFor="user-email-login">
           <span>Email</span>

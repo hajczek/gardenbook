@@ -5,6 +5,7 @@ const UserRegistration = () => {
   const [userEmail, setUserEmail] = useState("");
   const [userPass, setUserPass] = useState("");
   const [userPassAgain, setUserPassAgain] = useState("");
+  import { displayErrorInfo } from "../../common/DisplayErrorInfo";
 
   function onSubmit(e) {
     console.log(userName);
@@ -16,9 +17,9 @@ const UserRegistration = () => {
   return (
     <div className="info">
       <h1>Panel rejestracji</h1>
-      <div class="error-info">
-        Ten adres e-mail już istnieje. / Wpisane hasła są różne.
-      </div>
+      {displayErrorInfo(
+        `Ten adres e-mail już istnieje. / Wpisane hasła są różne.`
+      )}
       <form action="" onSubmit={onSubmit}>
         <label htmlFor="user-name">
           <span>Imię</span>

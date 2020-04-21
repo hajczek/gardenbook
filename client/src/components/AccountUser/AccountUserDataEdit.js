@@ -47,10 +47,8 @@ const AccountUserDataEdit = () => {
           .map((newData) => {
             return (
               <div key="new-user-data">
-                <div class="error-info">
-                  {displayErrorInfo(`Tan adres e-mail już istnieje. / Aktualne hasło jest
+                {displayErrorInfo(`Tan adres e-mail już istnieje. / Aktualne hasło jest
                   niprawidłowe.`)}
-                </div>
                 <label htmlFor="user-name">
                   <span>Imię</span>
                   <input
