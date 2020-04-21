@@ -1,4 +1,4 @@
-import React, { useState, useContext, Fragment } from "react";
+import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
 import { getUserId } from "./AccountUserDataBox";
@@ -23,7 +23,7 @@ const AccountUserDataEdit = () => {
     e.preventDefault();
 
     const userDataNew = {
-      id: document.getElementById("user-id").textContent,
+      id: getUserId(),
       userName,
       userEmail,
       userPass,
@@ -44,7 +44,7 @@ const AccountUserDataEdit = () => {
         .filter((data) => data.id === getUserId())
         .map((newData) => {
           return (
-            <div>
+            <div key="new-user-data">
               <label htmlFor="user-name">Imię</label>
               <input
                 type="text"
@@ -67,19 +67,15 @@ const AccountUserDataEdit = () => {
               <input
                 type="password"
                 name="user-pass"
-                value={newData.userPass}
-                onChange={(e) =>
-                  setUserPass((newData.userPass = e.target.value))
-                }
+                value={userPass}
+                onChange={(e) => setUserPass(e.target.value)}
               />
               <label htmlFor="user-pass-new">Nowe hasło</label>
               <input
                 type="password"
                 name="user-pass-new"
                 value={newData.userPassNew}
-                onChange={(e) =>
-                  setUserPassNew((newData.userPassNew = e.target.value))
-                }
+                onChange={(e) => setUserPassNew(e.target.value)}
               />
               <label htmlFor="user-tel">Telefon</label>
               <input
