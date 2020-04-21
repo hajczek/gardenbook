@@ -71,7 +71,7 @@ const AccountUserFunctionsEdit = () => {
                   />
                 </label>
                 <label htmlFor="alert-time">
-                  <span>Czas dla alertów (ile godzin przed: od 1 do 12):</span>
+                  <span>Alarm (ile godz. przed):</span>
                   <input
                     name="alert-time"
                     type="number"
@@ -125,7 +125,7 @@ const AccountUserFunctionsEdit = () => {
                   />
                 </label>
                 <label htmlFor="search-workers">
-                  <span>Wyszukiwarka wykonawców:</span>
+                  <span>Znajdź wykonawcę:</span>
                   <input
                     name="search-workers"
                     type="checkbox"
