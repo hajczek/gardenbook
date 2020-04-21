@@ -7,8 +7,8 @@ const AccountUserCard = () => {
   return (
     <div className="contentUser">
       {/* <AccountUserDataBox /> */}
-      <AccountUserDataEdit />
       <AccountUserFunctionsBox />
+      <AccountUserDataEdit />
     </div>
   );
 };

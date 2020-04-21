@@ -53,6 +53,11 @@ export default (state, action) => {
           (work) => work.id === action.payload
         ),
       };
+    case "EDIT_USER_DATA":
+      return {
+        ...state,
+        userData: state.userData.filter((data) => data.id === action.payload),
+      };
     default:
       return state;
   }

@@ -211,6 +211,13 @@ export const GlobalProvider = ({ children }) => {
     });
   }
 
+  function editUserData(id) {
+    dispatch({
+      type: "EDIT_USER_DATA",
+      payload: id,
+    });
+  }
+
   return (
     <GlobalContext.Provider
       value={{
@@ -228,6 +235,7 @@ export const GlobalProvider = ({ children }) => {
         editMaterial,
         editPlant,
         editWork,
+        editUserData,
       }}
     >
       {children}

@@ -3,6 +3,12 @@ import { GlobalContext } from "../../context/GlobalState";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit } from "@fortawesome/free-solid-svg-icons";
 
+// Export id of user
+export const getUserId = (id) => {
+  id = 1;
+  return id;
+};
+
 const AccountUserDataBox = () => {
   const { userData } = useContext(GlobalContext);
 
@@ -21,7 +27,7 @@ const AccountUserDataBox = () => {
           <br />
           <span>Lokalizacja:</span> {data.userPlace}
           <br />
-          <button>
+          <button onClick={(e) => getUserId(data.id)}>
             <FontAwesomeIcon id="edit-plant" icon={faEdit} /> Edytuj dane
           </button>
         </p>
