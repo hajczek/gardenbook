@@ -64,13 +64,66 @@ exports.addWork = async (req, res, next) => {
 // @desc Edit work
 // @route PUT/works/:id
 // @access Public
-exports.editWork = (req, res, next) => {
-  res.send("PUT Work");
+exports.editWork = async (req, res, next) => {
+  try {
+    const {
+      workName,
+      workMatName,
+      workMatQuant,
+      workMatUnit,
+      workTerm,
+      workDetails,
+      workDone,
+      workTime,
+      workValue,
+      addedDate,
+    } = req.body;
+
+    const work = await Works.findById(req.params.id).updateOne(req.body);
+
+    if (!work) {
+      return res.status(404).json({
+        success: false,
+        error: "Nie znaleziono pracy o tym tytule",
+      });
+    }
+
+    return res.status(200).json({
+      success: true,
+      data: { work },
+    });
+  } catch (err) {
+    return res.status(500).json({
+      success: false,
+      error: "Błąd serwera",
+    });
+  }
 };
 
 // @desc Delete work
 // @route DELETE/works/:id
 // @access Public
-exports.deleteWork = (req, res, next) => {
-  res.send("DELETE Work");
+exports.deleteWork = async (req, res, next) => {
+  try {
+    const work = await Works.findById(req.params.id);
+
+    if (!work) {
+      return res.status(404).json({
+        success: false,
+        error: "Nie znaleziono pracy o tym tytule",
+      });
+    }
+
+    await work.remove();
+
+    return res.status(200).json({
+      success: true,
+      data: {},
+    });
+  } catch (err) {
+    return res.status(500).json({
+      success: false,
+      error: "Błąd serwera",
+    });
+  }
 };
