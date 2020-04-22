@@ -10,21 +10,23 @@ const WorksSchema = new mongoose.Schema({
     workMatName: {
       type: String,
       required: [false],
+      default: "",
     },
     workMatQuant: {
       type: Number,
       required: [false],
+      default: 0,
     },
     workMatUnit: {
       type: String,
       required: [false],
+      default: 0,
     },
   },
   workTerm: {
     type: String,
     trim: true,
     required: [true, "Wybierz termin pracy"],
-    default: "",
   },
   workDetails: {
     type: String,
