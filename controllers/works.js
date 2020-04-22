@@ -1,15 +1,64 @@
+const Works = require("../models/Works");
+
 // @desc Get all works
 // @route GET/works
 // @access Public
-exports.getWorks = (req, res, next) => {
-  res.send("GET Works");
+exports.getWorks = async (req, res, next) => {
+  try {
+    const works = await Works.find();
+
+    return res.status(200).json({
+      success: true,
+      count: works.length,
+      data: works,
+    });
+  } catch (err) {
+    return res.status(500).json({
+      success: false,
+      error: "Błąd serwera",
+    });
+  }
 };
 
 // @desc Add work
 // @route POST/works
 // @access Public
-exports.addWork = (req, res, next) => {
-  res.send("POST Work");
+exports.addWork = async (req, res, next) => {
+  try {
+    const {
+      workName,
+      workMatName,
+      workMatQuant,
+      workMatUnit,
+      workTerm,
+      workDetails,
+      workDone,
+      workTime,
+      workValue,
+      addedDate,
+    } = req.body;
+
+    const work = await Works.create(req.body);
+
+    return res.status(201).json({
+      success: true,
+      data: work,
+    });
+  } catch (err) {
+    if (err.name === "ValidationError") {
+      const messages = Object.values(err.errors).map((val) => val.message);
+
+      return res.status(400).json({
+        success: false,
+        error: messages,
+      });
+    } else {
+      return res.status(500).json({
+        success: false,
+        error: "Błąd serwera",
+      });
+    }
+  }
 };
 
 // @desc Edit work

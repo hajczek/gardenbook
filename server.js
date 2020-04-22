@@ -10,6 +10,8 @@ connectDB();
 
 const app = express();
 
+app.use(express.json());
+
 const alerts = require("./routes/alerts");
 const users = require("./routes/users");
 const works = require("./routes/works");
