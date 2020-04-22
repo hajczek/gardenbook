@@ -7,7 +7,9 @@ dotenv.config({ path: "./config/config.env" });
 
 const app = express();
 
-app.get("/", (req, res) => res.send("Hello"));
+const home = require("./routes/home");
+// app.get("/", (req, res) => res.send("Hello"));
+app.use("/", home);
 
 const PORT = process.env.PORT || 5000;
 
