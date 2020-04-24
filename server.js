@@ -20,7 +20,7 @@ const materials = require("./routes/materials");
 
 // app.get("/", (req, res) => res.send("Hello"));
 app.use("/alerts", alerts);
-app.use("/account", users);
+app.use("/users", users);
 app.use("/works", works);
 app.use("/plants", plants);
 app.use("/materials", materials);
