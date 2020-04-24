@@ -1,14 +1,10 @@
 .userSection {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 
   .contentUser {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     width: 100vw;
-    height: 100%;
+    height: 65vh;
     padding: 3rem 5vw 0 5vw;
 
     #alerts {
@@ -100,6 +96,7 @@
 
 @media screen and (max-width: 950px) {
   .userSection .contentUser {
+    height: 100%;
     width: calc(100vw -5.9rem);
     flex-direction: column;
     margin-bottom: 2rem;

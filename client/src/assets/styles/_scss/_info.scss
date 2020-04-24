@@ -1,25 +1,17 @@
 .info {
   padding: 2rem 3rem 3rem 2rem;
   background-color: $white-color-opacity-08;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   font-weight: bold;
   height: 50vh;
   color: $grey-color;
-  -ms-flex-item-align: end;
   align-self: flex-end;
   margin-right: 5vw;
   margin-top: 3.7rem;
   width: 43vw;
 
   .title {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
 
     #logo {

@@ -4,18 +4,11 @@ footer {
   height: 4rem;
   position: absolute;
   bottom: 0;
-  -webkit-box-shadow: 0px -26px 43px -16px rgba(0, 0, 0, 0.75);
   box-shadow: 0px -26px 43px -16px rgba(0, 0, 0, 0.75);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 0 5vw;
-  -ms-flex-line-pack: center;
   align-content: center;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 
   p {
@@ -56,8 +49,6 @@ footer {
   footer {
     padding: 0 0.6rem;
     margin: 0 auto;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
 
     nav {
