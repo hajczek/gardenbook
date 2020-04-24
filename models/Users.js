@@ -39,19 +39,23 @@ const UsersSchema = new mongoose.Schema({
     },
     gardenPlan: {
       type: Boolean,
-      defaul: false,
+      required: [true],
+      default: true,
     },
     gardenStatistic: {
       type: Boolean,
-      defaul: false,
+      required: [true],
+      default: true,
     },
     gardenHistory: {
       type: Boolean,
-      defaul: false,
+      required: [true],
+      default: true,
     },
     searchWorkers: {
       type: Boolean,
-      defaul: false,
+      required: [true],
+      default: true,
     },
   },
   addedDate: {
