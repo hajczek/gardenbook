@@ -10,6 +10,7 @@ const EditedWork = ({ work }) => {
 
   const [workName, setWorkName] = useState("");
   const [workTerm, setWorkTerm] = useState("");
+  const [workAlert, setWorkAlert] = useState("");
   const [workDone, setWorkDone] = useState(false);
   const [workTime, setWorkTime] = useState("");
   const [workValue, setWorkValue] = useState(0);
@@ -30,6 +31,7 @@ const EditedWork = ({ work }) => {
       },
       workTime,
       workTerm,
+      workAlert,
       workDone,
       workValue,
       workDetails,
@@ -51,6 +53,7 @@ const EditedWork = ({ work }) => {
               <th>Lp.</th>
               <th>Tytuł</th>
               <th>Termin</th>
+              <th>Alarm</th>
               <th>Wykonana</th>
               <th>Czas pracy [godz.]</th>
               <th>Wartość [zł.]</th>
@@ -83,6 +86,17 @@ const EditedWork = ({ work }) => {
                         value={editedWork.workTerm}
                         onChange={(e) =>
                           setWorkTerm((editedWork.workTerm = e.target.value))
+                        }
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="time"
+                        id="work-alert"
+                        name="work-alert"
+                        value={editedWork.workAlert}
+                        onChange={(e) =>
+                          setWorkAlert((editedWork.workAlert = e.target.value))
                         }
                       />
                     </td>

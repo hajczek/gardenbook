@@ -5,6 +5,7 @@ import addedDateFunction from "../../common/AddedDateFunction";
 export const PlanWorkForm = () => {
   const [workName, setWorkName] = useState("");
   const [workTerm, setWorkTerm] = useState("");
+  const [workAlert, setWorkAlert] = useState("");
   const [workMatName, setWorkMatName] = useState("");
   const [workMatQuant, setWorkMatQuant] = useState(0);
   const [workMatUnit, setWorkMatUnit] = useState("");
@@ -22,6 +23,7 @@ export const PlanWorkForm = () => {
       workName,
       workMaterial: { workMatName, workMatQuant, workMatUnit },
       workTerm,
+      workAlert,
       workDetails,
       addedDate,
       workDone,
@@ -93,7 +95,19 @@ export const PlanWorkForm = () => {
           value={workTerm}
           onChange={(e) => setWorkTerm(e.target.value)}
         />
-        <span id="add-work-term">Dodaj termin do kalendarza &raquo;</span>
+        {/* <span id="add-work-term">Dodaj termin do kalendarza &raquo;</span> */}
+      </label>
+      <label htmlFor="work-alert">
+        <span>Czas dla alarmu</span>
+        <input
+          type="time"
+          name="work-alert"
+          id="work-alert"
+          value={workAlert}
+          onChange={(e) => setWorkTerm(e.target.value)}
+          placeholder="00:00"
+        />
+        {/* <span id="add-work-term">Dodaj termin do kalendarza &raquo;</span> */}
       </label>
       <label htmlFor="work-details">
         <span>Uwagi</span>
