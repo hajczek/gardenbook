@@ -15,9 +15,6 @@ const AccountUserFunctionsBox = () => {
           Planner prac:
           <span>{data.accountSets.workPlanner === false ? "wył." : "wł."}</span>
           <br />
-          Czas dla alertów (od 1 do 12 godz.):
-          <span>{data.accountSets.alertTime}</span>
-          <br />
           Plan ogrodu:
           <span>{data.accountSets.gardenPlan === false ? "wył." : "wł."}</span>
           <br />

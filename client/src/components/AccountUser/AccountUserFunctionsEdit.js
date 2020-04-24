@@ -70,21 +70,6 @@ const AccountUserFunctionsEdit = () => {
                     }
                   />
                 </label>
-                <label htmlFor="alert-time">
-                  <span>Alarm (ile godz. przed):</span>
-                  <input
-                    name="alert-time"
-                    type="number"
-                    min="1"
-                    max="12"
-                    value={newSet.accountSets.alertTime}
-                    onChange={(e) =>
-                      setAlertTime(
-                        (newSet.accountSets.alertTime = e.target.value)
-                      )
-                    }
-                  />
-                </label>
                 <label htmlFor="garden-plan">
                   <span>Plan ogrodu:</span>
                   <input
