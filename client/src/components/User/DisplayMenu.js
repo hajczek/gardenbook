@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const DisplayMenu = () => {
-  function changeStateOfMenu(e) {
+  function displayLeftMenu(e) {
     document.getElementById("left-menu").style.display = "flex";
     document.querySelector(".displayMenu").style.display = "none";
 
@@ -11,7 +11,7 @@ const DisplayMenu = () => {
   }
 
   return (
-    <div className="displayMenu" onClick={changeStateOfMenu}>
+    <div className="displayMenu" onClick={displayLeftMenu}>
       <FontAwesomeIcon icon={faBars} fixedWidth title="Menu" />
     </div>
   );

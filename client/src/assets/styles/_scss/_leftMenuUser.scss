@@ -3,6 +3,10 @@
   flex-direction: row;
   width: 5.9rem;
 
+  .closeMenu {
+    display: none;
+  }
+
   #left-menu-first {
     width: 4.1rem;
     background-color: $limone;
@@ -51,6 +55,17 @@
 @media screen and (max-width: 950px) {
   #left-menu {
     display: none;
+
+    .closeMenu {
+      display: flex;
+      font-size: 1.5rem;
+      margin: 1rem;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+      }
+    }
   }
 }
 

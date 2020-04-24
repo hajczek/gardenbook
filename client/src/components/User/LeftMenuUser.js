@@ -7,12 +7,27 @@ import {
   faMap,
   faChartLine,
   faEye,
+  faTimes,
 } from "@fortawesome/free-solid-svg-icons";
 
 const LeftMenuUser = () => {
+  function closeLeftMenu(e) {
+    document.getElementById("left-menu").style.display = "none";
+    document.querySelector(".displayMenu").style.display = "flex";
+
+    e.preventDefault();
+  }
+
   return (
     <nav id="left-menu">
       <div id="left-menu-first">
+        <FontAwesomeIcon
+          className="closeMenu"
+          icon={faTimes}
+          fixedWidth
+          title="Zamknij"
+          onClick={closeLeftMenu}
+        />
         <a id="plants" href="#" className="menuLeftBtn">
           <FontAwesomeIcon icon={faSpa} fixedWidth title="Rośliny" />
         </a>
