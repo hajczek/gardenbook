@@ -1,6 +1,7 @@
 import React from "react";
 import HeaderUser from "./HeaderUser";
 import LeftMenuUser from "./LeftMenuUser";
+import DisplayMenu from "./DisplayMenu";
 import Footer from "../Page/Footer";
 // import AlertsCard from "../Alerts/AlertsCard";
 import AccountUserCard from "../AccountUser/AccountUserCard";
@@ -20,6 +21,7 @@ const PageCard = () => {
     <div className="userPage">
       <HeaderUser />
       <section className="userSection">
+        <DisplayMenu />
         <LeftMenuUser />
         {/* <AlertsCard /> */}
         <AccountUserCard />

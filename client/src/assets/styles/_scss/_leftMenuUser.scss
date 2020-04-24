@@ -48,6 +48,12 @@
   }
 }
 
+@media screen and (max-width: 950px) {
+  #left-menu {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 550px) {
   #left-menu {
     width: 4.8rem;
