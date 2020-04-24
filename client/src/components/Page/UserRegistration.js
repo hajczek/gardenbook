@@ -1,11 +1,11 @@
 import React, { useState } from "react";
+import { displayErrorInfo } from "../../common/DisplayErrorInfo";
 
 const UserRegistration = () => {
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
   const [userPass, setUserPass] = useState("");
   const [userPassAgain, setUserPassAgain] = useState("");
-  import { displayErrorInfo } from "../../common/DisplayErrorInfo";
 
   function onSubmit(e) {
     console.log(userName);

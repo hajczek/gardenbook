@@ -1,10 +1,10 @@
 import React, { useState } from "react";
+import { displayErrorInfo } from "../../common/DisplayErrorInfo";
 
 const UserLogin = () => {
   const [userEmailLogin, setUserEmailLogin] = useState("");
   const [userPassLogin, setUserPassLogin] = useState("");
   const [userIsLogged, setUserIsLogged] = useState(false);
-  import { displayErrorInfo } from "../../common/DisplayErrorInfo";
 
   function onSubmit(e) {
     console.log(userEmailLogin);

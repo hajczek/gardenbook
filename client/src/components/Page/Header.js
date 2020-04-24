@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import logo from "../../assets/img/gardenbook-logo.png";
 
 const Header = () => {
@@ -10,9 +11,15 @@ const Header = () => {
         </a>
       </div>
       <nav>
-        <a href="#">Home</a>
-        <a href="#">Zarejestruj</a>
-        <a href="#">Zaloguj</a>
+        <NavLink to="/" exact={true} activeClassName="is-active">
+          Home
+        </NavLink>
+        <NavLink to="/zarejestruj" exact={true} activeClassName="is-active">
+          Zarejestruj
+        </NavLink>
+        <NavLink to="/zaloguj" exact={true} activeClassName="is-active">
+          Zaloguj
+        </NavLink>
       </nav>
     </header>
   );
