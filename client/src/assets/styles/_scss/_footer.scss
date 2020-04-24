@@ -1,6 +1,6 @@
 footer {
   width: 100vw;
-  background-color: $green-color;
+  background-color: $green;
   height: 4rem;
   position: absolute;
   bottom: 0;
@@ -12,27 +12,27 @@ footer {
   flex-wrap: wrap;
 
   p {
-    color: $lightest-green-color;
+    color: $lightest-green;
 
     a {
-      color: $lightest-green-color;
+      color: $lightest-green;
       text-decoration: none;
 
       &:hover {
-        color: $white-color;
+        color: $white;
       }
     }
   }
 
   nav {
     a {
-      color: $lightest-grey-color;
+      color: $lightest-grey;
       opacity: 60%;
       margin-left: 2rem;
       text-decoration: none;
 
       &:hover {
-        color: $white-color;
+        color: $white;
         opacity: 1;
       }
     }

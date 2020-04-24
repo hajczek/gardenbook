@@ -9,9 +9,9 @@
 
   .title {
     display: flex;
-    background-color: $limone-color-opacity-06;
+    background-color: $limone-opacity-06;
     font-size: 1.5rem;
-    color: $light-grey-color;
+    color: $light-grey;
     font-weight: bold;
     width: 14rem;
     text-align: center;
@@ -19,8 +19,8 @@
     justify-content: center;
 
     &:hover {
-      background-color: $limone-color;
-      color: $lighter-green-color;
+      background-color: $limone;
+      color: $lighter-green;
       cursor: pointer;
     }
   }

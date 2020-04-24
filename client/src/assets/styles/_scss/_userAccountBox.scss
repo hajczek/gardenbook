@@ -1,12 +1,12 @@
 .user-data-box {
   width: 50%;
-  background-color: $grey-color;
+  background-color: $grey;
   padding: 2.5rem;
   position: relative;
   font-size: 1.3rem;
 
   h2 {
-    color: $white-color;
+    color: $white;
     margin-bottom: 2rem;
     font-size: 1.5rem;
   }
@@ -14,10 +14,10 @@
   p {
     font-size: 1.3rem;
     line-height: 2;
-    color: $lighter-grey-color;
+    color: $lighter-grey;
 
     span {
-      color: $white-color;
+      color: $white;
       font-weight: bold;
     }
   }
@@ -28,7 +28,7 @@
     padding: 1rem 0.5rem;
     font-size: 1.2rem;
     font-weight: bold;
-    color: $grey-color;
+    color: $grey;
     border: none;
     position: absolute;
     bottom: 2.5rem;
@@ -41,7 +41,7 @@
 }
 .user-functionality-box {
   width: 50%;
-  background-color: $limone-color;
+  background-color: $limone;
   padding: 2.5rem 2.5rem 5rem 2.5rem;
   font-size: 1.3rem;
   position: relative;
@@ -62,7 +62,7 @@
 
     span {
       margin-left: 1rem;
-      color: $strong-green-color;
+      color: $strong-green;
     }
   }
   button {
@@ -71,8 +71,8 @@
     padding: 1rem 0.5rem;
     font-size: 1.2rem;
     font-weight: bold;
-    background-color: $grey-color;
-    color: $lighter-grey-color;
+    background-color: $grey;
+    color: $lighter-grey;
     border: none;
     position: absolute;
     bottom: 2.5rem;

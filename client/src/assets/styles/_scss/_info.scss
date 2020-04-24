@@ -1,11 +1,11 @@
 .info {
   padding: 2rem 3rem 3rem 2rem;
-  background-color: $white-color-opacity-08;
+  background-color: $white-opacity-08;
   display: flex;
   flex-direction: column;
   font-weight: bold;
   height: 50vh;
-  color: $grey-color;
+  color: $grey;
   align-self: flex-end;
   margin-right: 5vw;
   margin-top: 3.7rem;
@@ -25,7 +25,7 @@
 
   h1 {
     text-transform: uppercase;
-    color: $lighter-green-color;
+    color: $lighter-green;
     padding: 1rem 0 2rem 0;
   }
 
@@ -38,7 +38,7 @@
       line-height: 2;
 
       .important {
-        color: $light-green-color;
+        color: $light-green;
       }
     }
   }
@@ -49,7 +49,7 @@
   }
 
   .slogan-green {
-    color: $light-green-color;
+    color: $light-green;
   }
 }
 

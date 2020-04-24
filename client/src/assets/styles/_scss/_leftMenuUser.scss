@@ -5,14 +5,14 @@
 
   #left-menu-first {
     width: 4.1rem;
-    background-color: $limone-color;
+    background-color: $limone;
     height: calc(100vh - 168px);
 
     .menuLeftBtn {
       display: flex;
       font-size: 2.7rem;
-      border-bottom: 1px solid $white-color;
-      color: $grey-color;
+      border-bottom: 1px solid $white;
+      color: $grey;
       width: 4.1rem;
       padding: 0.6rem 0 0.6rem;
       align-content: center;
@@ -29,8 +29,8 @@
     width: 1.8rem;
 
     .addBtn {
-      background-color: $more-lightnes-grey-color;
-      border-bottom: 1px solid $white-color;
+      background-color: $more-lightnes-grey;
+      border-bottom: 1px solid $white;
       display: flex;
       font-size: 2rem;
       text-decoration: none;
