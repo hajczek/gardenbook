@@ -1,15 +1,25 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer>
       <p>
-        <a href="./">gardenbook</a> &copy; 2020 | <a href="#">Regulamin</a>
+        <a href="./">gardenbook</a> &copy; 2020 |{" "}
+        <NavLink to="/regulamin" exact={true} activeClassName="is-active">
+          Regulamin
+        </NavLink>
       </p>
       <nav>
-        <a href="#">Home</a>
-        <a href="#">Rejestracja</a>
-        <a href="#">Zaloguj</a>
+        <NavLink to="/" exact={true} activeClassName="is-active">
+          Home
+        </NavLink>
+        <NavLink to="/zarejestruj" exact={true} activeClassName="is-active">
+          Zarejestruj
+        </NavLink>
+        <NavLink to="/zaloguj" exact={true} activeClassName="is-active">
+          Zaloguj
+        </NavLink>
       </nav>
     </footer>
   );
