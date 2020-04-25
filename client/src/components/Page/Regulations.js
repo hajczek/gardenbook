@@ -4,7 +4,7 @@ const Regulations = () => {
   return (
     <div className="info">
       <h1>Regulamin</h1>
-      <div className="regulationText">
+      <div className="scrollBox">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac erat
           dignissim, pharetra diam eget, cursus ex. Mauris ac lectus bibendum,
