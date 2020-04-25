@@ -23,6 +23,15 @@
       color: $lighter-green;
       cursor: pointer;
     }
+
+    a {
+      color: $light-grey;
+      text-decoration: none;
+
+      &:hover {
+        color: $lighter-green;
+      }
+    }
   }
 }
 
