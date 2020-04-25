@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import { GlobalContext } from "../../context/GlobalState";
 import { NavLink } from "react-router-dom";
 import Navigation from "./Navigation";
 
 const Footer = () => {
+  const { userData } = useContext(GlobalContext);
   return (
     <footer>
       <p>
@@ -14,7 +16,9 @@ const Footer = () => {
           Regulamin
         </NavLink>
       </p>
-      <Navigation />
+      {userData.map((data) =>
+        data.userLogged === false ? <Navigation /> : null
+      )}
     </footer>
   );
 };
