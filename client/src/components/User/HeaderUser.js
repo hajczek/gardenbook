@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import logo from "../../assets/img/gardenbook-logo.png";
 import TopMenu from "./TopMenu";
 
@@ -6,9 +7,9 @@ const HeaderUser = () => {
   return (
     <header>
       <div className="logo">
-        <a href="./">
+        <NavLink to="/" exact={true} activeClassName="is-active">
           <img src={logo} alt="gardenbook" id="logo" />
-        </a>
+        </NavLink>
       </div>
       <TopMenu />
     </header>

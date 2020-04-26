@@ -24,7 +24,11 @@ const AlertsBox = () => {
                 <span>
                   {daysToAlert(alert.workTerm) > 1
                     ? ` za ${daysToAlert(alert.workTerm)} dni `
-                    : ` za ${daysToAlert(alert.workTerm)} dzień `}
+                    : daysToAlert(alert.workTerm) === 1
+                    ? ` za ${daysToAlert(alert.workTerm)} dzień `
+                    : daysToAlert(alert.workTerm) === 0
+                    ? ` jutro `
+                    : null}
                   &raquo;
                 </span>
               </li>

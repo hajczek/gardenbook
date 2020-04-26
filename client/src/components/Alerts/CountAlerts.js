@@ -5,7 +5,7 @@ import { maxDateFormatted } from "./AlertsFunction";
 export const CountAlerts = () => {
   const { plannedWorks } = useContext(GlobalContext);
 
-  // Filter dates which need alert
+  // Filter dates which needs alert
   let alertDates = plannedWorks.filter(
     (plannedWork) => plannedWork.workTerm <= maxDateFormatted
   );

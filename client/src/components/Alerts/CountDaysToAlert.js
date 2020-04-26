@@ -8,5 +8,5 @@ export default function daysToAlert(date) {
   // To calculate the no. of days between two dates
   let Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
 
-  return Difference_In_Days.toFixed();
+  return Math.round(Difference_In_Days);
 }
