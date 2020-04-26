@@ -4,41 +4,68 @@ import HeaderUser from "./HeaderUser";
 import LeftMenuUser from "./LeftMenuUser";
 import DisplayMenu from "./DisplayMenu";
 import Footer from "../Page/Footer";
-// import AlertsCard from "../Alerts/AlertsCard";
-// import AccountUserCard from "../AccountUser/AccountUserCard";
-// import ManageWorksCard from "../ManageWorks/ManageWorksCard";
-// import ManageMaterialsCard from "../ManageMaterials/ManageMaterialsCard";
-// import ManagePlantsCard from "../ManagePlants/ManagePlantsCard";
-// import AddMaterialCard from "../AddMaterial/AddMaterialCard";
-// import AddPlantCard from "../AddPlant/AddPlantCard";
-// import PlanWorkCard from "../PlanWork/PlanWorkCard";
+import AlertsCard from "../Alerts/AlertsCard";
+import AccountUserCard from "../AccountUser/AccountUserCard";
+import ManageWorksCard from "../ManageWorks/ManageWorksCard";
+import ManageMaterialsCard from "../ManageMaterials/ManageMaterialsCard";
+import ManagePlantsCard from "../ManagePlants/ManagePlantsCard";
+import AddMaterialCard from "../AddMaterial/AddMaterialCard";
+import AddPlantCard from "../AddPlant/AddPlantCard";
+import PlanWorkCard from "../PlanWork/PlanWorkCard";
+import Help from "./Help";
 
 // import EditedPlant from "./../ManagePlants/EditedPlant";
 // import EditedMaterial from "./../ManageMaterials/EditedMaterial";
-import EditedWork from "./../ManageWorks/EditedWork";
+// import EditedWork from "./../ManageWorks/EditedWork";
 
-const PageCard = () => {
+const PageUser = () => {
   return (
-    <div className="userPage">
-      <HeaderUser />
-      <section className="userSection">
-        <DisplayMenu />
-        <LeftMenuUser />
-        {/* <AlertsCard /> */}
-        {/* <AccountUserCard /> */}
-        {/* <ManageWorksCard /> */}
-        {/* <ManageMaterialsCard /> */}
-        {/* <ManagePlantsCard /> */}
-        {/* <AddMaterialCard /> */}
-        {/* <AddPlantCard /> */}
-        {/* <PlanWorkCard /> */}
-        {/* <EditedPlant /> */}
-        {/* <EditedMaterial /> */}
-        <EditedWork />
-      </section>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="userPage">
+        <HeaderUser />
+        <section className="userSection">
+          <DisplayMenu />
+          <LeftMenuUser />
+          <Switch>
+            <Route exact={true} path="/alarmy" component={AlertsCard} />
+            <Route exact={true} path="/konto" component={AccountUserCard} />
+            <Route
+              exact={true}
+              path="/zarzadzaj-pracami"
+              component={ManageWorksCard}
+            />
+            <Route
+              exact={true}
+              path="/zarzadzaj-materialami"
+              component={ManageMaterialsCard}
+            />
+            <Route
+              exact={true}
+              path="/zarzadzaj-roslinami"
+              component={ManagePlantsCard}
+            />
+            <Route
+              exact={true}
+              path="/dodaj-material"
+              component={AddMaterialCard}
+            />
+            <Route
+              exact={true}
+              path="/dodaj-rosline"
+              component={AddPlantCard}
+            />
+            <Route
+              exact={true}
+              path="/zaplanuj-prace"
+              component={PlanWorkCard}
+            />
+            <Route exact={true} path="/pomoc" component={Help} />
+          </Switch>
+        </section>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 };
 
-export default PageCard;
+export default PageUser;

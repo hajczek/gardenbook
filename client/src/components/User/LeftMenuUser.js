@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faSpa,
@@ -28,20 +29,42 @@ const LeftMenuUser = () => {
           title="Zamknij"
           onClick={closeLeftMenu}
         />
-        <a id="plants" href="#" className="menuLeftBtn">
+        <NavLink
+          to="/zarzadzaj-roslinami"
+          title="Zarządzaj roslinami"
+          exact={true}
+          activeClassName="is-active"
+          id="plants"
+          className="menuLeftBtn"
+        >
           <FontAwesomeIcon icon={faSpa} fixedWidth title="Rośliny" />
-        </a>
-        <a id="materials" href="#" className="menuLeftBtn">
+        </NavLink>
+        <NavLink
+          to="/zarzadzaj-materialami"
+          title="Zarządzaj materiałami"
+          exact={true}
+          activeClassName="is-active"
+          id="materials"
+          className="menuLeftBtn"
+        >
           <FontAwesomeIcon icon={faPen} fixedWidth title="Materiały" />
-        </a>
-        <a id="works" href="#" className="menuLeftBtn">
+        </NavLink>
+
+        <NavLink
+          to="/zarzadzaj-pracami"
+          title="Zarządzaj pracami"
+          exact={true}
+          activeClassName="is-active"
+          id="works"
+          className="menuLeftBtn"
+        >
           <FontAwesomeIcon
             icon={faCalendarAlt}
             fixedWidth
-            title="Zaplanowane prace"
+            title="Zarządzaj pracami"
           />
-        </a>
-        <a id="plan" href="#" className="menuLeftBtn notActive">
+        </NavLink>
+        {/* <a id="plan" href="#" className="menuLeftBtn notActive">
           <FontAwesomeIcon icon={faMap} fixedWidth title="Plan ogrodu" />
         </a>
         <a id="statistic" href="#" className="menuLeftBtn notActive">
@@ -49,23 +72,39 @@ const LeftMenuUser = () => {
         </a>
         <a id="search" href="#" className="menuLeftBtn notActive">
           <FontAwesomeIcon icon={faEye} fixedWidth title="Znajdź wykonawcę" />
-        </a>
+        </a> */}
       </div>
       <div id="left-menu-second">
-        <a className="addBtn" href="#" id="add-plant" title="Dodaj roślinę">
-          +
-        </a>
-        <a
+        <NavLink
+          to="/dodaj-rosline"
+          title="Dodaj roślinę"
+          exact={true}
+          activeClassName="is-active"
+          id="add-plant"
           className="addBtn"
-          href="#"
-          uid="add-material"
-          title="Dodaj materiał"
         >
           +
-        </a>
-        <a className="addBtn" href="#" id="add-work" title="Zaplanuj pracę">
+        </NavLink>
+        <NavLink
+          to="/dodaj-material"
+          title="Dodaj materiał"
+          exact={true}
+          activeClassName="is-active"
+          id="add-material"
+          className="addBtn"
+        >
           +
-        </a>
+        </NavLink>
+        <NavLink
+          to="/zaplanuj-prace"
+          title="Zaplanuj pracę"
+          exact={true}
+          activeClassName="is-active"
+          id="add-work"
+          className="addBtn"
+        >
+          +
+        </NavLink>
       </div>
     </nav>
   );

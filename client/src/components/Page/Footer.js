@@ -6,8 +6,8 @@ import Navigation from "./Navigation";
 const Footer = () => {
   const { userData } = useContext(GlobalContext);
   return (
-    <footer>
-      <p>
+    <footer key="footer">
+      <p key="footerText">
         <NavLink to="/" exact={true} activeClassName="is-active">
           gardenbook
         </NavLink>{" "}

@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import CountAlerts from "../Alerts/CountAlerts";
 import logo from "../../assets/img/gardenbook-logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -21,22 +22,33 @@ const HeaderUser = () => {
         </a>
       </div>
       <nav>
-        <a href="#" title="Alerty">
+        <NavLink to="/" title="Alerty" exact={true} activeClassName="is-active">
           <CountAlerts />
           <FontAwesomeIcon icon={faBell} />
-        </a>
+        </NavLink>
         <a href="#" title="Zestawienie prac">
           <FontAwesomeIcon icon={faCheck} />
         </a>
-        <a href="#" title="Portal społeczności">
+        {/* <a href="#" title="Portal społeczności">
           <FontAwesomeIcon icon={faDesktop} />
-        </a>
-        <a href="#" title="Konto użytkownika">
+        </a> */}
+        <NavLink
+          to="/konto"
+          title="Konto"
+          exact={true}
+          activeClassName="is-active"
+        >
           <FontAwesomeIcon icon={faUser} />
-        </a>
-        <a href="#" title="Pomoc">
+        </NavLink>
+
+        <NavLink
+          to="/pomoc"
+          title="Pomoc"
+          exact={true}
+          activeClassName="is-active"
+        >
           <FontAwesomeIcon icon={faQuestion} />
-        </a>
+        </NavLink>
         <a href="#" title="Historia">
           <FontAwesomeIcon icon={faHistory} />
         </a>

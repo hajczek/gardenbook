@@ -20,7 +20,6 @@ const PageCard = () => {
   return (
     <div className="contentPage">
       <Header />
-      {/* <Info /> */}
       <Switch>
         <Route exact={true} path="/" component={Info} />
         <Route exact={true} path="/zaloguj" component={UserLogin} />
