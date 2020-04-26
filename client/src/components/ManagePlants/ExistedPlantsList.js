@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { NavLink } from "react-router-dom";
 import { GlobalContext } from "../../context/GlobalState";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
@@ -93,13 +94,20 @@ const ExistedPlantsList = () => {
                 {plant.plantWateringFreq}
               </td>
               <td align="center">
-                <FontAwesomeIcon
-                  id="edit-plant"
-                  icon={faEdit}
-                  // This action must open EditedPlant component and set plantData to this component
-                  // onClick={() => console.log(plant.id)}
-                  onClick={(e) => getPlantId(plant.id)}
-                />
+                <NavLink
+                  to="/edycja-rosliny"
+                  title="Edycja rosliny"
+                  exact={true}
+                  activeClassName="is-active"
+                >
+                  <FontAwesomeIcon
+                    id="edit-plant"
+                    icon={faEdit}
+                    // This action must open EditedPlant component and set plantData to this component
+                    // onClick={() => console.log(plant.id)}
+                    onClick={(e) => getPlantId(plant.id)}
+                  />
+                </NavLink>
               </td>
               <td align="center">
                 <FontAwesomeIcon

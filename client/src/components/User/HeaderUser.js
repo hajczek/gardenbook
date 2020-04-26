@@ -26,9 +26,9 @@ const HeaderUser = () => {
           <CountAlerts />
           <FontAwesomeIcon icon={faBell} />
         </NavLink>
-        <a href="#" title="Zestawienie prac">
+        {/* <a href="#" title="Zestawienie prac">
           <FontAwesomeIcon icon={faCheck} />
-        </a>
+        </a> */}
         {/* <a href="#" title="Portal społeczności">
           <FontAwesomeIcon icon={faDesktop} />
         </a> */}
@@ -49,9 +49,9 @@ const HeaderUser = () => {
         >
           <FontAwesomeIcon icon={faQuestion} />
         </NavLink>
-        <a href="#" title="Historia">
+        {/* <a href="#" title="Historia">
           <FontAwesomeIcon icon={faHistory} />
-        </a>
+        </a> */}
         <a href="#" title="Wyloguj">
           <FontAwesomeIcon icon={faSignOutAlt} />
         </a>

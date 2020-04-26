@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { NavLink } from "react-router-dom";
 import { GlobalContext } from "../../context/GlobalState";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
@@ -59,13 +60,20 @@ const ExistedMaterialsList = () => {
                 {(material.materialQuant * material.materialPrice).toFixed(2)}
               </td>
               <td align="center">
-                <FontAwesomeIcon
-                  id="edit-material"
-                  icon={faEdit}
-                  // This action must open EditedMatrial component and set materialData to this component
-                  // onClick={() => console.log(material.id)}
-                  onClick={(e) => getMaterialId(material.id)}
-                />
+                <NavLink
+                  to="/edycja-materialu"
+                  title="Edycja materiału"
+                  exact={true}
+                  activeClassName="is-active"
+                >
+                  <FontAwesomeIcon
+                    id="edit-material"
+                    icon={faEdit}
+                    // This action must open EditedMatrial component and set materialData to this component
+                    // onClick={() => console.log(material.id)}
+                    onClick={(e) => getMaterialId(material.id)}
+                  />
+                </NavLink>
               </td>
               <td align="center">
                 <FontAwesomeIcon

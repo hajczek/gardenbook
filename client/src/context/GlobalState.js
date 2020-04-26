@@ -47,7 +47,7 @@ const initialState = {
       workTerm: "2020-04-25",
       workAlert: "10:00",
       workDetails: "Podlać połudionwe rabaty",
-      workDone: false,
+      workDone: true,
       workTime: 0,
       workValue: 0,
       addedDate: "",

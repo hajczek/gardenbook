@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { NavLink } from "react-router-dom";
 import { GlobalContext } from "../../context/GlobalState";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
@@ -73,13 +74,20 @@ const PlannedWorkList = () => {
               </td>
               <td id="work-details">{plannedWork.workDetails}</td>
               <td align="center">
-                <FontAwesomeIcon
-                  id="edit-work"
-                  icon={faEdit}
-                  // This action must open EditedWork component and set workData to this component
-                  //onClick={() => console.log(plannedWork.id)}
-                  onClick={(e) => getWorkId(plannedWork.id)}
-                />
+                <NavLink
+                  to="/edycja-pracy"
+                  title="Edycja pracy"
+                  exact={true}
+                  activeClassName="is-active"
+                >
+                  <FontAwesomeIcon
+                    id="edit-work"
+                    icon={faEdit}
+                    // This action must open EditedWork component and set workData to this component
+                    //onClick={() => console.log(plannedWork.id)}
+                    onClick={(e) => getWorkId(plannedWork.id)}
+                  />
+                </NavLink>
               </td>
               <td align="center">
                 <FontAwesomeIcon

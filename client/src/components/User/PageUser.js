@@ -14,9 +14,9 @@ import AddPlantCard from "../AddPlant/AddPlantCard";
 import PlanWorkCard from "../PlanWork/PlanWorkCard";
 import Help from "./Help";
 
-// import EditedPlant from "./../ManagePlants/EditedPlant";
-// import EditedMaterial from "./../ManageMaterials/EditedMaterial";
-// import EditedWork from "./../ManageWorks/EditedWork";
+import EditedPlant from "./../ManagePlants/EditedPlant";
+import EditedMaterial from "./../ManageMaterials/EditedMaterial";
+import EditedWork from "./../ManageWorks/EditedWork";
 
 const PageUser = () => {
   return (
@@ -58,6 +58,17 @@ const PageUser = () => {
               exact={true}
               path="/zaplanuj-prace"
               component={PlanWorkCard}
+            />
+            <Route exact={true} path="/edycja-pracy" component={EditedWork} />
+            <Route
+              exact={true}
+              path="/edycja-rosliny"
+              component={EditedPlant}
+            />
+            <Route
+              exact={true}
+              path="/edycja-materialu"
+              component={EditedMaterial}
             />
             <Route exact={true} path="/pomoc" component={Help} />
           </Switch>
