@@ -15,7 +15,7 @@ const ExistedMaterialsList = () => {
   const { deleteMaterial } = useContext(GlobalContext);
 
   return (
-    <div className="content">
+    <div className="contentList">
       <table>
         <tbody>
           <tr>

@@ -15,7 +15,7 @@ const PlannedWorkList = () => {
   const { deleteWork } = useContext(GlobalContext);
 
   return (
-    <div className="content">
+    <div className="contentList">
       <table>
         <tbody>
           <tr>

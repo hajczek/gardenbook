@@ -12,7 +12,6 @@
       margin: 0 0.8rem;
     }
   }
-
   .plus-link {
     align-self: flex-end;
     position: relative;
@@ -26,63 +25,67 @@
       opacity: 0.7;
     }
   }
-
   p {
     font-size: 1.2rem;
   }
+  .contentList {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 
-  table {
-    background-color: $limone;
-    font-size: 1.2rem;
-    margin-top: 1.2rem;
-    padding: 0.6rem 0.6rem 1.1rem 0.6rem;
+    table {
+      background-color: $limone;
+      font-size: 1.2rem;
+      margin-top: 1.2rem;
+      padding: 0.6rem 0.6rem 1.1rem 0.6rem;
 
-    tr {
-      background: rgba(255, 255, 255, 0);
-      color: #444;
-      th {
-        padding: 0.3rem;
-      }
-      td {
-        padding: 0.3rem;
-
-        h3 {
-          text-transform: uppercase;
+      tr {
+        background: rgba(255, 255, 255, 0);
+        color: #444;
+        th {
+          padding: 0.3rem;
         }
+        td {
+          padding: 0.3rem;
 
-        svg:hover {
-          cursor: pointer;
-          opacity: 0.7;
-        }
+          h3 {
+            text-transform: uppercase;
+          }
 
-        a {
-          color: $grey;
-
-          &:hover {
+          svg:hover {
+            cursor: pointer;
             opacity: 0.7;
           }
+
+          a {
+            color: $grey;
+
+            &:hover {
+              opacity: 0.7;
+            }
+          }
+        }
+
+        &:hover {
+          color: #000;
+          background: rgba(255, 255, 255, 0.7);
         }
       }
 
-      &:hover {
-        color: #000;
-        background: rgba(255, 255, 255, 0.7);
+      tr:nth-child(odd) {
+        background: rgba(255, 255, 255, 0.3);
+        &:hover {
+          background: rgba(255, 255, 255, 0.7);
+        }
       }
-    }
 
-    tr:nth-child(odd) {
-      background: rgba(255, 255, 255, 0.3);
-      &:hover {
-        background: rgba(255, 255, 255, 0.7);
-      }
-    }
-
-    tr:first-child,
-    tr:nth-child(2) {
-      background: rgba(255, 255, 255, 0);
-      &:hover {
-        color: $grey;
+      tr:first-child,
+      tr:nth-child(2) {
         background: rgba(255, 255, 255, 0);
+        &:hover {
+          color: $grey;
+          background: rgba(255, 255, 255, 0);
+        }
       }
     }
   }

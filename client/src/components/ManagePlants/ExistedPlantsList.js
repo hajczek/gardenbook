@@ -15,7 +15,7 @@ const ExistedPlantsList = () => {
   const { deletePlant } = useContext(GlobalContext);
 
   return (
-    <div className="content">
+    <div className="contentList">
       <table className="existed-plant-table">
         <tbody>
           <tr>
