@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import SearchExistedWork from "./SearchExistedWork";
 import ExistedWorksList from "./ExistedWorksList";
 
@@ -10,9 +11,15 @@ const ManageWorksCard = () => {
           <h2>Zarządzaj zadaniami</h2>
           <SearchExistedWork />
         </div>
-        <span className="plus-link" id="plan-work-link">
+        <NavLink
+          to="/zaplanuj-prace"
+          exact={true}
+          activeClassName="is-active"
+          id="plan-work-link"
+          className="plus-link"
+        >
           + Zaplanuj pracę
-        </span>
+        </NavLink>
         <p>
           Zmień nazwę, termin, zaznacz jako wykonaną lub usuń wybraną z
           zaplanowanych prac.

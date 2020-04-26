@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import SearchExistedPlant from "./SearchExistedPlant";
 import ExistedPlantsList from "./ExistedPlantsList";
 
@@ -10,9 +11,15 @@ const ManagePlantsCard = () => {
           <h2>Zarządzaj roślinami</h2>
           <SearchExistedPlant />
         </div>
-        <span className="plus-link" id="add-plant-link">
+        <NavLink
+          to="/dodaj-rosline"
+          exact={true}
+          activeClassName="is-active"
+          id="add-plant-link"
+          className="plus-link"
+        >
           + Dodaj roślinę
-        </span>
+        </NavLink>
         <p>
           Zmień nazwę, zdjęcie, ilość, nawóz, dawkę, częstotliwość nawożenia i
           podlewania lub usuń wybrane rośliny.
