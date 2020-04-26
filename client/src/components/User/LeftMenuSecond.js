@@ -1,5 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 const LeftMenuSecond = () => {
   return (
@@ -12,7 +14,7 @@ const LeftMenuSecond = () => {
         id="add-work"
         className="addBtn"
       >
-        +
+        <FontAwesomeIcon icon={faPlus} fixedWidth />
       </NavLink>
       <NavLink
         to="/dodaj-rosline"
@@ -22,7 +24,7 @@ const LeftMenuSecond = () => {
         id="add-plant"
         className="addBtn"
       >
-        +
+        <FontAwesomeIcon icon={faPlus} fixedWidth />
       </NavLink>
       <NavLink
         to="/dodaj-material"
@@ -32,7 +34,7 @@ const LeftMenuSecond = () => {
         id="add-material"
         className="addBtn"
       >
-        +
+        <FontAwesomeIcon icon={faPlus} fixedWidth />
       </NavLink>
     </div>
   );
