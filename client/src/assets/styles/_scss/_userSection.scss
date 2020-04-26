@@ -1,5 +1,8 @@
 .userSection {
   display: flex;
+  background: $green url("../../img/gardenbook-bg.jpg") no-repeat center center
+    fixed;
+  background-size: cover;
 
   .contentUser {
     display: flex;
@@ -10,6 +13,7 @@
     #alerts {
       width: 50%;
       background-color: $grey;
+      opacity: 0.95;
       padding: 3.2rem 2rem 3.5rem 3.2rem;
 
       h2 {
@@ -39,7 +43,8 @@
     }
 
     .existed-box {
-      background-color: $limone;
+      background-color: $white;
+      opacity: 0.85;
       color: $grey;
       padding: 3.2rem 2rem 3.5rem 3.2rem;
       width: 50%;
