@@ -53,6 +53,14 @@
           cursor: pointer;
           opacity: 0.7;
         }
+
+        a {
+          color: $grey;
+
+          &:hover {
+            opacity: 0.7;
+          }
+        }
       }
 
       &:hover {
