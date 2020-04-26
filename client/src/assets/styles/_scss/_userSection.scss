@@ -13,35 +13,35 @@
     .content {
       background-color: rgba(225, 225, 225, 0.9);
       padding: 2rem;
+    }
 
-      #alerts {
-        width: 50%;
-        background-color: $grey;
-        opacity: 0.95;
-        padding: 3.2rem 2rem 3.5rem 3.2rem;
+    #alerts {
+      width: 50%;
+      background-color: $grey;
+      opacity: 0.95;
+      padding: 3.2rem 2rem 3.5rem 3.2rem;
 
-        h2 {
-          color: $luminescence-green;
-          font-size: 1.5rem;
-          margin-bottom: 1.8rem;
-          text-transform: uppercase;
-        }
+      h2 {
+        color: $luminescence-green;
+        font-size: 1.5rem;
+        margin-bottom: 1.8rem;
+        text-transform: uppercase;
+      }
 
-        #alerts-list {
-          color: $white;
-          font-weight: bold;
-          font-size: 1.4rem;
-          li {
-            line-height: 1.8;
-            margin-left: 3rem;
-            span {
-              color: $luminescence-green;
-            }
+      #alerts-list {
+        color: $white;
+        font-weight: bold;
+        font-size: 1.4rem;
+        li {
+          line-height: 1.8;
+          margin-left: 3rem;
+          span {
+            color: $luminescence-green;
+          }
 
-            &:hover {
-              cursor: pointer;
-              opacity: 0.7;
-            }
+          &:hover {
+            cursor: pointer;
+            opacity: 0.7;
           }
         }
       }
