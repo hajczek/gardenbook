@@ -16,6 +16,7 @@ const AlertsBox = () => {
       </h2>
       <ol id="alerts-list">
         {plannedWorks
+          .reverse()
           .filter((plannedWork) => plannedWork.workTerm <= maxDateFormatted)
           .map((alert) => {
             return (
