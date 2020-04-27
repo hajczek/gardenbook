@@ -153,7 +153,7 @@ const ExistedPlantsList = () => {
           ))}
         </tbody>
       </table>
-      <div>
+      <div className="summaryBox">
         RAZEM: Gatunków: {plants.length}
         Sztuk: {countNumOfPlants()}
         Wartość: {countValueOfAllPlants()}

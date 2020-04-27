@@ -132,7 +132,7 @@ const PlannedWorkList = () => {
           ))}
         </tbody>
       </table>
-      <div>
+      <div className="summaryBox">
         <h3>RAZEM</h3>
         Il. zaplanowanych prac: {plannedWorks.length}
         Niewykonanych: {countNumOfNotDoneWork()}

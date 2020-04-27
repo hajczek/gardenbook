@@ -2,6 +2,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
 
   .top-box {
     display: flex;
@@ -38,7 +39,9 @@
       font-size: 1.2rem;
       margin-top: 1.2rem;
       padding: 0.6rem 0.6rem 1.1rem 0.6rem;
-      overflow-y: scroll;
+      height: 35vh;
+      display: flex;
+      overflow: auto;
 
       tr {
         background: rgba(255, 255, 255, 0);
@@ -106,6 +109,17 @@
           background: rgba(255, 255, 255, 0);
         }
       }
+    }
+    .summaryBox {
+      position: absolute;
+      bottom: 1.5rem;
+      font-weight: bold;
+      background-color: $white;
+      width: 96%;
+      padding: 0.5rem;
+      font-size: 1.2rem;
+      display: flex;
+      justify-content: flex-end;
     }
   }
 }
