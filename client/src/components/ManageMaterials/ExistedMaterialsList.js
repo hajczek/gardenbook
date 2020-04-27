@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { GlobalContext } from "../../context/GlobalState";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,6 +13,8 @@ export const getMaterialId = (id) => {
 const ExistedMaterialsList = () => {
   const { materials } = useContext(GlobalContext);
   const { deleteMaterial } = useContext(GlobalContext);
+  const [search, setSearch] = useState("");
+  const [filteredMaterials, setFilteredMaterials] = useState([]);
 
   function countValueOfAllMaterials() {
     let valueOfAllMaterials = 0;
@@ -23,8 +25,22 @@ const ExistedMaterialsList = () => {
     return valueOfAllMaterials.toFixed(2);
   }
 
+  useEffect(() => {
+    setFilteredMaterials(
+      materials.filter((material) =>
+        material.materialName.toLowerCase().includes(search.toLowerCase())
+      )
+    );
+  }, [search, materials]);
+
   return (
     <div className="contentList">
+      <input
+        id="search-material"
+        type="text"
+        onChange={(e) => setSearch(e.target.value)}
+        placeholder="Wyszukaj materiał po nazwie"
+      />
       <table>
         <tbody>
           <tr>
@@ -44,7 +60,7 @@ const ExistedMaterialsList = () => {
             <th>Usuń</th>
           </tr>
 
-          {materials.map((material) => (
+          {filteredMaterials.map((material) => (
             <tr key={material.id}>
               <td id="material-id" align="center">
                 {material.id}

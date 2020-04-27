@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import SearchExistedMaterial from "./SearchExistedMaterial";
 import ExistedMaterialsList from "./ExistedMaterialsList";
 
 const ManageMaterialsCard = () => {
@@ -9,7 +8,6 @@ const ManageMaterialsCard = () => {
       <div className="content">
         <div className="top-box">
           <h2>Zarządzaj materiałami</h2>
-          <SearchExistedMaterial />
         </div>
         <NavLink
           to="/dodaj-material"
