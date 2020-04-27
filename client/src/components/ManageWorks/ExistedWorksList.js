@@ -25,9 +25,22 @@ const PlannedWorkList = () => {
   function countNumOfPlannedWork() {
     let numOfPlannedWork = 0;
     for (let i = 0; i < plannedWorks.length; i++) {
-      if (plannedWorks[i].workDone === false) numOfPlannedWork += 1;
+      if (new Date(plannedWorks[i].workTerm) > new Date())
+        numOfPlannedWork += 1;
     }
     return numOfPlannedWork;
+  }
+
+  function countNumOfNotDoneWork() {
+    let numOfNotDonedWork = 0;
+    for (let i = 0; i < plannedWorks.length; i++) {
+      if (
+        new Date(plannedWorks[i].workTerm) < new Date() &&
+        plannedWorks[i].workDone === false
+      )
+        numOfNotDonedWork += 1;
+    }
+    return numOfNotDonedWork;
   }
 
   return (
@@ -124,7 +137,7 @@ const PlannedWorkList = () => {
             <td align="center">RAZEM</td>
             <td align="left">Il. zaplanowanych prac: {plannedWorks.length}</td>
             <td align="left" colSpan="2">
-              Niewykonanych: {}
+              Niewykonanych: {countNumOfNotDoneWork()}
             </td>
             <td></td>
             <td align="left" colSpan="2">
