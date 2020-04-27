@@ -72,6 +72,13 @@
         }
       }
 
+      .workDone {
+        color: $strong-green;
+        &:hover {
+          color: $strong-green;
+        }
+      }
+
       tr:nth-child(odd) {
         background: rgba(255, 255, 255, 0.3);
         &:hover {
@@ -97,10 +104,6 @@
           color: $grey;
           background: rgba(255, 255, 255, 0);
         }
-      }
-
-      .workDone {
-        color: $strong-green;
       }
     }
   }

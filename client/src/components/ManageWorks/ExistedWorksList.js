@@ -101,6 +101,24 @@ const PlannedWorkList = () => {
               </td>
             </tr>
           ))}
+          <tr>
+            <td colSpan="10"></td>
+          </tr>
+          <tr className="summaryTr">
+            <td align="center">RAZEM</td>
+            <td align="left">Il. zaplanowanych prac: {plannedWorks.length}</td>
+            <td align="left" colSpan="2">
+              Niewykonanych: {}
+            </td>
+            <td></td>
+            <td align="left" colSpan="2">
+              Wykonanych: {}
+            </td>
+            <td align="left" colSpan="2">
+              Do wykonania: {}
+            </td>
+            <td></td>
+          </tr>
         </tbody>
       </table>
     </div>
