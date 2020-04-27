@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
+import { GlobalContext } from "../../context/GlobalState";
 
 const SearchExistedPlant = () => {
+  const { plants } = useContext(GlobalContext);
+
   function onSubmit(e) {
-    console.log("Send");
+    for (let i = 0; i < plants.length; i++) {
+      if (plants[i].plantName === document.getElementById("search-plant").value)
+        console.log(plants[i].plantName);
+    }
     e.preventDefault();
   }
 
-  function onChange(e) {
-    console.log(e);
-  }
+  function onChange(e) {}
 
   return (
     <form onSubmit={onSubmit}>
