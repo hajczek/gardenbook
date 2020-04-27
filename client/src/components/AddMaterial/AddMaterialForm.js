@@ -1,8 +1,6 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 const AddMaterialForm = () => {
   const [materialName, setMaterialName] = useState("");
@@ -48,10 +46,9 @@ const AddMaterialForm = () => {
           type="file"
           name="material-photo"
           value={materialPhoto}
+          className="inputFile"
           onChange={(e) => setMaterialPhoto(e.target.value)}
-          placeholder="Wybierz plik ze zdjęciem"
         />
-        <FontAwesomeIcon icon={faDownload} />
       </label>
 
       <label htmlFor="material-quant">
@@ -63,6 +60,7 @@ const AddMaterialForm = () => {
           min="0"
           value={materialQuant}
           onChange={(e) => setMaterialQuant(e.target.value)}
+          accept="image/jpeg,image/gif,image/jpg,image/png"
         />
       </label>
       <label htmlFor="unit">

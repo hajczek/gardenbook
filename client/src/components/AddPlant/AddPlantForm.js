@@ -1,8 +1,6 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 const AddPlantForm = () => {
   const { addPlant } = useContext(GlobalContext);
@@ -61,16 +59,15 @@ const AddPlantForm = () => {
       </label>
       <label htmlFor="plant-photo">
         <span>Zdjęcie rośliny</span>
-
         <input
           type="file"
           name="plant-photo"
           id="plant-photo"
+          className="inputFile"
           filename={plantPhoto}
           onChange={(e) => setPlantPhoto(e.target.value)}
-          placeholder="Wybierz plik ze zdjęciem"
+          accept="image/jpeg,image/gif,image/jpg,image/png"
         />
-        <FontAwesomeIcon icon={faDownload} />
       </label>
 
       <label htmlFor="plant-price">
