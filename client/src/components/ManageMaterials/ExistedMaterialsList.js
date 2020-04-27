@@ -14,6 +14,15 @@ const ExistedMaterialsList = () => {
   const { materials } = useContext(GlobalContext);
   const { deleteMaterial } = useContext(GlobalContext);
 
+  function countValueOfAllMaterials() {
+    let valueOfAllMaterials = 0;
+    for (let i = 0; i < materials.length; i++) {
+      valueOfAllMaterials +=
+        materials[i].materialQuant * materials[i].materialPrice;
+    }
+    return valueOfAllMaterials.toFixed(2);
+  }
+
   return (
     <div className="contentList">
       <table>
@@ -84,6 +93,16 @@ const ExistedMaterialsList = () => {
               </td>
             </tr>
           ))}
+          <tr>
+            <td colSpan="12"></td>
+          </tr>
+          <tr className="summaryTr">
+            <td align="center">RAZEM</td>
+            <td align="center">Il. materiałów: {materials.length}</td>
+            <td colSpan="4"></td>
+            <td align="right">Wartość: {countValueOfAllMaterials()}</td>
+            <td colSpan="2"></td>
+          </tr>
         </tbody>
       </table>
     </div>
