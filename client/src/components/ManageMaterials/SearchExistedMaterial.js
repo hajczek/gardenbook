@@ -7,8 +7,11 @@ const SearchExistedMaterial = () => {
   function onSubmit(e) {
     for (let i = 0; i < materials.length; i++) {
       if (
-        materials[i].materialName.toLowerCase() ===
-        document.getElementById("search-material").value.toLowerCase()
+        materials[i].materialName
+          .toLowerCase()
+          .includes(
+            document.getElementById("search-material").value.toLowerCase()
+          )
       )
         // In this place we must display searched material from database
         console.log(materials[i].materialName);

@@ -7,8 +7,9 @@ const SearchExistedPlant = () => {
   function onSubmit(e) {
     for (let i = 0; i < plants.length; i++) {
       if (
-        plants[i].plantName.toLowerCase() ===
-        document.getElementById("search-plant").value.toLowerCase()
+        plants[i].plantName
+          .toLowerCase()
+          .includes(document.getElementById("search-plant").value.toLowerCase())
       )
         // In this place we must display searched plant from database
         console.log(plants[i].plantName);
