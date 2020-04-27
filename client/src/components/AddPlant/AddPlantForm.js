@@ -57,8 +57,8 @@ const AddPlantForm = () => {
           onChange={(e) => setPlantQuant(e.target.value)}
         />
       </label>
-      <label htmlFor="plant-photo">
-        <span>Zdjęcie rośliny</span>
+      <label htmlFor="plant-photo" className="labelForInputFile">
+        Dodaj zdjęcie rośliny
         <input
           type="file"
           name="plant-photo"
@@ -68,6 +68,7 @@ const AddPlantForm = () => {
           onChange={(e) => setPlantPhoto(e.target.value)}
           accept="image/jpeg,image/gif,image/jpg,image/png"
         />
+        <span>Wybierz plik</span>
       </label>
 
       <label htmlFor="plant-price">

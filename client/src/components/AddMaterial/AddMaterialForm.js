@@ -40,15 +40,17 @@ const AddMaterialForm = () => {
           onChange={(e) => setMaterialName(e.target.value)}
         />
       </label>
-      <label htmlFor="material-photo" id="material-photo">
-        <span>Zdjęcie materiału</span>
+      <label htmlFor="material-photo" className="labelForInputFile">
+        Dodaj zdjęcie materiału
         <input
           type="file"
           name="material-photo"
           value={materialPhoto}
           className="inputFile"
           onChange={(e) => setMaterialPhoto(e.target.value)}
+          accept="image/jpeg,image/gif,image/jpg,image/png"
         />
+        <span>Wybierz plik</span>
       </label>
 
       <label htmlFor="material-quant">
@@ -60,7 +62,6 @@ const AddMaterialForm = () => {
           min="0"
           value={materialQuant}
           onChange={(e) => setMaterialQuant(e.target.value)}
-          accept="image/jpeg,image/gif,image/jpg,image/png"
         />
       </label>
       <label htmlFor="unit">
