@@ -39,7 +39,7 @@ export const PlanWorkForm = () => {
   return (
     <form id="plan-work" action="#" onSubmit={onSubmit}>
       <label htmlFor="work-name">
-        <span>Nazwa planowanej pracy</span>
+        <span>Tytuł planowanej pracy</span>
         <input
           type="text"
           name="work-name"
@@ -61,31 +61,6 @@ export const PlanWorkForm = () => {
           <option value="nawoz-do-trawnika">Nawóz do trawnika</option>
         </select>
       </label>
-      <label htmlFor="work-mat-quant">
-        <span>Ilość</span>
-        <input
-          type="number"
-          name="work-mat-quant"
-          id="work-mat-quant"
-          min="0"
-          placeholder="0"
-          value={workMatQuant}
-          onChange={(e) => setWorkMatQuant(e.target.value)}
-        />
-      </label>
-      <label htmlFor="work-mat-unit">
-        <span>Jednostka</span>
-        <select
-          name="work-mat-unit"
-          id="work-mat-unit"
-          value={workMatUnit}
-          onChange={(e) => setWorkMatUnit(e.target.value)}
-        >
-          <option value="wybierz">Wybierz jednostkę</option>
-          <option value="litr">Litr</option>
-          <option value="kg">Kg</option>
-        </select>
-      </label>
       <label htmlFor="work-term">
         <span>Termin realizacji</span>
         <input
@@ -96,6 +71,18 @@ export const PlanWorkForm = () => {
           onChange={(e) => setWorkTerm(e.target.value)}
         />
         {/* <span id="add-work-term">Dodaj termin do kalendarza &raquo;</span> */}
+      </label>
+      <label htmlFor="work-mat-quant">
+        <span>Ilość potrzebnego materiału</span>
+        <input
+          type="number"
+          name="work-mat-quant"
+          id="work-mat-quant"
+          min="0"
+          placeholder="0"
+          value={workMatQuant}
+          onChange={(e) => setWorkMatQuant(e.target.value)}
+        />
       </label>
       <label htmlFor="work-alert">
         <span>Czas dla alarmu</span>
@@ -109,10 +96,24 @@ export const PlanWorkForm = () => {
         />
         {/* <span id="add-work-term">Dodaj termin do kalendarza &raquo;</span> */}
       </label>
+
+      <label htmlFor="work-mat-unit">
+        <span>Jednostka maateriału</span>
+        <select
+          name="work-mat-unit"
+          id="work-mat-unit"
+          value={workMatUnit}
+          onChange={(e) => setWorkMatUnit(e.target.value)}
+        >
+          <option value="wybierz">Wybierz jednostkę</option>
+          <option value="litr">Litr</option>
+          <option value="kg">Kg</option>
+        </select>
+      </label>
       <label htmlFor="work-details">
         <span>Uwagi</span>
         <textarea
-          rows="4"
+          rows="6"
           cols="38"
           id="work-details"
           name="work-details"
