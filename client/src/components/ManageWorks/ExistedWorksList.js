@@ -14,6 +14,22 @@ const PlannedWorkList = () => {
   const { plannedWorks } = useContext(GlobalContext);
   const { deleteWork } = useContext(GlobalContext);
 
+  function countNumOfDoneWork() {
+    let numOfDoneWork = 0;
+    for (let i = 0; i < plannedWorks.length; i++) {
+      if (plannedWorks[i].workDone === true) numOfDoneWork += 1;
+    }
+    return numOfDoneWork;
+  }
+
+  function countNumOfPlannedWork() {
+    let numOfPlannedWork = 0;
+    for (let i = 0; i < plannedWorks.length; i++) {
+      if (plannedWorks[i].workDone === false) numOfPlannedWork += 1;
+    }
+    return numOfPlannedWork;
+  }
+
   return (
     <div className="contentList">
       <table>
@@ -112,10 +128,10 @@ const PlannedWorkList = () => {
             </td>
             <td></td>
             <td align="left" colSpan="2">
-              Wykonanych: {}
+              Wykonanych: {countNumOfDoneWork()}
             </td>
             <td align="left" colSpan="2">
-              Do wykonania: {}
+              Do wykonania: {countNumOfPlannedWork()}
             </td>
             <td></td>
           </tr>
