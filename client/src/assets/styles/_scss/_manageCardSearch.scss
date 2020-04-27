@@ -1,9 +1,6 @@
 .top-box {
   form {
     font-size: 1.2rem;
-
-    #search-material,
-    #search-plant,
     #date-from,
     #date-to {
       padding: 0.3rem;
@@ -24,19 +21,20 @@
   }
 }
 
-@media screen and (max-width: 950px) {
-  .top-box form {
-    #search-material {
-      width: 80%;
-      padding: 0.3rem 0 0.3rem 0.3rem;
-      margin-left: 0;
-    }
-    #date-from,
-    #date-to {
-      width: 8.5rem;
-    }
-  }
+.inputSearch {
+  width: 50%;
+  padding: 0.4rem;
+  margin-top: 1rem;
+  font-size: 1.1rem;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
+  .top-box form #date-from,
+  .top-box form #date-to {
+    width: 8.5rem;
+  }
+
+  .inputSearch {
+    width: 100%;
+  }
 }
