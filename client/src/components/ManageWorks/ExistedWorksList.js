@@ -44,7 +44,10 @@ const PlannedWorkList = () => {
           </tr>
 
           {plannedWorks.map((plannedWork) => (
-            <tr key={plannedWork.id}>
+            <tr
+              key={plannedWork.id}
+              className={plannedWork.workDone === true ? "workDone" : ""}
+            >
               <td id="work-id" align="center">
                 {plannedWork.id}
               </td>
