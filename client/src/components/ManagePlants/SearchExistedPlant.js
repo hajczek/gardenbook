@@ -6,20 +6,22 @@ const SearchExistedPlant = () => {
 
   function onSubmit(e) {
     for (let i = 0; i < plants.length; i++) {
-      if (plants[i].plantName === document.getElementById("search-plant").value)
+      if (
+        plants[i].plantName.toLowerCase() ===
+        document.getElementById("search-plant").value.toLowerCase()
+      )
+        // In this place we must display searched plant from database
         console.log(plants[i].plantName);
     }
     e.preventDefault();
   }
-
-  function onChange(e) {}
 
   return (
     <form onSubmit={onSubmit}>
       <input
         id="search-plant"
         type="text"
-        onChange={(e) => onChange(e.target.value)}
+        onChange={(e) => e.target.value}
         placeholder="Wpisz nazwę rośliny"
       />
       <button>&raquo;</button>
