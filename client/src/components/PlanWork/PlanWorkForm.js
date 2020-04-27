@@ -113,8 +113,8 @@ export const PlanWorkForm = () => {
       <label htmlFor="work-details">
         <span>Uwagi</span>
         <textarea
-          rows="6"
-          cols="38"
+          rows="4"
+          cols="91"
           id="work-details"
           name="work-details"
           value={workDetails}

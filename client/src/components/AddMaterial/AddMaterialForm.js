@@ -40,30 +40,6 @@ const AddMaterialForm = () => {
           onChange={(e) => setMaterialName(e.target.value)}
         />
       </label>
-      <label htmlFor="material-photo" className="labelForInputFile">
-        Dodaj zdjęcie materiału
-        <input
-          type="file"
-          name="material-photo"
-          value={materialPhoto}
-          className="inputFile"
-          onChange={(e) => setMaterialPhoto(e.target.value)}
-          accept="image/jpeg,image/gif,image/jpg,image/png"
-        />
-        <span>Wybierz plik</span>
-      </label>
-
-      <label htmlFor="material-quant">
-        <span>Ilość</span>
-        <input
-          type="number"
-          name="material-quant"
-          id="material-quant"
-          min="0"
-          value={materialQuant}
-          onChange={(e) => setMaterialQuant(e.target.value)}
-        />
-      </label>
       <label htmlFor="unit">
         <span>Jednostka</span>
         <select
@@ -77,6 +53,19 @@ const AddMaterialForm = () => {
           <option value="litr">litr</option>
         </select>
       </label>
+
+      <label htmlFor="material-quant">
+        <span>Ilość</span>
+        <input
+          type="number"
+          name="material-quant"
+          id="material-quant"
+          min="0"
+          value={materialQuant}
+          onChange={(e) => setMaterialQuant(e.target.value)}
+        />
+      </label>
+
       <label htmlFor="material-pricer">
         <span>Cena jedn. [zł]</span>
         <input
@@ -87,6 +76,18 @@ const AddMaterialForm = () => {
           value={materialPrice}
           onChange={(e) => setMaterialPrice(e.target.value)}
         />
+      </label>
+      <label htmlFor="material-photo" className="labelForInputFile">
+        Dodaj zdjęcie materiału
+        <input
+          type="file"
+          name="material-photo"
+          value={materialPhoto}
+          className="inputFile"
+          onChange={(e) => setMaterialPhoto(e.target.value)}
+          accept="image/jpeg,image/gif,image/jpg,image/png"
+        />
+        <span>Wybierz plik</span>
       </label>
       <button id="add-material-btn">Dodaj</button>
     </form>
