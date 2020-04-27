@@ -22,6 +22,14 @@ const ExistedPlantsList = () => {
     return numOfPlants;
   }
 
+  function countValueOfAllPlants() {
+    let valueOfAllPlants = 0;
+    for (let i = 0; i < plants.length; i++) {
+      valueOfAllPlants += plants[i].plantQuant * plants[i].plantPrice;
+    }
+    return valueOfAllPlants.toFixed(2);
+  }
+
   return (
     <div className="contentList">
       <table className="existed-plant-table">
@@ -126,11 +134,17 @@ const ExistedPlantsList = () => {
               </td>
             </tr>
           ))}
-
+          <tr>
+            <td colSpan="12"></td>
+          </tr>
           <tr className="summaryTr">
-            <td>Podsumowanie</td>
-            <td>Ilość gatunków: {plants.length}</td>
-            <td>Ilość sztuk roślin: {countNumOfPlants()}</td>
+            <td align="center">RAZEM</td>
+            <td align="center">Gatunków: {plants.length}</td>
+            <td></td>
+            <td align="center">Sztuk: {countNumOfPlants()}</td>
+            <td></td>
+            <td align="right">Wartość: {countValueOfAllPlants()}</td>
+            <td colSpan="6"></td>
           </tr>
         </tbody>
       </table>
