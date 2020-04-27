@@ -151,20 +151,13 @@ const ExistedPlantsList = () => {
               </td>
             </tr>
           ))}
-          <tr>
-            <td colSpan="12"></td>
-          </tr>
-          <tr className="summaryTr">
-            <td align="center">RAZEM</td>
-            <td align="center">Gatunków: {plants.length}</td>
-            <td></td>
-            <td align="center">Sztuk: {countNumOfPlants()}</td>
-            <td></td>
-            <td align="right">Wartość: {countValueOfAllPlants()}</td>
-            <td colSpan="6"></td>
-          </tr>
         </tbody>
       </table>
+      <div>
+        RAZEM: Gatunków: {plants.length}
+        Sztuk: {countNumOfPlants()}
+        Wartość: {countValueOfAllPlants()}
+      </div>
     </div>
   );
 };

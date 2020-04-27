@@ -130,26 +130,15 @@ const PlannedWorkList = () => {
               </td>
             </tr>
           ))}
-          <tr>
-            <td colSpan="10"></td>
-          </tr>
-          <tr className="summaryTr">
-            <td align="center">RAZEM</td>
-            <td align="left">Il. zaplanowanych prac: {plannedWorks.length}</td>
-            <td align="left" colSpan="2">
-              Niewykonanych: {countNumOfNotDoneWork()}
-            </td>
-            <td></td>
-            <td align="left" colSpan="2">
-              Wykonanych: {countNumOfDoneWork()}
-            </td>
-            <td align="left" colSpan="2">
-              Do wykonania: {countNumOfPlannedWork()}
-            </td>
-            <td></td>
-          </tr>
         </tbody>
       </table>
+      <div>
+        <h3>RAZEM</h3>
+        Il. zaplanowanych prac: {plannedWorks.length}
+        Niewykonanych: {countNumOfNotDoneWork()}
+        Wykonanych: {countNumOfDoneWork()}
+        Do wykonania: {countNumOfPlannedWork()}
+      </div>
     </div>
   );
 };

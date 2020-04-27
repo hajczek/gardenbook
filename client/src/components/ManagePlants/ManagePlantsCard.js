@@ -18,7 +18,6 @@ const ManagePlantsCard = () => {
         >
           + Dodaj roślinę
         </NavLink>
-        <div id="search-result-for-plants"></div>
         <p>
           Zmień nazwę, zdjęcie, ilość, nawóz, dawkę, częstotliwość nawożenia i
           podlewania lub usuń wybrane rośliny.

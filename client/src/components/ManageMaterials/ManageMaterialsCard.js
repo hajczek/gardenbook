@@ -18,7 +18,6 @@ const ManageMaterialsCard = () => {
         >
           + Dodaj materiał
         </NavLink>
-        <div id="search-result-for-materials"></div>
         <p>Zmień nazwę, ilość, cenę, wartość lub usuń wybrane materiały.</p>
         <ExistedMaterialsList />
       </div>

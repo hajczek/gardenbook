@@ -121,6 +121,24 @@ const initialState = {
       materialPrice: 1.7,
       addedDate: "",
     },
+    {
+      id: 4,
+      materialName: "Żwir",
+      materialPhoto: "",
+      materialQuant: 100,
+      materialUnit: "kg",
+      materialPrice: 0.7,
+      addedDate: "",
+    },
+    {
+      id: 5,
+      materialName: "Azofoska 2",
+      materialPhoto: "https://azofoska.pl/uploads/AZOFOSKA_granulat_500kg.jpg",
+      materialQuant: 60,
+      materialUnit: "kg",
+      materialPrice: 2.5,
+      addedDate: "",
+    },
   ],
   userData: [
     {

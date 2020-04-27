@@ -110,18 +110,12 @@ const ExistedMaterialsList = () => {
               </td>
             </tr>
           ))}
-          <tr>
-            <td colSpan="12"></td>
-          </tr>
-          <tr className="summaryTr">
-            <td align="center">RAZEM</td>
-            <td align="center">Il. materiałów: {materials.length}</td>
-            <td colSpan="4"></td>
-            <td align="right">Wartość: {countValueOfAllMaterials()}</td>
-            <td colSpan="2"></td>
-          </tr>
         </tbody>
       </table>
+      <div>
+        RAZEM: Il. materiałów: {materials.length}
+        Wartość: {countValueOfAllMaterials()}
+      </div>
     </div>
   );
 };
