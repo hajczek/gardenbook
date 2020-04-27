@@ -14,6 +14,14 @@ const ExistedPlantsList = () => {
   const { plants } = useContext(GlobalContext);
   const { deletePlant } = useContext(GlobalContext);
 
+  function countNumOfPlants() {
+    let numOfPlants = 0;
+    for (let i = 0; i < plants.length; i++) {
+      numOfPlants += plants[i].plantQuant;
+    }
+    return numOfPlants;
+  }
+
   return (
     <div className="contentList">
       <table className="existed-plant-table">
@@ -118,6 +126,12 @@ const ExistedPlantsList = () => {
               </td>
             </tr>
           ))}
+
+          <tr className="summaryTr">
+            <td>Podsumowanie</td>
+            <td>Ilość gatunków: {plants.length}</td>
+            <td>Ilość sztuk roślin: {countNumOfPlants()}</td>
+          </tr>
         </tbody>
       </table>
     </div>
