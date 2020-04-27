@@ -12,7 +12,10 @@ const SearchExistedPlant = () => {
           .includes(document.getElementById("search-plant").value.toLowerCase())
       )
         // In this place we must display searched plant from database
-        console.log(plants[i].plantName);
+        document.getElementById(
+          "search-result-for-plants"
+        ).innerHTML = `<p>${plants[i].plantName}</p>`;
+      console.log(plants[i].plantName);
     }
     e.preventDefault();
   }

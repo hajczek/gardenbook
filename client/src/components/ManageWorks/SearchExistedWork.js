@@ -13,7 +13,10 @@ const SearchExistedWork = () => {
           new Date(document.getElementById("date-to").value)
       )
         // In this place we must display searched planned works list
-        console.log(plannedWorks[i].workTerm);
+        document.getElementById(
+          "search-result-for-works"
+        ).innerHTML = `<p>${plannedWorks[i].workTerm}</p>`;
+      console.log(plannedWorks[i].workTerm);
       e.preventDefault();
     }
   }

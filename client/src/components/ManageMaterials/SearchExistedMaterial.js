@@ -14,7 +14,10 @@ const SearchExistedMaterial = () => {
           )
       )
         // In this place we must display searched material from database
-        console.log(materials[i].materialName);
+        document.getElementById(
+          "search-result-for-materials"
+        ).innerHTML = `<p>${materials[i].materialName}</p>`;
+      console.log(materials[i].materialName);
     }
     e.preventDefault();
   }
