@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { GlobalContext } from "../../context/GlobalState";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,6 +13,8 @@ export const getPlantId = (id) => {
 const ExistedPlantsList = () => {
   const { plants } = useContext(GlobalContext);
   const { deletePlant } = useContext(GlobalContext);
+  const [search, setSearch] = useState("");
+  const [filteredPlants, setFilteredPlants] = useState([]);
 
   function countNumOfPlants() {
     let numOfPlants = 0;
@@ -30,8 +32,23 @@ const ExistedPlantsList = () => {
     return valueOfAllPlants.toFixed(2);
   }
 
+  useEffect(() => {
+    setFilteredPlants(
+      plants.filter((plant) =>
+        plant.plantName.toLowerCase().includes(search.toLowerCase())
+      )
+    );
+  }, [search, plants]);
+
   return (
     <div className="contentList">
+      <input
+        id="search-plant"
+        type="text"
+        onChange={(e) => setSearch(e.target.value)}
+        placeholder="Wyszukaj roślinę po nazwie"
+        className="inputSearch"
+      />
       <table className="existed-plant-table">
         <tbody>
           <tr>
@@ -74,7 +91,7 @@ const ExistedPlantsList = () => {
             <th>Usuń</th>
           </tr>
 
-          {plants.map((plant) => (
+          {filteredPlants.map((plant) => (
             <tr key={plant.id}>
               <td id="plant-id" align="center">
                 {plant.id}

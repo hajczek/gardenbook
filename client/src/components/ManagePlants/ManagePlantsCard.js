@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import SearchExistedPlant from "./SearchExistedPlant";
 import ExistedPlantsList from "./ExistedPlantsList";
 
 const ManagePlantsCard = () => {
@@ -9,7 +8,6 @@ const ManagePlantsCard = () => {
       <div className="content">
         <div className="top-box">
           <h2>Zarządzaj roślinami</h2>
-          <SearchExistedPlant />
         </div>
         <NavLink
           to="/dodaj-rosline"

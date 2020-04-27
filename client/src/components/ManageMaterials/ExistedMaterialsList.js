@@ -40,6 +40,7 @@ const ExistedMaterialsList = () => {
         type="text"
         onChange={(e) => setSearch(e.target.value)}
         placeholder="Wyszukaj materiał po nazwie"
+        className="inputSearch"
       />
       <table>
         <tbody>
