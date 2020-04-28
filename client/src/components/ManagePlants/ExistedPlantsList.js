@@ -58,25 +58,25 @@ const ExistedPlantsList = () => {
           </tr>
           <tr>
             <th>Lp.</th>
-            <th>Nazwa</th>
-            <th>Zdjęcie</th>
-            <th>
+            <th className="longTd">Nazwa</th>
+            <th className="longTd">Zdjęcie</th>
+            <th className="longTd">
               Ilość
               <br />
               [szt.]
             </th>
-            <th>
+            <th className="longTd">
               Cena jedn.
               <br />
               [zł.]
             </th>
-            <th>
+            <th className="longTd">
               Wartość
               <br />
               [zł]
             </th>
-            <th>Nawóz</th>
-            <th>
+            <th className="longTd">Nawóz</th>
+            <th className="longTd">
               Dawka
               <br />
               [ml lub gr]
@@ -93,11 +93,9 @@ const ExistedPlantsList = () => {
 
           {filteredPlants.map((plant) => (
             <tr key={plant.id}>
-              <td id="plant-id" align="center">
-                {plant.id}
-              </td>
+              <td align="center">{plant.id}</td>
               <td id="plant-name">{plant.plantName}</td>
-              <td align="center">
+              <td className="longTd" align="center">
                 <img
                   src={plant.plantPhoto}
                   id="plant-photo"

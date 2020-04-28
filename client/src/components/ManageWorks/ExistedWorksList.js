@@ -54,20 +54,20 @@ const PlannedWorkList = () => {
           </tr>
           <tr>
             <th>Lp.</th>
-            <th>Tytuł</th>
-            <th>Termin</th>
+            <th className="longTd">Tytuł</th>
+            <th className="longTd">Termin</th>
             <th>Status</th>
-            <th>
+            <th className="longTd">
               Czas pracy
               <br />[ il. godz.]
             </th>
-            <th>
+            <th className="longTd">
               Wartość
               <br />
               [zł.]
             </th>
-            <th>Materiał</th>
-            <th>Uwagi</th>
+            <th className="longTd">Materiał</th>
+            <th className="longTd">Uwagi</th>
             <th>Edytuj</th>
             <th>Usuń</th>
           </tr>
