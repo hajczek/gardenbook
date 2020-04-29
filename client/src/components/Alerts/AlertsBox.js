@@ -3,6 +3,7 @@ import { GlobalContext } from "../../context/GlobalState";
 import { maxDateFormatted } from "./AlertsFunction";
 import CountAlerts from "./CountAlerts";
 import daysToAlert from "./CountDaysToAlert";
+import addedDateFunction from "../../common/AddedDateFunction";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBell } from "@fortawesome/free-solid-svg-icons";
 
@@ -17,7 +18,11 @@ const AlertsBox = () => {
       <ol id="alerts-list">
         {plannedWorks
           .reverse()
-          .filter((plannedWork) => plannedWork.workTerm <= maxDateFormatted)
+          .filter(
+            (plannedWork) =>
+              plannedWork.workTerm >= addedDateFunction() &&
+              plannedWork.workTerm <= maxDateFormatted
+          )
           .map((alert) => {
             return (
               <li key={alert.id}>
@@ -26,13 +31,11 @@ const AlertsBox = () => {
                   {daysToAlert(alert.workTerm) > 1
                     ? ` za ${daysToAlert(alert.workTerm)} dni o ${
                         alert.workAlert
-                      } `
+                      }`
                     : daysToAlert(alert.workTerm) === 1
-                    ? ` za ${daysToAlert(alert.workTerm)} dzień o ${
-                        alert.workAlert
-                      } `
+                    ? ` jutro o ${alert.workAlert}`
                     : daysToAlert(alert.workTerm) === 0
-                    ? ` jutro o ${alert.workAlert} `
+                    ? ` dzisiaj o ${alert.workAlert} `
                     : null}
                   &raquo;
                 </span>
