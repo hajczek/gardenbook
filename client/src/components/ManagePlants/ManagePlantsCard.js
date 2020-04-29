@@ -8,16 +8,16 @@ const ManagePlantsCard = () => {
       <div className="content">
         <div className="top-box">
           <h2>Zarządzaj roślinami</h2>
+          <NavLink
+            to="/dodaj-rosline"
+            exact={true}
+            activeClassName="is-active"
+            id="add-plant-link"
+            className="plus-link"
+          >
+            + Dodaj roślinę
+          </NavLink>
         </div>
-        <NavLink
-          to="/dodaj-rosline"
-          exact={true}
-          activeClassName="is-active"
-          id="add-plant-link"
-          className="plus-link"
-        >
-          + Dodaj roślinę
-        </NavLink>
         <p>
           Zmień nazwę, zdjęcie, ilość, nawóz, dawkę, częstotliwość nawożenia i
           podlewania lub usuń wybrane rośliny.

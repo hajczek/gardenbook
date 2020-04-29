@@ -8,16 +8,16 @@ const ManageWorksCard = () => {
       <div className="content">
         <div className="top-box">
           <h2>Zarządzaj zadaniami</h2>
+          <NavLink
+            to="/zaplanuj-prace"
+            exact={true}
+            activeClassName="is-active"
+            id="plan-work-link"
+            className="plus-link"
+          >
+            + Zaplanuj pracę
+          </NavLink>
         </div>
-        <NavLink
-          to="/zaplanuj-prace"
-          exact={true}
-          activeClassName="is-active"
-          id="plan-work-link"
-          className="plus-link"
-        >
-          + Zaplanuj pracę
-        </NavLink>
         <div id="search-result-for-works"></div>
         <p>
           Zmień nazwę, termin, zaznacz jako wykonaną lub usuń wybraną z

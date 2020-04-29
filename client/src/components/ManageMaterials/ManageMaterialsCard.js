@@ -8,16 +8,17 @@ const ManageMaterialsCard = () => {
       <div className="content">
         <div className="top-box">
           <h2>Zarządzaj materiałami</h2>
+          <NavLink
+            to="/dodaj-material"
+            exact={true}
+            className="plus-link"
+            activeClassName="is-active"
+            id="add-material-link"
+          >
+            + Dodaj materiał
+          </NavLink>
         </div>
-        <NavLink
-          to="/dodaj-material"
-          exact={true}
-          className="plus-link"
-          activeClassName="is-active"
-          id="add-material-link"
-        >
-          + Dodaj materiał
-        </NavLink>
+
         <p>Zmień nazwę, ilość, cenę, wartość lub usuń wybrane materiały.</p>
         <ExistedMaterialsList />
       </div>
