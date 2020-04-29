@@ -27,13 +27,17 @@ const AlertsBox = () => {
             return (
               <li key={alert.id}>
                 {alert.workName}:
-                <span>
+                <span
+                  className={
+                    alert.workTerm === addedDateFunction() ? "redAlert" : null
+                  }
+                >
                   {daysToAlert(alert.workTerm) > 1
                     ? ` za ${daysToAlert(alert.workTerm)} dni o ${
                         alert.workAlert
-                      }`
+                      } `
                     : daysToAlert(alert.workTerm) === 1
-                    ? ` jutro o ${alert.workAlert}`
+                    ? ` jutro o ${alert.workAlert} `
                     : daysToAlert(alert.workTerm) === 0
                     ? ` dzisiaj o ${alert.workAlert} `
                     : null}

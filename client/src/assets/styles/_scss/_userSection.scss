@@ -41,6 +41,10 @@
             color: $luminescence-green;
           }
 
+          .redAlert {
+            color: $orange;
+          }
+
           &:hover {
             cursor: pointer;
             opacity: 0.7;
