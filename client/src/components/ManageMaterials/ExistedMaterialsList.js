@@ -113,7 +113,7 @@ const ExistedMaterialsList = () => {
         </tbody>
       </table>
       <div className="summaryBox">
-        RAZEM: Il. materiałów: {materials.length} | Wartość:{" "}
+        <h3>RAZEM:</h3> Il. materiałów: {materials.length} | Wartość:{" "}
         {countValueOfAllMaterials()} zł
       </div>
     </div>
