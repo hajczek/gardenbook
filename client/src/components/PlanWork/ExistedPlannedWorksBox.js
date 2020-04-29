@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { NavLink } from "react-router-dom";
 import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
 
@@ -13,9 +14,16 @@ const ExistedPlannedWorksBox = () => {
           .map((plannedWork) => (
             <li key={plannedWork.id}>
               {plannedWork.workName}:{" "}
-              <span className="greenText">
+              <NavLink
+                to="/zarzadzaj-pracami"
+                title="Zarządzaj pracami"
+                exact={true}
+                activeClassName="is-active"
+                id="works"
+                className="greenText"
+              >
                 {plannedWork.workTerm}, {plannedWork.workAlert} &raquo;
-              </span>
+              </NavLink>
             </li>
           ))}
       </ol>

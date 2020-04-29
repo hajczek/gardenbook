@@ -75,15 +75,15 @@
 
           .greenText {
             color: $strong-green;
+
+            &:hover {
+              text-decoration: none;
+              opacity: 0.7;
+            }
           }
 
           .quantity {
             margin-left: 0.6rem;
-          }
-
-          &:hover {
-            cursor: pointer;
-            opacity: 0.7;
           }
         }
       }
