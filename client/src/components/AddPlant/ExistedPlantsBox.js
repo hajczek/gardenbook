@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { NavLink } from "react-router-dom";
 import { GlobalContext } from "../../context/GlobalState";
 
 const ExistedPlantsBox = () => {
@@ -10,8 +11,16 @@ const ExistedPlantsBox = () => {
       <ol>
         {plants.map((plant) => (
           <li key={plant.id}>
-            {plant.plantName}
-            <span className="quantity">{plant.plantQuant}</span> szt. &raquo;
+            <NavLink
+              to="/zarzadzaj-roslinami"
+              title="Zarządzaj roslinami"
+              exact={true}
+              activeClassName="is-active"
+              id="plants"
+              className="greenText"
+            >
+              {plant.plantName}: {plant.plantQuant} szt. &raquo;
+            </NavLink>
           </li>
         ))}
       </ol>
