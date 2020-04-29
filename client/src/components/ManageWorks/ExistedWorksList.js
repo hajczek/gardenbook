@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { GlobalContext } from "../../context/GlobalState";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,6 +13,9 @@ export const getWorkId = (id) => {
 const PlannedWorkList = () => {
   const { plannedWorks } = useContext(GlobalContext);
   const { deleteWork } = useContext(GlobalContext);
+  const [searchFrom, setSearchFrom] = useState("");
+  const [searchTo, setSearchTo] = useState("");
+  const [filteredWorks, setFilteredWorks] = useState([]);
 
   function countNumOfDoneWork() {
     let numOfDoneWork = 0;
@@ -43,8 +46,32 @@ const PlannedWorkList = () => {
     return numOfNotDonedWork;
   }
 
+  useEffect(() => {
+    setFilteredWorks(
+      plannedWorks.filter(
+        (plannedWork) =>
+          new Date(plannedWork.workTerm) > new Date(searchFrom) &&
+          new Date(plannedWork.workTerm) < new Date(searchTo)
+      )
+    );
+  }, [searchFrom, searchTo, plannedWorks]);
+
   return (
     <div className="contentList">
+      <div className="searchForWorks">
+        Wybierz okres od
+        <input
+          id="date-from"
+          type="date"
+          onChange={(e) => setSearchFrom(e.target.value)}
+        />
+        do
+        <input
+          type="date"
+          id="date-to"
+          onChange={(e) => setSearchTo(e.target.value)}
+        />
+      </div>
       <table>
         <tbody>
           <tr>
@@ -72,7 +99,7 @@ const PlannedWorkList = () => {
             <th>Usuń</th>
           </tr>
 
-          {plannedWorks.map((plannedWork) => (
+          {filteredWorks.map((plannedWork) => (
             <tr
               key={plannedWork.id}
               className={plannedWork.workDone === true ? "workDone" : ""}
@@ -133,11 +160,9 @@ const PlannedWorkList = () => {
         </tbody>
       </table>
       <div className="summaryBox">
-        <h3>RAZEM</h3>
-        Il. zaplanowanych prac: {plannedWorks.length}
-        Niewykonanych: {countNumOfNotDoneWork()}
-        Wykonanych: {countNumOfDoneWork()}
-        Do wykonania: {countNumOfPlannedWork()}
+        <h3>RAZEM:</h3> Il. zaplanowanych prac: {plannedWorks.length} |
+        Niewykonanych: {countNumOfNotDoneWork()} | Wykonanych:{" "}
+        {countNumOfDoneWork()} | Do wykonania: {countNumOfPlannedWork()}
       </div>
     </div>
   );

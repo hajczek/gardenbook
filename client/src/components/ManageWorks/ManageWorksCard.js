@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import SearchExistedWork from "./SearchExistedWork";
+// import SearchExistedWork from "./SearchExistedWork";
 import ExistedWorksList from "./ExistedWorksList";
 
 const ManageWorksCard = () => {
@@ -9,7 +9,7 @@ const ManageWorksCard = () => {
       <div className="content">
         <div className="top-box">
           <h2>Zarządzaj zadaniami</h2>
-          <SearchExistedWork />
+          {/* <SearchExistedWork /> */}
         </div>
         <NavLink
           to="/zaplanuj-prace"
