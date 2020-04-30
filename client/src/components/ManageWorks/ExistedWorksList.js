@@ -13,8 +13,8 @@ export const getWorkId = (id) => {
 const PlannedWorkList = () => {
   const { plannedWorks } = useContext(GlobalContext);
   const { deleteWork } = useContext(GlobalContext);
-  const [searchFrom, setSearchFrom] = useState("");
-  const [searchTo, setSearchTo] = useState("");
+  const [searchFrom, setSearchFrom] = useState("2020-01-01");
+  const [searchTo, setSearchTo] = useState("2222-12-31");
   const [filteredWorks, setFilteredWorks] = useState([]);
 
   function countNumOfDoneWork() {

@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { NavLink } from "react-router-dom";
 import { GlobalContext } from "../../context/GlobalState";
 
 const ExistedMaterialsBox = () => {
@@ -10,9 +11,17 @@ const ExistedMaterialsBox = () => {
       <ol>
         {materials.map((material) => (
           <li key={material.id}>
-            {material.materialName}{" "}
-            <span className="quantity">{material.materialQuant}</span>
-            <span className="unit">{material.materialUnit}</span> &raquo;
+            <NavLink
+              to="/zarzadzaj-materialami"
+              title="Zarządzaj materiałami"
+              exact={true}
+              activeClassName="is-active"
+              id="materials"
+              className="greenText"
+            >
+              {material.materialName}: {material.materialQuant}{" "}
+              {material.materialUnit} &raquo;
+            </NavLink>
           </li>
         ))}
       </ol>
