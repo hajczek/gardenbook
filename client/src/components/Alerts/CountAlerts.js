@@ -15,7 +15,9 @@ export const CountAlerts = () => {
 
   return (
     <Fragment>
-      <span>{alertDates.length}</span>
+      <span className={alertDates.length > 0 ? "greenAlert" : ""}>
+        {alertDates.length}
+      </span>
     </Fragment>
   );
 };
