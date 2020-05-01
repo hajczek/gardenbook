@@ -5,12 +5,17 @@
   height: 65vh;
   padding: 3rem 5vw 0 5vw;
 
-  h2 {
-    margin-bottom: 2rem;
-  }
+  .content {
+    background-color: rgba(225, 225, 225, 0.9);
+    padding: 2rem;
 
-  p {
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
   }
 }

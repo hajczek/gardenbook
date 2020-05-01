@@ -12,7 +12,7 @@ const initialState = {
         workMatQuant: 0,
         workMatUnit: "",
       },
-      workTerm: "2020-04-29",
+      workTerm: "2020-05-02",
       workAlert: "09:00",
       workDetails: "Wykonać do południa",
       workDone: false,
