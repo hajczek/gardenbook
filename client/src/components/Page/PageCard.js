@@ -11,7 +11,7 @@ import GardensCommunity from "./MoreInfoComponents/GardensCommunity";
 import KnowledgeExchange from "./MoreInfoComponents/KnowledgeExchange";
 import UsefulTools from "./MoreInfoComponents/UsefulTools";
 import DataMagazine from "./MoreInfoComponents/DataMagazine";
-import BaseGardeningCompanies from "./MoreInfoComponents/BaseGardeningCompanies";
+import GardenPlan from "./MoreInfoComponents/GardenPlan";
 import FindContractor from "./MoreInfoComponents/FindContractor";
 import Regulations from "./Regulations";
 import NotFound from "./NotFound";
@@ -46,11 +46,7 @@ const PageCard = () => {
             component={UsefulTools}
           />
           <Route exact={true} path="/magazyn-danych" component={DataMagazine} />
-          <Route
-            exact={true}
-            path="/baza-firm-ogrodniczych"
-            component={BaseGardeningCompanies}
-          />
+          <Route exact={true} path="/plan-ogrodu" component={GardenPlan} />
           <Route
             exact={true}
             path="/znajdz-wykonawce"

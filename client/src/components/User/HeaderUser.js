@@ -14,7 +14,7 @@ const HeaderUser = () => {
         </NavLink>
       </div>
       {userData.map((user) => (
-        <span className="welcomeText">Witaj {user.userEmail}</span>
+        <span className="welcomeText">Witaj {user.userName} !</span>
       ))}
       <TopMenu />
     </header>

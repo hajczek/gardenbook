@@ -33,12 +33,8 @@ const MoreInfo = () => {
         </NavLink>
       </div>
       <div className="title">
-        <NavLink
-          to="/baza-firm-ogrodniczych"
-          exact={true}
-          activeClassName="is-active"
-        >
-          Baza firm ogrodniczych
+        <NavLink to="/plan-ogrodu" exact={true} activeClassName="is-active">
+          Plan Twojego ogrodu
         </NavLink>
       </div>
       <div className="title">
