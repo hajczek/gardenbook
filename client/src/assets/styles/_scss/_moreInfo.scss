@@ -7,31 +7,28 @@
   width: 100vw;
   padding: 0 6.2rem;
 
-  .title {
+  a {
     display: flex;
     background-color: $limone-opacity-06;
     font-size: 1.5rem;
-    color: $light-grey;
     font-weight: bold;
     width: 14rem;
     text-align: center;
     padding: 2rem 2.5rem;
     justify-content: center;
+    color: $strong-grey;
+    text-decoration: none;
+    opacity: 0.8;
 
     &:hover {
-      background-color: $limone;
       color: $lighter-green;
-      cursor: pointer;
+      background-color: $limone;
     }
+  }
 
-    a {
-      color: $light-grey;
-      text-decoration: none;
-
-      &:hover {
-        color: $lighter-green;
-      }
-    }
+  .is-active {
+    background-color: $limone;
+    color: $lighter-green;
   }
 }
 
