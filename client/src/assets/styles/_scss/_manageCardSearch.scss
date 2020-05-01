@@ -1,23 +1,12 @@
-.top-box {
-  form {
-    font-size: 1.2rem;
-    #date-from,
-    #date-to {
-      padding: 0.3rem;
-      font-size: 1.1rem;
-    }
-
-    button {
-      font-size: 1.3rem;
-      padding: 0.3rem 0.5rem 0.4rem 0.5rem;
-      background-color: $spring-green;
-      border: none;
-      color: $strong-green;
-
-      &:hover {
-        opacity: 0.7;
-      }
-    }
+.searchForWorks {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  font-weight: bold;
+  #date-from,
+  #date-to {
+    padding: 0.3rem;
+    font-size: 1.1rem;
+    margin: 0 1rem;
   }
 }
 
@@ -29,8 +18,8 @@
 }
 
 @media screen and (max-width: 950px) {
-  .top-box form #date-from,
-  .top-box form #date-to {
+  .searchForWorks #date-from,
+  .searchForWorks #date-to {
     width: 8.5rem;
   }
 
