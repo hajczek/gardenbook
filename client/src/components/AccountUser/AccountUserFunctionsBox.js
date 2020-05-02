@@ -1,11 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { GlobalContext } from "../../context/GlobalState";
+import AccountUserFunctionsEdit from "./AccountUserFunctionsEdit";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit } from "@fortawesome/free-solid-svg-icons";
 
 const AccountUserFunctionsBox = () => {
   const { userData } = useContext(GlobalContext);
-  return (
+  const [editFunctionsOption, setEditFunctionsOption] = useState(false);
+
+  return editFunctionsOption === false ? (
     <div className="user-functionality-box">
       <h2>Funkcje / Narzędzia</h2>
       <p className="text-info">Włącz / Wyłącz wybrane funkcje / narzędzia</p>
@@ -33,12 +36,14 @@ const AccountUserFunctionsBox = () => {
             {data.accountSets.searchWorkers === false ? "wył." : "wł."}
           </span>
           <br />
-          <button>
+          <button onClick={(e) => setEditFunctionsOption(true)}>
             <FontAwesomeIcon id="edit-plant" icon={faEdit} /> Zmień ustawienia
           </button>
         </p>
       ))}
     </div>
+  ) : (
+    <AccountUserFunctionsEdit />
   );
 };
 

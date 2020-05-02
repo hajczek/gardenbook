@@ -1,7 +1,8 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit } from "@fortawesome/free-solid-svg-icons";
+import AccountUserDataEdit from "./AccountUserDataEdit";
 
 // Export id of user
 export const getUserId = (id) => {
@@ -11,8 +12,9 @@ export const getUserId = (id) => {
 
 const AccountUserDataBox = () => {
   const { userData } = useContext(GlobalContext);
+  const [editData, setEditData] = useState(false);
 
-  return (
+  return editData === false ? (
     <div className="user-data-box">
       <h2>Twoje dane</h2>
       {userData.map((data) => (
@@ -27,12 +29,14 @@ const AccountUserDataBox = () => {
           <br />
           <span>Lokalizacja:</span> {data.userPlace}
           <br />
-          <button onClick={(e) => getUserId(data.id)}>
+          <button onClick={(e) => setEditData(true)}>
             <FontAwesomeIcon id="edit-plant" icon={faEdit} /> Edytuj dane
           </button>
         </p>
       ))}
     </div>
+  ) : (
+    <AccountUserDataEdit />
   );
 };
 
