@@ -1,10 +1,8 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
-// Function for get id of edited mayerial
-import { getMaterialId } from "./ExistedMaterialsList";
 
-const EditedMaterial = () => {
+const EditedMaterial = (props) => {
   const { materials } = useContext(GlobalContext);
   const { editMaterial } = useContext(GlobalContext);
 
@@ -33,21 +31,22 @@ const EditedMaterial = () => {
   }
 
   return (
-    <div className="content">
-      <form onSubmit={onSubmit}>
+    <div className="contentEdit">
+      <form id="material-edit-form" onSubmit={onSubmit}>
         <table>
           <tbody>
             <tr>
               <th>Lp.</th>
               <th>Nazwa</th>
-              <th>Zdjęcie</th>
-              <th>Ilość</th>
-              <th>Jedn.</th>
-              <th>Cena jedn. [zł.]</th>
+              <th className="longTd">Zdjęcie</th>
+              <th className="longTd">Ilość</th>
+              <th className="longTd">Jedn.</th>
+              <th className="longTd">Cena jedn. [zł.]</th>
+              <th></th>
             </tr>
 
             {materials
-              .filter((material) => material.id === getMaterialId())
+              .filter((material) => material.id === props.materialid)
               .map((editedMaterial) => {
                 return (
                   <tr key={editedMaterial.id}>

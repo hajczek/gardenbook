@@ -3,18 +3,15 @@ import { NavLink } from "react-router-dom";
 import { GlobalContext } from "../../context/GlobalState";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
-
-// Export id of edited material item to EditedPMaterial component
-export const getMaterialId = (id) => {
-  id = 2;
-  return id;
-};
+import EditedMaterial from "./EditedMaterial";
 
 const ExistedMaterialsList = () => {
   const { materials } = useContext(GlobalContext);
   const { deleteMaterial } = useContext(GlobalContext);
   const [search, setSearch] = useState("");
   const [filteredMaterials, setFilteredMaterials] = useState([]);
+  const [editMaterial, setEditMaterial] = useState(false);
+  const [materialId, setMaterialId] = useState();
 
   function countValueOfAllMaterials() {
     let valueOfAllMaterials = 0;
@@ -33,7 +30,7 @@ const ExistedMaterialsList = () => {
     );
   }, [search, materials]);
 
-  return (
+  return editMaterial === false ? (
     <div className="contentList">
       <input
         id="search-material"
@@ -86,20 +83,23 @@ const ExistedMaterialsList = () => {
                 {(material.materialQuant * material.materialPrice).toFixed(2)}
               </td>
               <td align="center">
-                <NavLink
+                {/* <NavLink
                   to="/edycja-materialu"
                   title="Edycja materiału"
                   exact={true}
                   activeClassName="is-active"
-                >
-                  <FontAwesomeIcon
-                    id="edit-material"
-                    icon={faEdit}
-                    // This action must open EditedMatrial component and set materialData to this component
-                    // onClick={() => console.log(material.id)}
-                    onClick={(e) => getMaterialId(material.id)}
-                  />
-                </NavLink>
+                > */}
+                <FontAwesomeIcon
+                  id="edit-material"
+                  icon={faEdit}
+                  // This action must open EditedMatrial component and set materialData to this component
+                  // onClick={() => console.log(material.id)}
+                  onClick={(e) => {
+                    setEditMaterial(true);
+                    setMaterialId(material.id);
+                  }}
+                />
+                {/* </NavLink> */}
               </td>
               <td align="center">
                 <FontAwesomeIcon
@@ -117,6 +117,8 @@ const ExistedMaterialsList = () => {
         {countValueOfAllMaterials()} zł
       </div>
     </div>
+  ) : (
+    <EditedMaterial materialid={materialId} />
   );
 };
 

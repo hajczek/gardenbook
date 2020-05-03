@@ -65,11 +65,11 @@ const PageUser = () => {
               path="/edycja-rosliny"
               component={EditedPlant}
             /> */}
-            <Route
+            {/* <Route
               exact={true}
               path="/edycja-materialu"
               component={EditedMaterial}
-            />
+            /> */}
             <Route exact={true} path="/pomoc" component={Help} />
           </Switch>
         </section>
