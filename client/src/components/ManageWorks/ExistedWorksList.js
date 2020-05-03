@@ -7,10 +7,10 @@ import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 import EditedWork from "./EditedWork";
 
 // Export id of edited work item to EditedWork component
-export const getWorkId = (id) => {
-  id = 3;
-  return id;
-};
+// export const getWorkId = () => {
+//   let id;
+//   return id;
+// };
 
 const PlannedWorkList = () => {
   const { plannedWorks } = useContext(GlobalContext);
@@ -47,6 +47,11 @@ const PlannedWorkList = () => {
         numOfNotDonedWork += 1;
     }
     return numOfNotDonedWork;
+  }
+
+  function getWorkId(e) {
+    let id = e.currentTarget.dataset.id;
+    alert(id);
   }
 
   useEffect(() => {
@@ -160,9 +165,12 @@ const PlannedWorkList = () => {
                 <FontAwesomeIcon
                   id="edit-work"
                   icon={faEdit}
+                  data-id={plannedWork.id}
                   // This action must open EditedWork component and set workData to this component
                   //onClick={() => console.log(plannedWork.id)}
-                  onClick={(e) => setEditWork(true)}
+                  onClick={(e) => {
+                    setEditWork(true);
+                  }}
                 />
                 {/* </NavLink> */}
               </td>

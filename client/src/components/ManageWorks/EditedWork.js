@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
 // Function for get id of edited work
-import { getWorkId } from "./ExistedWorksList";
+// import { getWorkId } from "./ExistedWorksList";
 
 const EditedWork = ({ work }) => {
   const { plannedWorks } = useContext(GlobalContext);
@@ -58,7 +58,7 @@ const EditedWork = ({ work }) => {
               <th>Lp.</th>
               <th className="longTd">Tytuł</th>
               <th className="longTd">Termin</th>
-              <th>Alarm</th>
+              <th className="longTd">Alarm</th>
               <th align="center">Status</th>
               <th className="longTd">
                 Czas pracy
@@ -74,7 +74,7 @@ const EditedWork = ({ work }) => {
               <th></th>
             </tr>
             {plannedWorks
-              .filter((work) => work.id === getWorkId())
+              .filter((work) => work.id === 1)
               .map((editedWork) => {
                 return (
                   <tr key={editedWork.id}>
