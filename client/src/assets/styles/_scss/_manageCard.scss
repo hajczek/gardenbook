@@ -76,17 +76,38 @@
         }
       }
 
+      .workDone:nth-child(odd),
       .workDone {
-        color: $strong-green;
+        background: $strong-green;
+        color: $white;
+
+        td a {
+          color: $white;
+        }
+
         &:hover {
           color: $strong-green;
+
+          td a {
+            color: $strong-green;
+          }
         }
       }
 
       .workNotDone {
-        color: $orange;
+        background: $orange;
+        color: $white;
+
+        td a {
+          color: $white;
+        }
+
         &:hover {
-          opacity: 0.7;
+          color: $orange;
+
+          td a {
+            color: $orange;
+          }
         }
       }
 
