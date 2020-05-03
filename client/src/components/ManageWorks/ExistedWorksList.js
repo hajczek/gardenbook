@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { GlobalContext } from "../../context/GlobalState";
+import addedDateFunction from "../../common/AddedDateFunction";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 
@@ -102,7 +103,18 @@ const PlannedWorkList = () => {
           {filteredWorks.map((plannedWork) => (
             <tr
               key={plannedWork.id}
-              className={plannedWork.workDone === true ? "workDone" : ""}
+              // Add special class name for done or not done work
+              className={
+                plannedWork.workDone === true
+                  ? "workDone"
+                  : plannedWork.workDone === false &&
+                    plannedWork.workTerm < addedDateFunction()
+                  ? "workNotDone"
+                  : plannedWork.workDone === false &&
+                    plannedWork.workTerm > addedDateFunction()
+                  ? ""
+                  : ""
+              }
             >
               <td id="work-id" align="center">
                 {plannedWork.id}
