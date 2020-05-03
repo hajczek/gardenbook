@@ -45,6 +45,7 @@
         color: #444;
         th {
           padding: 0.3rem;
+          width: 10%;
         }
         td {
           padding: 0.3rem;
@@ -67,8 +68,12 @@
           }
         }
 
+        .shortTd {
+          width: 3%;
+        }
+
         .longTd {
-          width: 10%;
+          width: 15%;
         }
       }
 

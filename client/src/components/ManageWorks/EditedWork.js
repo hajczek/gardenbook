@@ -53,22 +53,22 @@ const EditedWork = (props) => {
               </td>
             </tr>
             <tr>
-              <th>Lp.</th>
+              <th className="shortTd">Id</th>
               <th className="longTd">Tytuł</th>
-              <th className="longTd">Termin</th>
-              <th className="longTd">Alarm</th>
+              <th>Termin</th>
+              <th>Alarm</th>
               <th align="center">Status</th>
-              <th className="longTd">
+              <th>
                 Czas pracy
                 <br />[ il. godz. ]
               </th>
-              <th className="longTd">
+              <th>
                 Wartość
                 <br />
                 [zł.]
               </th>
               <th className="longTd">Materiał</th>
-              <th className="longTd">Uwagi</th>
+              <th>Uwagi</th>
               <th></th>
             </tr>
             {plannedWorks
@@ -203,7 +203,9 @@ const EditedWork = (props) => {
                       ></textarea>
                     </td>
                     <td align="center">
-                      <button id="change-works-btn">Zapisz</button>
+                      <button className="editBtn" id="change-works-btn">
+                        Zapisz
+                      </button>
                     </td>
                   </tr>
                 );

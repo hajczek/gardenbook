@@ -36,12 +36,12 @@ const EditedMaterial = (props) => {
         <table>
           <tbody>
             <tr>
-              <th>Lp.</th>
-              <th>Nazwa</th>
+              <th className="shortTd">Id</th>
+              <th className="longTd">Nazwa</th>
               <th className="longTd">Zdjęcie</th>
-              <th className="longTd">Ilość</th>
-              <th className="longTd">Jedn.</th>
-              <th className="longTd">Cena jedn. [zł.]</th>
+              <th>Ilość</th>
+              <th>Jedn.</th>
+              <th>Cena jedn. [zł.]</th>
               <th></th>
             </tr>
 
@@ -127,7 +127,9 @@ const EditedMaterial = (props) => {
                       />
                     </td>
                     <td>
-                      <button id="changes-materials-btn">Zapisz</button>
+                      <button className="editBtn" id="changes-materials-btn">
+                        Zapisz
+                      </button>
                     </td>
                   </tr>
                 );

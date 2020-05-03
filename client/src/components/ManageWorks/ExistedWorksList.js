@@ -78,7 +78,7 @@ const PlannedWorkList = (props) => {
             </td>
           </tr>
           <tr>
-            <th>Lp.</th>
+            <th className="shortTd">Lp.</th>
             <th className="longTd">Tytuł</th>
             <th className="longTd">Termin</th>
             <th>Alarm</th>

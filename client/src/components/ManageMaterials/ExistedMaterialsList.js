@@ -47,7 +47,7 @@ const ExistedMaterialsList = () => {
             </td>
           </tr>
           <tr>
-            <th>Lp.</th>
+            <th className="shortTd">Lp.</th>
             <th className="longTd">Nazwa</th>
             <th className="longTd">Zdjęcie</th>
             <th className="longTd">Ilość</th>

@@ -42,21 +42,21 @@ const EditedPlant = (props) => {
         <table>
           <tbody>
             <tr>
-              <th>Lp.</th>
+              <th className="shortTd">Id</th>
               <th>Nazwa</th>
               <th className="longTd">Zdjęcie</th>
-              <th className="longTd">
+              <th>
                 Ilość
                 <br />
                 [szt.]
               </th>
-              <th className="longTd">
+              <th>
                 Cena jedn.
                 <br />
                 [zł.]
               </th>
-              <th className="longTd">Nawóz</th>
-              <th className="longTd">
+              <th>Nawóz</th>
+              <th>
                 Dawka
                 <br />
                 [ml lub gr]
@@ -191,7 +191,9 @@ const EditedPlant = (props) => {
                       />
                     </td>
                     <td>
-                      <button id="changes-plants-btn">Zapisz</button>
+                      <button className="editBtn" id="changes-plants-btn">
+                        Zapisz
+                      </button>
                     </td>
                   </tr>
                 );
