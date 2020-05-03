@@ -1,10 +1,8 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
-// Function for get id of edited plant
-import { getPlantId } from "./ExistedPlantsList";
 
-const EditedPlant = ({ plant }) => {
+const EditedPlant = (props) => {
   const { plants } = useContext(GlobalContext);
   const { editPlant } = useContext(GlobalContext);
 
@@ -39,31 +37,31 @@ const EditedPlant = ({ plant }) => {
   }
 
   return (
-    <div className="content">
-      <form onSubmit={onSubmit}>
+    <div className="contentEdit">
+      <form id="plant-edit-form" onSubmit={onSubmit}>
         <table>
           <tbody>
             <tr>
               <th>Lp.</th>
               <th>Nazwa</th>
-              <th>Zdjęcie</th>
-              <th>
+              <th className="longTd">Zdjęcie</th>
+              <th className="longTd">
                 Ilość
                 <br />
                 [szt.]
               </th>
-              <th>
+              <th className="longTd">
                 Cena jedn.
                 <br />
                 [zł.]
               </th>
-              <th>Nawóz</th>
-              <th>
+              <th className="longTd">Nawóz</th>
+              <th className="longTd">
                 Dawka
                 <br />
                 [ml lub gr]
               </th>
-              <th colSpan="2">
+              <th colSpan="2" className="longTd">
                 Częstotliwość
                 <br /> nawożenia / podlewania
                 <br />
@@ -71,7 +69,7 @@ const EditedPlant = ({ plant }) => {
               </th>
             </tr>
             {plants
-              .filter((plant) => plant.id === getPlantId())
+              .filter((plant) => plant.id === props.plantid)
               .map((editedPlant) => {
                 return (
                   <tr key={editedPlant.id}>

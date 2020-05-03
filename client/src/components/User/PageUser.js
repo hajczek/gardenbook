@@ -60,11 +60,11 @@ const PageUser = () => {
               component={PlanWorkCard}
             />
             {/* <Route exact={true} path="/edycja-pracy" component={EditedWork} /> */}
-            <Route
+            {/* <Route
               exact={true}
               path="/edycja-rosliny"
               component={EditedPlant}
-            />
+            /> */}
             <Route
               exact={true}
               path="/edycja-materialu"

@@ -3,18 +3,15 @@ import { NavLink } from "react-router-dom";
 import { GlobalContext } from "../../context/GlobalState";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
+import EditedPlant from "./EditedPlant";
 
-// Export id of edited plant item to EditedPlant component
-export const getPlantId = (id) => {
-  id = 3;
-  return id;
-};
-
-const ExistedPlantsList = () => {
+const ExistedPlantsList = (props) => {
   const { plants } = useContext(GlobalContext);
   const { deletePlant } = useContext(GlobalContext);
   const [search, setSearch] = useState("");
   const [filteredPlants, setFilteredPlants] = useState([]);
+  const [editPlant, setEditPlant] = useState(false);
+  const [plantId, setPlantId] = useState();
 
   function countNumOfPlants() {
     let numOfPlants = 0;
@@ -40,7 +37,7 @@ const ExistedPlantsList = () => {
     );
   }, [search, plants]);
 
-  return (
+  return editPlant === false ? (
     <div className="contentList">
       <input
         id="search-plant"
@@ -125,20 +122,23 @@ const ExistedPlantsList = () => {
                 {plant.plantWateringFreq}
               </td>
               <td align="center">
-                <NavLink
+                {/* <NavLink
                   to="/edycja-rosliny"
                   title="Edycja rosliny"
                   exact={true}
                   activeClassName="is-active"
-                >
-                  <FontAwesomeIcon
-                    id="edit-plant"
-                    icon={faEdit}
-                    // This action must open EditedPlant component and set plantData to this component
-                    // onClick={() => console.log(plant.id)}
-                    onClick={(e) => getPlantId(plant.id)}
-                  />
-                </NavLink>
+                > */}
+                <FontAwesomeIcon
+                  id="edit-plant"
+                  icon={faEdit}
+                  // This action must open EditedPlant component and set plantData to this component
+                  // onClick={() => console.log(plant.id)}
+                  onClick={(e) => {
+                    setEditPlant(true);
+                    setPlantId(plant.id);
+                  }}
+                />
+                {/* </NavLink> */}
               </td>
               <td align="center">
                 <FontAwesomeIcon
@@ -156,6 +156,8 @@ const ExistedPlantsList = () => {
         | Wartość: {countValueOfAllPlants()}
       </div>
     </div>
+  ) : (
+    <EditedPlant plantid={plantId} />
   );
 };
 

@@ -155,9 +155,7 @@ const PlannedWorkList = (props) => {
                 <FontAwesomeIcon
                   id="edit-work"
                   icon={faEdit}
-                  workId={plannedWork.id}
-                  // This action must open EditedWork component and set workData to this component
-                  //onClick={() => console.log(plannedWork.id)}
+                  // This action opens EditedWork component and set workData to this component
                   onClick={(e) => {
                     setEditWork(true);
                     setWorkId(plannedWork.id);
