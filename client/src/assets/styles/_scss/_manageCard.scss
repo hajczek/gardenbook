@@ -157,6 +157,14 @@
       background: rgba(255, 255, 255, 0.7);
     }
   }
+  .contentEdit table {
+    tr:first-child {
+      background: rgba(255, 255, 255, 0);
+    }
+    tr:nth-child(2) {
+      background: rgba(255, 255, 255, 0.3);
+    }
+  }
 }
 
 @media screen and (max-width: 1210px) {
