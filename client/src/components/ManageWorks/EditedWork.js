@@ -1,10 +1,8 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
-// Function for get id of edited work
-// import { getWorkId } from "./ExistedWorksList";
 
-const EditedWork = ({ work }) => {
+const EditedWork = (props) => {
   const { plannedWorks } = useContext(GlobalContext);
   const { editWork } = useContext(GlobalContext);
 
@@ -74,7 +72,7 @@ const EditedWork = ({ work }) => {
               <th></th>
             </tr>
             {plannedWorks
-              .filter((work) => work.id === 1)
+              .filter((work) => work.id === props.workid)
               .map((editedWork) => {
                 return (
                   <tr key={editedWork.id}>

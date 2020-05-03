@@ -6,19 +6,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 import EditedWork from "./EditedWork";
 
-// Export id of edited work item to EditedWork component
-// export const getWorkId = () => {
-//   let id;
-//   return id;
-// };
-
-const PlannedWorkList = () => {
+const PlannedWorkList = (props) => {
   const { plannedWorks } = useContext(GlobalContext);
   const { deleteWork } = useContext(GlobalContext);
   const [searchFrom, setSearchFrom] = useState("2020-01-01");
   const [searchTo, setSearchTo] = useState("2222-12-31");
   const [filteredWorks, setFilteredWorks] = useState([]);
   const [editWork, setEditWork] = useState(false);
+  const [workId, setWorkId] = useState();
 
   function countNumOfDoneWork() {
     let numOfDoneWork = 0;
@@ -47,11 +42,6 @@ const PlannedWorkList = () => {
         numOfNotDonedWork += 1;
     }
     return numOfNotDonedWork;
-  }
-
-  function getWorkId(e) {
-    let id = e.currentTarget.dataset.id;
-    alert(id);
   }
 
   useEffect(() => {
@@ -165,11 +155,12 @@ const PlannedWorkList = () => {
                 <FontAwesomeIcon
                   id="edit-work"
                   icon={faEdit}
-                  data-id={plannedWork.id}
+                  workId={plannedWork.id}
                   // This action must open EditedWork component and set workData to this component
                   //onClick={() => console.log(plannedWork.id)}
                   onClick={(e) => {
                     setEditWork(true);
+                    setWorkId(plannedWork.id);
                   }}
                 />
                 {/* </NavLink> */}
@@ -192,7 +183,7 @@ const PlannedWorkList = () => {
       </div>
     </div>
   ) : (
-    <EditedWork />
+    <EditedWork workid={workId} />
   );
 };
 
