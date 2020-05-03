@@ -4,6 +4,7 @@ import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
+import EditedWork from "./EditedWork";
 
 // Export id of edited work item to EditedWork component
 export const getWorkId = (id) => {
@@ -17,6 +18,7 @@ const PlannedWorkList = () => {
   const [searchFrom, setSearchFrom] = useState("2020-01-01");
   const [searchTo, setSearchTo] = useState("2222-12-31");
   const [filteredWorks, setFilteredWorks] = useState([]);
+  const [editWork, setEditWork] = useState(false);
 
   function countNumOfDoneWork() {
     let numOfDoneWork = 0;
@@ -57,7 +59,7 @@ const PlannedWorkList = () => {
     );
   }, [searchFrom, searchTo, plannedWorks]);
 
-  return (
+  return editWork === false ? (
     <div className="contentList">
       <div className="searchForWorks">
         Wybierz okres od
@@ -84,6 +86,7 @@ const PlannedWorkList = () => {
             <th>Lp.</th>
             <th className="longTd">Tytuł</th>
             <th className="longTd">Termin</th>
+            <th>Alarm</th>
             <th>Status</th>
             <th className="longTd">
               Czas pracy
@@ -123,6 +126,9 @@ const PlannedWorkList = () => {
               <td id="work-term" align="center">
                 {plannedWork.workTerm}
               </td>
+              <td id="work-alert" align="center">
+                {plannedWork.workAlert}
+              </td>
               <td id="work-done" align="center" className="center">
                 {plannedWork.workDone === false ? "-" : "+"}
               </td>
@@ -145,20 +151,20 @@ const PlannedWorkList = () => {
               </td>
               <td id="work-details">{plannedWork.workDetails}</td>
               <td align="center">
-                <NavLink
+                {/* <NavLink
                   to="/edycja-pracy"
                   title="Edycja pracy"
                   exact={true}
                   activeClassName="is-active"
-                >
-                  <FontAwesomeIcon
-                    id="edit-work"
-                    icon={faEdit}
-                    // This action must open EditedWork component and set workData to this component
-                    //onClick={() => console.log(plannedWork.id)}
-                    onClick={(e) => getWorkId(plannedWork.id)}
-                  />
-                </NavLink>
+                > */}
+                <FontAwesomeIcon
+                  id="edit-work"
+                  icon={faEdit}
+                  // This action must open EditedWork component and set workData to this component
+                  //onClick={() => console.log(plannedWork.id)}
+                  onClick={(e) => setEditWork(true)}
+                />
+                {/* </NavLink> */}
               </td>
               <td align="center">
                 <FontAwesomeIcon
@@ -177,6 +183,8 @@ const PlannedWorkList = () => {
         {countNumOfDoneWork()} | Do wykonania: {countNumOfPlannedWork()}
       </div>
     </div>
+  ) : (
+    <EditedWork />
   );
 };
 

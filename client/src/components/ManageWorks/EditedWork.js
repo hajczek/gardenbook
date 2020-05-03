@@ -45,20 +45,33 @@ const EditedWork = ({ work }) => {
   }
 
   return (
-    <div className="content">
-      <form id="work-done-form" onSubmit={onSubmit}>
+    <div className="contentEdit">
+      <form id="work-edit-form" onSubmit={onSubmit}>
         <table>
           <tbody>
             <tr>
+              <td colSpan="10">
+                <h3>Edycja zadania</h3>
+              </td>
+            </tr>
+            <tr>
               <th>Lp.</th>
-              <th>Tytuł</th>
-              <th>Termin</th>
+              <th className="longTd">Tytuł</th>
+              <th className="longTd">Termin</th>
               <th>Alarm</th>
-              <th>Wykonana</th>
-              <th>Czas pracy [godz.]</th>
-              <th>Wartość [zł.]</th>
-              <th>Materiał</th>
-              <th>Uwagi</th>
+              <th align="center">Status</th>
+              <th className="longTd">
+                Czas pracy
+                <br />[ il. godz. ]
+              </th>
+              <th className="longTd">
+                Wartość
+                <br />
+                [zł.]
+              </th>
+              <th className="longTd">Materiał</th>
+              <th className="longTd">Uwagi</th>
+              <th></th>
             </tr>
             {plannedWorks
               .filter((work) => work.id === getWorkId())
@@ -100,7 +113,7 @@ const EditedWork = ({ work }) => {
                         }
                       />
                     </td>
-                    <td>
+                    <td align="center">
                       <input
                         type="checkbox"
                         id="work-done"
@@ -191,7 +204,7 @@ const EditedWork = ({ work }) => {
                         }
                       ></textarea>
                     </td>
-                    <td>
+                    <td align="center">
                       <button id="change-works-btn">Zapisz</button>
                     </td>
                   </tr>
