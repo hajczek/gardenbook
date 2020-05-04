@@ -1,4 +1,5 @@
 import React from "react";
+import { displayErrorInfo } from "../../common/DisplayErrorInfo";
 
 const EditedWorkHead = () => {
   return (
@@ -6,6 +7,9 @@ const EditedWorkHead = () => {
       <tr>
         <td colSpan="10">
           <h3>Edycja zadania</h3>
+           {displayErrorInfo(
+            `Uzupełnij wymagane pola.`
+          )}
         </td>
       </tr>
       <tr>
