@@ -69,12 +69,13 @@ const EditedPlant = (props) => {
                         id="plant-photo"
                         alt={editedPlant.plantName}
                         style={{ maxHeight: 100 }}
-                      />
+                      /><br/>
+                      Wprowadź link do nowego zdjęcia
                       <input
-                        type="file"
+                        type="text"
                         name="plant-photo"
                         id="plant-photo"
-                        filename={editedPlant.plantPhoto}
+                        value={editedPlant.plantPhoto}
                         onChange={(e) =>
                           setPlantPhoto(
                             (editedPlant.plantPhoto = e.target.value)

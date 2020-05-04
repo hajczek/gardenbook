@@ -58,8 +58,7 @@ const initialState = {
       id: 1,
       plantName: "Brzoza",
       plantQuant: 4,
-      plantPhoto:
-        "https://www.google.com/url?sa=i&url=https%3A%2F%2Fdrzewa.nk4.netmark.pl%2Fatlas%2Fbrzoza%2Fbrzoza_brodawkowata%2Fbrzoza_brodawkowata.php&psig=AOvVaw2MBe3JsU0AMasOjAiNZTEw&ust=1587024266947000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKDLzJ786egCFQAAAAAdAAAAABAD",
+      plantPhoto: "https://0.allegroimg.com/s1024/0c5fdb/6ba8e3a54d1683d13a1621ae3990",
       plantWateringFreq: 0,
       plantFetilizer: "",
       plantFetilizerFreq: 0,
@@ -106,7 +105,7 @@ const initialState = {
     {
       id: 2,
       materialName: "Kora",
-      materialPhoto: "",
+      materialPhoto: "https://www.swiatkwiatow.pl/userfiles//image/kora_ogrodowa.jpg",
       materialQuant: 50,
       materialUnit: "kg",
       materialPrice: 0.6,

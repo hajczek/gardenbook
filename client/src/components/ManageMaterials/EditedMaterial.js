@@ -65,12 +65,13 @@ const EditedMaterial = (props) => {
                         id="material-photo"
                         alt={editedMaterial.materialName}
                         style={{ maxHeight: 100 }}
-                      />
+                      /><br />
+                      Wprowadź link do nowego zdjęcia
                       <input
-                        type="file"
+                        type="text"
                         name="material-photo"
                         id="material-photo"
-                        filename={editedMaterial.materialPhoto}
+                        value={editedMaterial.materialPhoto}
                         onChange={(e) =>
                           setMaterialPhoto(
                             (editedMaterial.materialPhoto = e.target.value)
