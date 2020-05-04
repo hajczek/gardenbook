@@ -36,6 +36,11 @@ const EditedMaterial = (props) => {
         <table>
           <tbody>
             <tr>
+              <td colSpan="10">
+                <h3>Edycja materiału</h3>
+              </td>
+            </tr>
+            <tr>
               <th className="shortTd">Id</th>
               <th className="longTd">Nazwa</th>
               <th className="longTd">Zdjęcie</th>

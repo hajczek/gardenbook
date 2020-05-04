@@ -42,6 +42,11 @@ const EditedPlant = (props) => {
         <table>
           <tbody>
             <tr>
+              <td colSpan="10">
+                <h3>Edycja rośliny</h3>
+              </td>
+            </tr>
+            <tr>
               <th className="shortTd">Id</th>
               <th>Nazwa</th>
               <th className="longTd">Zdjęcie</th>
