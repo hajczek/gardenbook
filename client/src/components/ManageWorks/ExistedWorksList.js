@@ -1,10 +1,10 @@
 import React, { useContext, useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
 import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 import EditedWork from "./EditedWork";
+import ExistedWorksListHead from "./ExistedWorksListHead";
 
 const PlannedWorkList = (props) => {
   const { plannedWorks } = useContext(GlobalContext);
@@ -72,31 +72,7 @@ const PlannedWorkList = (props) => {
       </div>
       <table>
         <tbody>
-          <tr>
-            <td colSpan="10">
-              <h3>Lista zadań</h3>
-            </td>
-          </tr>
-          <tr>
-            <th className="shortTd">Lp.</th>
-            <th className="longTd">Tytuł</th>
-            <th className="longTd">Termin</th>
-            <th>Alarm</th>
-            <th>Status</th>
-            <th className="longTd">
-              Czas pracy
-              <br />[ il. godz.]
-            </th>
-            <th className="longTd">
-              Wartość
-              <br />
-              [zł.]
-            </th>
-            <th className="longTd">Materiał</th>
-            <th className="longTd">Uwagi</th>
-            <th>Edytuj</th>
-            <th>Usuń</th>
-          </tr>
+          <ExistedWorksListHead />
 
           {filteredWorks.map((plannedWork) => (
             <tr
@@ -146,22 +122,15 @@ const PlannedWorkList = (props) => {
               </td>
               <td id="work-details">{plannedWork.workDetails}</td>
               <td align="center">
-                {/* <NavLink
-                  to="/edycja-pracy"
-                  title="Edycja pracy"
-                  exact={true}
-                  activeClassName="is-active"
-                > */}
                 <FontAwesomeIcon
                   id="edit-work"
                   icon={faEdit}
-                  // This action opens EditedWork component and set workData to this component
+                  // This action opens EditedWork component and set work data to edit form
                   onClick={(e) => {
                     setEditWork(true);
                     setWorkId(plannedWork.id);
                   }}
                 />
-                {/* </NavLink> */}
               </td>
               <td align="center">
                 <FontAwesomeIcon

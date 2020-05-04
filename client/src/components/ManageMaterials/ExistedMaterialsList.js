@@ -1,8 +1,8 @@
 import React, { useContext, useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
 import { GlobalContext } from "../../context/GlobalState";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
+import ExistedMaterialsListHead from "./ExistedMaterialsListHead";
 import EditedMaterial from "./EditedMaterial";
 
 const ExistedMaterialsList = () => {
@@ -41,23 +41,7 @@ const ExistedMaterialsList = () => {
       />
       <table>
         <tbody>
-          <tr>
-            <td colSpan="6">
-              <h3>Lista materiałów</h3>
-            </td>
-          </tr>
-          <tr>
-            <th className="shortTd">Lp.</th>
-            <th className="longTd">Nazwa</th>
-            <th className="longTd">Zdjęcie</th>
-            <th className="longTd">Ilość</th>
-            <th>Jedn.</th>
-            <th className="longTd">Cena jedn. [zł.]</th>
-            <th className="longTd">Wartość [zł.]</th>
-            <th>Edytuj</th>
-            <th>Usuń</th>
-          </tr>
-
+          <ExistedMaterialsListHead />
           {filteredMaterials.map((material) => (
             <tr key={material.id}>
               <td id="material-id" align="center">
@@ -83,23 +67,15 @@ const ExistedMaterialsList = () => {
                 {(material.materialQuant * material.materialPrice).toFixed(2)}
               </td>
               <td align="center">
-                {/* <NavLink
-                  to="/edycja-materialu"
-                  title="Edycja materiału"
-                  exact={true}
-                  activeClassName="is-active"
-                > */}
                 <FontAwesomeIcon
                   id="edit-material"
                   icon={faEdit}
-                  // This action must open EditedMatrial component and set materialData to this component
-                  // onClick={() => console.log(material.id)}
+                  // This action opens EditedMatrial component with set material data in form to edit
                   onClick={(e) => {
                     setEditMaterial(true);
                     setMaterialId(material.id);
                   }}
                 />
-                {/* </NavLink> */}
               </td>
               <td align="center">
                 <FontAwesomeIcon

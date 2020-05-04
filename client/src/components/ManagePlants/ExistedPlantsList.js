@@ -1,9 +1,9 @@
 import React, { useContext, useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
 import { GlobalContext } from "../../context/GlobalState";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 import EditedPlant from "./EditedPlant";
+import ExistedPlantsListHead from "./ExistedPlantsListHead";
 
 const ExistedPlantsList = (props) => {
   const { plants } = useContext(GlobalContext);
@@ -48,46 +48,7 @@ const ExistedPlantsList = (props) => {
       />
       <table className="existed-plant-table">
         <tbody>
-          <tr>
-            <td colSpan="11">
-              <h3>Lista roślin</h3>
-            </td>
-          </tr>
-          <tr>
-            <th className="shortTd">Lp.</th>
-            <th className="longTd">Nazwa</th>
-            <th className="longTd">Zdjęcie</th>
-            <th className="longTd">
-              Ilość
-              <br />
-              [szt.]
-            </th>
-            <th className="longTd">
-              Cena jedn.
-              <br />
-              [zł.]
-            </th>
-            <th className="longTd">
-              Wartość
-              <br />
-              [zł]
-            </th>
-            <th className="longTd">Nawóz</th>
-            <th className="longTd">
-              Dawka
-              <br />
-              [ml lub gr]
-            </th>
-            <th colSpan="2">
-              Częstotliwość
-              <br /> nawożenia / podlewania
-              <br />
-              [na rok] / [na tydz.]
-            </th>
-            <th>Edytuj</th>
-            <th>Usuń</th>
-          </tr>
-
+          <ExistedPlantsListHead />
           {filteredPlants.map((plant) => (
             <tr key={plant.id}>
               <td align="center">{plant.id}</td>
@@ -122,23 +83,15 @@ const ExistedPlantsList = (props) => {
                 {plant.plantWateringFreq}
               </td>
               <td align="center">
-                {/* <NavLink
-                  to="/edycja-rosliny"
-                  title="Edycja rosliny"
-                  exact={true}
-                  activeClassName="is-active"
-                > */}
                 <FontAwesomeIcon
                   id="edit-plant"
                   icon={faEdit}
-                  // This action must open EditedPlant component and set plantData to this component
-                  // onClick={() => console.log(plant.id)}
+                  // This action opens EditedPlant component and set plantD data to tedit form
                   onClick={(e) => {
                     setEditPlant(true);
                     setPlantId(plant.id);
                   }}
                 />
-                {/* </NavLink> */}
               </td>
               <td align="center">
                 <FontAwesomeIcon
