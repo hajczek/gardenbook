@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
+import { displayErrorInfo } from "../../common/DisplayErrorInfo";
 
 const AddPlantForm = () => {
   const { addPlant } = useContext(GlobalContext);
@@ -36,6 +37,10 @@ const AddPlantForm = () => {
   }
 
   return (
+    <>
+    {displayErrorInfo(
+        `Uzupełnij wymagane pola.`
+      )}
     <form id="add-plant" action="" onSubmit={onSubmit}>
       <label htmlFor="plant-name">
         <span>Nazwa rośliny</span>
@@ -127,6 +132,7 @@ const AddPlantForm = () => {
 
       <button id="add-plant-btn">Zapisz</button>
     </form>
+    </>
   );
 };
 

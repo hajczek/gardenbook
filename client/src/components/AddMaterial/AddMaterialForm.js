@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
+import { displayErrorInfo } from "../../common/DisplayErrorInfo";
 
 const AddMaterialForm = () => {
   const [materialName, setMaterialName] = useState("");
@@ -29,6 +30,10 @@ const AddMaterialForm = () => {
     e.preventDefault();
   }
   return (
+    <>
+    {displayErrorInfo(
+        `Uzupełnij wymagane pola.`
+      )}
     <form id="add-material" action="" onSubmit={onSubmit}>
       <label htmlFor="material-name">
         <span>Nazwa materiału</span>
@@ -91,6 +96,7 @@ const AddMaterialForm = () => {
       </label>
       <button id="add-material-btn">Dodaj</button>
     </form>
+    </>
   );
 };
 

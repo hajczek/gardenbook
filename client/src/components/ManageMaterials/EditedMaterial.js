@@ -37,7 +37,6 @@ const EditedMaterial = (props) => {
         <table>
           <tbody>
             <EditedMaterialHead />
-
             {materials
               .filter((material) => material.id === props.materialid)
               .map((editedMaterial) => {

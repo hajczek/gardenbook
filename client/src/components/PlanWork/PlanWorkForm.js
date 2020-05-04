@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
+import { displayErrorInfo } from "../../common/DisplayErrorInfo";
 
 export const PlanWorkForm = () => {
   const [workName, setWorkName] = useState("");
@@ -37,6 +38,10 @@ export const PlanWorkForm = () => {
     e.preventDefault();
   }
   return (
+    <>
+    {displayErrorInfo(
+        `Uzupełnij wymagane pola.`
+      )}
     <form id="plan-work" action="#" onSubmit={onSubmit}>
       <label htmlFor="work-name">
         <span>Tytuł planowanej pracy</span>
@@ -123,6 +128,7 @@ export const PlanWorkForm = () => {
       </label>
       <button id="plan-work-btn">Zapisz</button>
     </form>
+    </>
   );
 };
 
