@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 import EditedWork from "./EditedWork";
 import ExistedWorksListHead from "./ExistedWorksListHead";
+import ExistedWorksSummary from "./ExistedWorksSummary";
 
 const PlannedWorkList = (props) => {
   const { plannedWorks } = useContext(GlobalContext);
@@ -14,35 +15,6 @@ const PlannedWorkList = (props) => {
   const [filteredWorks, setFilteredWorks] = useState([]);
   const [editWork, setEditWork] = useState(false);
   const [workId, setWorkId] = useState();
-
-  function countNumOfDoneWork() {
-    let numOfDoneWork = 0;
-    for (let i = 0; i < plannedWorks.length; i++) {
-      if (plannedWorks[i].workDone === true) numOfDoneWork += 1;
-    }
-    return numOfDoneWork;
-  }
-
-  function countNumOfPlannedWork() {
-    let numOfPlannedWork = 0;
-    for (let i = 0; i < plannedWorks.length; i++) {
-      if (new Date(plannedWorks[i].workTerm) > new Date())
-        numOfPlannedWork += 1;
-    }
-    return numOfPlannedWork;
-  }
-
-  function countNumOfNotDoneWork() {
-    let numOfNotDonedWork = 0;
-    for (let i = 0; i < plannedWorks.length; i++) {
-      if (
-        new Date(plannedWorks[i].workTerm) < new Date() &&
-        plannedWorks[i].workDone === false
-      )
-        numOfNotDonedWork += 1;
-    }
-    return numOfNotDonedWork;
-  }
 
   useEffect(() => {
     setFilteredWorks(
@@ -143,11 +115,7 @@ const PlannedWorkList = (props) => {
           ))}
         </tbody>
       </table>
-      <div className="summaryBox">
-        <h3>RAZEM PRAC:</h3> Zaplanowanych: {plannedWorks.length} |
-        Niewykonanych: {countNumOfNotDoneWork()} | Wykonanych:{" "}
-        {countNumOfDoneWork()} | Do wykonania: {countNumOfPlannedWork()}
-      </div>
+      <ExistedWorksSummary />
     </div>
   ) : (
     <EditedWork workid={workId} />

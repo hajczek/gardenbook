@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 import ExistedMaterialsListHead from "./ExistedMaterialsListHead";
 import EditedMaterial from "./EditedMaterial";
+import ExistedMaterialsSummary from './ExistedMaterialsSummary';
 
 const ExistedMaterialsList = () => {
   const { materials } = useContext(GlobalContext);
@@ -12,15 +13,6 @@ const ExistedMaterialsList = () => {
   const [filteredMaterials, setFilteredMaterials] = useState([]);
   const [editMaterial, setEditMaterial] = useState(false);
   const [materialId, setMaterialId] = useState();
-
-  function countValueOfAllMaterials() {
-    let valueOfAllMaterials = 0;
-    for (let i = 0; i < materials.length; i++) {
-      valueOfAllMaterials +=
-        materials[i].materialQuant * materials[i].materialPrice;
-    }
-    return valueOfAllMaterials.toFixed(2);
-  }
 
   useEffect(() => {
     setFilteredMaterials(
@@ -88,10 +80,7 @@ const ExistedMaterialsList = () => {
           ))}
         </tbody>
       </table>
-      <div className="summaryBox">
-        <h3>RAZEM:</h3> Il. materiałów: {materials.length} | Wartość:{" "}
-        {countValueOfAllMaterials()} zł
-      </div>
+      <ExistedMaterialsSummary />
     </div>
   ) : (
     <EditedMaterial materialid={materialId} />

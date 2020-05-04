@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 import EditedPlant from "./EditedPlant";
 import ExistedPlantsListHead from "./ExistedPlantsListHead";
+import ExistedPlantsSummary from "./ExistedPlantsSummary";
 
 const ExistedPlantsList = (props) => {
   const { plants } = useContext(GlobalContext);
@@ -12,22 +13,6 @@ const ExistedPlantsList = (props) => {
   const [filteredPlants, setFilteredPlants] = useState([]);
   const [editPlant, setEditPlant] = useState(false);
   const [plantId, setPlantId] = useState();
-
-  function countNumOfPlants() {
-    let numOfPlants = 0;
-    for (let i = 0; i < plants.length; i++) {
-      numOfPlants += plants[i].plantQuant;
-    }
-    return numOfPlants;
-  }
-
-  function countValueOfAllPlants() {
-    let valueOfAllPlants = 0;
-    for (let i = 0; i < plants.length; i++) {
-      valueOfAllPlants += plants[i].plantQuant * plants[i].plantPrice;
-    }
-    return valueOfAllPlants.toFixed(2);
-  }
 
   useEffect(() => {
     setFilteredPlants(
@@ -104,10 +89,7 @@ const ExistedPlantsList = (props) => {
           ))}
         </tbody>
       </table>
-      <div className="summaryBox">
-        <h3>RAZEM:</h3> Gatunków: {plants.length} | Sztuk: {countNumOfPlants()}{" "}
-        | Wartość: {countValueOfAllPlants()}
-      </div>
+      <ExistedPlantsSummary />
     </div>
   ) : (
     <EditedPlant plantid={plantId} />
