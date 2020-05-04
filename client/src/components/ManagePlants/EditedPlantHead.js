@@ -29,11 +29,12 @@ const EditedPlantHead = () => {
           [ml lub gr]
         </th>
         <th colSpan="2" className="longTd">
-          Częstotliwość
+          Częstotość
           <br /> nawożenia / podlewania
           <br />
           [na rok] / [na tydz.]
         </th>
+        <th></th>
       </tr>
     </>
   );

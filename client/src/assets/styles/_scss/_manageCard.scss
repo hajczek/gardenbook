@@ -123,13 +123,7 @@
             color: $orange;
           }
         }
-      }
-
-      // tr:nth-child(odd) {
-      //   background: rgba(255, 255, 255, 0.3);
-      // }
-
-      
+      }   
 
       .summaryTr {
         font-weight: bold;
@@ -170,7 +164,7 @@
       background: rgba(255, 255, 255, 0);
     }
     tr:nth-child(2) {
-      background: rgba(255, 255, 255, 0);
+      background: rgba(255, 255, 255, 0.7);
     }
   }
 }
