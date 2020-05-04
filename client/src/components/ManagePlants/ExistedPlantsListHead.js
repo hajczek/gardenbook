@@ -12,29 +12,29 @@ const ExistedPlantsListHead = () => {
         <th className="shortTd">Lp.</th>
         <th className="longTd">Nazwa</th>
         <th className="longTd">Zdjęcie</th>
-        <th className="longTd">
+        <th>
           Ilość
           <br />
           [szt.]
         </th>
-        <th className="longTd">
+        <th>
           Cena jedn.
           <br />
           [zł.]
         </th>
-        <th className="longTd">
+        <th>
           Wartość
           <br />
           [zł]
         </th>
-        <th className="longTd">Nawóz</th>
-        <th className="longTd">
+        <th>Nawóz</th>
+        <th>
           Dawka
           <br />
           [ml lub gr]
         </th>
-        <th colSpan="2">
-          Częstotliwość
+        <th colSpan="2" className="longTd">
+          Częstotość
           <br /> nawożenia / podlewania
           <br />
           [na rok] / [na tydz.]
