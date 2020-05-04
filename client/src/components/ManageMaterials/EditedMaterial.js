@@ -32,6 +32,8 @@ const EditedMaterial = (props) => {
   }
 
   return (
+    <>
+    <p>Zmień dane wybranego materiału.</p>
     <div className="contentEdit">
       <form id="material-edit-form" onSubmit={onSubmit}>
         <table>
@@ -130,6 +132,7 @@ const EditedMaterial = (props) => {
         </table>
       </form>
     </div>
+    </>
   );
 };
 

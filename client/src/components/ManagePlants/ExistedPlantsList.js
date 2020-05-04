@@ -23,6 +23,8 @@ const ExistedPlantsList = (props) => {
   }, [search, plants]);
 
   return editPlant === false ? (
+    <>
+    <p>Edytuj lub usuń wybrane rośliny.</p>
     <div className="contentList">
       <input
         id="search-plant"
@@ -91,6 +93,7 @@ const ExistedPlantsList = (props) => {
       </table>
       <ExistedPlantsSummary />
     </div>
+    </>
   ) : (
     <EditedPlant plantid={plantId} />
   );

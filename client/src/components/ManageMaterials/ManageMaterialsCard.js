@@ -18,8 +18,6 @@ const ManageMaterialsCard = () => {
             + Dodaj materiał
           </NavLink>
         </div>
-
-        <p>Zmień nazwę, ilość, cenę, wartość lub usuń wybrane materiały.</p>
         <ExistedMaterialsList />
       </div>
     </div>

@@ -38,6 +38,8 @@ const EditedPlant = (props) => {
   }
 
   return (
+    <>
+    <p>Zmień dane wybranej rośliny.</p>
     <div className="contentEdit">
       <form id="plant-edit-form" onSubmit={onSubmit}>
         <table>
@@ -177,6 +179,7 @@ const EditedPlant = (props) => {
         </table>
       </form>
     </div>
+    </>
   );
 };
 

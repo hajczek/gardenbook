@@ -18,10 +18,6 @@ const ManageWorksCard = () => {
             + Zaplanuj pracę
           </NavLink>
         </div>
-        <p>
-          Zmień nazwę, termin, zaznacz jako wykonaną lub usuń wybraną z
-          zaplanowanych prac.
-        </p>
         <ExistedWorksList />
       </div>
     </div>

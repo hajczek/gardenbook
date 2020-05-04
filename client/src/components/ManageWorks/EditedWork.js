@@ -44,6 +44,8 @@ const EditedWork = (props) => {
   }
 
   return (
+    <>
+    <p>Zmień ustawienia wybranego zadania.</p>
     <div className="contentEdit">
       <form id="work-edit-form" onSubmit={onSubmit}>
         <table>
@@ -192,6 +194,7 @@ const EditedWork = (props) => {
         </table>
       </form>
     </div>
+    </>
   );
 };
 

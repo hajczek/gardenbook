@@ -27,6 +27,8 @@ const PlannedWorkList = (props) => {
   }, [searchFrom, searchTo, plannedWorks]);
 
   return editWork === false ? (
+    <>
+    <p>Edytuj lub usuń wybrane zadania.</p>
     <div className="contentList">
       <div className="searchForWorks">
         Wybierz okres od
@@ -117,6 +119,7 @@ const PlannedWorkList = (props) => {
       </table>
       <ExistedWorksSummary />
     </div>
+    </>
   ) : (
     <EditedWork workid={workId} />
   );

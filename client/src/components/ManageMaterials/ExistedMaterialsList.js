@@ -23,6 +23,8 @@ const ExistedMaterialsList = () => {
   }, [search, materials]);
 
   return editMaterial === false ? (
+    <>
+    <p>Edytuj lub usuń wybrane materiały.</p>
     <div className="contentList">
       <input
         id="search-material"
@@ -82,6 +84,7 @@ const ExistedMaterialsList = () => {
       </table>
       <ExistedMaterialsSummary />
     </div>
+    </>
   ) : (
     <EditedMaterial materialid={materialId} />
   );
