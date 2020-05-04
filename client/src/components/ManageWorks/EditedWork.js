@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
+import EditedWorkHead from "./EditedWorkHead";
 import addedDateFunction from "../../common/AddedDateFunction";
 
 const EditedWork = (props) => {
@@ -47,30 +48,7 @@ const EditedWork = (props) => {
       <form id="work-edit-form" onSubmit={onSubmit}>
         <table>
           <tbody>
-            <tr>
-              <td colSpan="10">
-                <h3>Edycja zadania</h3>
-              </td>
-            </tr>
-            <tr>
-              <th className="shortTd">Id</th>
-              <th className="longTd">Tytuł</th>
-              <th>Termin</th>
-              <th>Alarm</th>
-              <th align="center">Status</th>
-              <th>
-                Czas pracy
-                <br />[ il. godz. ]
-              </th>
-              <th>
-                Wartość
-                <br />
-                [zł.]
-              </th>
-              <th className="longTd">Materiał</th>
-              <th>Uwagi</th>
-              <th></th>
-            </tr>
+            <EditedWorkHead />
             {plannedWorks
               .filter((work) => work.id === props.workid)
               .map((editedWork) => {

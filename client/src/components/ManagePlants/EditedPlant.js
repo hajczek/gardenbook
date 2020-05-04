@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
+import EditedPlantHead from "./EditedPlantHead";
 import addedDateFunction from "../../common/AddedDateFunction";
 
 const EditedPlant = (props) => {
@@ -41,38 +42,7 @@ const EditedPlant = (props) => {
       <form id="plant-edit-form" onSubmit={onSubmit}>
         <table>
           <tbody>
-            <tr>
-              <td colSpan="10">
-                <h3>Edycja rośliny</h3>
-              </td>
-            </tr>
-            <tr>
-              <th className="shortTd">Id</th>
-              <th>Nazwa</th>
-              <th className="longTd">Zdjęcie</th>
-              <th>
-                Ilość
-                <br />
-                [szt.]
-              </th>
-              <th>
-                Cena jedn.
-                <br />
-                [zł.]
-              </th>
-              <th>Nawóz</th>
-              <th>
-                Dawka
-                <br />
-                [ml lub gr]
-              </th>
-              <th colSpan="2" className="longTd">
-                Częstotliwość
-                <br /> nawożenia / podlewania
-                <br />
-                [na rok] / [na tydz.]
-              </th>
-            </tr>
+            <EditedPlantHead />
             {plants
               .filter((plant) => plant.id === props.plantid)
               .map((editedPlant) => {

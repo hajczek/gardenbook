@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
+import EditedMaterialHead from "./EditedMaterialHead";
 import addedDateFunction from "../../common/AddedDateFunction";
 
 const EditedMaterial = (props) => {
@@ -35,20 +36,7 @@ const EditedMaterial = (props) => {
       <form id="material-edit-form" onSubmit={onSubmit}>
         <table>
           <tbody>
-            <tr>
-              <td colSpan="10">
-                <h3>Edycja materiału</h3>
-              </td>
-            </tr>
-            <tr>
-              <th className="shortTd">Id</th>
-              <th className="longTd">Nazwa</th>
-              <th className="longTd">Zdjęcie</th>
-              <th>Ilość</th>
-              <th>Jedn.</th>
-              <th>Cena jedn. [zł.]</th>
-              <th></th>
-            </tr>
+            <EditedMaterialHead />
 
             {materials
               .filter((material) => material.id === props.materialid)
