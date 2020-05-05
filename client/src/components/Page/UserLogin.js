@@ -11,12 +11,12 @@ const UserLogin = () => {
 
   function onSubmit(e) {  
 
-    e.preventDefault();
+    // e.preventDefault();
     console.log(userEmailLogin);
     console.log(userPassLogin);
     
 // Check if input fields are empty
-    userEmailLogin === '' || userPassLogin === ''
+    userEmailLogin === '' || userPassLogin === ''   
       ? setErrorInfo('Uzupełnij wymagane pola.') 
       // Check if email and password are on database
       : userData.some((user) => 
@@ -31,7 +31,7 @@ const UserLogin = () => {
     <div className="info">
       <h1>Panel logowania</h1>
       <DisplayErrorInfo info={errorInfo} />
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} id="user-email-form">
         <label htmlFor="user-email-login">
           <span>Email</span>
           <input
