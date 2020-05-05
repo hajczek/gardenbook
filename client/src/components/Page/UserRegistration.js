@@ -10,9 +10,7 @@ const UserRegistration = () => {
   const [userPass, setUserPass] = useState("");
   const [userPassAgain, setUserPassAgain] = useState("");
   const [errorInfo, setErrorInfo] = useState('');
-  const [userInfo, setUserInfo] = useState('');
-
-  
+  const [userInfo, setUserInfo] = useState('');  
 
   function onSubmit(e) {    
     e.preventDefault();
@@ -21,14 +19,14 @@ const UserRegistration = () => {
     userEmail === '' || userPass === '' ||  userPassAgain === ''
       ? setErrorInfo('Uzupełnij wymagane pola.') 
       // Check if email is on database
-      : userData.filter((user) => user.userEmail === document.getElementById('user-email').value) === true
+      : userData.filter((user) => (user.userEmail === document.getElementById('user-email').value) === true)
       ? setErrorInfo('Ten email już istnieje w naszej bazie.') 
       // Check if passwords are different
       : userPass !== userPassAgain 
       ? setErrorInfo('Hasła są różne.')       
       // TODO - set new data to database
-      : setUserInfo('Zostałeś zarejestrowany');
-    }
+      : setUserInfo('Zostałeś zarejestrowany. Zaloguj się na swoje konto użytkownika.');
+  }
 
   return (
     <div className="info">

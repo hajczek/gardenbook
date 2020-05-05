@@ -156,23 +156,24 @@ const initialState = {
         gardenHistory: false,
         searchWorkers: false,
       },
-    },{
-      id: 2,
-      userName: "Janina",
-      userEmail: "janina@kowalski.pl",
-      userPass: "haslo2",
-      userTel: "+48658888777",
-      userPlace: "Milanówek",
-      userLogged: false,
-      accountSets: {
-        workPlanner: true,
-        alertTime: 1,
-        gardenPlan: false,
-        gardenStatistic: false,
-        gardenHistory: false,
-        searchWorkers: false,
-      }
-    }
+    },
+    // {
+    //   id: 2,
+    //   userName: "Janina",
+    //   userEmail: "janina@kowalski.pl",
+    //   userPass: "haslo2",
+    //   userTel: "+48658888777",
+    //   userPlace: "Milanówek",
+    //   userLogged: false,
+    //   accountSets: {
+    //     workPlanner: true,
+    //     alertTime: 1,
+    //     gardenPlan: false,
+    //     gardenStatistic: false,
+    //     gardenHistory: false,
+    //     searchWorkers: false,
+    //   }
+    // }
   ],
 };
 
