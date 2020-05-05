@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import DisplayErrorInfo from "../../common/DisplayErrorInfo";
+import DisplayInfo from "../../common/DisplayInfo";
 
 const UserRegistration = () => {
   const { userData } = useContext(GlobalContext);
@@ -9,15 +10,12 @@ const UserRegistration = () => {
   const [userPass, setUserPass] = useState("");
   const [userPassAgain, setUserPassAgain] = useState("");
   const [errorInfo, setErrorInfo] = useState('');
+  const [userInfo, setUserInfo] = useState('');
 
   
 
   function onSubmit(e) {    
     e.preventDefault();
-
-    console.log(userData.filter((user) => user.userEmail === document.getElementById('user-email').value ? console.log('true') : console.log('false')));
-
-    // TODO - check, if email exist in database
 
    // Check if input fields are empty
     userEmail === '' || userPass === '' ||  userPassAgain === ''
@@ -29,13 +27,14 @@ const UserRegistration = () => {
       : userPass !== userPassAgain 
       ? setErrorInfo('Hasła są różne.')       
       // TODO - set new data to database
-      : console.log('Zostałeś zarejestrowany', userName, userEmail, userPass, userPassAgain)
+      : setUserInfo('Zostałeś zarejestrowany');
     }
 
   return (
     <div className="info">
       <h1>Panel rejestracji</h1>
       <DisplayErrorInfo info={errorInfo} />
+      <DisplayInfo info={userInfo} />
       <form action="" onSubmit={onSubmit}>
         <label htmlFor="user-name">
           <span>Imię</span>
