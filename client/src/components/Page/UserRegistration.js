@@ -1,26 +1,41 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { GlobalContext } from "../../context/GlobalState";
 import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 
 const UserRegistration = () => {
+  const { userData } = useContext(GlobalContext);
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
   const [userPass, setUserPass] = useState("");
   const [userPassAgain, setUserPassAgain] = useState("");
+  const [errorInfo, setErrorInfo] = useState('');
+
+  
 
   function onSubmit(e) {    
     e.preventDefault();
 
-    userPass !== userPassAgain 
-    ? console.log('Hasła są różne') 
-    // In this place user data must be set on database
-    : console.log('Zostałeś zarejestrowany', userName, userEmail, userPass, userPassAgain);
+    console.log(userData.filter((user) => user.userEmail === document.getElementById('user-email').value ? console.log('true') : console.log('false')));
 
-    userEmail === '' || userName === '' || userPass === '' ||  userPassAgain === '' ? console.log('Uzupełnij puste pola') : console.log('Pola zostały prawidłowo wypełnione');
-  }
+    // TODO - check, if email exist in database
+
+   // Check if input fields are empty
+    userEmail === '' || userPass === '' ||  userPassAgain === ''
+      ? setErrorInfo('Uzupełnij wymagane pola.') 
+      // Check if email is on database
+      : userData.filter((user) => user.userEmail === document.getElementById('user-email').value) === true
+      ? setErrorInfo('Ten email już istnieje w naszej bazie.') 
+      // Check if passwords are different
+      : userPass !== userPassAgain 
+      ? setErrorInfo('Hasła są różne.')       
+      // TODO - set new data to database
+      : console.log('Zostałeś zarejestrowany', userName, userEmail, userPass, userPassAgain)
+    }
 
   return (
     <div className="info">
       <h1>Panel rejestracji</h1>
+      <DisplayErrorInfo info={errorInfo} />
       <form action="" onSubmit={onSubmit}>
         <label htmlFor="user-name">
           <span>Imię</span>
@@ -37,6 +52,7 @@ const UserRegistration = () => {
             type="text"
             name="user-email"
             value={userEmail}
+            id="user-email"
             onChange={(e) => setUserEmail(e.target.value)}
           />
         </label>
