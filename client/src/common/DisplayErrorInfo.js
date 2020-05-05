@@ -1,5 +1,7 @@
 import React from "react";
 
-export function displayErrorInfo(info) {
-  return <div className="error-info">{info}</div>;
+const DisplayErrorInfo = props => {
+  return <div className="error-info">{props.info}</div>;
 }
+
+export default DisplayErrorInfo;

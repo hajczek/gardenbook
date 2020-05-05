@@ -17,7 +17,7 @@ const Footer = () => {
         </NavLink>
       </p>
       {userData.map((data) =>
-        data.userLogged === false ? <Navigation /> : null
+        data.userLogged === false ? <Navigation key="navigacja-footer" /> : null
       )}
     </footer>
   );

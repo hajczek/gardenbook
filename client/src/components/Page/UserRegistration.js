@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { displayErrorInfo } from "../../common/DisplayErrorInfo";
+import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 
 const UserRegistration = () => {
   const [userName, setUserName] = useState("");
@@ -7,19 +7,20 @@ const UserRegistration = () => {
   const [userPass, setUserPass] = useState("");
   const [userPassAgain, setUserPassAgain] = useState("");
 
-  function onSubmit(e) {
-    console.log(userName);
-    console.log(userEmail);
-    console.log(userPass);
-    console.log(userPassAgain);
+  function onSubmit(e) {    
     e.preventDefault();
+
+    userPass !== userPassAgain 
+    ? console.log('Hasła są różne') 
+    // In this place user data must be set on database
+    : console.log('Zostałeś zarejestrowany', userName, userEmail, userPass, userPassAgain);
+
+    userEmail === '' || userName === '' || userPass === '' ||  userPassAgain === '' ? console.log('Uzupełnij puste pola') : console.log('Pola zostały prawidłowo wypełnione');
   }
+
   return (
     <div className="info">
       <h1>Panel rejestracji</h1>
-      {displayErrorInfo(
-        `Ten adres e-mail już istnieje. / Wpisane hasła są różne.`
-      )}
       <form action="" onSubmit={onSubmit}>
         <label htmlFor="user-name">
           <span>Imię</span>

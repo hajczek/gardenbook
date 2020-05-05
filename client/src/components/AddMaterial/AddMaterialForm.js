@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
-import { displayErrorInfo } from "../../common/DisplayErrorInfo";
+import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 
 const AddMaterialForm = () => {
   const [materialName, setMaterialName] = useState("");
@@ -31,9 +31,7 @@ const AddMaterialForm = () => {
   }
   return (
     <>
-    {displayErrorInfo(
-        `Uzupełnij wymagane pola.`
-      )}
+    <DisplayErrorInfo info="Uzupełnij wymagane pola." />
     <form id="add-material" action="" onSubmit={onSubmit}>
       <label htmlFor="material-name">
         <span>Nazwa materiału</span>

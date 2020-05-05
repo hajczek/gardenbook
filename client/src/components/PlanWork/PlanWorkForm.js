@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
-import { displayErrorInfo } from "../../common/DisplayErrorInfo";
+import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 
 export const PlanWorkForm = () => {
   const [workName, setWorkName] = useState("");
@@ -39,9 +39,7 @@ export const PlanWorkForm = () => {
   }
   return (
     <>
-    {displayErrorInfo(
-        `Uzupełnij wymagane pola.`
-      )}
+    <DisplayErrorInfo info='Uzupełnij wymagane pola.' />
     <form id="plan-work" action="#" onSubmit={onSubmit}>
       <label htmlFor="work-name">
         <span>Tytuł planowanej pracy</span>

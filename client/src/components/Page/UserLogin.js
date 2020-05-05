@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { displayErrorInfo } from "../../common/DisplayErrorInfo";
+import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 
 const UserLogin = () => {
   const [userEmailLogin, setUserEmailLogin] = useState("");
@@ -18,7 +18,7 @@ const UserLogin = () => {
   return (
     <div className="info">
       <h1>Panel logowania</h1>
-      {displayErrorInfo(`Podałeś nieprawidłowe dane.`)}
+      <DisplayErrorInfo info="Podałeś nieprawidłowe dane." />
       <form onSubmit={onSubmit}>
         <label htmlFor="user-email-login">
           <span>Email</span>

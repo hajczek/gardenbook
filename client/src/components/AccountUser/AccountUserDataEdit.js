@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
 import { getUserId } from "./AccountUserDataBox";
-import { displayErrorInfo } from "../../common/DisplayErrorInfo";
+import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 
 const AccountUserDataEdit = () => {
   const [userName, setUserName] = useState("");
@@ -47,8 +47,7 @@ const AccountUserDataEdit = () => {
           .map((newData) => {
             return (
               <div key="new-user-data">
-                {displayErrorInfo(`Tan adres e-mail już istnieje. / Aktualne hasło jest
-                  niprawidłowe.`)}
+              <DisplayErrorInfo info='Tan adres e-mail już istnieje. / Aktualne hasło jest niprawidłowe.' />
                 <label htmlFor="user-name">
                   <span>Imię</span>
                   <input
