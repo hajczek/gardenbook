@@ -2,8 +2,12 @@ import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
 import DisplayErrorInfo from "../../common/DisplayErrorInfo";
+import DisplayInfo from "../../common/DisplayInfo";
 
 export const PlanWorkForm = () => {
+  const { addWork } = useContext(GlobalContext);
+  const { plannedWorks } = useContext(GlobalContext);
+
   const [workName, setWorkName] = useState("");
   const [workTerm, setWorkTerm] = useState("");
   const [workAlert, setWorkAlert] = useState("");
@@ -15,8 +19,23 @@ export const PlanWorkForm = () => {
   const [workDone] = useState(false);
   const [workTime] = useState(0);
   const [workValue] = useState(0);
+  const [errorInfo, setErrorInfo] = useState('');
+  const [userInfo, setUserInfo] = useState('');
 
-  const { addWork } = useContext(GlobalContext);
+   const addedWork = () => {
+    // Display info for user about added plant to list
+    setUserInfo('Dodano nowe zadanie.')
+    // Clear info about error
+    setErrorInfo('');
+    // Clear all fields of form
+    setWorkName('');
+    setWorkTerm("");
+    setWorkAlert("");
+    setWorkMatName("");
+    setWorkMatQuant(0);
+    setWorkMatUnit("");
+    setWorkDetails("");
+  }
 
   function onSubmit(e) {
     const newWork = {
@@ -32,6 +51,13 @@ export const PlanWorkForm = () => {
       workValue,
     };
 
+    // Check if input field for name and term is empty 
+    workName === '' || workTerm === ''
+    // If no, set info about error 
+    ? setErrorInfo('Uzupełnij wymagane pola') 
+    // If yes, put new plant in database
+    : addedWork();
+
     addWork(newWork);
     console.log(newWork);
 
@@ -39,7 +65,8 @@ export const PlanWorkForm = () => {
   }
   return (
     <>
-    <DisplayErrorInfo info='Uzupełnij wymagane pola.' />
+    <DisplayErrorInfo info={errorInfo} />
+    <DisplayInfo info={userInfo} />
     <form id="plan-work" action="#" onSubmit={onSubmit}>
       <label htmlFor="work-name">
         <span>Tytuł planowanej pracy</span>
