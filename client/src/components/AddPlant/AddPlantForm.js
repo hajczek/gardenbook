@@ -6,6 +6,7 @@ import DisplayInfo from "../../common/DisplayInfo";
 
 const AddPlantForm = () => {
   const { addPlant } = useContext(GlobalContext);
+  const { plants } = useContext(GlobalContext);
 
   const [plantName, setPlantName] = useState("");
   const [plantQuant, setPlantQuant] = useState(0);
@@ -53,6 +54,8 @@ const AddPlantForm = () => {
     plantName === '' 
     // If no, set info about error 
     ? setErrorInfo('Wpisz nazwę dodawanej rośliny.') 
+    : plants.some((plant) => (plant.plantName === document.getElementById('plant-name').value) === true)
+    ? setErrorInfo('Ta roślina jest już na liście.') 
     // If yes, put new plant in database
     : addedPlant();
 
