@@ -11,7 +11,7 @@ const UserLogin = () => {
 
   function onSubmit(e) {  
 
-    // e.preventDefault();
+    e.preventDefault();
     console.log(userEmailLogin);
     console.log(userPassLogin);
     
