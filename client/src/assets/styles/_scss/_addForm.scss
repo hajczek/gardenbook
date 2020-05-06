@@ -11,8 +11,8 @@
     padding: 2.5rem 2rem 0 3.5rem;
 
     h2 {
-      margin-bottom: 1rem;
       color: $lighter-grey;
+      margin-bottom: 1rem;
       text-transform: uppercase;
     }
 
@@ -23,7 +23,8 @@
       flex-wrap: wrap;
       flex-direction: row;
       font-size: 1.2rem;
-      width: 100%;
+      width: 100%;      
+      margin-top: 1rem;
 
       label {
         width: 50%;
@@ -33,7 +34,7 @@
           color: $lighter-grey;
           display: flex;
           width: 100%;
-          margin-bottom: 0.6rem;
+          margin-bottom: 0.4rem;
         }
 
         input,

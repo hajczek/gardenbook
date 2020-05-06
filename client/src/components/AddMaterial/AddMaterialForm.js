@@ -2,16 +2,33 @@ import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
 import DisplayErrorInfo from "../../common/DisplayErrorInfo";
+import DisplayInfo from "../../common/DisplayInfo";
 
 const AddMaterialForm = () => {
+  const { materials } = useContext(GlobalContext);
+  const { addMaterial } = useContext(GlobalContext);
+
   const [materialName, setMaterialName] = useState("");
   const [materialPhoto, setMaterialPhoto] = useState("");
   const [materialQuant, setMaterialQuant] = useState(0);
   const [materialUnit, setMaterialUnit] = useState("");
   const [materialPrice, setMaterialPrice] = useState(0);
   const [addedDate] = useState(addedDateFunction());
+  const [errorInfo, setErrorInfo] = useState('');
+  const [userInfo, setUserInfo] = useState('');
 
-  const { addMaterial } = useContext(GlobalContext);
+  const addedMaterial = () => {
+    // Display info for user about added material to list
+    setUserInfo('Dodano materiał do spisu.')
+    // Clear info about error
+    setErrorInfo('');
+    // Clear all fields of form
+    setMaterialName("");
+    setMaterialPhoto("");
+    setMaterialQuant(0);
+    setMaterialUnit("");
+    setMaterialPrice(0);
+  }
 
   function onSubmit(e) {
     const newMaterial = {
@@ -24,6 +41,15 @@ const AddMaterialForm = () => {
       addedDate,
     };
 
+     // Check if input field for name is empty
+    materialName === '' 
+    // If no, set info about error 
+    ? setErrorInfo('Wpisz nazwę dodawanego materiału.')
+    : materials.some((material) => (material.materialName === document.getElementById('material-name').value) === true)
+    ? setErrorInfo('Ten materiał jest już na liście.') 
+    // If material is not on a list it in database
+    : addedMaterial();
+
     addMaterial(newMaterial);
     console.log(newMaterial);
 
@@ -31,7 +57,8 @@ const AddMaterialForm = () => {
   }
   return (
     <>
-    <DisplayErrorInfo info="Uzupełnij wymagane pola." />
+    <DisplayErrorInfo info={errorInfo}/>
+    <DisplayInfo info={userInfo}/>
     <form id="add-material" action="" onSubmit={onSubmit}>
       <label htmlFor="material-name">
         <span>Nazwa materiału</span>
