@@ -22,6 +22,8 @@ const AddPlantForm = () => {
   const addedPlant = () => {
     // Display info for user about added plant to list
     setUserInfo('Dodano roślinę do spisu.')
+    // Clear info about error
+    setErrorInfo('');
     // Clear all fields of form
     setPlantName('');
     setPlantQuant('');
