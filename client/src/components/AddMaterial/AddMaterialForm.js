@@ -57,11 +57,12 @@ const AddMaterialForm = () => {
   }
   return (
     <>
+    <span className="neededFields">Pola oznaczone * są wymagane.</span>
     <DisplayErrorInfo info={errorInfo}/>
     <DisplayInfo info={userInfo}/>
     <form id="add-material" action="" onSubmit={onSubmit}>
       <label htmlFor="material-name">
-        <span>Nazwa materiału</span>
+        <span>Nazwa materiału *</span>
         <input
           type="text"
           name="material-name"

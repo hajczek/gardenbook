@@ -67,11 +67,12 @@ const AddPlantForm = () => {
 
   return (
     <>
+    <span className="neededFields">Pola oznaczone * są wymagane.</span>
     <DisplayErrorInfo info={errorInfo}/>
     <DisplayInfo info={userInfo}/>
     <form id="add-plant" action="" onSubmit={onSubmit}>
       <label htmlFor="plant-name">
-        <span>Nazwa rośliny</span>
+        <span>Nazwa rośliny *</span>
         <input
           type="text"
           name="plant-name"

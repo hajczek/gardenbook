@@ -65,11 +65,12 @@ export const PlanWorkForm = () => {
   }
   return (
     <>
+    <span className="neededFields">Pola oznaczone * są wymagane.</span>
     <DisplayErrorInfo info={errorInfo} />
     <DisplayInfo info={userInfo} />
     <form id="plan-work" action="#" onSubmit={onSubmit}>
       <label htmlFor="work-name">
-        <span>Tytuł planowanej pracy</span>
+        <span>Tytuł planowanej pracy *</span>
         <input
           type="text"
           name="work-name"
@@ -92,7 +93,7 @@ export const PlanWorkForm = () => {
         </select>
       </label>
       <label htmlFor="work-term">
-        <span>Termin realizacji</span>
+        <span>Termin realizacji *</span>
         <input
           type="date"
           name="work-term"
@@ -115,7 +116,7 @@ export const PlanWorkForm = () => {
         />
       </label>
       <label htmlFor="work-alert">
-        <span>Czas dla alarmu</span>
+        <span>Czas alarmu</span>
         <input
           type="time"
           name="work-alert"
