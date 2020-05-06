@@ -13,8 +13,15 @@ const UserRegistration = () => {
   const [userInfo, setUserInfo] = useState('');
 
   const registrationDone = () => {
+    // Clear error info
     setErrorInfo('');
-    setUserInfo('Zostałeś zarejestrowany. Zaloguj się na swoje konto użytkownika.')
+    // Display info for user about registration
+    setUserInfo('Zostałeś zarejestrowany. Zaloguj się na swoje konto użytkownika.');
+    // Clear form fields
+    setUserName("");
+    setUserEmail('');
+    setUserPass('');
+    setUserPassAgain('');
   }
 
   function onSubmit(e) {    
@@ -46,6 +53,7 @@ const UserRegistration = () => {
             type="text"
             name="user-name"
             value={userName}
+            id="user-name"
             onChange={(e) => setUserName(e.target.value)}
           />
         </label>
@@ -66,6 +74,7 @@ const UserRegistration = () => {
             type="text"
             name="user-pass"
             value={userPass}
+            id="user-pass"
             onChange={(e) => setUserPass(e.target.value)}
           />
         </label>
@@ -75,6 +84,7 @@ const UserRegistration = () => {
             type="text"
             name="user-pass-again"
             value={userPassAgain}
+            id="user-pass-again"
             onChange={(e) => setUserPassAgain(e.target.value)}
           />
         </label>
