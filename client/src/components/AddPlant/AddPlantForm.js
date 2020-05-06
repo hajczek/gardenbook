@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
 import DisplayErrorInfo from "../../common/DisplayErrorInfo";
+import DisplayInfo from "../../common/DisplayInfo";
 
 const AddPlantForm = () => {
   const { addPlant } = useContext(GlobalContext);
@@ -15,6 +16,22 @@ const AddPlantForm = () => {
   const [plantPrice, setPlantPrice] = useState(0);
   const [plantFetilizerDose, setPlantFetilizerDose] = useState(0);
   const [addedDate] = useState(addedDateFunction());
+  const [errorInfo, setErrorInfo] = useState('');
+  const [userInfo, setUserInfo] = useState('');
+
+  const addedPlant = () => {
+    // Display info for user about added plant to list
+    setUserInfo('Dodano roślinę do spisu.')
+    // Clear all fields of form
+    setPlantName('');
+    setPlantQuant('');
+    setPlantPhoto('');
+    setPlantWateringFreq('');
+    setPlantFetilizer('');
+    setPlantFetilizerFreq('');
+    setPlantPrice('');
+    setPlantFetilizerDose('');
+  }
 
   function onSubmit(e) {
     const newPlant = {
@@ -30,6 +47,13 @@ const AddPlantForm = () => {
       addedDate,
     };
 
+    // Check if input field for name is empty
+    plantName === '' 
+    // If no, set info about error 
+    ? setErrorInfo('Wpisz nazwę dodawanej rośliny.') 
+    // If yes, put new plant in database
+    : addedPlant();
+
     addPlant(newPlant);
     console.log(newPlant);
 
@@ -38,7 +62,8 @@ const AddPlantForm = () => {
 
   return (
     <>
-    <DisplayErrorInfo info="Uzupełnij wymagane pola."/>
+    <DisplayErrorInfo info={errorInfo}/>
+    <DisplayInfo info={userInfo}/>
     <form id="add-plant" action="" onSubmit={onSubmit}>
       <label htmlFor="plant-name">
         <span>Nazwa rośliny</span>
