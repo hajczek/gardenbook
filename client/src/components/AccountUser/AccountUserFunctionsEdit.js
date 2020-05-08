@@ -3,7 +3,7 @@ import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
 // import { getUserId } from "./AccountUserDataBox";
 
-const AccountUserFunctionsEdit = () => {
+const AccountUserFunctionsEdit = (props) => {
   const [workPlanner, setWorkPlanner] = useState(false);
   const [alertTime, setAlertTime] = useState(0);
   const [gardenPlan, setGardenPlan] = useState(false);
@@ -12,6 +12,7 @@ const AccountUserFunctionsEdit = () => {
   const [searchWorkers, setSearchWorkers] = useState(false);
   const [localization, setLocalization] = useState("");
   const [addedDate] = useState(addedDateFunction());
+  const [userId, setUserId] = useState();
 
   const { userData } = useContext(GlobalContext);
   const { editUserData } = useContext(GlobalContext);
@@ -31,7 +32,7 @@ const AccountUserFunctionsEdit = () => {
     console.log(addedDate);
 
     const userFunctionsNew = {
-      // id: getUserId(),
+      id: props.userid,
       workPlanner,
       alertTime,
       gardenPlan,
@@ -53,7 +54,7 @@ const AccountUserFunctionsEdit = () => {
       <form id="user-functions" onSubmit={onSubmit}>
         <h2>Zmień stan wybranych funkcji / narzędzi</h2>
         {userData
-          .filter((data) => data.id === 1) //getUserId()
+          .filter((data) => data.id === props.userid)
           .map((newSet) => {
             return (
               <div key="user-func-edit">

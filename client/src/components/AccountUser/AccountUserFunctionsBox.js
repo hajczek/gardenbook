@@ -4,9 +4,10 @@ import AccountUserFunctionsEdit from "./AccountUserFunctionsEdit";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit } from "@fortawesome/free-solid-svg-icons";
 
-const AccountUserFunctionsBox = () => {
+const AccountUserFunctionsBox = (props) => {
   const { userData } = useContext(GlobalContext);
   const [editFunctionsOption, setEditFunctionsOption] = useState(false);
+   const [userId, setUserId] = useState();
 
   return editFunctionsOption === false ? (
     <div className="user-functionality-box">
@@ -36,14 +37,17 @@ const AccountUserFunctionsBox = () => {
             {data.accountSets.searchWorkers === false ? "wył." : "wł."}
           </span>
           <br />
-          <button onClick={(e) => setEditFunctionsOption(true)}>
+          <button onClick={(e) => {
+            setEditFunctionsOption(true);
+            setUserId(data.id);
+            }}>
             <FontAwesomeIcon id="edit-plant" icon={faEdit} /> Zmień ustawienia
           </button>
         </p>
       ))}
     </div>
   ) : (
-    <AccountUserFunctionsEdit />
+    <AccountUserFunctionsEdit userid={userId}/>
   );
 };
 
