@@ -37,7 +37,6 @@ const AccountUserFunctionsEdit = (props) => {
   const [gardenStatistic, setGardenStatistic] = useState(actualGardenStatistic);
   const [gardenHistory, setGardenHistory] = useState(actualGardenHistory);
   const [searchWorkers, setSearchWorkers] = useState(actualSearchWorkers);
-  const [localization, setLocalization] = useState(actualLocalization);
   const [addedDate] = useState(addedDateFunction());
   const [userId, setUserId] = useState();
   const [errorInfo, setErrorInfo] = useState('');
@@ -48,11 +47,6 @@ const putNewSets = () => {
     setUserInfo('Ustawienia zostały zaktualizowane.');
     // Clear info about error
     setErrorInfo('');
-    // Clear all fields of form
-    // setUserName('');
-    // setUserEmail('');
-    // setUserPass('');
-    // setUserTel('');
     // Remove form from view
     document.getElementById('user-functions').style.display = 'none';
   }
@@ -66,10 +60,10 @@ const putNewSets = () => {
       gardenStatistic,
       gardenHistory,
       searchWorkers,
-      localization,
       addedDate,
     };
 
+    putNewSets();
     editUserData(userFunctionsNew);
     console.log(userFunctionsNew);
 
@@ -136,17 +130,6 @@ const putNewSets = () => {
                     onChange={(e) =>
                       setSearchWorkers(e.target.value)
                     }
-                  />
-                </label>
-                <label htmlFor="localizaion">
-                  <span>Lokalizacja:</span>
-                  <input
-                    name="localizaion"
-                    type="text"
-                    value={localization}
-                    onChange={(e) =>
-                      setLocalization(e.target.value)}
-                    placeholder="Wpisz swoją lokalizację"
                   />
                 </label>
               </div>
