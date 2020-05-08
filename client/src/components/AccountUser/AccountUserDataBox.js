@@ -49,14 +49,6 @@ const AccountUserDataBox = (props) => {
             >
               <FontAwesomeIcon id="edit-plant" icon={faEdit} /> Zmień
             </button>
-            {/* <button
-              onClick={(e) => {
-                setEditFunctionsOption(true);
-                setUserId(data.id);
-              }}
-            >
-              <FontAwesomeIcon id="edit-plant" icon={faEdit} /> Zmień ustawienia
-            </button> */}
           </p>
         </>
       ))}
