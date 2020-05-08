@@ -30,8 +30,7 @@ const AccountUserDataEdit = (props) => {
   // Define states for user data
   const [userName, setUserName] = useState(actualUserName);
   const [userEmail, setUserEmail] = useState(actualUserEmail);
-  const [userPass, setUserPass] = useState("");
-  const [userPassNew, setUserPassNew] = useState("");
+  const [userPass, setUserPass] = useState(actualUserPass);
   const [userTel, setUserTel] = useState(actualUserTel);
   const [addedDate] = useState(addedDateFunction());
   const [errorInfo, setErrorInfo] = useState('');
@@ -46,7 +45,6 @@ const AccountUserDataEdit = (props) => {
     setUserName('');
     setUserEmail('');
     setUserPass('');
-    setUserPassNew('');
     setUserTel('');
     document.getElementById('user-data-edit').style.display = 'none';
   }
@@ -57,7 +55,6 @@ const AccountUserDataEdit = (props) => {
       userName,
       userEmail,
       userPass,
-      userPassNew,
       userTel,
       addedDate,
     };
@@ -67,10 +64,7 @@ const AccountUserDataEdit = (props) => {
      ? setErrorInfo('Uzupełnij wymagane pola')
      // Check if email exists in database
     : actualUserEmail === document.getElementById('user-email').value
-    ? setErrorInfo(`Ten adres email już istnieje w naszej bazie.`) 
-    // Check if actual password is correct
-    : actualUserPass !== document.getElementById("user-pass").value
-    ? setErrorInfo('Wpisane aktualne hasło jest nieprawidłowe') 
+    ? setErrorInfo(`Ten adres email już istnieje w naszej bazie.`)
     // If yes, put new plant in database
     : addedNewData();
 
@@ -114,15 +108,6 @@ const AccountUserDataEdit = (props) => {
                     id="user-pass"
                     value={userPass}
                     onChange={(e) => setUserPass(e.target.value)}
-                  />
-                </label>
-                <label htmlFor="user-pass-new">
-                  <span>Nowe hasło</span>
-                  <input
-                    type="password"
-                    name="user-pass-new"
-                    value={userPassNew}
-                    onChange={(e) => setUserPassNew(e.target.value)}
                   />
                 </label>
                 <label htmlFor="user-tel">
