@@ -4,15 +4,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit } from "@fortawesome/free-solid-svg-icons";
 import AccountUserDataEdit from "./AccountUserDataEdit";
 
-// Export id of user
-export const getUserId = (id) => {
-  id = 1;
-  return id;
-};
-
-const AccountUserDataBox = () => {
+const AccountUserDataBox = (props) => {
   const { userData } = useContext(GlobalContext);
   const [editData, setEditData] = useState(false);
+  const [userId, setUserId] = useState();
 
   return editData === false ? (
     <div className="user-data-box">
@@ -21,7 +16,7 @@ const AccountUserDataBox = () => {
         <p key="user-data">
           <span>Imię:</span> {data.userName}
           <br />
-          <span>Email/login:</span> {data.userEmail}
+          <span>Email (login):</span> {data.userEmail}
           <br />
           {/* <span>Aktualne hasło:</span> {data.userPass}
           <br /> */}
@@ -29,14 +24,18 @@ const AccountUserDataBox = () => {
           <br />
           <span>Lokalizacja:</span> {data.userPlace}
           <br />
-          <button onClick={(e) => setEditData(true)}>
+          <button onClick={(e) => {
+              setEditData(true); 
+              setUserId(data.id);
+              }
+            }>
             <FontAwesomeIcon id="edit-plant" icon={faEdit} /> Edytuj dane
           </button>
         </p>
       ))}
     </div>
   ) : (
-    <AccountUserDataEdit />
+    <AccountUserDataEdit userid={userId} />
   );
 };
 

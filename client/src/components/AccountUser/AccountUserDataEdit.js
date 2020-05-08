@@ -1,11 +1,11 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
-import { getUserId } from "./AccountUserDataBox";
+// import { getUserId } from "./AccountUserDataBox";
 import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 import DisplayInfo from "../../common/DisplayInfo";
 
-const AccountUserDataEdit = () => {
+const AccountUserDataEdit = (props) => {
   const { userData } = useContext(GlobalContext);
   const { editUserData } = useContext(GlobalContext);
 
@@ -17,7 +17,7 @@ const AccountUserDataEdit = () => {
 
   // Get actual user data
   {userData
-    .filter((data) => data.id === getUserId())
+    .filter((data) => data.id === props.userid)
     .map((userData) => {
       actualUserName = userData.userName;
       actualUserEmail = userData.userEmail;
@@ -25,10 +25,12 @@ const AccountUserDataEdit = () => {
       actualUserTel = userData.userTel;
     })}
 
+    console.log(actualUserPass);
+
   // Define states for user data
   const [userName, setUserName] = useState(actualUserName);
   const [userEmail, setUserEmail] = useState(actualUserEmail);
-  const [userPass, setUserPass] = useState(actualUserPass);
+  const [userPass, setUserPass] = useState("");
   const [userPassNew, setUserPassNew] = useState("");
   const [userTel, setUserTel] = useState(actualUserTel);
   const [addedDate] = useState(addedDateFunction());
@@ -46,11 +48,12 @@ const AccountUserDataEdit = () => {
     setUserPass('');
     setUserPassNew('');
     setUserTel('');
+    document.getElementById('user-data-edit').style.display = 'none';
   }
 
   function onSubmit(e) {
     const userDataNew = {
-      id: getUserId(),
+      id: props.userid,
       userName,
       userEmail,
       userPass,
@@ -77,14 +80,14 @@ const AccountUserDataEdit = () => {
     e.preventDefault();
   }
   return (
-    <div className="user-data-box">
-    
-        <h2>Zmień wybrane dane</h2>        
+    <div className="user-data-box">    
+        <h2>Zmień wybrane dane</h2>
+        <span className="neededFields">Pola oznaczone * nie mogą być puste.</span>   
           <DisplayErrorInfo info={errorInfo} />
           <DisplayInfo info={userInfo} />
-      <form id="user-data-edit" onSubmit={onSubmit}>
+          <form id="user-data-edit" onSubmit={onSubmit}>
                 <label htmlFor="user-name">
-                  <span>Imię</span>
+                  <span>Imię *</span>
                   <input
                     type="text"
                     name="user-name"
@@ -94,7 +97,7 @@ const AccountUserDataEdit = () => {
                   />
                 </label>
                 <label htmlFor="user-email">
-                  <span>E-mail (login)</span>
+                  <span>E-mail (login) *</span>
                   <input
                     type="email"
                     name="user-email"
@@ -104,7 +107,7 @@ const AccountUserDataEdit = () => {
                   />
                 </label>
                 <label htmlFor="user-pass">
-                  <span>Aktualne hasło</span>
+                  <span>Aktualne hasło *</span>
                   <input
                     type="password"
                     name="user-pass"
@@ -118,7 +121,7 @@ const AccountUserDataEdit = () => {
                   <input
                     type="password"
                     name="user-pass-new"
-                    value=""
+                    value={userPassNew}
                     onChange={(e) => setUserPassNew(e.target.value)}
                   />
                 </label>

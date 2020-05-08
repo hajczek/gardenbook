@@ -10,6 +10,10 @@
 }
 
 .user-data-box {
+  .neededFields {
+    color: $white;
+    font-size: 1rem;
+  }
   form {
     label {
       width: 100%;
