@@ -14,7 +14,7 @@ const AccountUserDataBox = (props) => {
       <h2>Twoje dane:</h2>
       {userData.map((data) => (
         <>
-          <p key="user-func">
+          <p key="user-data">
             <span>Imię:</span> {data.userName}
             <br />
             <span>Email (login):</span> {data.userEmail}
@@ -24,8 +24,9 @@ const AccountUserDataBox = (props) => {
             <span>Telefon:</span> {data.userTel}
             <br />
             <span>Lokalizacja:</span> {data.userPlace}
-            <br />
-            <h2>Twoje ustawienia aplikacji:</h2>
+          </p>
+          <h2>Twoje ustawienia aplikacji:</h2>
+          <p key="user-func">
             <span>Planner prac: </span>
             {data.accountSets.workPlanner === false ? "wył." : "wł."}
             <br />
@@ -41,15 +42,15 @@ const AccountUserDataBox = (props) => {
             <span>Wyszukiwarka wykonawców: </span>
             {data.accountSets.searchWorkers === false ? "wył." : "wł."}
             <br />
-            <button
-              onClick={(e) => {
-                setEditData(true);
-                setUserId(data.id);
-              }}
-            >
-              <FontAwesomeIcon id="edit-plant" icon={faEdit} /> Zmień
-            </button>
           </p>
+          <button
+            onClick={(e) => {
+              setEditData(true);
+              setUserId(data.id);
+            }}
+          >
+            <FontAwesomeIcon id="edit-plant" icon={faEdit} /> Zmień
+          </button>
         </>
       ))}
     </div>
