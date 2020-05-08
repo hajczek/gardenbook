@@ -1,36 +1,63 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
-// import { getUserId } from "./AccountUserDataBox";
+import DisplayErrorInfo from "../../common/DisplayErrorInfo";
+import DisplayInfo from "../../common/DisplayInfo";
 
 const AccountUserFunctionsEdit = (props) => {
-  const [workPlanner, setWorkPlanner] = useState(false);
-  const [alertTime, setAlertTime] = useState(0);
-  const [gardenPlan, setGardenPlan] = useState(false);
-  const [gardenStatistic, setGardenStatistic] = useState(false);
-  const [gardenHistory, setGardenHistory] = useState(false);
-  const [searchWorkers, setSearchWorkers] = useState(false);
-  const [localization, setLocalization] = useState("");
-  const [addedDate] = useState(addedDateFunction());
-  const [userId, setUserId] = useState();
-
   const { userData } = useContext(GlobalContext);
   const { editUserData } = useContext(GlobalContext);
 
-  /* Needed functionality: 
-    1. onSubmit() - send to database options setted by user
-  */
+   // Handle for sets of user functionality
+  let actualWorkPlanner;
+  let actualAlertTime;
+  let actualGardenPlan;
+  let actualGardenStatistic;
+  let actualGardenHistory;
+  let actualSearchWorkers;
+  let actualLocalization;
+
+  // Get actual sets for user functionality
+  {userData
+    .filter((data) => data.id === props.userid)
+    .map((userData) => {
+      actualWorkPlanner = userData.workPlanner;
+      actualAlertTime = userData.alertTime;
+      actualGardenPlan = userData.gardenPlan;
+      actualGardenStatistic = userData.gardenStatistic;
+      actualGardenHistory = userData.gardenHistory;
+      actualSearchWorkers = userData.searchWorkers;
+      actualLocalization = userData.localization;
+    })}
+
+// Define states for user functionality
+  const [workPlanner, setWorkPlanner] = useState(actualWorkPlanner);
+  const [alertTime, setAlertTime] = useState( actualAlertTime);
+  const [gardenPlan, setGardenPlan] = useState(actualGardenPlan);
+  const [gardenStatistic, setGardenStatistic] = useState(actualGardenStatistic);
+  const [gardenHistory, setGardenHistory] = useState(actualGardenHistory);
+  const [searchWorkers, setSearchWorkers] = useState(actualSearchWorkers);
+  const [localization, setLocalization] = useState(actualLocalization);
+  const [addedDate] = useState(addedDateFunction());
+  const [userId, setUserId] = useState();
+  const [errorInfo, setErrorInfo] = useState('');
+  const [userInfo, setUserInfo] = useState('');
+
+const putNewSets = () => {  
+    // Info about set new data in database
+    setUserInfo('Ustawienia zostały zaktualizowane.');
+    // Clear info about error
+    setErrorInfo('');
+    // Clear all fields of form
+    // setUserName('');
+    // setUserEmail('');
+    // setUserPass('');
+    // setUserTel('');
+    // Remove form from view
+    document.getElementById('user-functions').style.display = 'none';
+  }
 
   function onSubmit(e) {
-    console.log(workPlanner);
-    console.log(alertTime);
-    console.log(gardenPlan);
-    console.log(gardenStatistic);
-    console.log(gardenHistory);
-    console.log(searchWorkers);
-    console.log(localization);
-    console.log(addedDate);
-
     const userFunctionsNew = {
       id: props.userid,
       workPlanner,
@@ -51,23 +78,19 @@ const AccountUserFunctionsEdit = (props) => {
 
   return (
     <div className="user-functionality-box">
+      <h2>Zmień stan wybranych funkcji / narzędzi</h2>
+      <DisplayErrorInfo info={errorInfo} />
+      <DisplayInfo info={userInfo} />
       <form id="user-functions" onSubmit={onSubmit}>
-        <h2>Zmień stan wybranych funkcji / narzędzi</h2>
-        {userData
-          .filter((data) => data.id === props.userid)
-          .map((newSet) => {
-            return (
-              <div key="user-func-edit">
+        <div key="user-func-edit">
                 <label htmlFor="work-planner">
                   <span>Planner prac:</span>
                   <input
                     name="work-planner"
                     type="checkbox"
-                    checked={newSet.accountSets.workPlanner}
+                    checked={workPlanner}
                     onChange={(e) =>
-                      setWorkPlanner(
-                        (newSet.accountSets.workPlanner = e.target.value)
-                      )
+                      setWorkPlanner(e.target.value)
                     }
                   />
                 </label>
@@ -76,11 +99,9 @@ const AccountUserFunctionsEdit = (props) => {
                   <input
                     name="garden-plan"
                     type="checkbox"
-                    checked={newSet.accountSets.gardenPlan}
+                    checked={gardenPlan}
                     onChange={(e) =>
-                      setGardenPlan(
-                        (newSet.accountSets.gardenPlan = e.target.value)
-                      )
+                      setGardenPlan(e.target.value)
                     }
                   />
                 </label>
@@ -89,11 +110,9 @@ const AccountUserFunctionsEdit = (props) => {
                   <input
                     name="garden-statistic"
                     type="checkbox"
-                    checked={newSet.accountSets.gardenStatistic}
+                    checked={gardenStatistic}
                     onChange={(e) =>
-                      setGardenStatistic(
-                        (newSet.accountSets.gardenStatistic = e.target.value)
-                      )
+                      setGardenStatistic(e.target.value)
                     }
                   />
                 </label>
@@ -102,11 +121,9 @@ const AccountUserFunctionsEdit = (props) => {
                   <input
                     name="garden-history"
                     type="checkbox"
-                    checked={newSet.accountSets.gardenHistory}
+                    checked={gardenHistory}
                     onChange={(e) =>
-                      setGardenHistory(
-                        (newSet.accountSets.gardenHistory = e.target.value)
-                      )
+                      setGardenHistory(e.target.value)
                     }
                   />
                 </label>
@@ -115,11 +132,9 @@ const AccountUserFunctionsEdit = (props) => {
                   <input
                     name="search-workers"
                     type="checkbox"
-                    checked={newSet.accountSets.searchWorkers}
+                    checked={searchWorkers}
                     onChange={(e) =>
-                      setSearchWorkers(
-                        (newSet.accountSets.searchWorkers = e.target.value)
-                      )
+                      setSearchWorkers(e.target.value)
                     }
                   />
                 </label>
@@ -128,17 +143,13 @@ const AccountUserFunctionsEdit = (props) => {
                   <input
                     name="localizaion"
                     type="text"
-                    value={newSet.localization}
+                    value={localization}
                     onChange={(e) =>
-                      setLocalization((newSet.gardenHistory = e.target.value))
-                    }
+                      setLocalization(e.target.value)}
                     placeholder="Wpisz swoją lokalizację"
                   />
                 </label>
               </div>
-            );
-          })}
-
         <button id="functions-btn">Zapisz zmiany</button>
       </form>
     </div>

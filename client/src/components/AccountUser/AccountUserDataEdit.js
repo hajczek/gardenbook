@@ -1,7 +1,6 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
-// import { getUserId } from "./AccountUserDataBox";
 import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 import DisplayInfo from "../../common/DisplayInfo";
 
@@ -25,8 +24,6 @@ const AccountUserDataEdit = (props) => {
       actualUserTel = userData.userTel;
     })}
 
-    console.log(actualUserPass);
-
   // Define states for user data
   const [userName, setUserName] = useState(actualUserName);
   const [userEmail, setUserEmail] = useState(actualUserEmail);
@@ -42,10 +39,11 @@ const AccountUserDataEdit = (props) => {
     // Clear info about error
     setErrorInfo('');
     // Clear all fields of form
-    setUserName('');
-    setUserEmail('');
-    setUserPass('');
-    setUserTel('');
+    // setUserName('');
+    // setUserEmail('');
+    // setUserPass('');
+    // setUserTel('');
+    // Remove form from view
     document.getElementById('user-data-edit').style.display = 'none';
   }
 
@@ -77,9 +75,9 @@ const AccountUserDataEdit = (props) => {
     <div className="user-data-box">    
         <h2>Zmień wybrane dane</h2>
         <span className="neededFields">Pola oznaczone * nie mogą być puste.</span>   
-          <DisplayErrorInfo info={errorInfo} />
-          <DisplayInfo info={userInfo} />
-          <form id="user-data-edit" onSubmit={onSubmit}>
+        <DisplayErrorInfo info={errorInfo} />
+        <DisplayInfo info={userInfo} />
+        <form id="user-data-edit" onSubmit={onSubmit}>
                 <label htmlFor="user-name">
                   <span>Imię *</span>
                   <input
