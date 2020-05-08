@@ -23,8 +23,8 @@ const AccountUserDataBox = () => {
           <br />
           <span>Email/login:</span> {data.userEmail}
           <br />
-          <span>Aktualne hasło:</span> {data.userPass}
-          <br />
+          {/* <span>Aktualne hasło:</span> {data.userPass}
+          <br /> */}
           <span>Telefon:</span> {data.userTel}
           <br />
           <span>Lokalizacja:</span> {data.userPlace}

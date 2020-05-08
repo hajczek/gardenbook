@@ -9,28 +9,11 @@ const AccountUserDataEdit = () => {
   const { userData } = useContext(GlobalContext);
   const { editUserData } = useContext(GlobalContext);
 
-  // Handle for actual user data
-  let actualUserName;
-  let actualUserEmail;
-  let actualUserPass;
-  let actualUserTel;
-
-  // Get actual user data
-  {userData
-    .filter((data) => data.id === getUserId())
-    .map((userData) => {
-      actualUserName = userData.userName;
-      actualUserEmail = userData.userEmail;
-      actualUserPass = userData.userPass;
-      actualUserTel = userData.userTel;
-    })}
-
-  // Define states for user data
-  const [userName, setUserName] = useState(actualUserName);
-  const [userEmail, setUserEmail] = useState(actualUserEmail);
-  const [userPass, setUserPass] = useState(actualUserPass);
+  const [userName, setUserName] = useState("");
+  const [userEmail, setUserEmail] = useState("");
+  const [userPass, setUserPass] = useState("");
   const [userPassNew, setUserPassNew] = useState("");
-  const [userTel, setUserTel] = useState(actualUserTel);
+  const [userTel, setUserTel] = useState("");
   const [addedDate] = useState(addedDateFunction());
   const [errorInfo, setErrorInfo] = useState('');
   const [userInfo, setUserInfo] = useState('');
@@ -63,16 +46,19 @@ const AccountUserDataEdit = () => {
      document.getElementById("user-name").value === '' || document.getElementById("user-email").value === '' || document.getElementById("user-pass").value === ''
      ? setErrorInfo('Uzupełnij wymagane pola')
      // Check if email exists in database
-    : actualUserEmail === document.getElementById('user-email').value
+    : userData.some((user) => (user.userEmail === document.getElementById('user-email').value) === true)
     ? setErrorInfo(`Ten adres email już istnieje w naszej bazie.`) 
     // Check if actual password is correct
-    : actualUserPass !== document.getElementById("user-pass").value
+    : userData.some((user) => (user.id === getUserId()) && (user.userPass === document.getElementById("user-pass").value) === false)
     ? setErrorInfo('Wpisane aktualne hasło jest nieprawidłowe') 
     // If yes, put new plant in database
     : addedNewData();
 
+    let user = {userData};
+    console.log(user);
+
     editUserData(userDataNew);
-    console.log(userDataNew);
+    // console.log(userDataNew);
     
     e.preventDefault();
   }
@@ -83,14 +69,21 @@ const AccountUserDataEdit = () => {
           <DisplayErrorInfo info={errorInfo} />
           <DisplayInfo info={userInfo} />
       <form id="user-data-edit" onSubmit={onSubmit}>
+        {userData
+          .filter((data) => data.id === getUserId())
+          .map((newData) => {
+            return (
+              <>
                 <label htmlFor="user-name">
                   <span>Imię</span>
                   <input
                     type="text"
                     name="user-name"
-                    value={userName}
+                    value={newData.userName}
                     id="user-name"
-                    onChange={(e) => setUserName(e.target.value)}
+                    onChange={(e) =>
+                      setUserName((newData.userName = e.target.value))
+                    }
                   />
                 </label>
                 <label htmlFor="user-email">
@@ -98,9 +91,11 @@ const AccountUserDataEdit = () => {
                   <input
                     type="email"
                     name="user-email"
-                    value={userEmail}
+                    value={newData.userEmail}
                     id="user-email"
-                    onChange={(e) => setUserEmail(e.target.value)}
+                    onChange={(e) =>
+                      setUserEmail((newData.userEmail = e.target.value))
+                    }
                   />
                 </label>
                 <label htmlFor="user-pass">
@@ -118,7 +113,7 @@ const AccountUserDataEdit = () => {
                   <input
                     type="password"
                     name="user-pass-new"
-                    value=""
+                    value={newData.userPassNew}
                     onChange={(e) => setUserPassNew(e.target.value)}
                   />
                 </label>
@@ -127,10 +122,15 @@ const AccountUserDataEdit = () => {
                   <input
                     type="phone"
                     name="user-tel"
-                    value={userTel}
-                    onChange={(e) => setUserTel(e.target.value)}
+                    value={newData.userTel}
+                    onChange={(e) =>
+                      setUserTel((newData.userTel = e.target.value))
+                    }
                   />
                 </label>
+              </>
+            );
+          })}
         <button id="change-btn">Zapisz zmiany</button>
       </form>
     </div>
