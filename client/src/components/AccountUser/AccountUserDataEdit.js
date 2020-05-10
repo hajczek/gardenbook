@@ -86,8 +86,7 @@ const AccountUserDataEdit = (props) => {
 
     // Check if input field for name is empty
     document.getElementById("user-name").value === "" ||
-    document.getElementById("user-email").value === "" ||
-    document.getElementById("user-pass").value === ""
+    document.getElementById("user-email").value === ""
       ? setErrorInfo("Uzupełnij wymagane pola")
       : // Check if email exists in database
       actualUserEmail === document.getElementById("user-email").value
@@ -128,7 +127,7 @@ const AccountUserDataEdit = (props) => {
           />
         </label>
         <label htmlFor="user-pass">
-          <span>Aktualne hasło *</span>
+          <span>Nowe hasło</span>
           <input
             type="password"
             name="user-pass"
