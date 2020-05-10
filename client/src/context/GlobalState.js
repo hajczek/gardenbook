@@ -58,7 +58,8 @@ const initialState = {
       id: 1,
       plantName: "Brzoza",
       plantQuant: 4,
-      plantPhoto: "https://0.allegroimg.com/s1024/0c5fdb/6ba8e3a54d1683d13a1621ae3990",
+      plantPhoto:
+        "https://0.allegroimg.com/s1024/0c5fdb/6ba8e3a54d1683d13a1621ae3990",
       plantWateringFreq: 0,
       plantFetilizer: "",
       plantFetilizerFreq: 0,
@@ -105,7 +106,8 @@ const initialState = {
     {
       id: 2,
       materialName: "Kora",
-      materialPhoto: "https://www.swiatkwiatow.pl/userfiles//image/kora_ogrodowa.jpg",
+      materialPhoto:
+        "https://www.swiatkwiatow.pl/userfiles//image/kora_ogrodowa.jpg",
       materialQuant: 50,
       materialUnit: "kg",
       materialPrice: 0.6,

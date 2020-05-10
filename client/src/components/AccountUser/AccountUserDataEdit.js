@@ -31,11 +31,11 @@ const AccountUserDataEdit = (props) => {
         actualUserPass = userData.userPass;
         actualUserTel = userData.userTel;
         actualUserPlace = userData.userPlace;
-        actualWorkPlanner = userData.workPlanner;
-        actualGardenPlan = userData.gardenPlan;
-        actualGardenStatistic = userData.gardenStatistic;
-        actualGardenHistory = userData.gardenHistory;
-        actualSearchWorkers = userData.searchWorkers;
+        actualWorkPlanner = userData.accountSets.workPlanner;
+        actualGardenPlan = userData.accountSets.gardenPlan;
+        actualGardenStatistic = userData.accountSets.gardenStatistic;
+        actualGardenHistory = userData.accountSets.gardenHistory;
+        actualSearchWorkers = userData.accountSets.searchWorkers;
       });
   }
 
