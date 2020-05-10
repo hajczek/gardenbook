@@ -59,12 +59,6 @@ const AccountUserDataEdit = (props) => {
     setUserInfo("Dane zostały zaktualizowane.");
     // Clear info about error
     setErrorInfo("");
-    // Clear all fields of form
-    // setUserName('');
-    // setUserEmail('');
-    // setUserPass('');
-    // setUserTel('');
-    // Remove form from view
     document.getElementById("user-data-edit").style.display = "none";
   };
 
