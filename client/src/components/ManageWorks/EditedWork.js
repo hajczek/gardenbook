@@ -82,7 +82,7 @@ const EditedWork = (props) => {
     // Check if input field for name is empty
     document.getElementById("work-name").value === "" ||
     document.getElementById("work-term").value === ""
-      ? setErrorInfo("Uzupełnij wymagane pola")
+      ? setErrorInfo("Uzupełnij wymagane pola: tytuł, termin")
       : // If yes, put new plant in database
         saveNewData();
 
@@ -101,6 +101,7 @@ const EditedWork = (props) => {
         <form id="work-edit-form" onSubmit={onSubmit}>
           <table>
             <tbody>
+              <EditedWorkHead />
               <tr key={props.workid}>
                 <td id="work-id">{props.workid}</td>
                 <td>

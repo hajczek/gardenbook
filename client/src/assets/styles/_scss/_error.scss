@@ -1,16 +1,20 @@
-.info .error-info {
+.info .error-info,
+.user-content .content .error-info {
   color: $orange;
   font-size: 1.2rem;
   margin-top: 1rem;
+  font-weight: bold;
 }
 
 .contentUserForm .error-info {
   color: $orange;
   font-size: 1.2rem;
+  font-weight: bold;
 }
 
-.contentUser .user-data-box .error-info{
+.contentUser .user-data-box .error-info {
   color: $orange;
   font-size: 1.2rem;
   margin-bottom: 1rem;
+  font-weight: bold;
 }
