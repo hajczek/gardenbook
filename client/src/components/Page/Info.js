@@ -3,7 +3,7 @@ import logo from "../../assets/img/lotus.png";
 
 const Info = () => {
   return (
-    <div className="info">
+    <div className="right-box">
       <div className="title">
         <img id="logo" src={logo} alt="gardenbook logo" />
         <h1>Ogrodniczy serwis społecznościowy</h1>

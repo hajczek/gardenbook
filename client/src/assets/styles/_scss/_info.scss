@@ -1,4 +1,4 @@
-.info {
+.right-box {
   padding: 2rem 3rem 3rem 2rem;
   background-color: $white-opacity-08;
   display: flex;
@@ -54,7 +54,7 @@
 }
 
 @media screen and (max-width: 1250px) {
-  .info {
+  .right-box {
     width: 80vw;
     margin: 3.7rem auto;
 
@@ -65,7 +65,7 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .info {
+  .right-box {
     margin: 2.5rem auto;
 
     .title {
@@ -90,7 +90,7 @@
 }
 
 @media screen and (max-width: 650px) {
-  .info {
+  .right-box {
     padding: 1.2rem;
 
     .title h1 {
@@ -110,7 +110,7 @@
 }
 
 @media screen and (max-width: 500px) {
-  .info {
+  .right-box {
     h1 {
       font-size: 1.16rem;
       padding: 1rem 0 1.5rem 0;
