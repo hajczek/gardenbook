@@ -43,7 +43,7 @@ const EditedMaterial = (props) => {
     setUserInfo("Dane zostały zaktualizowane.");
     // Clear info about error
     setErrorInfo("");
-    document.getElementById("material-edit-form").style.display = "none";
+    document.querySelector(".edit-form").style.display = "none";
   };
 
   function onSubmit(e) {
@@ -57,14 +57,14 @@ const EditedMaterial = (props) => {
       addedDate,
     };
 
+    editMaterial(editMaterialDetails);
+    console.log(editMaterialDetails);
+
     // Check if input field for name or term is empty
     document.getElementById("material-name").value === ""
       ? setErrorInfo("Uzupełnij wymagane pola: nazwa materiału")
       : // If yes, put new date for material in database
         saveNewData();
-
-    editMaterial(editMaterialDetails);
-    console.log(editMaterialDetails);
 
     e.preventDefault();
   }
@@ -75,11 +75,10 @@ const EditedMaterial = (props) => {
       <DisplayErrorInfo info={errorInfo} />
       <DisplayInfo info={userInfo} />
       <div className="contentEdit">
-        <form id="material-edit-form" onSubmit={onSubmit}>
+        <form className="edit-form" onSubmit={onSubmit}>
           <table>
             <tbody>
               <EditedMaterialHead />
-              return (
               <tr key={props.materialid}>
                 <td id="material-id">{props.materialid}</td>
                 <td>

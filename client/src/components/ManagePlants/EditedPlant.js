@@ -58,7 +58,7 @@ const EditedPlant = (props) => {
     setUserInfo("Dane zostały zaktualizowane.");
     // Clear info about error
     setErrorInfo("");
-    document.getElementById("plant-edit-form").style.display = "none";
+    document.querySelector(".edit-form").style.display = "none";
   };
 
   function onSubmit(e) {
@@ -93,7 +93,7 @@ const EditedPlant = (props) => {
       <DisplayErrorInfo info={errorInfo} />
       <DisplayInfo info={userInfo} />
       <div className="contentEdit">
-        <form id="plant-edit-form" onSubmit={onSubmit}>
+        <form id="edit-form" onSubmit={onSubmit}>
           <table>
             <tbody>
               <EditedPlantHead />

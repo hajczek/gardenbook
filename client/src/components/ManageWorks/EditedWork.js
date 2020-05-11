@@ -58,7 +58,7 @@ const EditedWork = (props) => {
     setUserInfo("Dane zostały zaktualizowane.");
     // Clear info about error
     setErrorInfo("");
-    document.getElementById("work-edit-form").style.display = "none";
+    document.querySelector("edit-form").style.display = "none";
   };
 
   function onSubmit(e) {
@@ -98,7 +98,7 @@ const EditedWork = (props) => {
       <DisplayErrorInfo info={errorInfo} />
       <DisplayInfo info={userInfo} />
       <div className="contentEdit">
-        <form id="work-edit-form" onSubmit={onSubmit}>
+        <form className="edit-form" onSubmit={onSubmit}>
           <table>
             <tbody>
               <EditedWorkHead />
