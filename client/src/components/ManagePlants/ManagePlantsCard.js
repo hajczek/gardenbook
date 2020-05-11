@@ -4,7 +4,7 @@ import ExistedPlantsList from "./ExistedPlantsList";
 
 const ManagePlantsCard = () => {
   return (
-    <div className="contentUser">
+    <div className="user-content">
       <div className="content">
         <div className="top-box">
           <h2>Zarządzaj roślinami</h2>

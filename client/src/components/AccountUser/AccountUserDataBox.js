@@ -10,7 +10,7 @@ const AccountUserDataBox = (props) => {
   const [userId, setUserId] = useState();
 
   return editData === false ? (
-    <div className="user-data-box">
+    <div className="user-right-box">
       <h2>Twoje dane:</h2>
       {userData.map((data) => (
         <>

@@ -1,12 +1,12 @@
 import React from "react";
 import AlertsBox from "./AlertsBox";
-import ExistedPlannedWorksBox from "../PlanWork/ExistedPlannedWorksBox";
+// import ExistedPlannedWorksBox from "../PlanWork/ExistedPlannedWorksBox";
 
 const AlertsCard = () => {
   return (
-    <div className="contentUser">
+    <div className="user-content">
       <AlertsBox />
-      <ExistedPlannedWorksBox />
+      {/* <ExistedPlannedWorksBox /> */}
     </div>
   );
 };

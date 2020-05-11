@@ -22,9 +22,16 @@ const TopMenu = () => {
       {/* <a href="#" title="Zestawienie prac">
           <FontAwesomeIcon icon={faCheck} />
         </a> */}
-      {/* <a href="#" title="Portal społeczności">
-          <FontAwesomeIcon icon={faDesktop} />
-        </a> */}
+
+      {/* Link to social network for users */}
+      {/* <NavLink
+        to="/wall"
+        title="Portal społecznościowy gardenBook"
+        exact={true}
+        activeClassName="is-active"
+      >
+        <FontAwesomeIcon icon={faDesktop} />
+      </NavLink> */}
       <NavLink
         to="/konto"
         title="Konto"

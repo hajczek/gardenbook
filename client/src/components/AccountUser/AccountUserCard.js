@@ -4,7 +4,7 @@ import AccountUserDataBox from "./AccountUserDataBox";
 
 const AccountUserCard = () => {
   return (
-    <div className="contentUser">
+    <div className="user-content">
       <AccountUserDataBox />
       {/* <AccountUserFunctionsBox /> */}
     </div>

@@ -2,8 +2,8 @@ import React from "react";
 
 const Help = () => {
   return (
-    <div className="contentUserHelp">
-      <div className="content">
+    <div className="user-content">
+      <div className="user-right-box">
         <h2>Pomoc</h2>
         <p>
           W tym dziale znajdą się wskazówki w jaki sposób korzystać z aplikacji.

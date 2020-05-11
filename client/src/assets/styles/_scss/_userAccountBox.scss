@@ -1,4 +1,4 @@
-.user-data-box {
+.user-right-box {
   width: 50%;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 2.5rem 2.5rem 5rem 2.5rem;
@@ -42,17 +42,14 @@
 }
 
 @media screen and (max-width: 950px) {
-  .user-data-box {
+  .user-right-box {
     width: 100%;
-  }
-
-  .user-data-box {
     padding-bottom: 10rem;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .user-data-box {
+  .user-right-box {
     padding: 1.5rem;
     font-size: 1.2rem;
     line-height: 1.2;

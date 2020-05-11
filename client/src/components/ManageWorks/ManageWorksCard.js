@@ -4,7 +4,7 @@ import ExistedWorksList from "./ExistedWorksList";
 
 const ManageWorksCard = () => {
   return (
-    <div className="contentUser">
+    <div className="user-content">
       <div className="content">
         <div className="top-box">
           <h2>Zarządzaj zadaniami</h2>

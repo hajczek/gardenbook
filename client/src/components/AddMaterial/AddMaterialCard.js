@@ -4,7 +4,7 @@ import ExistedMaterialsBox from "./ExistedMaterialsBox";
 
 const AddMaterialCard = () => {
   return (
-    <div className="contentUser">
+    <div className="user-content">
       <div className="contentUserFormBox">
         <div className="contentUserForm">
           <h2>Dodaj materiał</h2>

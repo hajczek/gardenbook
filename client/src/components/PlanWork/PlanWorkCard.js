@@ -4,7 +4,7 @@ import ExistedPlannedWorksBox from "./ExistedPlannedWorksBox";
 
 const PlanWorkCard = () => {
   return (
-    <div className="contentUser">
+    <div className="user-content">
       <div className="contentUserFormBox">
         <div className="contentUserForm">
           <h2>Zaplanuj pracę</h2>

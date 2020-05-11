@@ -13,6 +13,7 @@ import AddMaterialCard from "../AddMaterial/AddMaterialCard";
 import AddPlantCard from "../AddPlant/AddPlantCard";
 import PlanWorkCard from "../PlanWork/PlanWorkCard";
 import Help from "./Help";
+import WallUser from "../WallUser/WallUserCard";
 
 import EditedPlant from "./../ManagePlants/EditedPlant";
 import EditedMaterial from "./../ManageMaterials/EditedMaterial";
@@ -71,6 +72,7 @@ const PageUser = () => {
               component={EditedMaterial}
             /> */}
             <Route exact={true} path="/pomoc" component={Help} />
+            <Route exact={true} path="/wall" component={WallUser} />
           </Switch>
         </section>
         <Footer />
