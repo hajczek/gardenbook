@@ -1,5 +1,4 @@
 import React from "react";
-import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 
 const EditedPlantHead = () => {
   return (
@@ -7,7 +6,6 @@ const EditedPlantHead = () => {
       <tr>
         <td colSpan="10">
           <h3>Edycja rośliny</h3>
-          <DisplayErrorInfo info='Uzupełnij wymagane pola.' />
         </td>
       </tr>
       <tr>

@@ -79,11 +79,11 @@ const EditedWork = (props) => {
       addedDate,
     };
 
-    // Check if input field for name is empty
+    // Check if input field for name or term is empty
     document.getElementById("work-name").value === "" ||
     document.getElementById("work-term").value === ""
       ? setErrorInfo("Uzupełnij wymagane pola: tytuł, termin")
-      : // If yes, put new plant in database
+      : // If yes, put new date for work in database
         saveNewData();
 
     editWork(editWorkDetails);
