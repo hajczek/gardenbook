@@ -54,7 +54,7 @@ const AccountUserDataEdit = (props) => {
   const [errorInfo, setErrorInfo] = useState("");
   const [userInfo, setUserInfo] = useState("");
 
-  const addedNewData = () => {
+  const saveNewData = () => {
     // Info about set new data in database
     setUserInfo("Dane zostały zaktualizowane.");
     // Clear info about error
@@ -86,7 +86,7 @@ const AccountUserDataEdit = (props) => {
       actualUserEmail === document.getElementById("user-email").value
       ? setErrorInfo(`Ten adres email już istnieje w naszej bazie.`)
       : // If yes, put new plant in database
-        addedNewData();
+        saveNewData();
 
     editUserData(userDataNew);
     console.log(userDataNew);
