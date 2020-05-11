@@ -48,7 +48,7 @@ const EditedMaterial = (props) => {
 
   function onSubmit(e) {
     const editMaterialDetails = {
-      id: document.getElementById("material-id").textContent,
+      id: props.materialid,
       materialName,
       materialPhoto,
       materialQuant,
@@ -57,14 +57,14 @@ const EditedMaterial = (props) => {
       addedDate,
     };
 
-    editMaterial(editMaterialDetails);
-    console.log(editMaterialDetails);
-
     // Check if input field for name or term is empty
     document.getElementById("material-name").value === ""
       ? setErrorInfo("Uzupełnij wymagane pola: nazwa materiału")
       : // If yes, put new date for material in database
         saveNewData();
+
+    editMaterial(editMaterialDetails);
+    console.log(editMaterialDetails);
 
     e.preventDefault();
   }

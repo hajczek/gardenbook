@@ -6,7 +6,7 @@ import ExistedMaterialsListHead from "./ExistedMaterialsListHead";
 import EditedMaterial from "./EditedMaterial";
 import ExistedMaterialsSummary from "./ExistedMaterialsSummary";
 
-const ExistedMaterialsList = () => {
+const ExistedMaterialsList = (props) => {
   const { materials } = useContext(GlobalContext);
   const { deleteMaterial } = useContext(GlobalContext);
   const [search, setSearch] = useState("");

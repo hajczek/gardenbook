@@ -11,7 +11,7 @@ import {
   faTimes,
 } from "@fortawesome/free-solid-svg-icons";
 
-const LeftMenuFirst = () => {
+const LeftMenuFirst = (props) => {
   function closeLeftMenu(e) {
     document.getElementById("left-menu").style.display = "none";
     document.querySelector(".displayMenu").style.display = "flex";

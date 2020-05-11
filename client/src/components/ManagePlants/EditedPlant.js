@@ -93,7 +93,7 @@ const EditedPlant = (props) => {
       <DisplayErrorInfo info={errorInfo} />
       <DisplayInfo info={userInfo} />
       <div className="contentEdit">
-        <form id="edit-form" onSubmit={onSubmit}>
+        <form className="edit-form" onSubmit={onSubmit}>
           <table>
             <tbody>
               <EditedPlantHead />

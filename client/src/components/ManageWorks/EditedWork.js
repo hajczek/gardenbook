@@ -58,7 +58,7 @@ const EditedWork = (props) => {
     setUserInfo("Dane zostały zaktualizowane.");
     // Clear info about error
     setErrorInfo("");
-    document.querySelector("edit-form").style.display = "none";
+    document.querySelector(".edit-form").style.display = "none";
   };
 
   function onSubmit(e) {
