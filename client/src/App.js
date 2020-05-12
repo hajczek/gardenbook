@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { GlobalContext } from "./context/GlobalState";
 import { GlobalProvider } from "./context/GlobalState";
@@ -7,7 +7,11 @@ import PageUser from "./components/User/PageUser";
 import "./App.scss";
 
 const App = () => {
-  const { userData } = useContext(GlobalContext);
+  const { userData, getUsers } = useContext(GlobalContext);
+
+  useEffect(() => {
+    getUsers();
+  }, []);
 
   return (
     <BrowserRouter>

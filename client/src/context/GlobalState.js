@@ -69,9 +69,9 @@ export const GlobalProvider = ({ children }) => {
     }
   }
 
-  async function getUser() {
+  async function getUsers() {
     try {
-      const res = await axios.get("/user");
+      const res = await axios.get("/users");
 
       dispatch({
         type: "GET_USER",
@@ -85,32 +85,68 @@ export const GlobalProvider = ({ children }) => {
     }
   }
 
-  function addMaterial(material) {
-    dispatch({
-      type: "ADD_MATERIAL",
-      payload: material,
-    });
+  async function addMaterial(material) {
+    try {
+      const res = await axios.post("/material");
+
+      dispatch({
+        type: "ADD_MATERIAL",
+        payload: material,
+      });
+    } catch (err) {
+      dispatch({
+        type: "MATERIALS_ERROR",
+        payload: err.response.data.err,
+      });
+    }
   }
 
-  function addPlant(plant) {
-    dispatch({
-      type: "ADD_PLANT",
-      payload: plant,
-    });
+  async function addPlant(plant) {
+    try {
+      const res = await axios.post("/plants");
+
+      dispatch({
+        type: "ADD_PLANT",
+        payload: plant,
+      });
+    } catch (err) {
+      dispatch({
+        type: "PLANTS_ERROR",
+        payload: err.response.data.err,
+      });
+    }
   }
 
-  function addWork(work) {
-    dispatch({
-      type: "ADD_WORK",
-      payload: work,
-    });
+  async function addWork(work) {
+    try {
+      const res = await axios.post("/works");
+
+      dispatch({
+        type: "ADD_WORK",
+        payload: work,
+      });
+    } catch (err) {
+      dispatch({
+        type: "WORKS_ERROR",
+        payload: err.response.data.err,
+      });
+    }
   }
 
-  function addUser(user) {
-    dispatch({
-      type: "ADD_USER",
-      payload: user,
-    });
+  async function addUser(user) {
+    try {
+      const res = await axios.post("/users");
+
+      dispatch({
+        type: "ADD_USER",
+        payload: user,
+      });
+    } catch (err) {
+      dispatch({
+        type: "USER_ERROR",
+        payload: err.response.data.err,
+      });
+    }
   }
 
   async function deleteMaterial(id) {
@@ -238,7 +274,7 @@ export const GlobalProvider = ({ children }) => {
         getWorks,
         getPlants,
         getMaterials,
-        getUser,
+        getUsers,
         deleteMaterial,
         deletePlant,
         deleteWork,
