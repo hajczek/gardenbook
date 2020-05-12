@@ -106,6 +106,13 @@ export const GlobalProvider = ({ children }) => {
     });
   }
 
+  function addUser(user) {
+    dispatch({
+      type: "Add_USER",
+      payload: user,
+    });
+  }
+
   function deleteMaterial(id) {
     dispatch({
       type: "DELETE_MATERIAL",
@@ -173,6 +180,7 @@ export const GlobalProvider = ({ children }) => {
         addMaterial,
         addPlant,
         addWork,
+        addUser,
         editMaterial,
         editPlant,
         editWork,
