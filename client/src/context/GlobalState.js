@@ -108,7 +108,7 @@ export const GlobalProvider = ({ children }) => {
 
   function addUser(user) {
     dispatch({
-      type: "Add_USER",
+      type: "ADD_USER",
       payload: user,
     });
   }
