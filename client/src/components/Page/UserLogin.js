@@ -6,25 +6,27 @@ const UserLogin = () => {
   const { userData } = useContext(GlobalContext);
   const [userEmailLogin, setUserEmailLogin] = useState("");
   const [userPassLogin, setUserPassLogin] = useState("");
-  const [userIsLogged, setUserIsLogged] = useState(false);
-  const [errorInfo, setErrorInfo] = useState('');
+  const [userLogged, setUserLogged] = useState(false);
+  const [errorInfo, setErrorInfo] = useState("");
 
-  function onSubmit(e) {  
-
+  function onSubmit(e) {
     e.preventDefault();
     console.log(userEmailLogin);
     console.log(userPassLogin);
-    
-// Check if input fields are empty
-    userEmailLogin === '' || userPassLogin === ''   
-      ? setErrorInfo('Uzupełnij wymagane pola.') 
-      // Check if email and password are on database
-      : userData.some((user) => 
-      user.userEmail !== document.getElementById('user-email-login').value
-      || user.userPass !== document.getElementById('user-pass-login').value)
-      ? setErrorInfo('Podane dane są nieprawidłowe')     
-      // TODO - put new set of userIsLogged to database
-      : setUserIsLogged(true)
+
+    // Check if input fields are empty
+    userEmailLogin === "" || userPassLogin === ""
+      ? setErrorInfo("Uzupełnij wymagane pola.")
+      : // Check if email and password are on database
+      userData.some(
+          (user) =>
+            user.userEmail !==
+              document.getElementById("user-email-login").value ||
+            user.userPass !== document.getElementById("user-pass-login").value
+        )
+      ? setErrorInfo("Podane dane są nieprawidłowe")
+      : // TODO - put new set of userIsLogged to database
+        setUserLogged(true);
   }
 
   return (
