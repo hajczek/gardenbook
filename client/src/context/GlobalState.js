@@ -170,6 +170,8 @@ export const GlobalProvider = ({ children }) => {
         materials: state.materials,
         userData: state.userData,
         accountSets: state.accountSets,
+        error: state.error,
+        loding: state.loading,
         getWorks,
         getPlants,
         getMaterials,
