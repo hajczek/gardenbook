@@ -113,25 +113,52 @@ export const GlobalProvider = ({ children }) => {
     });
   }
 
-  function deleteMaterial(id) {
-    dispatch({
-      type: "DELETE_MATERIAL",
-      payload: id,
-    });
+  async function deleteMaterial(id) {
+    try {
+      await axios.delete(`/materials/${id}`);
+
+      dispatch({
+        type: "DELETE_MATERIAL",
+        payload: id,
+      });
+    } catch (err) {
+      dispatch({
+        type: "MATERIALS_ERROR",
+        payload: err.response.data.error,
+      });
+    }
   }
 
-  function deletePlant(id) {
-    dispatch({
-      type: "DELETE_PLANT",
-      payload: id,
-    });
+  async function deletePlant(id) {
+    try {
+      await axios.delete(`/plants/${id}`);
+
+      dispatch({
+        type: "DELETE_PLANT",
+        payload: id,
+      });
+    } catch (err) {
+      dispatch({
+        type: "PLANTS_ERROR",
+        payload: err.response.data.error,
+      });
+    }
   }
 
-  function deleteWork(id) {
-    dispatch({
-      type: "DELETE_WORK",
-      payload: id,
-    });
+  async function deleteWork(id) {
+    try {
+      await axios.delete(`/works/${id}`);
+
+      dispatch({
+        type: "DELETE_WORK",
+        payload: id,
+      });
+    } catch (err) {
+      dispatch({
+        type: "WORKS_ERROR",
+        payload: err.response.data.error,
+      });
+    }
   }
 
   function editMaterial(id) {
