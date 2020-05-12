@@ -1,5 +1,29 @@
 export default (state, action) => {
   switch (action.type) {
+    case "GET_WORKS":
+      return {
+        ...state,
+        plannedWorks: state.plannedWorks.filter(
+          (work) => work.id !== action.payload
+        ),
+      };
+    case "GET_PLANTS":
+      return {
+        ...state,
+        plants: state.plants.filter((plant) => plant.id !== action.payload),
+      };
+    case "GET_MATERIALS":
+      return {
+        ...state,
+        materials: state.materials.filter(
+          (material) => material.id !== action.payload
+        ),
+      };
+    case "GET_USER":
+      return {
+        ...state,
+        userData: state.userData.filter((user) => user.id !== action.payload),
+      };
     case "DELETE_MATERIAL":
       return {
         ...state,
