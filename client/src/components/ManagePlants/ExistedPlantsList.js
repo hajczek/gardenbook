@@ -7,12 +7,17 @@ import ExistedPlantsListHead from "./ExistedPlantsListHead";
 import ExistedPlantsSummary from "./ExistedPlantsSummary";
 
 const ExistedPlantsList = (props) => {
-  const { plants } = useContext(GlobalContext);
+  const { plants, getPlants } = useContext(GlobalContext);
   const { deletePlant } = useContext(GlobalContext);
   const [search, setSearch] = useState("");
   const [filteredPlants, setFilteredPlants] = useState([]);
   const [editPlant, setEditPlant] = useState(false);
   const [plantId, setPlantId] = useState();
+
+  useEffect(() => {
+    getPlants();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     setFilteredPlants(
