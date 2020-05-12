@@ -82,6 +82,26 @@ export default (state, action) => {
         ...state,
         userData: state.userData.filter((data) => data.id === action.payload),
       };
+    case "WORKS_ERROR":
+      return {
+        ...state,
+        error: action.payload,
+      };
+    case "PLANTS_ERROR":
+      return {
+        ...state,
+        error: action.payload,
+      };
+    case "MATERIALS_ERROR":
+      return {
+        ...state,
+        error: action.payload,
+      };
+    case "USER_ERROR":
+      return {
+        ...state,
+        error: action.payload,
+      };
     default:
       return state;
   }
