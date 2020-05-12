@@ -28,18 +28,18 @@ export default (state, action) => {
       return {
         ...state,
         materials: state.materials.filter(
-          (material) => material.id !== action.payload
+          (material) => material._id !== action.payload
         ),
       };
     case "DELETE_PLANT":
       return {
         ...state,
-        plants: state.plants.filter((plant) => plant.id !== action.payload),
+        plants: state.plants.filter((plant) => plant._id !== action.payload),
       };
     case "DELETE_WORK":
       return {
         ...state,
-        works: state.works.filter((work) => work.id !== action.payload),
+        works: state.works.filter((work) => work._id !== action.payload),
       };
     case "ADD_MATERIAL":
       return {
@@ -65,23 +65,23 @@ export default (state, action) => {
       return {
         ...state,
         materials: state.materials.filter(
-          (material) => material.id === action.payload
+          (material) => material._id === action.payload
         ),
       };
     case "EDIT_PLANT":
       return {
         ...state,
-        plants: state.plants.filter((plant) => plant.id === action.payload),
+        plants: state.plants.filter((plant) => plant._id === action.payload),
       };
     case "EDIT_WORK":
       return {
         ...state,
-        works: state.works.filter((work) => work.id === action.payload),
+        works: state.works.filter((work) => work._id === action.payload),
       };
     case "EDIT_USER_DATA":
       return {
         ...state,
-        userData: state.userData.filter((data) => data.id === action.payload),
+        userData: state.userData.filter((data) => data._id === action.payload),
       };
     case "WORKS_ERROR":
       return {
