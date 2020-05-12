@@ -7,12 +7,17 @@ import EditedMaterial from "./EditedMaterial";
 import ExistedMaterialsSummary from "./ExistedMaterialsSummary";
 
 const ExistedMaterialsList = (props) => {
-  const { materials } = useContext(GlobalContext);
+  const { materials, getMaterials } = useContext(GlobalContext);
   const { deleteMaterial } = useContext(GlobalContext);
   const [search, setSearch] = useState("");
   const [filteredMaterials, setFilteredMaterials] = useState([]);
   const [editMaterial, setEditMaterial] = useState(false);
   const [materialId, setMaterialId] = useState();
+
+  useEffect(() => {
+    getMaterials();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     setFilteredMaterials(
