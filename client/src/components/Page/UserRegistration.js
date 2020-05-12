@@ -4,41 +4,47 @@ import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 import DisplayInfo from "../../common/DisplayInfo";
 
 const UserRegistration = () => {
-  const { userData } = useContext(GlobalContext);
+  const { users } = useContext(GlobalContext);
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
   const [userPass, setUserPass] = useState("");
   const [userPassAgain, setUserPassAgain] = useState("");
-  const [errorInfo, setErrorInfo] = useState('');
-  const [userInfo, setUserInfo] = useState('');
+  const [errorInfo, setErrorInfo] = useState("");
+  const [userInfo, setUserInfo] = useState("");
 
   const registrationDone = () => {
     // Clear error info
-    setErrorInfo('');
+    setErrorInfo("");
     // Display info for user about registration
-    setUserInfo('Zostałeś zarejestrowany. Zaloguj się na swoje konto użytkownika.');
+    setUserInfo(
+      "Zostałeś zarejestrowany. Zaloguj się na swoje konto użytkownika."
+    );
     // Clear form fields
     setUserName("");
-    setUserEmail('');
-    setUserPass('');
-    setUserPassAgain('');
-  }
+    setUserEmail("");
+    setUserPass("");
+    setUserPassAgain("");
+  };
 
-  function onSubmit(e) {    
+  function onSubmit(e) {
     e.preventDefault();
 
-   // Check if input fields are empty
-    userEmail === '' || userPass === '' ||  userPassAgain === ''
-      ? setErrorInfo('Uzupełnij wymagane pola.') 
-      // Check if email is on database
-      : userData.some((user) => (user.userEmail === document.getElementById('user-email').value) === true)
-      ? setErrorInfo('Ten email już istnieje w naszej bazie.') 
-      // Check if passwords are different
-      : userPass !== userPassAgain 
-      ? setErrorInfo('Hasła są różne.')       
-      // TODO - set new data to database
-      : registrationDone();
-      // setUserInfo('Zostałeś zarejestrowany. Zaloguj się na swoje konto użytkownika.');
+    // Check if input fields are empty
+    userEmail === "" || userPass === "" || userPassAgain === ""
+      ? setErrorInfo("Uzupełnij wymagane pola.")
+      : // Check if email is on database
+      users.some(
+          (user) =>
+            (user.userEmail === document.getElementById("user-email").value) ===
+            true
+        )
+      ? setErrorInfo("Ten email już istnieje w naszej bazie.")
+      : // Check if passwords are different
+      userPass !== userPassAgain
+      ? setErrorInfo("Hasła są różne.")
+      : // TODO - set new data to database
+        registrationDone();
+    // setUserInfo('Zostałeś zarejestrowany. Zaloguj się na swoje konto użytkownika.');
   }
 
   return (

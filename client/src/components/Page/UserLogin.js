@@ -3,7 +3,7 @@ import { GlobalContext } from "../../context/GlobalState";
 import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 
 const UserLogin = () => {
-  const { userData } = useContext(GlobalContext);
+  const { users } = useContext(GlobalContext);
   const [userEmailLogin, setUserEmailLogin] = useState("");
   const [userPassLogin, setUserPassLogin] = useState("");
   const [userLogged, setUserLogged] = useState(false);
@@ -18,7 +18,7 @@ const UserLogin = () => {
     userEmailLogin === "" || userPassLogin === ""
       ? setErrorInfo("Uzupełnij wymagane pola.")
       : // Check if email and password are on database
-      userData.some(
+      users.some(
           (user) =>
             user.userEmail !==
               document.getElementById("user-email-login").value ||

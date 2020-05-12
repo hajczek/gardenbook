@@ -22,7 +22,7 @@ export default (state, action) => {
       return {
         ...state,
         loading: false,
-        userData: action.payload,
+        users: action.payload,
       };
     case "DELETE_MATERIAL":
       return {
@@ -59,7 +59,7 @@ export default (state, action) => {
     case "ADD_USER":
       return {
         ...state,
-        userData: [...state.userData, action.payload],
+        users: [...state.users, action.payload],
       };
     case "EDIT_MATERIAL":
       return {
@@ -81,7 +81,7 @@ export default (state, action) => {
     case "EDIT_USER_DATA":
       return {
         ...state,
-        userData: state.userData.filter((data) => data._id === action.payload),
+        users: state.users.filter((data) => data._id === action.payload),
       };
     case "WORKS_ERROR":
       return {

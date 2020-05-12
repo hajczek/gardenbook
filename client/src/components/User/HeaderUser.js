@@ -5,7 +5,7 @@ import logo from "../../assets/img/gardenbook-logo.png";
 import TopMenu from "./TopMenu";
 
 const HeaderUser = () => {
-  const { userData } = useContext(GlobalContext);
+  const { users } = useContext(GlobalContext);
   return (
     <header>
       <div className="logo">
@@ -13,8 +13,10 @@ const HeaderUser = () => {
           <img src={logo} alt="gardenbook" id="logo" />
         </NavLink>
       </div>
-      {userData.map((user) => (
-        <span className="welcomeText" key="user-name">Witaj {user.userName} !</span>
+      {users.map((user) => (
+        <span className="welcomeText" key="user-name">
+          Witaj {user.userName} !
+        </span>
       ))}
       <TopMenu />
     </header>

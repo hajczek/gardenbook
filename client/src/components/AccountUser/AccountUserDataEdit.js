@@ -5,7 +5,7 @@ import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 import DisplayInfo from "../../common/DisplayInfo";
 
 const AccountUserDataEdit = (props) => {
-  const { userData } = useContext(GlobalContext);
+  const { users } = useContext(GlobalContext);
   const { editUserData } = useContext(GlobalContext);
 
   // Handle for actual user data
@@ -23,7 +23,7 @@ const AccountUserDataEdit = (props) => {
 
   // Get actual user data and sets for functionality
   {
-    userData
+    users
       .filter((data) => data.id === props.userid)
       .map((userData) => {
         actualUserName = userData.userName;

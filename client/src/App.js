@@ -7,17 +7,18 @@ import PageUser from "./components/User/PageUser";
 import "./App.scss";
 
 const App = () => {
-  const { userData, getUsers } = useContext(GlobalContext);
+  const { users, getUsers } = useContext(GlobalContext);
 
   useEffect(() => {
     getUsers();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <BrowserRouter>
       <GlobalProvider>
         <div className="App">
-          {userData.map((data) =>
+          {users.map((data) =>
             data.userLogged === false ? <PageCard /> : <PageUser />
           )}
         </div>

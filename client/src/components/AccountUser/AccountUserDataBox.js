@@ -5,14 +5,14 @@ import { faEdit } from "@fortawesome/free-solid-svg-icons";
 import AccountUserDataEdit from "./AccountUserDataEdit";
 
 const AccountUserDataBox = (props) => {
-  const { userData } = useContext(GlobalContext);
+  const { users } = useContext(GlobalContext);
   const [editData, setEditData] = useState(false);
   const [userId, setUserId] = useState();
 
   return editData === false ? (
     <div className="user-right-box">
       <h2>Twoje dane:</h2>
-      {userData.map((data) => (
+      {users.map((data) => (
         <>
           <p key="user-data">
             <span>Imię:</span> {data.userName}

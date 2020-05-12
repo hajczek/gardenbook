@@ -7,7 +7,7 @@ const initialState = {
   works: [],
   plants: [],
   materials: [],
-  userData: [],
+  users: [],
   error: null,
   loading: true,
 };
