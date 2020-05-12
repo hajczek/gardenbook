@@ -24,7 +24,7 @@ const EditedWork = (props) => {
   // Get actual user data and sets for works
   {
     works
-      .filter((work) => work.id === props.workid)
+      .filter((work) => work._id === props.workid)
       .map((work) => {
         actualWorkName = work.workName;
         actualWorkTerm = work.workTerm;

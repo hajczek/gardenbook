@@ -55,7 +55,7 @@ const PlannedWorkList = (props) => {
 
             {filteredWorks.map((plannedWork) => (
               <tr
-                key={plannedWork.id}
+                key={plannedWork._id}
                 // Add special class name for done or not done work
                 className={
                   plannedWork.workDone === true
@@ -70,7 +70,7 @@ const PlannedWorkList = (props) => {
                 }
               >
                 <td id="work-id" align="center">
-                  {plannedWork.id}
+                  {plannedWork._id}
                 </td>
                 <td id="work-name">{plannedWork.workName}</td>
                 <td id="work-term" align="center">
@@ -107,7 +107,7 @@ const PlannedWorkList = (props) => {
                     // This action opens EditedWork component and set work data to edit form
                     onClick={(e) => {
                       setEditWork(true);
-                      setWorkId(plannedWork.id);
+                      setWorkId(plannedWork._id);
                     }}
                   />
                 </td>
@@ -115,7 +115,7 @@ const PlannedWorkList = (props) => {
                   <FontAwesomeIcon
                     id="delete-work"
                     icon={faTrash}
-                    onClick={() => deleteWork(plannedWork.id)}
+                    onClick={() => deleteWork(plannedWork._id)}
                   />
                 </td>
               </tr>

@@ -42,8 +42,8 @@ const ExistedPlantsList = (props) => {
           <tbody>
             <ExistedPlantsListHead />
             {filteredPlants.map((plant) => (
-              <tr key={plant.id}>
-                <td align="center">{plant.id}</td>
+              <tr key={plant._id}>
+                <td align="center">{plant._id}</td>
                 <td id="plant-name">{plant.plantName}</td>
                 <td className="longTd" align="center">
                   <img
@@ -82,7 +82,7 @@ const ExistedPlantsList = (props) => {
                     // Open EditedPlant component and set plantId data to to edit form
                     onClick={(e) => {
                       setEditPlant(true);
-                      setPlantId(plant.id);
+                      setPlantId(plant._id);
                     }}
                   />
                 </td>
@@ -90,7 +90,7 @@ const ExistedPlantsList = (props) => {
                   <FontAwesomeIcon
                     id="delete-plant"
                     icon={faTrash}
-                    onClick={() => deletePlant(plant.id)}
+                    onClick={() => deletePlant(plant._id)}
                   />
                 </td>
               </tr>

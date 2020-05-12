@@ -22,7 +22,7 @@ const EditedPlant = (props) => {
   // Get actual user data and sets for works
   {
     plants
-      .filter((plant) => plant.id === props.plantid)
+      .filter((plant) => plant._id === props.plantid)
       .map((plant) => {
         actualPlantName = plant.plantName;
         actualPlantPhoto = plant.plantPhoto;

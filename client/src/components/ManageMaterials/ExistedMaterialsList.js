@@ -42,9 +42,9 @@ const ExistedMaterialsList = (props) => {
           <tbody>
             <ExistedMaterialsListHead />
             {filteredMaterials.map((material) => (
-              <tr key={material.id}>
+              <tr key={material._id}>
                 <td id="material-id" align="center">
-                  {material.id}
+                  {material._id}
                 </td>
                 <td id="material-name">{material.materialName}</td>
                 <td align="center">
@@ -72,7 +72,7 @@ const ExistedMaterialsList = (props) => {
                     // This action opens EditedMatrial component with set material data in form to edit
                     onClick={(e) => {
                       setEditMaterial(true);
-                      setMaterialId(material.id);
+                      setMaterialId(material._id);
                     }}
                   />
                 </td>
@@ -80,7 +80,7 @@ const ExistedMaterialsList = (props) => {
                   <FontAwesomeIcon
                     id="delete-material"
                     icon={faTrash}
-                    onClick={() => deleteMaterial(material.id)}
+                    onClick={() => deleteMaterial(material._id)}
                   />
                 </td>
               </tr>

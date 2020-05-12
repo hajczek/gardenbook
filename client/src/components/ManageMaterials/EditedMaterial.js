@@ -19,7 +19,7 @@ const EditedMaterial = (props) => {
   // Get actual user data and sets for works
   {
     materials
-      .filter((material) => material.id === props.materialid)
+      .filter((material) => material._id === props.materialid)
       .map((material) => {
         actualMaterialName = material.materialName;
         actualMaterialPhoto = material.materialPhoto;
