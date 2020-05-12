@@ -102,12 +102,17 @@ export const GlobalProvider = ({ children }) => {
   }
 
   async function addPlant(plant) {
+    const config = {
+      headers: {
+        "Content-type": "application/json",
+      },
+    };
     try {
-      const res = await axios.post("/plants");
+      const res = await axios.post("/plants", plant, config);
 
       dispatch({
         type: "ADD_PLANT",
-        payload: plant,
+        payload: res.data.data,
       });
     } catch (err) {
       dispatch({
@@ -118,12 +123,17 @@ export const GlobalProvider = ({ children }) => {
   }
 
   async function addWork(work) {
+    const config = {
+      headers: {
+        "Content-type": "application/json",
+      },
+    };
     try {
-      const res = await axios.post("/works");
+      const res = await axios.post("/works", work, config);
 
       dispatch({
         type: "ADD_WORK",
-        payload: work,
+        payload: res.data.data,
       });
     } catch (err) {
       dispatch({
@@ -134,12 +144,17 @@ export const GlobalProvider = ({ children }) => {
   }
 
   async function addUser(user) {
+    const config = {
+      headers: {
+        "Content-type": "application/json",
+      },
+    };
     try {
-      const res = await axios.post("/users");
+      const res = await axios.post("/users", user, config);
 
       dispatch({
         type: "ADD_USER",
-        payload: user,
+        payload: res.data.data,
       });
     } catch (err) {
       dispatch({
