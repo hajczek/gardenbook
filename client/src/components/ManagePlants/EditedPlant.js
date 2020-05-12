@@ -80,11 +80,10 @@ const EditedPlant = (props) => {
       ? setErrorInfo("Uzupełnij wymagane pola: nazwa rośliny")
       : // If yes, put new plant in database
         saveNewData();
-
     editPlant(editPlantDetails);
     console.log(editPlantDetails);
 
-    e.preventDefault();
+    // e.preventDefault();
   }
 
   return (

@@ -66,7 +66,7 @@ const EditedMaterial = (props) => {
     editMaterial(editMaterialDetails);
     console.log(editMaterialDetails);
 
-    e.preventDefault();
+    // e.preventDefault();
   }
 
   return (

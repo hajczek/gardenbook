@@ -89,7 +89,7 @@ const EditedWork = (props) => {
     editWork(editWorkDetails);
     console.log(editWorkDetails);
 
-    e.preventDefault();
+    // e.preventDefault();
   }
 
   return (
