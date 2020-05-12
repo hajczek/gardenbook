@@ -39,9 +39,7 @@ export default (state, action) => {
     case "DELETE_WORK":
       return {
         ...state,
-        plannedWorks: state.plannedWorks.filter(
-          (work) => work.id !== action.payload
-        ),
+        works: state.works.filter((work) => work.id !== action.payload),
       };
     case "ADD_MATERIAL":
       return {
@@ -56,7 +54,7 @@ export default (state, action) => {
     case "ADD_WORK":
       return {
         ...state,
-        plannedWorks: [...state.plannedWorks, action.payload],
+        works: [...state.works, action.payload],
       };
     case "ADD_USER":
       return {
@@ -78,9 +76,7 @@ export default (state, action) => {
     case "EDIT_WORK":
       return {
         ...state,
-        plannedWorks: state.plannedWorks.filter(
-          (work) => work.id === action.payload
-        ),
+        works: state.works.filter((work) => work.id === action.payload),
       };
     case "EDIT_USER_DATA":
       return {

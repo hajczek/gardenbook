@@ -8,7 +8,7 @@ import ExistedWorksListHead from "./ExistedWorksListHead";
 import ExistedWorksSummary from "./ExistedWorksSummary";
 
 const PlannedWorkList = (props) => {
-  const { plannedWorks, getWorks } = useContext(GlobalContext);
+  const { works, getWorks } = useContext(GlobalContext);
   const { deleteWork } = useContext(GlobalContext);
   const [searchFrom, setSearchFrom] = useState("2020-01-01");
   const [searchTo, setSearchTo] = useState("2222-12-31");
@@ -23,13 +23,13 @@ const PlannedWorkList = (props) => {
 
   useEffect(() => {
     setFilteredWorks(
-      plannedWorks.filter(
+      works.filter(
         (plannedWork) =>
           new Date(plannedWork.workTerm) > new Date(searchFrom) &&
           new Date(plannedWork.workTerm) < new Date(searchTo)
       )
     );
-  }, [searchFrom, searchTo, plannedWorks]);
+  }, [searchFrom, searchTo, works]);
 
   return editWork === false ? (
     <>

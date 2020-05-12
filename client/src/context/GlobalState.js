@@ -4,7 +4,7 @@ import axios from "axios";
 
 // Initial state
 const initialState = {
-  plannedWorks: [],
+  works: [],
   plants: [],
   materials: [],
   userData: [],
@@ -23,7 +23,7 @@ export const GlobalProvider = ({ children }) => {
 
   async function getWorks() {
     try {
-      const res = await axios.get("/plannedWorks");
+      const res = await axios.get("/works");
 
       dispatch({
         type: "GET_WORKS",
@@ -165,7 +165,7 @@ export const GlobalProvider = ({ children }) => {
   return (
     <GlobalContext.Provider
       value={{
-        plannedWorks: state.plannedWorks,
+        works: state.works,
         plants: state.plants,
         materials: state.materials,
         userData: state.userData,

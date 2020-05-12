@@ -4,12 +4,12 @@ import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
 
 const ExistedPlannedWorksBox = () => {
-  const { plannedWorks } = useContext(GlobalContext);
+  const { works } = useContext(GlobalContext);
   return (
     <div className="existed-box">
       <h2>Zaplanowane</h2>
       <ol>
-        {plannedWorks
+        {works
           .filter((plannedWork) => plannedWork.workTerm >= addedDateFunction())
           .map((plannedWork) => (
             <li key={plannedWork.id}>

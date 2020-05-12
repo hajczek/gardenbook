@@ -6,7 +6,7 @@ import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 import DisplayInfo from "../../common/DisplayInfo";
 
 const EditedWork = (props) => {
-  const { plannedWorks } = useContext(GlobalContext);
+  const { works } = useContext(GlobalContext);
   const { editWork } = useContext(GlobalContext);
 
   // Handle for actual data
@@ -23,7 +23,7 @@ const EditedWork = (props) => {
 
   // Get actual user data and sets for works
   {
-    plannedWorks
+    works
       .filter((work) => work.id === props.workid)
       .map((work) => {
         actualWorkName = work.workName;
