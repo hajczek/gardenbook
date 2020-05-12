@@ -58,6 +58,11 @@ export default (state, action) => {
         ...state,
         plannedWorks: [...state.plannedWorks, action.payload],
       };
+    case "ADD_USER":
+      return {
+        ...state,
+        userData: [...state.userData, action.payload],
+      };
     case "EDIT_MATERIAL":
       return {
         ...state,
