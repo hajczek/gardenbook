@@ -161,32 +161,68 @@ export const GlobalProvider = ({ children }) => {
     }
   }
 
-  function editMaterial(id) {
-    dispatch({
-      type: "EDIT_MATERIAL",
-      payload: id,
-    });
+  async function editMaterial(id) {
+    try {
+      await axios.put(`/materials/${id}`);
+
+      dispatch({
+        type: "EDIT_MATERIAL",
+        payload: id,
+      });
+    } catch (err) {
+      dispatch({
+        type: "MATERIALS_ERROR",
+        payload: err.response.data.error,
+      });
+    }
   }
 
-  function editPlant(id) {
-    dispatch({
-      type: "EDIT_PLANT",
-      payload: id,
-    });
+  async function editPlant(id) {
+    try {
+      await axios.put(`/plants/${id}`);
+
+      dispatch({
+        type: "EDIT_PLANT",
+        payload: id,
+      });
+    } catch (err) {
+      dispatch({
+        type: "PLANTS_ERROR",
+        payload: err.response.data.error,
+      });
+    }
   }
 
-  function editWork(id) {
-    dispatch({
-      type: "EDIT_WORK",
-      payload: id,
-    });
+  async function editWork(id) {
+    try {
+      await axios.put(`/works/${id}`);
+
+      dispatch({
+        type: "EDIT_WORK",
+        payload: id,
+      });
+    } catch (err) {
+      dispatch({
+        type: "WORKS_ERROR",
+        payload: err.response.data.error,
+      });
+    }
   }
 
-  function editUserData(id) {
-    dispatch({
-      type: "EDIT_USER_DATA",
-      payload: id,
-    });
+  async function editUserData(id) {
+    try {
+      await axios.put(`/users/${id}`);
+
+      dispatch({
+        type: "EDIT_USER_DATA",
+        payload: id,
+      });
+    } catch (err) {
+      dispatch({
+        type: "USER_ERROR",
+        payload: err.response.data.error,
+      });
+    }
   }
 
   return (
