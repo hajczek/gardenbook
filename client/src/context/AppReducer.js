@@ -46,17 +46,17 @@ export default (state, action) => {
     case "ADD_MATERIAL":
       return {
         ...state,
-        materials: [action.payload, ...state.materials],
+        materials: [...state.materials, action.payload],
       };
     case "ADD_PLANT":
       return {
         ...state,
-        plants: [action.payload, ...state.plants],
+        plants: [...state.plants, action.payload],
       };
     case "ADD_WORK":
       return {
         ...state,
-        plannedWorks: [action.payload, ...state.plannedWorks],
+        plannedWorks: [...state.plannedWorks, action.payload],
       };
     case "EDIT_MATERIAL":
       return {
