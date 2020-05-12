@@ -3,26 +3,26 @@ export default (state, action) => {
     case "GET_WORKS":
       return {
         ...state,
-        plannedWorks: state.plannedWorks.filter(
-          (work) => work.id !== action.payload
-        ),
+        loading: false,
+        works: action.payload,
       };
     case "GET_PLANTS":
       return {
         ...state,
-        plants: state.plants.filter((plant) => plant.id !== action.payload),
+        loading: false,
+        plants: action.payload,
       };
     case "GET_MATERIALS":
       return {
         ...state,
-        materials: state.materials.filter(
-          (material) => material.id !== action.payload
-        ),
+        loading: false,
+        materials: action.payload,
       };
     case "GET_USER":
       return {
         ...state,
-        userData: state.userData.filter((user) => user.id !== action.payload),
+        loading: false,
+        userData: action.payload,
       };
     case "DELETE_MATERIAL":
       return {
