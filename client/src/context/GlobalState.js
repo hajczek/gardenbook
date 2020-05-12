@@ -23,7 +23,7 @@ export const GlobalProvider = ({ children }) => {
 
   async function getWorks() {
     try {
-      const res = await axios.get("/works");
+      const res = await axios.get("/api/v1/works");
 
       dispatch({
         type: "GET_WORKS",
@@ -39,7 +39,7 @@ export const GlobalProvider = ({ children }) => {
 
   async function getPlants() {
     try {
-      const res = await axios.get("/plants");
+      const res = await axios.get("/api/v1/plants");
 
       dispatch({
         type: "GET_PLANTS",
@@ -55,7 +55,7 @@ export const GlobalProvider = ({ children }) => {
 
   async function getMaterials() {
     try {
-      const res = await axios.get("/materials");
+      const res = await axios.get("/api/v1/materials");
 
       dispatch({
         type: "GET_MATERIALS",
@@ -71,7 +71,7 @@ export const GlobalProvider = ({ children }) => {
 
   async function getUsers() {
     try {
-      const res = await axios.get("/users");
+      const res = await axios.get("/api/v1/users");
 
       dispatch({
         type: "GET_USER",
@@ -92,7 +92,7 @@ export const GlobalProvider = ({ children }) => {
       },
     };
     try {
-      const res = await axios.post("/materials", material, config);
+      const res = await axios.post("/api/v1/materials", material, config);
 
       dispatch({
         type: "ADD_MATERIAL",
@@ -113,7 +113,7 @@ export const GlobalProvider = ({ children }) => {
       },
     };
     try {
-      const res = await axios.post("/plants", plant, config);
+      const res = await axios.post("/api/v1/plants", plant, config);
 
       dispatch({
         type: "ADD_PLANT",
@@ -134,7 +134,7 @@ export const GlobalProvider = ({ children }) => {
       },
     };
     try {
-      const res = await axios.post("/works", work, config);
+      const res = await axios.post("/api/v1/works", work, config);
 
       dispatch({
         type: "ADD_WORK",
@@ -155,7 +155,7 @@ export const GlobalProvider = ({ children }) => {
       },
     };
     try {
-      const res = await axios.post("/users", user, config);
+      const res = await axios.post("/api/v1/users", user, config);
 
       dispatch({
         type: "ADD_USER",
@@ -171,7 +171,7 @@ export const GlobalProvider = ({ children }) => {
 
   async function deleteMaterial(id) {
     try {
-      await axios.delete(`/materials/${id}`);
+      await axios.delete(`/api/v1/materials/${id}`);
 
       dispatch({
         type: "DELETE_MATERIAL",
@@ -187,7 +187,7 @@ export const GlobalProvider = ({ children }) => {
 
   async function deletePlant(id) {
     try {
-      await axios.delete(`/plants/${id}`);
+      await axios.delete(`/api/v1/plants/${id}`);
 
       dispatch({
         type: "DELETE_PLANT",
@@ -203,7 +203,7 @@ export const GlobalProvider = ({ children }) => {
 
   async function deleteWork(id) {
     try {
-      await axios.delete(`/works/${id}`);
+      await axios.delete(`/api/v1/works/${id}`);
 
       dispatch({
         type: "DELETE_WORK",
@@ -219,7 +219,7 @@ export const GlobalProvider = ({ children }) => {
 
   async function editMaterial(id) {
     try {
-      await axios.put(`/materials/${id}`);
+      await axios.put(`/api/v1/materials/${id}`);
 
       dispatch({
         type: "EDIT_MATERIAL",
@@ -235,7 +235,7 @@ export const GlobalProvider = ({ children }) => {
 
   async function editPlant(id) {
     try {
-      await axios.put(`/plants/${id}`);
+      await axios.put(`/api/v1/plants/${id}`);
 
       dispatch({
         type: "EDIT_PLANT",
@@ -251,7 +251,7 @@ export const GlobalProvider = ({ children }) => {
 
   async function editWork(id) {
     try {
-      await axios.put(`/works/${id}`);
+      await axios.put(`/api/v1/works/${id}`);
 
       dispatch({
         type: "EDIT_WORK",
@@ -267,7 +267,7 @@ export const GlobalProvider = ({ children }) => {
 
   async function editUserData(id) {
     try {
-      await axios.put(`/users/${id}`);
+      await axios.put(`/api/v1/users/${id}`);
 
       dispatch({
         type: "EDIT_USER_DATA",
@@ -287,7 +287,7 @@ export const GlobalProvider = ({ children }) => {
         works: state.works,
         plants: state.plants,
         materials: state.materials,
-        userData: state.userData,
+        users: state.users,
         accountSets: state.accountSets,
         error: state.error,
         loding: state.loading,

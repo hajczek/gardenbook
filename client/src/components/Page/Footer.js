@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import Navigation from "./Navigation";
 
 const Footer = () => {
-  const { userData } = useContext(GlobalContext);
+  const { users } = useContext(GlobalContext);
   return (
     <footer key="footer">
       <p key="footerText">
@@ -16,7 +16,7 @@ const Footer = () => {
           Regulamin
         </NavLink>
       </p>
-      {userData.map((data) =>
+      {users.map((data) =>
         data.userLogged === false ? <Navigation key="navigacja-footer" /> : null
       )}
     </footer>
