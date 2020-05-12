@@ -86,12 +86,17 @@ export const GlobalProvider = ({ children }) => {
   }
 
   async function addMaterial(material) {
+    const config = {
+      headers: {
+        "Content-type": "application/json",
+      },
+    };
     try {
-      const res = await axios.post("/material");
+      const res = await axios.post("/materials", material, config);
 
       dispatch({
         type: "ADD_MATERIAL",
-        payload: material,
+        payload: res.data.data,
       });
     } catch (err) {
       dispatch({
