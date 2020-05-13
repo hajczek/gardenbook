@@ -10,8 +10,8 @@ import ExistedWorksSummary from "./ExistedWorksSummary";
 const PlannedWorkList = (props) => {
   const { works, getWorks } = useContext(GlobalContext);
   const { deleteWork } = useContext(GlobalContext);
-  const [searchFrom, setSearchFrom] = useState("2020-01-01");
-  const [searchTo, setSearchTo] = useState("2222-12-31");
+  const [searchFrom, setSearchFrom] = useState("01-01-2020");
+  const [searchTo, setSearchTo] = useState("31-12-2222");
   const [filteredWorks, setFilteredWorks] = useState([]);
   const [editWork, setEditWork] = useState(false);
   const [workId, setWorkId] = useState();
