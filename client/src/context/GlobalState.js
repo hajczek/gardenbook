@@ -19,11 +19,10 @@ export const GlobalContext = createContext(initialState);
 export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
-  // Functions
-
+  // Actions
   async function getWorks() {
     try {
-      const res = await axios.get("/api/v1/works");
+      const res = await axios.get("/works");
 
       dispatch({
         type: "GET_WORKS",
@@ -39,7 +38,7 @@ export const GlobalProvider = ({ children }) => {
 
   async function getPlants() {
     try {
-      const res = await axios.get("/api/v1/plants");
+      const res = await axios.get("/plants");
 
       dispatch({
         type: "GET_PLANTS",
@@ -55,7 +54,7 @@ export const GlobalProvider = ({ children }) => {
 
   async function getMaterials() {
     try {
-      const res = await axios.get("/api/v1/materials");
+      const res = await axios.get("/materials");
 
       dispatch({
         type: "GET_MATERIALS",
@@ -71,7 +70,7 @@ export const GlobalProvider = ({ children }) => {
 
   async function getUsers() {
     try {
-      const res = await axios.get("/api/v1/users");
+      const res = await axios.get("/users");
 
       dispatch({
         type: "GET_USER",
@@ -92,7 +91,7 @@ export const GlobalProvider = ({ children }) => {
       },
     };
     try {
-      const res = await axios.post("/api/v1/materials", material, config);
+      const res = await axios.post("/materials", material, config);
 
       dispatch({
         type: "ADD_MATERIAL",
@@ -113,7 +112,7 @@ export const GlobalProvider = ({ children }) => {
       },
     };
     try {
-      const res = await axios.post("/api/v1/plants", plant, config);
+      const res = await axios.post("/plants", plant, config);
 
       dispatch({
         type: "ADD_PLANT",
@@ -134,7 +133,7 @@ export const GlobalProvider = ({ children }) => {
       },
     };
     try {
-      const res = await axios.post("/api/v1/works", work, config);
+      const res = await axios.post("/works", work, config);
 
       dispatch({
         type: "ADD_WORK",
@@ -155,7 +154,7 @@ export const GlobalProvider = ({ children }) => {
       },
     };
     try {
-      const res = await axios.post("/api/v1/users", user, config);
+      const res = await axios.post("/users", user, config);
 
       dispatch({
         type: "ADD_USER",
@@ -171,7 +170,7 @@ export const GlobalProvider = ({ children }) => {
 
   async function deleteMaterial(id) {
     try {
-      await axios.delete(`/api/v1/materials/${id}`);
+      await axios.delete(`/materials/${id}`);
 
       dispatch({
         type: "DELETE_MATERIAL",
@@ -187,7 +186,7 @@ export const GlobalProvider = ({ children }) => {
 
   async function deletePlant(id) {
     try {
-      await axios.delete(`/api/v1/plants/${id}`);
+      await axios.delete(`/plants/${id}`);
 
       dispatch({
         type: "DELETE_PLANT",
@@ -203,7 +202,7 @@ export const GlobalProvider = ({ children }) => {
 
   async function deleteWork(id) {
     try {
-      await axios.delete(`/api/v1/works/${id}`);
+      await axios.delete(`/works/${id}`);
 
       dispatch({
         type: "DELETE_WORK",
@@ -219,7 +218,7 @@ export const GlobalProvider = ({ children }) => {
 
   async function editMaterial(id) {
     try {
-      await axios.put(`/api/v1/materials/${id}`);
+      await axios.put(`/materials/${id}`);
 
       dispatch({
         type: "EDIT_MATERIAL",
@@ -235,7 +234,7 @@ export const GlobalProvider = ({ children }) => {
 
   async function editPlant(id) {
     try {
-      await axios.put(`/api/v1/plants/${id}`);
+      await axios.put(`/plants/${id}`);
 
       dispatch({
         type: "EDIT_PLANT",
@@ -251,7 +250,7 @@ export const GlobalProvider = ({ children }) => {
 
   async function editWork(id) {
     try {
-      await axios.put(`/api/v1/works/${id}`);
+      await axios.put(`/works/${id}`);
 
       dispatch({
         type: "EDIT_WORK",
@@ -267,7 +266,7 @@ export const GlobalProvider = ({ children }) => {
 
   async function editUserData(id) {
     try {
-      await axios.put(`/api/v1/users/${id}`);
+      await axios.put(`/users/${id}`);
 
       dispatch({
         type: "EDIT_USER_DATA",

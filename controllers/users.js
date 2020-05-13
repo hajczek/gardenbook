@@ -1,7 +1,7 @@
 const Users = require("../models/Users");
 
 // @desc Get all users
-// @route GET/users/
+// @route GET /users/
 // @access Public
 exports.getUsers = async (req, res, next) => {
   try {
@@ -21,7 +21,7 @@ exports.getUsers = async (req, res, next) => {
 };
 
 // @desc Get all details about user
-// @route GET/users/:id
+// @route GET /users/:id
 // @access Public
 exports.getUserDetails = async (req, res, next) => {
   try {
@@ -46,7 +46,7 @@ exports.getUserDetails = async (req, res, next) => {
 };
 
 // @desc Add user
-// @route POST/users
+// @route POST /users
 // @access Public
 exports.addUser = async (req, res, next) => {
   try {
@@ -88,7 +88,7 @@ exports.addUser = async (req, res, next) => {
 };
 
 // @desc Edit user details
-// @route PUT/users/:id
+// @route PUT /users/:id
 // @access Public
 exports.editUserDetails = async (req, res, next) => {
   try {
@@ -128,7 +128,7 @@ exports.editUserDetails = async (req, res, next) => {
 };
 
 // @desc Delete user
-// @route DELETE/users/:id
+// @route DELETE /users/:id
 // @access Public
 exports.deleteUser = async (req, res, next) => {
   try {

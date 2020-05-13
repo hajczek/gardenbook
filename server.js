@@ -16,6 +16,7 @@ const materials = require("./routes/materials");
 
 const app = express();
 
+// For body parser
 app.use(express.json());
 
 if (process.env.NODE_ENV === "development") {
@@ -23,11 +24,11 @@ if (process.env.NODE_ENV === "development") {
 }
 
 // app.get("/", (req, res) => res.send("Hello"));
-app.use("/api/v1/alerts", alerts);
-app.use("/api/v1/users", users);
-app.use("/api/v1/works", works);
-app.use("/api/v1/plants", plants);
-app.use("/api/v1/materials", materials);
+app.use("/alerts", alerts);
+app.use("/users", users);
+app.use("/works", works);
+app.use("/plants", plants);
+app.use("/materials", materials);
 
 const PORT = process.env.PORT || 5000;
 
