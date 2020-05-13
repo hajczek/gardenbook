@@ -1,13 +1,18 @@
-import React, { useContext, Fragment } from "react";
+import React, { useContext, Fragment, useEffect } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import { maxDateFormatted } from "./AlertsFunction";
 import addedDateFunction from "../../common/AddedDateFunction";
 
 export const CountAlerts = () => {
-  const { plannedWorks } = useContext(GlobalContext);
+  const { works, getWorks } = useContext(GlobalContext);
+
+  useEffect(() => {
+    getWorks();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // Filter dates which needs alert
-  let alertDates = plannedWorks.filter(
+  let alertDates = works.filter(
     (plannedWork) =>
       plannedWork.workTerm >= addedDateFunction() &&
       plannedWork.workTerm <= maxDateFormatted
