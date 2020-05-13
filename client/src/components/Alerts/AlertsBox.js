@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import { maxDateFormatted } from "./AlertsFunction";
 import CountAlerts from "./CountAlerts";
@@ -8,7 +8,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBell } from "@fortawesome/free-solid-svg-icons";
 
 const AlertsBox = () => {
-  const { plannedWorks } = useContext(GlobalContext);
+  const { works, getWorks } = useContext(GlobalContext);
+
+  useEffect(() => {
+    getWorks();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  console.log(works);
 
   return (
     <div id="alerts">
@@ -16,7 +23,7 @@ const AlertsBox = () => {
         <FontAwesomeIcon icon={faBell} /> Aktualne alerty: <CountAlerts /> !!!
       </h2>
       <ol id="alerts-list">
-        {plannedWorks
+        {works
           .reverse()
           .filter(
             (plannedWork) =>

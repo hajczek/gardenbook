@@ -1,16 +1,21 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 import DisplayInfo from "../../common/DisplayInfo";
 
 const UserRegistration = () => {
-  const { users } = useContext(GlobalContext);
+  const { users, getUsers } = useContext(GlobalContext);
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
   const [userPass, setUserPass] = useState("");
   const [userPassAgain, setUserPassAgain] = useState("");
   const [errorInfo, setErrorInfo] = useState("");
   const [userInfo, setUserInfo] = useState("");
+
+  useEffect(() => {
+    getUsers();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const registrationDone = () => {
     // Clear error info

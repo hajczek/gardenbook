@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-
 const {
   getUsers,
   getUserDetails,
@@ -9,7 +8,6 @@ const {
   deleteUser,
 } = require("../controllers/users");
 
-// router.get("/", (req, res) => res.send("User Account Details"));
 router.route("/").get(getUsers).post(addUser);
 router
   .route("/:id")
