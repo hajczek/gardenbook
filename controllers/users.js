@@ -1,6 +1,6 @@
 const Users = require("../models/Users");
 
-// @desc Get all details about users
+// @desc Get all users
 // @route GET/users/
 // @access Public
 exports.getUsers = async (req, res, next) => {

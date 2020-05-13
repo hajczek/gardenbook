@@ -23,11 +23,11 @@ if (process.env.NODE_ENV === "development") {
 }
 
 // app.get("/", (req, res) => res.send("Hello"));
-app.use("/alerts", alerts);
-app.use("/users", users);
-app.use("/works", works);
-app.use("/plants", plants);
-app.use("/materials", materials);
+app.use("/api/v1/alerts", alerts);
+app.use("/api/v1/users", users);
+app.use("/api/v1/works", works);
+app.use("/api/v1/plants", plants);
+app.use("/api/v1/materials", materials);
 
 const PORT = process.env.PORT || 5000;
 
