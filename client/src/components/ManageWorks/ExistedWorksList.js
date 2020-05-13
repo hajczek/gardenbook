@@ -53,7 +53,7 @@ const PlannedWorkList = (props) => {
           <tbody>
             <ExistedWorksListHead />
 
-            {filteredWorks.map((plannedWork) => (
+            {filteredWorks.map((plannedWork, index) => (
               <tr
                 key={plannedWork._id}
                 // Add special class name for done or not done work
@@ -70,7 +70,7 @@ const PlannedWorkList = (props) => {
                 }
               >
                 <td id="work-id" align="center">
-                  {plannedWork._id}
+                  {index + 1}
                 </td>
                 <td id="work-name">{plannedWork.workName}</td>
                 <td id="work-term" align="center">

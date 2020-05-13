@@ -41,10 +41,10 @@ const ExistedMaterialsList = (props) => {
         <table>
           <tbody>
             <ExistedMaterialsListHead />
-            {filteredMaterials.map((material) => (
+            {filteredMaterials.map((material, index) => (
               <tr key={material._id}>
                 <td id="material-id" align="center">
-                  {material._id}
+                  {index + 1}
                 </td>
                 <td id="material-name">{material.materialName}</td>
                 <td align="center">

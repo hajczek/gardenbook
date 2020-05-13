@@ -41,9 +41,9 @@ const ExistedPlantsList = (props) => {
         <table className="existed-plant-table">
           <tbody>
             <ExistedPlantsListHead />
-            {filteredPlants.map((plant) => (
+            {filteredPlants.map((plant, index) => (
               <tr key={plant._id}>
-                <td align="center">{plant._id}</td>
+                <td align="center">{index + 1}</td>
                 <td id="plant-name">{plant.plantName}</td>
                 <td className="longTd" align="center">
                   <img
