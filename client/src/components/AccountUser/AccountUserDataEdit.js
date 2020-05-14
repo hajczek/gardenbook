@@ -81,10 +81,11 @@ const AccountUserDataEdit = (props) => {
     document.getElementById("user-name").value === "" ||
     document.getElementById("user-email").value === ""
       ? setErrorInfo("Uzupełnij wymagane pola")
-      : // Check if email exists in database
-      actualUserEmail === document.getElementById("user-email").value
-      ? setErrorInfo(`Ten adres email już istnieje w naszej bazie.`)
-      : // If yes, put new plant in database
+      : // :
+        // Check if email exists in database
+        // actualUserEmail === document.getElementById("user-email").value
+        // ? setErrorInfo(`Ten adres email już istnieje w naszej bazie.`)
+        // If yes, put new plant in database
         saveNewData();
 
     editUserData(props.userid, userDataNew);
@@ -92,7 +93,7 @@ const AccountUserDataEdit = (props) => {
     e.preventDefault();
   }
   return (
-    <div className="user-data-box">
+    <div className="user-right-box">
       <h2>Zmień wybrane dane</h2>
       <span className="neededFields">Pola oznaczone * nie mogą być puste.</span>
       <DisplayErrorInfo info={errorInfo} />

@@ -264,9 +264,9 @@ export const GlobalProvider = ({ children }) => {
     }
   }
 
-  async function editUserData(id, user) {
+  async function editUserData(id, data) {
     try {
-      const res = await axios.put(`/users/${id}`, user);
+      const res = await axios.put(`/users/${id}`, data);
 
       dispatch({
         type: "EDIT_USER_DATA",
