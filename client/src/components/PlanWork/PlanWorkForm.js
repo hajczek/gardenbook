@@ -6,7 +6,6 @@ import DisplayInfo from "../../common/DisplayInfo";
 
 export const PlanWorkForm = () => {
   const { addWork } = useContext(GlobalContext);
-  const { works } = useContext(GlobalContext);
 
   const [workName, setWorkName] = useState("");
   const [workTerm, setWorkTerm] = useState("");
