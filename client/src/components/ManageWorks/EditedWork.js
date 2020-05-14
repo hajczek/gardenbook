@@ -63,7 +63,7 @@ const EditedWork = (props) => {
 
   function onSubmit(e) {
     const editWorkDetails = {
-      id: props.workid,
+      _id: props.workid,
       workName,
       workMaterial: {
         workMatName,

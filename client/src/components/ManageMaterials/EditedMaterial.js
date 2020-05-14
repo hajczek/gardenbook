@@ -52,6 +52,7 @@ const EditedMaterial = (props) => {
 
   function onSubmit(e) {
     const editMaterialDetails = {
+      _id: props.materialid,
       materialName,
       materialPhoto,
       materialQuant,
@@ -66,8 +67,7 @@ const EditedMaterial = (props) => {
       : // If yes, put new date for material in database
         saveNewData();
 
-    editMaterial(editMaterialDetails);
-    console.log(editMaterialDetails);
+    editMaterial(props.materialid, editMaterialDetails);
 
     e.preventDefault();
   }
