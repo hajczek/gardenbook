@@ -30,8 +30,8 @@ const WorksSchema = new mongoose.Schema({
   },
   workAlert: {
     type: String,
-    trim: true,
-    required: [true, "Wybierz czas alarmu"],
+    required: [false],
+    default: "",
   },
   workDetails: {
     type: String,
