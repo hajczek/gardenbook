@@ -86,8 +86,7 @@ const EditedWork = (props) => {
       : // If yes, put new date for work in database
         saveNewData();
 
-    editWork(editWorkDetails);
-    console.log(editWorkDetails);
+    editWork(props.workid, editWorkDetails);
 
     // e.preventDefault();
   }
