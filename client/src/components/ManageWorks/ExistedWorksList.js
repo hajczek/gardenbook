@@ -25,8 +25,8 @@ const PlannedWorkList = (props) => {
     setFilteredWorks(
       works.filter(
         (plannedWork) =>
-          new Date(plannedWork.workTerm) > new Date(searchFrom) &&
-          new Date(plannedWork.workTerm) < new Date(searchTo)
+          new Date(plannedWork.workTerm) >= new Date(searchFrom) &&
+          new Date(plannedWork.workTerm) <= new Date(searchTo)
       )
     );
   }, [searchFrom, searchTo, works]);
