@@ -6,7 +6,7 @@ let dd = maxDate.getDate();
 let mm = maxDate.getMonth() + 1;
 let y = maxDate.getFullYear();
 
-export let maxDateFormatted = `${dd < 10 ? "0" + dd : dd}-${
-  mm < 10 ? "0" + mm : mm
-}-${y}
+export let maxDateFormatted = `${y}-${mm < 10 ? "0" + mm : mm}-${
+  dd < 10 ? "0" + dd : dd
+}
 }`;
