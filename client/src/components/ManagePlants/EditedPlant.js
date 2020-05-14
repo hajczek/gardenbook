@@ -97,7 +97,6 @@ const EditedPlant = (props) => {
             <tbody>
               <EditedPlantHead />
               <tr key={props.plantid}>
-                <td id="plant-id">{props.plantid}</td>
                 <td>
                   <input
                     type="string"

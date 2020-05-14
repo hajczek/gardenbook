@@ -9,7 +9,6 @@ const EditedWorkHead = () => {
         </td>
       </tr>
       <tr>
-        <th className="shortTd">Id</th>
         <th className="longTd">Tytuł</th>
         <th>Termin</th>
         <th>Alarm</th>

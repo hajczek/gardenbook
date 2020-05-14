@@ -9,7 +9,6 @@ const EditedMaterialHead = () => {
         </td>
       </tr>
       <tr>
-        <th className="shortTd">Id</th>
         <th className="longTd">Nazwa</th>
         <th className="longTd">Zdjęcie</th>
         <th>Ilość</th>

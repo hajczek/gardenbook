@@ -9,7 +9,6 @@ const EditedPlantHead = () => {
         </td>
       </tr>
       <tr>
-        <th className="shortTd">Id</th>
         <th>Nazwa</th>
         <th className="longTd">Zdjęcie</th>
         <th>

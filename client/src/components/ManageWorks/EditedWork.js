@@ -103,7 +103,6 @@ const EditedWork = (props) => {
             <tbody>
               <EditedWorkHead />
               <tr key={props.workid}>
-                <td id="work-id">{props.workid}</td>
                 <td>
                   <input
                     type="string"

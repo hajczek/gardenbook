@@ -80,7 +80,6 @@ const EditedMaterial = (props) => {
             <tbody>
               <EditedMaterialHead />
               <tr key={props.materialid}>
-                <td id="material-id">{props.materialid}</td>
                 <td>
                   <input
                     type="string"
