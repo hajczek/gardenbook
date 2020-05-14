@@ -63,7 +63,7 @@ const EditedPlant = (props) => {
 
   function onSubmit(e) {
     const editPlantDetails = {
-      id: props.plantid,
+      _id: props.plantid,
       plantName,
       plantQuant,
       plantPhoto,
@@ -80,8 +80,8 @@ const EditedPlant = (props) => {
       ? setErrorInfo("Uzupełnij wymagane pola: nazwa rośliny")
       : // If yes, put new plant in database
         saveNewData();
-    editPlant(editPlantDetails);
-    console.log(editPlantDetails);
+
+    editPlant(props.plantid, editPlantDetails);
 
     // e.preventDefault();
   }
