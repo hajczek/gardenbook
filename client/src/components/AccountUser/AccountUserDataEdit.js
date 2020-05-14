@@ -5,8 +5,7 @@ import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 import DisplayInfo from "../../common/DisplayInfo";
 
 const AccountUserDataEdit = (props) => {
-  const { users } = useContext(GlobalContext);
-  const { editUserData } = useContext(GlobalContext);
+  const { users, editUserData } = useContext(GlobalContext);
 
   // Handle for actual user data
   let actualUserName;
@@ -64,7 +63,7 @@ const AccountUserDataEdit = (props) => {
 
   function onSubmit(e) {
     const userDataNew = {
-      id: props.userid,
+      _id: props.userid,
       userName,
       userEmail,
       userPass,
@@ -88,8 +87,7 @@ const AccountUserDataEdit = (props) => {
       : // If yes, put new plant in database
         saveNewData();
 
-    editUserData(userDataNew);
-    console.log(userDataNew);
+    editUserData(props.userid, userDataNew);
 
     e.preventDefault();
   }
