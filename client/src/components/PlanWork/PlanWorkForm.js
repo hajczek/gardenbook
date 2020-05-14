@@ -9,7 +9,7 @@ export const PlanWorkForm = () => {
 
   const [workName, setWorkName] = useState("");
   const [workTerm, setWorkTerm] = useState("");
-  const [workAlert, setWorkAlert] = useState("");
+  const [workAlert, setWorkAlert] = useState("00:00");
   const [workMatName, setWorkMatName] = useState("");
   const [workMatQuant, setWorkMatQuant] = useState(0);
   const [workMatUnit, setWorkMatUnit] = useState("");
@@ -121,8 +121,7 @@ export const PlanWorkForm = () => {
             name="work-alert"
             id="work-alert"
             value={workAlert}
-            onChange={(e) => setWorkTerm(e.target.value)}
-            placeholder="00:00"
+            onChange={(e) => setWorkAlert(e.target.value)}
           />
           {/* <span id="add-work-term">Dodaj termin do kalendarza &raquo;</span> */}
         </label>

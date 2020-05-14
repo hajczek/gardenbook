@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import EditedMaterialHead from "./EditedMaterialHead";
 import addedDateFunction from "../../common/AddedDateFunction";
@@ -6,8 +6,12 @@ import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 import DisplayInfo from "../../common/DisplayInfo";
 
 const EditedMaterial = (props) => {
-  const { materials } = useContext(GlobalContext);
-  const { editMaterial } = useContext(GlobalContext);
+  const { materials, getMaterials, editMaterial } = useContext(GlobalContext);
+
+  useEffect(() => {
+    getMaterials();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // Handle for actual data
   let actualMaterialName;
@@ -48,7 +52,6 @@ const EditedMaterial = (props) => {
 
   function onSubmit(e) {
     const editMaterialDetails = {
-      id: props.materialid,
       materialName,
       materialPhoto,
       materialQuant,
@@ -66,7 +69,7 @@ const EditedMaterial = (props) => {
     editMaterial(editMaterialDetails);
     console.log(editMaterialDetails);
 
-    // e.preventDefault();
+    e.preventDefault();
   }
 
   return (

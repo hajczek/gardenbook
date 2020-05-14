@@ -216,13 +216,13 @@ export const GlobalProvider = ({ children }) => {
     }
   }
 
-  async function editMaterial(id) {
+  async function editMaterial(id, material) {
     try {
-      await axios.put(`/materials/${id}`);
+      const res = await axios.put(`/materials/${id}`, material);
 
       dispatch({
         type: "EDIT_MATERIAL",
-        payload: id,
+        payload: res.data.data,
       });
     } catch (err) {
       dispatch({
