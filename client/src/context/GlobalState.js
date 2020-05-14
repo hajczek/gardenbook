@@ -264,13 +264,13 @@ export const GlobalProvider = ({ children }) => {
     }
   }
 
-  async function editUserData(id) {
+  async function editUserData(id, user) {
     try {
-      await axios.put(`/users/${id}`);
+      const res = await axios.put(`/users/${id}`, user);
 
       dispatch({
         type: "EDIT_USER_DATA",
-        payload: id,
+        payload: res.data.data,
       });
     } catch (err) {
       dispatch({
