@@ -20,7 +20,7 @@ export default function addedDateFunction() {
 
   // Define date for today
   let todayDate =
-    day.toString() + "-" + month.toString() + "-" + year.toString();
+    year.toString() + "-" + month.toString() + "-" + day.toString();
 
   return todayDate;
 }

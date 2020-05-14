@@ -31,16 +31,7 @@ const PlannedWorkList = (props) => {
     );
   }, [searchFrom, searchTo, works]);
 
-  works.filter((work) =>
-    console.log(
-      work.workTerm,
-      searchFrom,
-      searchTo,
-      new Date(work.workTerm),
-      new Date(searchFrom),
-      new Date(searchTo)
-    )
-  );
+  console.log(addedDateFunction(), searchFrom, searchTo);
 
   return editWork === false ? (
     <>
