@@ -1,13 +1,18 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit } from "@fortawesome/free-solid-svg-icons";
 import AccountUserDataEdit from "./AccountUserDataEdit";
 
 const AccountUserDataBox = (props) => {
-  const { users } = useContext(GlobalContext);
+  const { users, getUsers } = useContext(GlobalContext);
   const [editData, setEditData] = useState(false);
   const [userId, setUserId] = useState();
+
+  useEffect(() => {
+    getUsers();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return editData === false ? (
     <div className="user-right-box">
@@ -46,7 +51,7 @@ const AccountUserDataBox = (props) => {
           <button
             onClick={(e) => {
               setEditData(true);
-              setUserId(data.id);
+              setUserId(data._id);
             }}
           >
             <FontAwesomeIcon id="edit-plant" icon={faEdit} /> Zmień

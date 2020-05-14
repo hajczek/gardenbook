@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
 import DisplayErrorInfo from "../../common/DisplayErrorInfo";
@@ -6,6 +6,11 @@ import DisplayInfo from "../../common/DisplayInfo";
 
 const AccountUserDataEdit = (props) => {
   const { users, editUserData } = useContext(GlobalContext);
+
+  useEffect(() => {
+    editUserData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // Handle for actual user data
   let actualUserName;
@@ -23,7 +28,7 @@ const AccountUserDataEdit = (props) => {
   // Get actual user data and sets for functionality
   {
     users
-      .filter((data) => data.id === props.userid)
+      .filter((data) => data._id === props.userid)
       .map((userData) => {
         actualUserName = userData.userName;
         actualUserEmail = userData.userEmail;
@@ -90,7 +95,7 @@ const AccountUserDataEdit = (props) => {
 
     editUserData(props.userid, userDataNew);
 
-    e.preventDefault();
+    // e.preventDefault();
   }
   return (
     <div className="user-right-box">
