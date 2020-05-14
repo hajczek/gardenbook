@@ -232,13 +232,13 @@ export const GlobalProvider = ({ children }) => {
     }
   }
 
-  async function editPlant(id) {
+  async function editPlant(id, plant) {
     try {
-      await axios.put(`/plants/${id}`);
+      const res = await axios.put(`/plants/${id}`, plant);
 
       dispatch({
         type: "EDIT_PLANT",
-        payload: id,
+        payload: res.data.data,
       });
     } catch (err) {
       dispatch({
