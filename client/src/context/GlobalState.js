@@ -248,13 +248,13 @@ export const GlobalProvider = ({ children }) => {
     }
   }
 
-  async function editWork(id) {
+  async function editWork(id, work) {
     try {
-      await axios.put(`/works/${id}`);
+      const res = await axios.put(`/works/${id}`, work);
 
       dispatch({
         type: "EDIT_WORK",
-        payload: id,
+        payload: res.data.data,
       });
     } catch (err) {
       dispatch({
