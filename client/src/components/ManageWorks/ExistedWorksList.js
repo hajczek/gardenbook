@@ -31,8 +31,6 @@ const PlannedWorkList = (props) => {
     );
   }, [searchFrom, searchTo, works]);
 
-  console.log(addedDateFunction(), searchFrom, searchTo);
-
   return editWork === false ? (
     <>
       <p>Edytuj lub usuń wybrane zadania.</p>
