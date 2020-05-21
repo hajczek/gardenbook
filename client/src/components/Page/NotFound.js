@@ -4,9 +4,9 @@ const NotFound = () => {
   return (
     <div className="info">
       <div className="title">
-        <h1>Strona której szukasz nie istnieje</h1>
+        <h1>Strona nie istnieje lub wymaga zalogowania</h1>
       </div>
-      <p>Skorzystaj z górnego menu i przejdź do istniejącej strony serwisie.</p>
+      <p>Zaloguj się lub zarejestruj!</p>
     </div>
   );
 };

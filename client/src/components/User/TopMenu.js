@@ -16,6 +16,11 @@ import {
 const TopMenu = (props) => {
   const { editUserDetails } = useContext(GlobalContext);
 
+  useEffect(() => {
+    editUserDetails();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const logout = () => {
     console.log(props.userid);
     const editUser = {
