@@ -26,12 +26,19 @@ const UserLogin = () => {
     }
 
     // Filter user
-    users.filter((user) =>
-      user.userEmail === document.getElementById("user-email-login").value &&
-      user.userPass === document.getElementById("user-pass-login").value
-        ? editUserDetails(user._id, editUser)
-        : setErrorInfo("Podane dane są nieprawidłowe.")
-    );
+    users
+      .filter(
+        (user) =>
+          user.userEmail === document.getElementById("user-email-login").value
+      )
+      .map((userExist) =>
+        userExist.userPass !== document.getElementById("user-pass-login").value
+          ? setErrorInfo("Podane dane są nieprawidłowe.")
+          : userExist.userPass ===
+            document.getElementById("user-pass-login").value
+          ? editUserDetails(userExist._id, editUser)
+          : null
+      );
   }
 
   return (
