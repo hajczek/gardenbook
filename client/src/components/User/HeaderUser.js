@@ -13,14 +13,16 @@ const HeaderUser = () => {
           <img src={logo} alt="gardenbook" id="logo" />
         </NavLink>
       </div>
-      {users.map((user) => (
-        <>
-          <span className="welcomeText" key="user-name">
-            Witaj {user.userName} !
-          </span>
-          <TopMenu userid={user._id} />
-        </>
-      ))}
+      {users
+        .filter((user) => user.userLogged === true)
+        .map((user) => (
+          <>
+            <span className="welcomeText" key="user-name">
+              Witaj {user.userName} !
+            </span>
+            <TopMenu userid={user._id} />
+          </>
+        ))}
     </header>
   );
 };

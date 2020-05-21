@@ -14,16 +14,6 @@ const UserLogin = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  let userEmail;
-  let userPass;
-  let userId;
-
-  users.some((user) => {
-    userEmail = user.userEmail;
-    userPass = user.userPass;
-    userId = user._id;
-  });
-
   const editUser = {
     userLogged: true,
   };
@@ -32,16 +22,16 @@ const UserLogin = () => {
     e.preventDefault();
 
     // Check if input fields are empty
-    userEmailLogin === "" || userPassLogin === ""
-      ? setErrorInfo("Uzupełnij wymagane pola.")
-      : // Check if email and password are on database
-      userEmail !== document.getElementById("user-email-login").value ||
-        userPass !== document.getElementById("user-pass-login").value
-      ? setErrorInfo("Podane dane są nieprawidłowe")
-      : userEmail === document.getElementById("user-email-login").value &&
-        userPass === document.getElementById("user-pass-login").value
-      ? editUserDetails(userId, editUser)
-      : console.log("Nie zalogowano");
+    if (userEmailLogin === "" || userPassLogin === "") {
+      setErrorInfo("Uzupełnij wymagane pola.");
+    }
+
+    users.filter((user) =>
+      user.userEmail === document.getElementById("user-email-login").value &&
+      user.userPass === document.getElementById("user-pass-login").value
+        ? editUserDetails(user._id, editUser)
+        : console.log("Nie zalogowano")
+    );
   }
 
   return (

@@ -15,10 +15,6 @@ import PlanWorkCard from "../PlanWork/PlanWorkCard";
 import Help from "./Help";
 import WallUser from "../WallUser/WallUserCard";
 
-import EditedPlant from "./../ManagePlants/EditedPlant";
-import EditedMaterial from "./../ManageMaterials/EditedMaterial";
-import EditedWork from "./../ManageWorks/EditedWork";
-
 const PageUser = () => {
   return (
     <BrowserRouter>

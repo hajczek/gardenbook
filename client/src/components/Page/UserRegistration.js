@@ -4,7 +4,7 @@ import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 import DisplayInfo from "../../common/DisplayInfo";
 
 const UserRegistration = () => {
-  const { users, getUsers } = useContext(GlobalContext);
+  const { users, getUsers, addUser } = useContext(GlobalContext);
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
   const [userPass, setUserPass] = useState("");
@@ -34,6 +34,20 @@ const UserRegistration = () => {
   function onSubmit(e) {
     e.preventDefault();
 
+    const newUser = {
+      userName,
+      userEmail,
+      userPass,
+      userTel: "",
+      userPlace: "",
+      isLogged: false,
+      workPlanner: true,
+      gardenPlan: false,
+      gardenStatistic: false,
+      gardenHistory: false,
+      searchWorkers: false,
+    };
+
     // Check if input fields are empty
     userEmail === "" || userPass === "" || userPassAgain === ""
       ? setErrorInfo("Uzupełnij wymagane pola.")
@@ -50,6 +64,9 @@ const UserRegistration = () => {
       : // TODO - set new data to database
         registrationDone();
     // setUserInfo('Zostałeś zarejestrowany. Zaloguj się na swoje konto użytkownika.');
+
+    console.log(newUser);
+    addUser(newUser);
   }
 
   return (
