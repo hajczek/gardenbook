@@ -6,7 +6,6 @@ const UserLogin = () => {
   const { users, getUsers, editUserDetails } = useContext(GlobalContext);
   const [userEmailLogin, setUserEmailLogin] = useState("");
   const [userPassLogin, setUserPassLogin] = useState("");
-  // const [userLogged, setUserLogged] = useState(false);
   const [errorInfo, setErrorInfo] = useState("");
 
   useEffect(() => {
