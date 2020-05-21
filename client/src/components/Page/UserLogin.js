@@ -9,10 +9,10 @@ const UserLogin = () => {
   // const [userLogged, setUserLogged] = useState(false);
   const [errorInfo, setErrorInfo] = useState("");
 
-  // useEffect(() => {
-  //   getUsers();
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, []);
+  useEffect(() => {
+    editUserDetails();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   let userEmail;
   let userPass;
@@ -28,7 +28,7 @@ const UserLogin = () => {
     userLogged: true,
   };
 
-  function onSubmit(e) {
+  function login(e) {
     e.preventDefault();
 
     // Check if input fields are empty
@@ -48,7 +48,7 @@ const UserLogin = () => {
     <div className="info">
       <h1>Panel logowania</h1>
       <DisplayErrorInfo info={errorInfo} />
-      <form onSubmit={onSubmit} id="user-email-form">
+      <form onSubmit={login} id="user-email-form">
         <label htmlFor="user-email-login">
           <span>Email</span>
           <input

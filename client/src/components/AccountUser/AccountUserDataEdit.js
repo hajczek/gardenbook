@@ -5,10 +5,10 @@ import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 import DisplayInfo from "../../common/DisplayInfo";
 
 const AccountUserDataEdit = (props) => {
-  const { users, editUserData } = useContext(GlobalContext);
+  const { users, editUserDetails } = useContext(GlobalContext);
 
   useEffect(() => {
-    editUserData();
+    editUserDetails();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -93,7 +93,7 @@ const AccountUserDataEdit = (props) => {
         // If yes, put new plant in database
         saveNewData();
 
-    editUserData(props.userid, userDataNew);
+    editUserDetails(props.userid, userDataNew);
 
     // e.preventDefault();
   }
