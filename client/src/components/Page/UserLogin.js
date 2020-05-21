@@ -3,35 +3,45 @@ import { GlobalContext } from "../../context/GlobalState";
 import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 
 const UserLogin = () => {
-  const { users, getUsers } = useContext(GlobalContext);
+  const { users, getUsers, editUserDetails } = useContext(GlobalContext);
   const [userEmailLogin, setUserEmailLogin] = useState("");
   const [userPassLogin, setUserPassLogin] = useState("");
-  const [userLogged, setUserLogged] = useState(false);
+  // const [userLogged, setUserLogged] = useState(false);
   const [errorInfo, setErrorInfo] = useState("");
 
-  useEffect(() => {
-    getUsers();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  // useEffect(() => {
+  //   getUsers();
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
+
+  let userEmail;
+  let userPass;
+  let userId;
+
+  users.some((user) => {
+    userEmail = user.userEmail;
+    userPass = user.userPass;
+    userId = user._id;
+  });
+
+  const editUser = {
+    userLogged: true,
+  };
 
   function onSubmit(e) {
     e.preventDefault();
-    console.log(userEmailLogin);
-    console.log(userPassLogin);
 
     // Check if input fields are empty
     userEmailLogin === "" || userPassLogin === ""
       ? setErrorInfo("Uzupełnij wymagane pola.")
       : // Check if email and password are on database
-      users.some(
-          (user) =>
-            user.userEmail !==
-              document.getElementById("user-email-login").value ||
-            user.userPass !== document.getElementById("user-pass-login").value
-        )
+      userEmail !== document.getElementById("user-email-login").value ||
+        userPass !== document.getElementById("user-pass-login").value
       ? setErrorInfo("Podane dane są nieprawidłowe")
-      : // TODO - put new set of userIsLogged to database
-        setUserLogged(true);
+      : userEmail === document.getElementById("user-email-login").value &&
+        userPass === document.getElementById("user-pass-login").value
+      ? editUserDetails(userId, editUser)
+      : console.log("Nie zalogowano");
   }
 
   return (
