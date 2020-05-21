@@ -26,11 +26,12 @@ const UserLogin = () => {
       setErrorInfo("Uzupełnij wymagane pola.");
     }
 
+    // Filter user
     users.filter((user) =>
       user.userEmail === document.getElementById("user-email-login").value &&
       user.userPass === document.getElementById("user-pass-login").value
         ? editUserDetails(user._id, editUser)
-        : console.log("Nie zalogowano")
+        : setErrorInfo("Podane dane są nieprawidłowe.")
     );
   }
 

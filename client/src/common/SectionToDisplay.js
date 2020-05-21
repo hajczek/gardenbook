@@ -6,19 +6,27 @@ import PageUser from "../components/User/PageUser";
 const SectionToDisplay = () => {
   const { users, getUsers } = useContext(GlobalContext);
 
+  // Get users from database
   useEffect(() => {
     getUsers();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Define array for logged users
+  let logged = [];
+
+  // Filter logged user
+  users
+    .filter((user) => user.userLogged === true)
+    .map((userLogged) => logged.push(userLogged));
+
   return (
     <>
-      {users.map((data) =>
-        data.userLogged === true ? (
-          <PageUser key="PageUser" />
-        ) : (
-          <PageCard key="PageCard" />
-        )
+      {/* Display user page if length of logged array is 1 */}
+      {logged.length === 1 ? (
+        <PageUser key="PageUser" />
+      ) : (
+        <PageCard key="PageCard" />
       )}
     </>
   );
