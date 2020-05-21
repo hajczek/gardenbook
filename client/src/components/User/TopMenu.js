@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { GlobalContext } from "../../context/GlobalState";
 import CountAlerts from "../Alerts/CountAlerts";
@@ -21,14 +21,13 @@ const TopMenu = (props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const logout = () => {
-    console.log(props.userid);
+  function logout() {
     const editUser = {
       _id: props.userid,
       userLogged: false,
     };
     editUserDetails(props.userid, editUser);
-  };
+  }
 
   return (
     <nav>
@@ -68,7 +67,7 @@ const TopMenu = (props) => {
       {/* <a href="#" title="Historia">
           <FontAwesomeIcon icon={faHistory} />
         </a> */}
-      <NavLink to="/" title="Home" exact={true} onClick={logout}>
+      <NavLink to="/" title="Home" exact={true} onClick={logout()}>
         <FontAwesomeIcon icon={faSignOutAlt} />
       </NavLink>
     </nav>
