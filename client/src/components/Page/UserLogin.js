@@ -9,16 +9,16 @@ const UserLogin = () => {
   const [errorInfo, setErrorInfo] = useState("");
 
   useEffect(() => {
-    editUserDetails();
+    getUsers();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const editUser = {
-    userLogged: true,
-  };
-
   function login(e) {
-    e.preventDefault();
+    // e.preventDefault();
+
+    const editUser = {
+      userLogged: true,
+    };
 
     // Check if input fields are empty
     if (userEmailLogin === "" || userPassLogin === "") {

@@ -275,7 +275,7 @@ export const GlobalProvider = ({ children }) => {
     } catch (err) {
       dispatch({
         type: "USER_ERROR",
-        payload: err.response.data.error,
+        payload: err,
       });
     }
   }

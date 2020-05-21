@@ -5,10 +5,10 @@ import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 import DisplayInfo from "../../common/DisplayInfo";
 
 const AccountUserDataEdit = (props) => {
-  const { users, editUserDetails } = useContext(GlobalContext);
+  const { users, getUsers, editUserDetails } = useContext(GlobalContext);
 
   useEffect(() => {
-    editUserDetails();
+    getUsers();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -29,17 +29,17 @@ const AccountUserDataEdit = (props) => {
   {
     users
       .filter((data) => data._id === props.userid)
-      .map((userData) => {
-        actualUserName = userData.userName;
-        actualUserEmail = userData.userEmail;
-        actualUserPass = userData.userPass;
-        actualUserTel = userData.userTel;
-        actualUserPlace = userData.userPlace;
-        actualWorkPlanner = userData.accountSets.workPlanner;
-        actualGardenPlan = userData.accountSets.gardenPlan;
-        actualGardenStatistic = userData.accountSets.gardenStatistic;
-        actualGardenHistory = userData.accountSets.gardenHistory;
-        actualSearchWorkers = userData.accountSets.searchWorkers;
+      .map((data) => {
+        actualUserName = data.userName;
+        actualUserEmail = data.userEmail;
+        actualUserPass = data.userPass;
+        actualUserTel = data.userTel;
+        actualUserPlace = data.userPlace;
+        actualWorkPlanner = data.accountSets.workPlanner;
+        actualGardenPlan = data.accountSets.gardenPlan;
+        actualGardenStatistic = data.accountSets.gardenStatistic;
+        actualGardenHistory = data.accountSets.gardenHistory;
+        actualSearchWorkers = data.accountSets.searchWorkers;
       });
   }
 
@@ -74,12 +74,14 @@ const AccountUserDataEdit = (props) => {
       userPass,
       userTel,
       userPlace,
-      workPlanner,
-      gardenPlan,
-      gardenStatistic,
-      gardenHistory,
-      searchWorkers,
-      addedDate,
+      accountSets: {
+        workPlanner,
+        gardenPlan,
+        gardenStatistic,
+        gardenHistory,
+        searchWorkers,
+        addedDate,
+      },
     };
 
     // Check if input field for name is empty
@@ -93,9 +95,10 @@ const AccountUserDataEdit = (props) => {
         // If yes, put new plant in database
         saveNewData();
 
+    console.log(userDataNew);
     editUserDetails(props.userid, userDataNew);
 
-    // e.preventDefault();
+    e.preventDefault();
   }
   return (
     <div className="user-right-box">
