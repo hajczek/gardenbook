@@ -19,6 +19,7 @@ const AccountUserDataEdit = (props) => {
   let actualUserTel;
   let actualUserPlace;
   // Handle for sets of user functionality
+  let actualUserLogged;
   let actualWorkPlanner;
   let actualGardenPlan;
   let actualGardenStatistic;
@@ -35,6 +36,7 @@ const AccountUserDataEdit = (props) => {
         actualUserPass = data.userPass;
         actualUserTel = data.userTel;
         actualUserPlace = data.userPlace;
+        actualUserLogged = data.userLogged;
         actualWorkPlanner = data.accountSets.workPlanner;
         actualGardenPlan = data.accountSets.gardenPlan;
         actualGardenStatistic = data.accountSets.gardenStatistic;
@@ -49,6 +51,7 @@ const AccountUserDataEdit = (props) => {
   const [userPass, setUserPass] = useState(actualUserPass);
   const [userTel, setUserTel] = useState(actualUserTel);
   const [userPlace, setUserPlace] = useState(actualUserPlace);
+  const [userLogged] = useState(actualUserLogged);
   const [workPlanner, setWorkPlanner] = useState(actualWorkPlanner);
   const [gardenPlan, setGardenPlan] = useState(actualGardenPlan);
   const [gardenStatistic, setGardenStatistic] = useState(actualGardenStatistic);
@@ -74,6 +77,7 @@ const AccountUserDataEdit = (props) => {
       userPass,
       userTel,
       userPlace,
+      userLogged,
       accountSets: {
         workPlanner,
         gardenPlan,
@@ -98,7 +102,7 @@ const AccountUserDataEdit = (props) => {
     console.log(userDataNew);
     editUserDetails(props.userid, userDataNew);
 
-    e.preventDefault();
+    // e.preventDefault();
   }
   return (
     <div className="user-right-box">
