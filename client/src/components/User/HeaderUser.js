@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/img/gardenbook-logo.png";
@@ -14,11 +14,13 @@ const HeaderUser = () => {
         </NavLink>
       </div>
       {users.map((user) => (
-        <span className="welcomeText" key="user-name">
-          Witaj {user.userName} !
-        </span>
+        <>
+          <span className="welcomeText" key="user-name">
+            Witaj {user.userName} !
+          </span>
+          <TopMenu userid={user._id} />
+        </>
       ))}
-      <TopMenu />
     </header>
   );
 };

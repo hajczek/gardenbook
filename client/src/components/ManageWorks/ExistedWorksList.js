@@ -12,6 +12,8 @@ const PlannedWorkList = (props) => {
   const { deleteWork } = useContext(GlobalContext);
   const [searchFrom, setSearchFrom] = useState("2020-01-31");
   const [searchTo, setSearchTo] = useState("2222-01-31");
+  // const [searchFrom, setSearchFrom] = useState();
+  // const [searchTo, setSearchTo] = useState();
   const [filteredWorks, setFilteredWorks] = useState([]);
   const [editWork, setEditWork] = useState(false);
   const [workId, setWorkId] = useState();

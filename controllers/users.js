@@ -98,6 +98,7 @@ exports.editUserDetails = async (req, res, next) => {
       userPass,
       userTel,
       userPlace,
+      userLogged,
       workPlanner,
       gardenPlan,
       gardenStatistic,

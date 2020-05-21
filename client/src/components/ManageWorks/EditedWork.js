@@ -6,8 +6,7 @@ import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 import DisplayInfo from "../../common/DisplayInfo";
 
 const EditedWork = (props) => {
-  const { works } = useContext(GlobalContext);
-  const { editWork } = useContext(GlobalContext);
+  const { works, editWork } = useContext(GlobalContext);
 
   // Handle for actual data
   let actualWorkName;

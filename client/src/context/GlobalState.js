@@ -264,7 +264,7 @@ export const GlobalProvider = ({ children }) => {
     }
   }
 
-  async function editUserData(id, data) {
+  async function editUserDetails(id, data) {
     try {
       const res = await axios.put(`/users/${id}`, data);
 
@@ -304,7 +304,7 @@ export const GlobalProvider = ({ children }) => {
         editMaterial,
         editPlant,
         editWork,
-        editUserData,
+        editUserDetails,
       }}
     >
       {children}

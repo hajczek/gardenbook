@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import { GlobalContext } from "../../context/GlobalState";
 import CountAlerts from "../Alerts/CountAlerts";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -12,7 +13,18 @@ import {
   faSignOutAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
-const TopMenu = () => {
+const TopMenu = (props) => {
+  const { editUserDetails } = useContext(GlobalContext);
+
+  const logout = () => {
+    console.log(props.userid);
+    const editUser = {
+      _id: props.userid,
+      userLogged: false,
+    };
+    editUserDetails(props.userid, editUser);
+  };
+
   return (
     <nav>
       <NavLink to="/" title="Alerty" exact={true} activeClassName="is-active">
@@ -51,9 +63,9 @@ const TopMenu = () => {
       {/* <a href="#" title="Historia">
           <FontAwesomeIcon icon={faHistory} />
         </a> */}
-      <a href="#" title="Wyloguj">
+      <NavLink to="/" title="Home" exact={true} onClick={logout}>
         <FontAwesomeIcon icon={faSignOutAlt} />
-      </a>
+      </NavLink>
     </nav>
   );
 };
