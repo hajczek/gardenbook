@@ -67,7 +67,7 @@ const TopMenu = (props) => {
       {/* <a href="#" title="Historia">
           <FontAwesomeIcon icon={faHistory} />
         </a> */}
-      <NavLink to="/" title="Home" exact={true} onClick={logout()}>
+      <NavLink to="/" title="Home" exact={true} onClick={logout}>
         <FontAwesomeIcon icon={faSignOutAlt} />
       </NavLink>
     </nav>
