@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/gardenbook/static/css/main.a65a2065.chunk.css",
+    "main.js": "/gardenbook/static/js/main.9b487eec.chunk.js",
+    "main.js.map": "/gardenbook/static/js/main.9b487eec.chunk.js.map",
+    "runtime-main.js": "/gardenbook/static/js/runtime-main.7d44664c.js",
+    "runtime-main.js.map": "/gardenbook/static/js/runtime-main.7d44664c.js.map",
+    "static/js/2.27481836.chunk.js": "/gardenbook/static/js/2.27481836.chunk.js",
+    "static/js/2.27481836.chunk.js.map": "/gardenbook/static/js/2.27481836.chunk.js.map",
+    "index.html": "/gardenbook/index.html",
+    "precache-manifest.403b9966c81e79b6eab0ae5aea3499e1.js": "/gardenbook/precache-manifest.403b9966c81e79b6eab0ae5aea3499e1.js",
+    "service-worker.js": "/gardenbook/service-worker.js",
+    "static/css/main.a65a2065.chunk.css.map": "/gardenbook/static/css/main.a65a2065.chunk.css.map",
+    "static/js/2.27481836.chunk.js.LICENSE.txt": "/gardenbook/static/js/2.27481836.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/gardenbook/static/media/gardenbook-bg.6f06ab4f.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7d44664c.js",
+    "static/js/2.27481836.chunk.js",
+    "static/css/main.a65a2065.chunk.css",
+    "static/js/main.9b487eec.chunk.js"
+  ]
+}
