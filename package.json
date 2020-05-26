@@ -1,5 +1,6 @@
 {
   "name": "gardenbook",
+  "homepage": "https://hajczek.github.io/gardenbook",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -7,7 +8,9 @@
     "start": "node server",
     "server": "nodemon server",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "Iwona Kolanowska",
   "license": "MIT",
@@ -15,6 +18,7 @@
     "colors": "^1.4.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "gh-pages": "^2.2.0",
     "mongoose": "^5.9.9",
     "morgan": "^1.10.0"
   },

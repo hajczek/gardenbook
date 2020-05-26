@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, Suspense } from "react";
 import { GlobalContext } from "./../context/GlobalState";
 import PageCard from "../components/Page/PageCard";
 import PageUser from "../components/User/PageUser";
