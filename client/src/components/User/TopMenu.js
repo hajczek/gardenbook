@@ -38,8 +38,6 @@ const TopMenu = (props) => {
       {/* <a href="#" title="Zestawienie prac">
           <FontAwesomeIcon icon={faCheck} />
         </a> */}
-
-      {/* Link to social network for users */}
       <NavLink
         to="/wall"
         title="Portal społecznościowy gardenBook"
