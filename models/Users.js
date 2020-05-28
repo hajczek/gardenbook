@@ -33,29 +33,29 @@ const UsersSchema = new mongoose.Schema({
   },
   accountSets: {
     workPlanner: {
-      type: String,
+      type: Boolean,
       required: [false],
-      default: "on",
+      default: true,
     },
     gardenPlan: {
-      type: String,
+      type: Boolean,
       required: [false],
-      default: "",
+      default: false,
     },
     gardenStatistic: {
-      type: String,
+      type: Boolean,
       required: [false],
-      default: "",
+      default: false,
     },
     gardenHistory: {
-      type: String,
+      type: Boolean,
       required: [false],
-      default: "",
+      default: false,
     },
     searchWorkers: {
-      type: String,
+      type: Boolean,
       required: [false],
-      default: "",
+      default: false,
     },
   },
   addedDate: {
