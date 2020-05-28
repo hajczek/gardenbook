@@ -4,7 +4,7 @@ import { faArchive } from "@fortawesome/free-solid-svg-icons";
 
 const DisplayPostsUser = () => {
   return (
-    <div className="container">
+    <div className="post-container">
       <h2>User1</h2>
       <p id="time">1 godz.</p>
       <a href="#" id="comments-link">
