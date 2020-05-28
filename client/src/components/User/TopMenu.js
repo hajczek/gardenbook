@@ -40,14 +40,14 @@ const TopMenu = (props) => {
         </a> */}
 
       {/* Link to social network for users */}
-      {/* <NavLink
+      <NavLink
         to="/wall"
         title="Portal społecznościowy gardenBook"
         exact={true}
         activeClassName="is-active"
       >
         <FontAwesomeIcon icon={faDesktop} />
-      </NavLink> */}
+      </NavLink>
       <NavLink
         to="/konto"
         title="Konto"
