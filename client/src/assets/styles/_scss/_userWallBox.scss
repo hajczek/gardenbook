@@ -1,19 +1,20 @@
 .user-left-box {
-  width: 50%;
+  width: 40%;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 2.5rem 2.5rem 5rem 2.5rem;
   font-size: 1.3rem;
   justify-content: flex-start;
+  overflow-y: scroll;
 
   #search-form {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 
     input {
-      width: 70%;
+      width: 90%;
       padding: 0.3rem 0.5rem;
       margin-right: 0.3rem;
     }
