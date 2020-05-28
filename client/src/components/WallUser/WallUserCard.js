@@ -1,16 +1,12 @@
 import React from "react";
 import RightBoxUser from "./RightBox/RightBoxUser";
-import SearchPostsUser from "./SearchPostsUser";
-import AddPostUser from "./AddPostUser";
-import DisplayPostsUser from "./DisplayPostsUser";
+import LeftBoxUser from "./LeftBox/LeftBoxUser";
 import Footer from "../Page/Footer";
 
 const WallUser = () => {
   return (
-    <div className="contentUser">
-      <SearchPostsUser />
-      <AddPostUser />
-      <DisplayPostsUser />
+    <div className="user-content">
+      <LeftBoxUser />
       <RightBoxUser />
       <Footer />
     </div>
