@@ -1,0 +1,42 @@
+.contacts-book {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: $limone;
+  padding: 1rem;
+  margin-top: 1.5rem;
+
+  .contacts-book-top {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+
+    h3 {
+      margin-left: 1rem;
+    }
+  }
+
+  ul {
+    font-size: 1.1rem;
+    list-style-type: none;
+    margin-top: 0.5rem;
+
+    li a {
+      color: $green;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+  }
+}
