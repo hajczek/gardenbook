@@ -102,7 +102,7 @@ const AccountUserDataEdit = (props) => {
     console.log(userDataNew);
     editUserDetails(props.userid, userDataNew);
 
-    e.preventDefault();
+    // e.preventDefault();
   }
   return (
     <div className="user-right-box">

@@ -134,8 +134,8 @@ const EditedWork = (props) => {
                     type="checkbox"
                     id="work-done"
                     name="work-done"
-                    checked={workDone}
-                    onChange={(e) => setWorkDone(e.target.value)}
+                    defaultChecked={workDone}
+                    onChange={(e) => setWorkDone(e.target.checked)}
                   />
                 </td>
                 <td>
