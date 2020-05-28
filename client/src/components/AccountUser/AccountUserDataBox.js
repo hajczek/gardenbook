@@ -35,19 +35,19 @@ const AccountUserDataBox = (props) => {
             <h2>Twoje ustawienia aplikacji:</h2>
             <p key="user-func">
               <span>Planner prac: </span>
-              {data.accountSets.workPlanner === "" ? "wył." : "wł."}
+              {data.accountSets.workPlanner === false ? "wył." : "wł."}
               <br />
               <span>Plan ogrodu: </span>
-              {data.accountSets.gardenPlan === "" ? "wył." : "wł."}
+              {data.accountSets.gardenPlan === false ? "wył." : "wł."}
               <br />
               <span>Statystyki: </span>
-              {data.accountSets.gardenStatistic === "" ? "wył." : "wł."}
+              {data.accountSets.gardenStatistic === false ? "wył." : "wł."}
               <br />
               <span>Historia: </span>
-              {data.accountSets.gardenHistory === "" ? "wył." : "wł."}
+              {data.accountSets.gardenHistory === false ? "wył." : "wł."}
               <br />
               <span>Wyszukiwarka wykonawców: </span>
-              {data.accountSets.searchWorkers === "" ? "wył." : "wł."}
+              {data.accountSets.searchWorkers === false ? "wył." : "wł."}
               <br />
             </p>
             <button
