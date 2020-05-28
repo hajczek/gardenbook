@@ -164,8 +164,8 @@ const AccountUserDataEdit = (props) => {
           <input
             name="work-planner"
             type="checkbox"
-            checked={workPlanner}
-            onChange={(e) => setWorkPlanner(e.target.value)}
+            defaultChecked={workPlanner}
+            onChange={(e) => setWorkPlanner(e.target.checked)}
           />
         </label>
         <label htmlFor="garden-plan">
@@ -173,8 +173,8 @@ const AccountUserDataEdit = (props) => {
           <input
             name="garden-plan"
             type="checkbox"
-            checked={gardenPlan}
-            onChange={(e) => setGardenPlan(e.target.value)}
+            defaultChecked={gardenPlan}
+            onChange={(e) => setGardenPlan(e.target.checked)}
           />
         </label>
         <label htmlFor="garden-statistic">
@@ -182,8 +182,8 @@ const AccountUserDataEdit = (props) => {
           <input
             name="garden-statistic"
             type="checkbox"
-            checked={gardenStatistic}
-            onChange={(e) => setGardenStatistic(e.target.value)}
+            defaultChecked={gardenStatistic}
+            onChange={(e) => setGardenStatistic(e.target.checked)}
           />
         </label>
         <label htmlFor="garden-history">
@@ -191,8 +191,8 @@ const AccountUserDataEdit = (props) => {
           <input
             name="garden-history"
             type="checkbox"
-            checked={gardenHistory}
-            onChange={(e) => setGardenHistory(e.target.value)}
+            defaultChecked={gardenHistory}
+            onChange={(e) => setGardenHistory(e.target.checked)}
           />
         </label>
         <label htmlFor="search-workers">
@@ -200,8 +200,8 @@ const AccountUserDataEdit = (props) => {
           <input
             name="search-workers"
             type="checkbox"
-            checked={searchWorkers}
-            onChange={(e) => setSearchWorkers(e.target.value)}
+            defaultChecked={searchWorkers}
+            onChange={(e) => setSearchWorkers(e.target.checked)}
           />
         </label>
         <button id="change-btn">Zapisz zmiany</button>
