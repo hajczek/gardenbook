@@ -88,17 +88,18 @@ const AccountUserDataEdit = (props) => {
       },
     };
 
-    // Check if input field for name is empty
-    document.getElementById("user-name").value === "" ||
-    document.getElementById("user-email").value === ""
-      ? setErrorInfo("Uzupełnij wymagane pola")
-      : // :
-        // Check if email exists in database
-        // actualUserEmail === document.getElementById("user-email").value
-        // ? setErrorInfo(`Ten adres email już istnieje w naszej bazie.`)
-        // If yes, put new plant in database
-        saveNewData();
-
+    users.map((user) => {
+      // Check if input field for name is empty
+      document.getElementById("user-name").value === "" ||
+      document.getElementById("user-email").value === ""
+        ? setErrorInfo("Uzupełnij wymagane pola")
+        : // Check if email exists in database
+        actualUserEmail !== document.getElementById("user-email").value &&
+          document.getElementById("user-email").value === user.userEmail
+        ? setErrorInfo(`Ten adres email już istnieje w naszej bazie.`)
+        : // If yes, put new plant in database
+          saveNewData();
+    });
     console.log(userDataNew);
     editUserDetails(props.userid, userDataNew);
 
