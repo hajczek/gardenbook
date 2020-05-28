@@ -5,7 +5,7 @@ import DisplayPostsUser from "./DisplayPostsUser";
 
 const LeftBoxUser = () => {
   return (
-    <div class="rightBox">
+    <div class="user-left-box">
       <SearchPostsUser />
       <AddPostUser />
       <DisplayPostsUser />

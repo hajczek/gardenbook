@@ -5,7 +5,7 @@ import ContactsBook from "./ContactsBook";
 
 const RightBoxUser = () => {
   return (
-    <div class="rightBox">
+    <div class="user-wall-right-box">
       <NewPosts />
       <ArchivedPosts />
       <ContactsBook />
