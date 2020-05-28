@@ -12,7 +12,7 @@ const DisplayPostsUser = () => {
           <a href="#" id="comments-link">
             5 komentarzy
           </a>
-          <a href="#" id="archive-post">
+          <a href="#" className="archive-post" title="Zarchiwizuj">
             <FontAwesomeIcon icon={faArchive} />
           </a>
         </div>
@@ -42,8 +42,13 @@ const DisplayPostsUser = () => {
           />
         </div>
       </form>
-      <p className="comment">Maecenas tristique, risus eget lacinia </p>
-      <p className="time">30 min.</p>
+      <div className="comment-box">
+        <p>
+          <span className="comment-author">User2</span>Maecenas tristique, risus
+          eget lacinia{" "}
+        </p>
+        <p className="time">30 min.</p>
+      </div>
     </div>
   );
 };
