@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import { GlobalProvider } from "./context/GlobalState";
 import SectionToDisplay from "./common/SectionToDisplay";

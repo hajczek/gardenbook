@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/img/gardenbook-logo.png";
