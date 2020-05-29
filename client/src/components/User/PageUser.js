@@ -56,17 +56,6 @@ const PageUser = () => {
               path="/zaplanuj-prace"
               component={PlanWorkCard}
             />
-            {/* <Route exact={true} path="/edycja-pracy" component={EditedWork} /> */}
-            {/* <Route
-              exact={true}
-              path="/edycja-rosliny"
-              component={EditedPlant}
-            /> */}
-            {/* <Route
-              exact={true}
-              path="/edycja-materialu"
-              component={EditedMaterial}
-            /> */}
             <Route exact={true} path="/pomoc" component={Help} />
             <Route exact={true} path="/wall" component={WallUser} />
           </Switch>
