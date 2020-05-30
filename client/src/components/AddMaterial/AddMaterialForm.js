@@ -108,6 +108,7 @@ const AddMaterialForm = () => {
             name="material-price"
             id="material-price"
             min="0"
+            step="0.01"
             value={materialPrice}
             onChange={(e) => setMaterialPrice(e.target.value)}
           />

@@ -102,6 +102,7 @@ const AddPlantForm = () => {
             name="plant-price"
             id="plant-price"
             min="0"
+            step="0.01"
             value={plantPrice}
             onChange={(e) => setPlantPrice(e.target.value)}
           />
