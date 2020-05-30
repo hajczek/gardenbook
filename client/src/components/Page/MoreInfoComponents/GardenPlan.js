@@ -11,8 +11,8 @@ const GardenPlan = () => {
           Funkjonalność ułatwijąca użytkownikom aplikacji zaprojektowanie ogrodu
           i/lub jego poszczególnych części. Mając do dyspozycji proste narzędzia
           do sporządzania schematycznych projektów, użytkownik będzie mógł
-          zaaranżować w aplikacji kształt swojego ogrodu. Funkcjonalość nie jest
-          jeszcze wdrożona.
+          zaaranżować w aplikacji kształt swojego ogrodu. Ta funkcjonalość nie
+          jest jeszcze wdrożona.
         </p>
         <p className="slogan-green">
           Założ konto! Korzystaj z zasobów i narzędzi gardenbook'a.

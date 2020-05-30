@@ -9,10 +9,10 @@ const KnowledgeExchange = () => {
       <div className="scrollBox">
         <p>
           Dzięki wbudowanemu w aplikację portalowi społecznościowemu użytkownicy
-          będą mogli w łatwy sposób wymieniać się wiedzą, doswiadczeniem.
-          Pozowli to poszczególnym użytkownikom na poszerzenie swojej wiedzy i
-          skorzystanie z doświadczeń innych ogrodników, stanowiących społeczność
-          gardenbook'a.
+          będą mogli w łatwy sposób wymieniać się wiedzą, doswiadczeniem i
+          opiniami. Pozowli to poszczególnym użytkownikom na poszerzenie swojej
+          wiedzy i skorzystanie z doświadczeń innych ogrodników, stanowiących
+          społeczność gardenbook'a. Ta funkcjonalność nie jest jeszcze wdrożona.
         </p>
         <p className="slogan-green">
           Założ konto! Korzystaj z zasobów i narzędzi gardenbook'a.

@@ -9,10 +9,10 @@ const UsefulTools = () => {
       <div className="scrollBox">
         <p>
           gardenbook oferuje swoim użytkownikom wiele przydatnych narzędzi,
-          ułatwiających organizację prac ogrodniczych i zarządzających.
-          Podstawowe narzędzia to: planer prac, baza roślin i materiałów. W
-          planie do wdrożenia znajdują się: statystyki, historia, plan ogrodu
-          oraz wyszukiwarka wykonawców prac ogrodniczych w Twoim pobliżu.
+          ułatwiających zarządzanie ogrodem i organizację niezbędnych prac.
+          Podstawowe narzędzia to: planer prac, baza roślin i materiałów oraz
+          statystyki. Planowane jest wdrożenie kolejnych: historia, plan ogrodu
+          oraz wyszukiwarka wykonawców prac ogrodniczych w pobliżu.
         </p>
         <p className="slogan-green">
           Założ konto! Korzystaj z zasobów i narzędzi gardenbook'a.

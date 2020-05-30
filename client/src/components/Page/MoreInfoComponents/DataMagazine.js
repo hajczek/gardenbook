@@ -10,8 +10,9 @@ const DataMagazine = () => {
         <p>
           gardenbook oferuje swoim użytkownikom magazynowanie danych dotyczących
           ilości roślin znajdujących się w ogrodzie oraz materiałów znajdujących
-          się na stanie. Dzięki temu w łatwy sposób można zarządzać zasobami
-          ogrodu - szybko można ustalić jakie elementy należy uzupełnić.
+          się na stanie. Dzięki temu w łatwy sposób można zarządzać posiadanymi
+          zasobami w ogrodzie - np. szybko ustalić, jakie elementy należy
+          uzupełnić.
         </p>
         <p className="slogan-green">
           Założ konto! Korzystaj z zasobów i narzędzi gardenbook'a.
