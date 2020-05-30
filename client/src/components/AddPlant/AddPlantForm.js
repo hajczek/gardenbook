@@ -7,6 +7,7 @@ import DisplayInfo from "../../common/DisplayInfo";
 const AddPlantForm = () => {
   const { addPlant } = useContext(GlobalContext);
   const { plants } = useContext(GlobalContext);
+  const { users } = useContext(GlobalContext);
 
   const [plantName, setPlantName] = useState("");
   const [plantQuant, setPlantQuant] = useState(0);
@@ -36,8 +37,13 @@ const AddPlantForm = () => {
     setPlantFetilizerDose("");
   };
 
+  const userId = users
+    .filter((user) => user.userLogged === true)
+    .map((user) => user._id)[0];
+
   function onSubmit(e) {
     const newPlant = {
+      userId,
       plantName,
       plantQuant,
       plantPhoto,

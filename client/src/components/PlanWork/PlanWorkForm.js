@@ -6,6 +6,7 @@ import DisplayInfo from "../../common/DisplayInfo";
 
 export const PlanWorkForm = () => {
   const { addWork } = useContext(GlobalContext);
+  const { users } = useContext(GlobalContext);
 
   const [workName, setWorkName] = useState("");
   const [workTerm, setWorkTerm] = useState("");
@@ -36,8 +37,13 @@ export const PlanWorkForm = () => {
     setWorkDetails("");
   };
 
+  const userId = users
+    .filter((user) => user.userLogged === true)
+    .map((user) => user._id)[0];
+
   function onSubmit(e) {
     const newWork = {
+      userId,
       workName,
       workMaterial: { workMatName, workMatQuant, workMatUnit },
       workTerm,

@@ -7,6 +7,7 @@ import DisplayInfo from "../../common/DisplayInfo";
 const AddMaterialForm = () => {
   const { materials } = useContext(GlobalContext);
   const { addMaterial } = useContext(GlobalContext);
+  const { users } = useContext(GlobalContext);
 
   const [materialName, setMaterialName] = useState("");
   const [materialPhoto, setMaterialPhoto] = useState("");
@@ -30,8 +31,13 @@ const AddMaterialForm = () => {
     setMaterialPrice(0);
   };
 
+  const userId = users
+    .filter((user) => user.userLogged === true)
+    .map((user) => user._id)[0];
+
   function onSubmit(e) {
     const newMaterial = {
+      userId,
       materialName,
       materialPhoto,
       materialQuant,

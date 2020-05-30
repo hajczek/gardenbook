@@ -29,6 +29,9 @@ const MaterialsSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+  userId: {
+    type: String,
+  },
 });
 
 module.exports = mongoose.model("Materials", MaterialsSchema);
