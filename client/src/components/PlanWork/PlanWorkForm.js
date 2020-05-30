@@ -5,8 +5,7 @@ import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 import DisplayInfo from "../../common/DisplayInfo";
 
 export const PlanWorkForm = () => {
-  const { addWork } = useContext(GlobalContext);
-  const { users } = useContext(GlobalContext);
+  const { addWork, users } = useContext(GlobalContext);
 
   const [workName, setWorkName] = useState("");
   const [workTerm, setWorkTerm] = useState("");

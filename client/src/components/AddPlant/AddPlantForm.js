@@ -5,9 +5,7 @@ import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 import DisplayInfo from "../../common/DisplayInfo";
 
 const AddPlantForm = () => {
-  const { addPlant } = useContext(GlobalContext);
-  const { plants } = useContext(GlobalContext);
-  const { users } = useContext(GlobalContext);
+  const { plants, addPlant, users } = useContext(GlobalContext);
 
   const [plantName, setPlantName] = useState("");
   const [plantQuant, setPlantQuant] = useState(0);

@@ -5,9 +5,7 @@ import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 import DisplayInfo from "../../common/DisplayInfo";
 
 const AddMaterialForm = () => {
-  const { materials } = useContext(GlobalContext);
-  const { addMaterial } = useContext(GlobalContext);
-  const { users } = useContext(GlobalContext);
+  const { materials, addMaterial, users } = useContext(GlobalContext);
 
   const [materialName, setMaterialName] = useState("");
   const [materialPhoto, setMaterialPhoto] = useState("");
