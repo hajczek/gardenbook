@@ -1,9 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { GlobalContext } from "../../context/GlobalState";
 
 const ExistedMaterialsBox = () => {
-  const { materials } = useContext(GlobalContext);
+  const { materials, getMaterials } = useContext(GlobalContext);
+
+  useEffect(() => {
+    getMaterials();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="existed-box">
