@@ -38,7 +38,6 @@ export const PlanWorkForm = () => {
 
   function onSubmit(e) {
     const newWork = {
-      id: Math.floor(Math.random() * 100000000),
       workName,
       workMaterial: { workMatName, workMatQuant, workMatUnit },
       workTerm,

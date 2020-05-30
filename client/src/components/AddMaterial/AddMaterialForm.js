@@ -14,25 +14,24 @@ const AddMaterialForm = () => {
   const [materialUnit, setMaterialUnit] = useState("");
   const [materialPrice, setMaterialPrice] = useState(0);
   const [addedDate] = useState(addedDateFunction());
-  const [errorInfo, setErrorInfo] = useState('');
-  const [userInfo, setUserInfo] = useState('');
+  const [errorInfo, setErrorInfo] = useState("");
+  const [userInfo, setUserInfo] = useState("");
 
   const addedMaterial = () => {
     // Display info for user about added material to list
-    setUserInfo('Dodano materiał do spisu.')
+    setUserInfo("Dodano materiał do spisu.");
     // Clear info about error
-    setErrorInfo('');
+    setErrorInfo("");
     // Clear all fields of form
     setMaterialName("");
     setMaterialPhoto("");
     setMaterialQuant(0);
     setMaterialUnit("");
     setMaterialPrice(0);
-  }
+  };
 
   function onSubmit(e) {
     const newMaterial = {
-      id: Math.floor(Math.random() * 100000000),
       materialName,
       materialPhoto,
       materialQuant,
@@ -41,14 +40,19 @@ const AddMaterialForm = () => {
       addedDate,
     };
 
-     // Check if input field for name is empty
-    materialName === '' 
-    // If no, set info about error 
-    ? setErrorInfo('Wpisz nazwę dodawanego materiału.')
-    : materials.some((material) => (material.materialName === document.getElementById('material-name').value) === true)
-    ? setErrorInfo('Ten materiał jest już na liście.') 
-    // If material is not on a list it in database
-    : addedMaterial();
+    // Check if input field for name is empty
+    materialName === ""
+      ? // If no, set info about error
+        setErrorInfo("Wpisz nazwę dodawanego materiału.")
+      : materials.some(
+          (material) =>
+            (material.materialName ===
+              document.getElementById("material-name").value) ===
+            true
+        )
+      ? setErrorInfo("Ten materiał jest już na liście.")
+      : // If material is not on a list it in database
+        addedMaterial();
 
     addMaterial(newMaterial);
     console.log(newMaterial);
@@ -57,71 +61,71 @@ const AddMaterialForm = () => {
   }
   return (
     <>
-    <span className="neededFields">Pola oznaczone * są wymagane.</span>
-    <DisplayErrorInfo info={errorInfo}/>
-    <DisplayInfo info={userInfo}/>
-    <form id="add-material" action="" onSubmit={onSubmit}>
-      <label htmlFor="material-name">
-        <span>Nazwa materiału *</span>
-        <input
-          type="text"
-          name="material-name"
-          id="material-name"
-          value={materialName}
-          onChange={(e) => setMaterialName(e.target.value)}
-        />
-      </label>
-      <label htmlFor="unit">
-        <span>Jednostka</span>
-        <select
-          name="material-unit"
-          id="material-unit"
-          value={materialUnit}
-          onChange={(e) => setMaterialUnit(e.target.value)}
-        >
-          <option value="wybierz">Wybierz</option>
-          <option value="kg">kg</option>
-          <option value="litr">litr</option>
-        </select>
-      </label>
+      <span className="neededFields">Pola oznaczone * są wymagane.</span>
+      <DisplayErrorInfo info={errorInfo} />
+      <DisplayInfo info={userInfo} />
+      <form id="add-material" action="" onSubmit={onSubmit}>
+        <label htmlFor="material-name">
+          <span>Nazwa materiału *</span>
+          <input
+            type="text"
+            name="material-name"
+            id="material-name"
+            value={materialName}
+            onChange={(e) => setMaterialName(e.target.value)}
+          />
+        </label>
+        <label htmlFor="unit">
+          <span>Jednostka</span>
+          <select
+            name="material-unit"
+            id="material-unit"
+            value={materialUnit}
+            onChange={(e) => setMaterialUnit(e.target.value)}
+          >
+            <option value="wybierz">Wybierz</option>
+            <option value="kg">kg</option>
+            <option value="litr">litr</option>
+          </select>
+        </label>
 
-      <label htmlFor="material-quant">
-        <span>Ilość</span>
-        <input
-          type="number"
-          name="material-quant"
-          id="material-quant"
-          min="0"
-          value={materialQuant}
-          onChange={(e) => setMaterialQuant(e.target.value)}
-        />
-      </label>
+        <label htmlFor="material-quant">
+          <span>Ilość</span>
+          <input
+            type="number"
+            name="material-quant"
+            id="material-quant"
+            min="0"
+            value={materialQuant}
+            onChange={(e) => setMaterialQuant(e.target.value)}
+          />
+        </label>
 
-      <label htmlFor="material-pricer">
-        <span>Cena jedn. [zł]</span>
-        <input
-          type="number"
-          name="material-price"
-          id="material-price"
-          min="0"
-          value={materialPrice}
-          onChange={(e) => setMaterialPrice(e.target.value)}
-        />
-      </label>
-      <label htmlFor="material-photo" className="labelForInputFile">
-        Dodaj zdjęcie materiału
-        <input
-          type="file"
-          name="material-photo"
-          value={materialPhoto}
-          className="inputFile"
-          onChange={(e) => setMaterialPhoto(e.target.value)}
-          accept="image/jpeg,image/gif,image/jpg,image/png"
-        />
-        <span>Wybierz plik</span>
-      </label>
-      <button id="add-material-btn">Dodaj</button>
-    </form>
+        <label htmlFor="material-pricer">
+          <span>Cena jedn. [zł]</span>
+          <input
+            type="number"
+            name="material-price"
+            id="material-price"
+            min="0"
+            value={materialPrice}
+            onChange={(e) => setMaterialPrice(e.target.value)}
+          />
+        </label>
+        <label htmlFor="material-photo" className="labelForInputFile">
+          Dodaj zdjęcie materiału
+          <input
+            type="file"
+            name="material-photo"
+            value={materialPhoto}
+            className="inputFile"
+            onChange={(e) => setMaterialPhoto(e.target.value)}
+            accept="image/jpeg,image/gif,image/jpg,image/png"
+          />
+          <span>Wybierz plik</span>
+        </label>
+        <button id="add-material-btn">Dodaj</button>
+      </form>
     </>
   );
 };
