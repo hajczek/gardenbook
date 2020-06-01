@@ -7,7 +7,7 @@ import EditedMaterial from "./EditedMaterial";
 import ExistedMaterialsSummary from "./ExistedMaterialsSummary";
 
 const ExistedMaterialsList = (props) => {
-  const { materials, getMaterials } = useContext(GlobalContext);
+  const { materials, getMaterials, users } = useContext(GlobalContext);
   const { deleteMaterial } = useContext(GlobalContext);
   const [search, setSearch] = useState("");
   const [filteredMaterials, setFilteredMaterials] = useState([]);
@@ -27,6 +27,10 @@ const ExistedMaterialsList = (props) => {
     );
   }, [search, materials]);
 
+  const userId = users
+    .filter((user) => user.userLogged === true)
+    .map((user) => user._id)[0];
+
   return editMaterial === false ? (
     <>
       <p>Edytuj lub usuń wybrane materiały.</p>
@@ -41,50 +45,54 @@ const ExistedMaterialsList = (props) => {
         <table>
           <tbody>
             <ExistedMaterialsListHead />
-            {filteredMaterials.map((material, index) => (
-              <tr key={material._id}>
-                <td id="material-id" align="center">
-                  {index + 1}
-                </td>
-                <td id="material-name">{material.materialName}</td>
-                <td align="center">
-                  <img
-                    src={material.materialPhoto}
-                    id="material-photo"
-                    alt={material.materialName}
-                    style={{ maxHeight: 100 }}
-                  />
-                </td>
-                <td id="material-quant" align="center">
-                  {material.materialQuant}
-                </td>
-                <td id="material-unit" align="center">
-                  {material.materialUnit}
-                </td>
-                <td align="right">{material.materialPrice.toFixed(2)}</td>
-                <td align="right">
-                  {(material.materialQuant * material.materialPrice).toFixed(2)}
-                </td>
-                <td align="center">
-                  <FontAwesomeIcon
-                    id="edit-material"
-                    icon={faEdit}
-                    // This action opens EditedMatrial component with set material data in form to edit
-                    onClick={(e) => {
-                      setEditMaterial(true);
-                      setMaterialId(material._id);
-                    }}
-                  />
-                </td>
-                <td align="center">
-                  <FontAwesomeIcon
-                    id="delete-material"
-                    icon={faTrash}
-                    onClick={() => deleteMaterial(material._id)}
-                  />
-                </td>
-              </tr>
-            ))}
+            {filteredMaterials
+              .filter((material) => material.userId === userId)
+              .map((material, index) => (
+                <tr key={material._id}>
+                  <td id="material-id" align="center">
+                    {index + 1}
+                  </td>
+                  <td id="material-name">{material.materialName}</td>
+                  <td align="center">
+                    <img
+                      src={material.materialPhoto}
+                      id="material-photo"
+                      alt={material.materialName}
+                      style={{ maxHeight: 100 }}
+                    />
+                  </td>
+                  <td id="material-quant" align="center">
+                    {material.materialQuant}
+                  </td>
+                  <td id="material-unit" align="center">
+                    {material.materialUnit}
+                  </td>
+                  <td align="right">{material.materialPrice.toFixed(2)}</td>
+                  <td align="right">
+                    {(material.materialQuant * material.materialPrice).toFixed(
+                      2
+                    )}
+                  </td>
+                  <td align="center">
+                    <FontAwesomeIcon
+                      id="edit-material"
+                      icon={faEdit}
+                      // This action opens EditedMatrial component with set material data in form to edit
+                      onClick={(e) => {
+                        setEditMaterial(true);
+                        setMaterialId(material._id);
+                      }}
+                    />
+                  </td>
+                  <td align="center">
+                    <FontAwesomeIcon
+                      id="delete-material"
+                      icon={faTrash}
+                      onClick={() => deleteMaterial(material._id)}
+                    />
+                  </td>
+                </tr>
+              ))}
           </tbody>
         </table>
         <ExistedMaterialsSummary />

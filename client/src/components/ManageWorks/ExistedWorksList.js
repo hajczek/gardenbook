@@ -8,12 +8,10 @@ import ExistedWorksListHead from "./ExistedWorksListHead";
 import ExistedWorksSummary from "./ExistedWorksSummary";
 
 const PlannedWorkList = (props) => {
-  const { works, getWorks } = useContext(GlobalContext);
+  const { works, getWorks, users } = useContext(GlobalContext);
   const { deleteWork } = useContext(GlobalContext);
   const [searchFrom, setSearchFrom] = useState("2020-01-31");
   const [searchTo, setSearchTo] = useState("2222-01-31");
-  // const [searchFrom, setSearchFrom] = useState();
-  // const [searchTo, setSearchTo] = useState();
   const [filteredWorks, setFilteredWorks] = useState([]);
   const [editWork, setEditWork] = useState(false);
   const [workId, setWorkId] = useState();
@@ -23,10 +21,15 @@ const PlannedWorkList = (props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const userId = users
+    .filter((user) => user.userLogged === true)
+    .map((user) => user._id)[0];
+
   useEffect(() => {
     setFilteredWorks(
       works.filter(
         (plannedWork) =>
+          plannedWork.userId === userId &&
           new Date(plannedWork.workTerm) >= new Date(searchFrom) &&
           new Date(plannedWork.workTerm) <= new Date(searchTo)
       )
