@@ -8,6 +8,11 @@ const ExistedMaterialsSummary = () => {
     .filter((user) => user.userLogged === true)
     .map((user) => user._id)[0];
 
+  /**
+   * Returns value of all materials
+   *
+   * @return {number} represents value of all materials
+   */
   function countValueOfAllMaterials() {
     let valueOfAllMaterials = 0;
     for (let i = 0; i < materials.length; i++) {
@@ -19,6 +24,11 @@ const ExistedMaterialsSummary = () => {
     return valueOfAllMaterials.toFixed(2);
   }
 
+  /**
+   * Returns number of all materials
+   *
+   * @return {number} represents all materials
+   */
   function countNumOfMaterials() {
     let numOfMaterials = 0;
     for (let i = 0; i < materials.length; i++) {

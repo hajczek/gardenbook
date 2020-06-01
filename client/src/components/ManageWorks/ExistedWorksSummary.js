@@ -8,6 +8,11 @@ const ExistedWorksSummary = () => {
     .filter((user) => user.userLogged === true)
     .map((user) => user._id)[0];
 
+  /**
+   * Returns number of done work
+   *
+   * @return {number} represents number of done work
+   */
   function countNumOfDoneWork() {
     let numOfDoneWork = 0;
     for (let i = 0; i < works.length; i++) {
@@ -17,6 +22,11 @@ const ExistedWorksSummary = () => {
     return numOfDoneWork;
   }
 
+  /**
+   * Returns number of planned work
+   *
+   * @return {number} represents number of planned work
+   */
   function countNumOfPlannedWork() {
     let numOfPlannedWork = 0;
     for (let i = 0; i < works.length; i++) {
@@ -30,6 +40,11 @@ const ExistedWorksSummary = () => {
     return numOfPlannedWork;
   }
 
+  /**
+   * Returns number of not done work
+   *
+   * @return {number} represents number of not done work
+   */
   function countNumOfNotDoneWork() {
     let numOfNotDonedWork = 0;
     for (let i = 0; i < works.length; i++) {

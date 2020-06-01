@@ -1,3 +1,9 @@
+/**
+ * Count days to alert.
+ *
+ * @param {string} Represents date
+ * @return {number} days to alerts
+ */
 export default function daysToAlert(date) {
   let date1 = new Date();
   let date2 = new Date(date);

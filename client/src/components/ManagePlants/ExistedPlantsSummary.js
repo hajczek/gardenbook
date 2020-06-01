@@ -8,6 +8,11 @@ const ExistedPlantsSummary = () => {
     .filter((user) => user.userLogged === true)
     .map((user) => user._id)[0];
 
+  /**
+   * Returns number of plants
+   *
+   * @return {number} represents all plants
+   */
   function countNumOfPlants() {
     let numOfPlants = 0;
     for (let i = 0; i < plants.length; i++) {
@@ -18,6 +23,11 @@ const ExistedPlantsSummary = () => {
     return numOfPlants;
   }
 
+  /**
+   * Returns value of all plants
+   *
+   * @return {number} represents value of all plants
+   */
   function countValueOfAllPlants() {
     let valueOfAllPlants = 0;
     for (let i = 0; i < plants.length; i++) {
@@ -28,6 +38,11 @@ const ExistedPlantsSummary = () => {
     return valueOfAllPlants.toFixed(2);
   }
 
+  /**
+   * Returns number of type of all plants
+   *
+   * @return {number} represents number of type of all plants
+   */
   function countNumOfTypePlants() {
     let numOfTypePlants = 0;
     for (let i = 0; i < plants.length; i++) {

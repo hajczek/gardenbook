@@ -1,5 +1,7 @@
 /**
- * @description Today date
+ * Returns today date
+ *
+ * @return {string} represents today date in format yyyy-mm-dd
  */
 export default function addedDateFunction() {
   // Define dates elements for input with date
