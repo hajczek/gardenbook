@@ -14,7 +14,7 @@ import DataMagazine from "./MoreInfoComponents/DataMagazine";
 import GardenPlan from "./MoreInfoComponents/GardenPlan";
 import FindContractor from "./MoreInfoComponents/FindContractor";
 import Regulations from "./Regulations";
-import NotFound from "./NotFound";
+// import NotFound from "./NotFound";
 
 const PageCard = () => {
   return (
@@ -52,7 +52,7 @@ const PageCard = () => {
             path="/znajdz-wykonawce"
             component={FindContractor}
           />
-          {/* <Route component={NotFound} /> */}
+          {/* <Route exact={true} path="/*" component={NotFound} /> */}
         </Switch>
         <MoreInfo />
         <Footer />

@@ -20,8 +20,13 @@
     display: flex;
     align-items: center;
 
+    svg {
+      color: $grey;
+    }
+
     h3 {
       margin-left: 1rem;
+      color: $grey;
     }
   }
   ul {
