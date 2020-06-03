@@ -22,9 +22,9 @@ const UserLogin = () => {
     };
 
     // Check if input fields are empty
-    if (userEmailLogin === "" || userPassLogin === "") {
-      setErrorInfo("Uzupełnij wymagane pola.");
-    }
+    userEmailLogin === "" || userPassLogin === ""
+      ? setErrorInfo("Uzupełnij wymagane pola.")
+      : setErrorInfo("");
 
     // Filter user
     users
