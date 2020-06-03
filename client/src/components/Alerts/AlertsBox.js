@@ -8,14 +8,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBell } from "@fortawesome/free-solid-svg-icons";
 
 const AlertsBox = () => {
-  const { works, getWorks } = useContext(GlobalContext);
+  const { works, getWorks, users } = useContext(GlobalContext);
 
   useEffect(() => {
     getWorks();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  console.log(works);
+  const userId = users
+    .filter((user) => user.userLogged === true)
+    .map((user) => user._id)[0];
 
   return (
     <div id="alerts">
@@ -27,6 +29,7 @@ const AlertsBox = () => {
           .reverse()
           .filter(
             (plannedWork) =>
+              plannedWork.userId === userId &&
               plannedWork.workTerm >= addedDateFunction() &&
               plannedWork.workTerm <= maxDateFormatted
           )
