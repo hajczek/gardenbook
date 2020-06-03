@@ -110,7 +110,15 @@ const AddPlantForm = () => {
           />
         </label>
         <label htmlFor="plant-photo" className="labelForInputFile">
-          Dodaj zdjęcie rośliny
+          Dodaj link do zdjęcia rośliny
+          <input
+            type="text"
+            name="plant-photo"
+            id="plant-photo"
+            value={plantPhoto}
+            onChange={(e) => setPlantPhoto(e.target.value)}
+          />
+          {/* Dodaj zdjęcie rośliny
           <input
             type="file"
             name="plant-photo"
@@ -120,7 +128,7 @@ const AddPlantForm = () => {
             onChange={(e) => setPlantPhoto(e.target.value)}
             accept="image/jpeg,image/gif,image/jpg,image/png"
           />
-          <span>Wybierz plik</span>
+          <span>Wybierz plik</span> */}
         </label>
         <label htmlFor="plant-fetilizer">
           <span>Nawóz</span>

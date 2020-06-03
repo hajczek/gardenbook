@@ -2,6 +2,7 @@ import React, { useContext, Fragment, useEffect } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import { maxDateFormatted } from "./AlertsFunction";
 import addedDateFunction from "../../common/AddedDateFunction";
+import GetUserLoggedId from "../../common/GetUserLoggedId";
 
 export const CountAlerts = () => {
   const { works, getWorks } = useContext(GlobalContext);
@@ -14,6 +15,7 @@ export const CountAlerts = () => {
   // Filter dates which needs alert
   let alertDates = works.filter(
     (plannedWork) =>
+      plannedWork.userId === GetUserLoggedId() &&
       plannedWork.workTerm >= addedDateFunction() &&
       plannedWork.workTerm <= maxDateFormatted
   );
