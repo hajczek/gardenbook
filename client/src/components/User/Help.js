@@ -8,7 +8,7 @@ const Help = () => {
         <p>
           W tym dziale znajdą się wskazówki w jaki sposób korzystać z aplikacji.
           Jak dodawać nowe elementy do aplikacji, w jaki sposób zarządzać jej
-          funkcjonalnością.
+          funkcjonalnością. Strona w przygotowaniu.
         </p>
       </div>
     </div>

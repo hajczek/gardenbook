@@ -127,7 +127,6 @@ export const PlanWorkForm = () => {
           />
           {/* <span id="add-work-term">Dodaj termin do kalendarza &raquo;</span> */}
         </label>
-
         <label htmlFor="work-mat-unit">
           <span>Jednostka maateriału</span>
           <select

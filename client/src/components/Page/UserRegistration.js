@@ -96,7 +96,6 @@ const UserRegistration = () => {
               onChange={(e) => setUserEmail(e.target.value)}
             />
           </label>
-
           <label htmlFor="user-pass">
             <span>Hasło*</span>
             <input

@@ -82,7 +82,7 @@ const ExistedPlantsList = (props) => {
                       id="edit-plant"
                       icon={faEdit}
                       plantid={plantId}
-                      // Open EditedPlant component and set plantId data to to edit form
+                      // Open EditedPlant component and set plantId data to edit form
                       onClick={(e) => {
                         setEditPlant(true);
                         setPlantId(plant._id);

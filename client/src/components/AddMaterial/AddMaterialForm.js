@@ -89,7 +89,6 @@ const AddMaterialForm = () => {
             <option value="litr">litr</option>
           </select>
         </label>
-
         <label htmlFor="material-quant">
           <span>Ilość</span>
           <input
@@ -101,7 +100,6 @@ const AddMaterialForm = () => {
             onChange={(e) => setMaterialQuant(e.target.value)}
           />
         </label>
-
         <label htmlFor="material-pricer">
           <span>Cena jedn. [zł]</span>
           <input
