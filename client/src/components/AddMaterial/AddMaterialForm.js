@@ -1,11 +1,12 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
+import GetUserLoggedId from "../../common/GetUserLoggedId";
 import addedDateFunction from "../../common/AddedDateFunction";
 import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 import DisplayInfo from "../../common/DisplayInfo";
 
 const AddMaterialForm = () => {
-  const { materials, addMaterial, users } = useContext(GlobalContext);
+  const { materials, addMaterial } = useContext(GlobalContext);
 
   const [materialName, setMaterialName] = useState("");
   const [materialPhoto, setMaterialPhoto] = useState("");
@@ -29,9 +30,7 @@ const AddMaterialForm = () => {
     setMaterialPrice(0);
   };
 
-  const userId = users
-    .filter((user) => user.userLogged === true)
-    .map((user) => user._id)[0];
+  const userId = GetUserLoggedId();
 
   function onSubmit(e) {
     const newMaterial = {
@@ -59,8 +58,6 @@ const AddMaterialForm = () => {
         addedMaterial();
 
     addMaterial(newMaterial);
-    console.log(newMaterial);
-
     e.preventDefault();
   }
   return (
