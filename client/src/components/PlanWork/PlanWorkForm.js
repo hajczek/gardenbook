@@ -3,9 +3,10 @@ import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
 import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 import DisplayInfo from "../../common/DisplayInfo";
+import GetUserLoggedId from "../../common/GetUserLoggedId";
 
 export const PlanWorkForm = () => {
-  const { addWork, users } = useContext(GlobalContext);
+  const { addWork } = useContext(GlobalContext);
 
   const [workName, setWorkName] = useState("");
   const [workTerm, setWorkTerm] = useState("");
@@ -36,9 +37,7 @@ export const PlanWorkForm = () => {
     setWorkDetails("");
   };
 
-  const userId = users
-    .filter((user) => user.userLogged === true)
-    .map((user) => user._id)[0];
+  const userId = GetUserLoggedId();
 
   function onSubmit(e) {
     const newWork = {
