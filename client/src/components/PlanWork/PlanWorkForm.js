@@ -62,7 +62,6 @@ export const PlanWorkForm = () => {
         addedWork();
 
     addWork(newWork);
-    console.log(newWork);
 
     e.preventDefault();
   }

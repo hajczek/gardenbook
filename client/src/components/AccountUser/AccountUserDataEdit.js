@@ -100,7 +100,6 @@ const AccountUserDataEdit = (props) => {
         : // If yes, put new plant in database
           saveNewData();
     });
-    console.log(userDataNew);
     editUserDetails(props.userid, userDataNew);
 
     // e.preventDefault();

@@ -65,7 +65,6 @@ const UserRegistration = () => {
         registrationDone();
     // setUserInfo('Zostałeś zarejestrowany. Zaloguj się na swoje konto użytkownika.');
 
-    console.log(newUser);
     addUser(newUser);
   }
 

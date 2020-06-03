@@ -68,7 +68,6 @@ const AddPlantForm = () => {
         addedPlant();
 
     addPlant(newPlant);
-    console.log(newPlant);
 
     e.preventDefault();
   }
