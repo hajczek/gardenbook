@@ -1,5 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { GlobalContext } from "../../context/GlobalState";
+import GetUserLoggedId from "../../common/GetUserLoggedId";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 import EditedPlant from "./EditedPlant";
@@ -7,7 +8,7 @@ import ExistedPlantsListHead from "./ExistedPlantsListHead";
 import ExistedPlantsSummary from "./ExistedPlantsSummary";
 
 const ExistedPlantsList = (props) => {
-  const { plants, getPlants, users } = useContext(GlobalContext);
+  const { plants, getPlants } = useContext(GlobalContext);
   const { deletePlant } = useContext(GlobalContext);
   const [search, setSearch] = useState("");
   const [filteredPlants, setFilteredPlants] = useState([]);
@@ -27,10 +28,6 @@ const ExistedPlantsList = (props) => {
     );
   }, [search, plants]);
 
-  const userId = users
-    .filter((user) => user.userLogged === true)
-    .map((user) => user._id)[0];
-
   return editPlant === false ? (
     <>
       <p>Edytuj lub usuń wybrane rośliny.</p>
@@ -46,7 +43,7 @@ const ExistedPlantsList = (props) => {
           <tbody>
             <ExistedPlantsListHead />
             {filteredPlants
-              .filter((plant) => plant.userId === userId)
+              .filter((plant) => plant.userId === GetUserLoggedId())
               .map((plant, index) => (
                 <tr key={plant._id}>
                   <td align="center">{index + 1}</td>

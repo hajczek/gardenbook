@@ -1,12 +1,9 @@
 import React, { useContext, useEffect } from "react";
 import { GlobalContext } from "../../context/GlobalState";
+import GetUserLoggedId from "../../common/GetUserLoggedId";
 
 const ExistedPlantsSummary = () => {
-  const { plants, users } = useContext(GlobalContext);
-
-  const userId = users
-    .filter((user) => user.userLogged === true)
-    .map((user) => user._id)[0];
+  const { plants } = useContext(GlobalContext);
 
   /**
    * Returns number of plants
@@ -16,7 +13,7 @@ const ExistedPlantsSummary = () => {
   function countNumOfPlants() {
     let numOfPlants = 0;
     for (let i = 0; i < plants.length; i++) {
-      if (plants[i].userId === userId) {
+      if (plants[i].userId === GetUserLoggedId()) {
         numOfPlants += plants[i].plantQuant;
       }
     }
@@ -31,7 +28,7 @@ const ExistedPlantsSummary = () => {
   function countValueOfAllPlants() {
     let valueOfAllPlants = 0;
     for (let i = 0; i < plants.length; i++) {
-      if (plants[i].userId === userId) {
+      if (plants[i].userId === GetUserLoggedId()) {
         valueOfAllPlants += plants[i].plantQuant * plants[i].plantPrice;
       }
     }
@@ -46,7 +43,7 @@ const ExistedPlantsSummary = () => {
   function countNumOfTypePlants() {
     let numOfTypePlants = 0;
     for (let i = 0; i < plants.length; i++) {
-      if (plants[i].userId === userId) {
+      if (plants[i].userId === GetUserLoggedId()) {
         numOfTypePlants += 1;
       }
     }

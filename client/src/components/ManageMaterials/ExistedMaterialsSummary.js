@@ -1,12 +1,9 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
+import GetUserLoggedId from "../../common/GetUserLoggedId";
 
 const ExistedMaterialsSummary = () => {
-  const { materials, users } = useContext(GlobalContext);
-
-  const userId = users
-    .filter((user) => user.userLogged === true)
-    .map((user) => user._id)[0];
+  const { materials } = useContext(GlobalContext);
 
   /**
    * Returns value of all materials
@@ -16,7 +13,7 @@ const ExistedMaterialsSummary = () => {
   function countValueOfAllMaterials() {
     let valueOfAllMaterials = 0;
     for (let i = 0; i < materials.length; i++) {
-      if (materials[i].userId === userId) {
+      if (materials[i].userId === GetUserLoggedId()) {
         valueOfAllMaterials +=
           materials[i].materialQuant * materials[i].materialPrice;
       }
@@ -32,7 +29,7 @@ const ExistedMaterialsSummary = () => {
   function countNumOfMaterials() {
     let numOfMaterials = 0;
     for (let i = 0; i < materials.length; i++) {
-      if (materials[i].userId === userId) {
+      if (materials[i].userId === GetUserLoggedId()) {
         numOfMaterials += 1;
       }
     }

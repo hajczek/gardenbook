@@ -1,25 +1,22 @@
 import React, { useContext, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { GlobalContext } from "../../context/GlobalState";
+import GetUserLoggedId from "../../common/GetUserLoggedId";
 
 const ExistedMaterialsBox = () => {
-  const { materials, getMaterials, users } = useContext(GlobalContext);
+  const { materials, getMaterials } = useContext(GlobalContext);
 
   useEffect(() => {
     getMaterials();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const userId = users
-    .filter((user) => user.userLogged === true)
-    .map((user) => user._id)[0];
-
   return (
     <div className="existed-box">
       <h2>ISTNIEJĄCE MATERIAŁY</h2>
       <ol>
         {materials
-          .filter((material) => material.userId === userId)
+          .filter((material) => material.userId === GetUserLoggedId())
           .map((material) => (
             <li key={material.id}>
               <NavLink

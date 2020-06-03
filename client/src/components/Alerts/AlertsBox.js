@@ -16,10 +16,6 @@ const AlertsBox = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // const userId = users
-  //   .filter((user) => user.userLogged === true)
-  //   .map((user) => user._id)[0];
-
   return (
     <div id="alerts">
       <h2>

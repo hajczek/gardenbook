@@ -1,5 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { GlobalContext } from "../../context/GlobalState";
+import GetUserLoggedId from "../../common/GetUserLoggedId";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 import ExistedMaterialsListHead from "./ExistedMaterialsListHead";
@@ -7,7 +8,7 @@ import EditedMaterial from "./EditedMaterial";
 import ExistedMaterialsSummary from "./ExistedMaterialsSummary";
 
 const ExistedMaterialsList = (props) => {
-  const { materials, getMaterials, users } = useContext(GlobalContext);
+  const { materials, getMaterials } = useContext(GlobalContext);
   const { deleteMaterial } = useContext(GlobalContext);
   const [search, setSearch] = useState("");
   const [filteredMaterials, setFilteredMaterials] = useState([]);
@@ -27,10 +28,6 @@ const ExistedMaterialsList = (props) => {
     );
   }, [search, materials]);
 
-  const userId = users
-    .filter((user) => user.userLogged === true)
-    .map((user) => user._id)[0];
-
   return editMaterial === false ? (
     <>
       <p>Edytuj lub usuń wybrane materiały.</p>
@@ -46,7 +43,7 @@ const ExistedMaterialsList = (props) => {
           <tbody>
             <ExistedMaterialsListHead />
             {filteredMaterials
-              .filter((material) => material.userId === userId)
+              .filter((material) => material.userId === GetUserLoggedId())
               .map((material, index) => (
                 <tr key={material._id}>
                   <td id="material-id" align="center">

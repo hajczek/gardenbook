@@ -1,25 +1,22 @@
 import React, { useContext, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { GlobalContext } from "../../context/GlobalState";
+import GetUserLoggedId from "../../common/GetUserLoggedId";
 
 const ExistedPlantsBox = () => {
-  const { plants, getPlants, users } = useContext(GlobalContext);
+  const { plants, getPlants } = useContext(GlobalContext);
 
   useEffect(() => {
     getPlants();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const userId = users
-    .filter((user) => user.userLogged === true)
-    .map((user) => user._id)[0];
-
   return (
     <div className="existed-box">
       <h2>ISTNIEJĄCE ROŚLINY</h2>
       <ol>
         {plants
-          .filter((plant) => plant.userId === userId)
+          .filter((plant) => plant.userId === GetUserLoggedId())
           .map((plant) => (
             <li key={plant.id}>
               <NavLink
