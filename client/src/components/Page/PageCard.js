@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Header from "./Header";
 import Info from "./Info";
-import MoreInfo from "./MoreInfo";
 import Footer from "./Footer";
 
 import UserLogin from "./UserLogin";
@@ -54,7 +53,6 @@ const PageCard = () => {
           />
           {/* <Route exact={true} path="/*" component={NotFound} /> */}
         </Switch>
-        <MoreInfo />
         <Footer />
       </div>
     </BrowserRouter>

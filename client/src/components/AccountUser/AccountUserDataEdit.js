@@ -101,7 +101,6 @@ const AccountUserDataEdit = (props) => {
           saveNewData();
     });
     editUserDetails(props.userid, userDataNew);
-
     // e.preventDefault();
   }
   return (
