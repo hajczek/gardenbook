@@ -15,10 +15,10 @@ const ExistedMaterialsList = (props) => {
   const [editMaterial, setEditMaterial] = useState(false);
   const [materialId, setMaterialId] = useState();
 
-  useEffect(() => {
-    getMaterials();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  // useEffect(() => {
+  //   getMaterials();
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
 
   useEffect(() => {
     setFilteredMaterials(
