@@ -4,7 +4,7 @@ import MoreInfo from "./../MoreInfo";
 const GardenPlan = () => {
   return (
     <>
-      <div className="info">
+      <div className="right-box">
         <div className="title">
           <h1>Plan Twojego ogrodu</h1>
         </div>

@@ -4,7 +4,7 @@ import MoreInfo from "./../MoreInfo";
 const KnowledgeExchange = () => {
   return (
     <>
-      <div className="info">
+      <div className="right-box">
         <div className="title">
           <h1>Wymiana wiedzy</h1>
         </div>

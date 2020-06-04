@@ -4,7 +4,7 @@ import MoreInfo from "./../MoreInfo";
 const GardensCommunity = () => {
   return (
     <>
-      <div className="info">
+      <div className="right-box">
         <div className="title">
           <h1>Społeczność Ogrodników</h1>
         </div>

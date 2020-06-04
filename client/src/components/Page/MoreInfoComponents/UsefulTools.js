@@ -4,7 +4,7 @@ import MoreInfo from "./../MoreInfo";
 const UsefulTools = () => {
   return (
     <>
-      <div className="info">
+      <div className="right-box">
         <div className="title">
           <h1>Przydatne narzędzia</h1>
         </div>

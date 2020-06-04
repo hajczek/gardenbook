@@ -4,7 +4,7 @@ import MoreInfo from "./../MoreInfo";
 const DataMagazine = () => {
   return (
     <>
-      <div className="info">
+      <div className="right-box">
         <div className="title">
           <h1>Magazyn Danych</h1>
         </div>

@@ -4,7 +4,7 @@ import MoreInfo from "./../MoreInfo";
 const FindContractor = () => {
   return (
     <>
-      <div className="info">
+      <div className="right-box">
         <div className="title">
           <h1>Znajdź wykonawcę</h1>
         </div>

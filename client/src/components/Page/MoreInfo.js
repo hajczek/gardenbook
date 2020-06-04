@@ -25,7 +25,7 @@ const MoreInfo = () => {
         Magazyn danych
       </NavLink>
       <NavLink to="/plan-ogrodu" exact={true} activeClassName="is-active">
-        Plan ogrodu
+        Projekt ogrodu
       </NavLink>
       <NavLink to="/znajdz-wykonawce" exact={true} activeClassName="is-active">
         Znajdź wykonawcę
