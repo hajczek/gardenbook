@@ -38,8 +38,9 @@ const ExistedMaterialsSummary = () => {
 
   return (
     <div className="summaryBox">
-      <h3>RAZEM:</h3> Il. materiałów: {countNumOfMaterials()} | Wartość:{" "}
-      {countValueOfAllMaterials()} zł
+      <h3>RAZEM:</h3>
+      <span>Il. materiałów: {countNumOfMaterials()} |</span>
+      <span>Wartość: {countValueOfAllMaterials()} zł</span>
     </div>
   );
 };

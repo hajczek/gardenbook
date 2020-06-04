@@ -57,9 +57,10 @@ const ExistedWorksSummary = () => {
 
   return (
     <div className="summaryBox">
-      <h3>RAZEM PRAC:</h3> Niewykonanych: {countNumOfNotDoneWork()} |
-      Wykonanych: {countNumOfDoneWork()} | Do wykonania:{" "}
-      {countNumOfPlannedWork()}
+      <h3>RAZEM PRAC:</h3>{" "}
+      <span>Niewykonanych: {countNumOfNotDoneWork()} | </span>
+      <span>Wykonanych: {countNumOfDoneWork()} | </span>
+      <span>Do wykonania: {countNumOfPlannedWork()} </span>
     </div>
   );
 };

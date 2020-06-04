@@ -150,6 +150,10 @@
       h3 {
         margin-right: 1rem;
       }
+
+      span {
+        margin-right: 0.5rem;
+      }
     }
   }
 
@@ -215,6 +219,7 @@
     bottom: 0;
     margin-top: 2rem;
     flex-direction: column;
+    width: 100%;
   }
 }
 

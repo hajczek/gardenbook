@@ -52,8 +52,9 @@ const ExistedPlantsSummary = () => {
 
   return (
     <div className="summaryBox">
-      <h3>RAZEM:</h3> Gatunków: {countNumOfTypePlants()} | Sztuk:{" "}
-      {countNumOfPlants()} | Wartość: {countValueOfAllPlants()}
+      <h3>RAZEM:</h3> <span>Gatunków: {countNumOfTypePlants()} |</span>
+      <span>Sztuk: {countNumOfPlants()} |</span>
+      <span>Wartość: {countValueOfAllPlants()}</span>
     </div>
   );
 };
