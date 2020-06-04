@@ -10,3 +10,11 @@
     line-height: 1.6;
   }
 }
+
+@media screen and (max-width: 650px) {
+  .scrollBox {
+    p {
+      font-size: 1.06rem;
+    }
+  }
+}

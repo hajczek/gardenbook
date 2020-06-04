@@ -75,6 +75,7 @@
       width: 8rem;
       padding: 1rem;
       line-height: 1.1;
+      margin-bottom: 1rem;
     }
 
     .title {
@@ -86,6 +87,7 @@
 @media screen and (max-width: 660px) {
   .more-info {
     margin-bottom: 20px;
+    margin: 0.5rem auto;
 
     .title {
       width: 150px;

@@ -54,8 +54,15 @@
     margin: 0;
 
     label {
+      width: 100%;
+
+      input {
+        margin: 0 0 0.5rem 0;
+        width: 100%;
+      }
       span {
         font-size: 1.1rem;
+        margin-bottom: 0;
       }
     }
 

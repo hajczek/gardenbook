@@ -1,4 +1,5 @@
-.contentPage {
+.contentPage,
+.userPage {
   background: $green url("../../img/gardenbook-bg.jpg") no-repeat center center
     fixed;
   background-size: cover;
@@ -9,7 +10,8 @@
 }
 
 @media screen and (max-height: 850px) {
-  .contentPage {
+  .contentPage,
+  .userPage {
     height: 100%;
   }
 }
