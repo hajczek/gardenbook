@@ -44,7 +44,7 @@ const UserLogin = () => {
 
   return (
     <>
-      <div className="info">
+      <div className="right-box">
         <h1>Panel logowania</h1>
         <DisplayErrorInfo info={errorInfo} />
         <form onSubmit={login} id="user-email-form">

@@ -71,7 +71,7 @@ const UserRegistration = () => {
 
   return (
     <>
-      <div className="info">
+      <div className="right-box">
         <h1>Panel rejestracji</h1>
         <DisplayErrorInfo info={errorInfo} />
         <DisplayInfo info={userInfo} />
