@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { GlobalContext } from "../../context/GlobalState";
-import GetUserLoggedId from "../../common/GetUserLoggedId";
+import { userId } from "../../common/GetUserLoggedId";
 import { maxDateFormatted } from "./AlertsFunction";
 import CountAlerts from "./CountAlerts";
 import daysToAlert from "./CountDaysToAlert";
@@ -26,7 +26,7 @@ const AlertsBox = () => {
           .reverse()
           .filter(
             (plannedWork) =>
-              plannedWork.userId === GetUserLoggedId() &&
+              plannedWork.userId === userId &&
               plannedWork.workTerm >= addedDateFunction() &&
               plannedWork.workTerm <= maxDateFormatted
           )

@@ -15,12 +15,10 @@ const HeaderUser = () => {
       </div>
       {users
         .filter((user) => user.userLogged === true)
-        .map((user) => (
+        .map((user, index) => (
           <>
-            <span className="welcomeText" key={user.userName}>
-              Witaj {user.userName} !
-            </span>
-            <TopMenu userid={user._id} key={user._id} />
+            <span className="welcomeText">Witaj {user.userName} !</span>
+            <TopMenu userid={user._id} />
           </>
         ))}
     </header>

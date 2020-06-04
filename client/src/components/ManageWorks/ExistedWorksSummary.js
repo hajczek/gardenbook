@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
-import GetUserLoggedId from "../../common/GetUserLoggedId";
+import { userId } from "../../common/GetUserLoggedId";
 
 const ExistedWorksSummary = () => {
   const { works } = useContext(GlobalContext);
@@ -13,7 +13,7 @@ const ExistedWorksSummary = () => {
   function countNumOfDoneWork() {
     let numOfDoneWork = 0;
     for (let i = 0; i < works.length; i++) {
-      if (works[i].userId === GetUserLoggedId() && works[i].workDone === true)
+      if (works[i].userId === userId && works[i].workDone === true)
         numOfDoneWork += 1;
     }
     return numOfDoneWork;
@@ -28,7 +28,7 @@ const ExistedWorksSummary = () => {
     let numOfPlannedWork = 0;
     for (let i = 0; i < works.length; i++) {
       if (
-        works[i].userId === GetUserLoggedId() &&
+        works[i].userId === userId &&
         new Date(works[i].workTerm) > new Date()
       ) {
         numOfPlannedWork += 1;
@@ -46,7 +46,7 @@ const ExistedWorksSummary = () => {
     let numOfNotDonedWork = 0;
     for (let i = 0; i < works.length; i++) {
       if (
-        works[i].userId === GetUserLoggedId() &&
+        works[i].userId === userId &&
         new Date(works[i].workTerm) < new Date() &&
         works[i].workDone === false
       )

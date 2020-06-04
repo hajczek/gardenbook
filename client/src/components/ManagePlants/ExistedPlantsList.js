@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { GlobalContext } from "../../context/GlobalState";
-import GetUserLoggedId from "../../common/GetUserLoggedId";
+import { userId } from "../../common/GetUserLoggedId";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 import EditedPlant from "./EditedPlant";
@@ -43,7 +43,7 @@ const ExistedPlantsList = (props) => {
           <tbody>
             <ExistedPlantsListHead />
             {filteredPlants
-              .filter((plant) => plant.userId === GetUserLoggedId())
+              .filter((plant) => plant.userId === userId)
               .map((plant, index) => (
                 <tr key={plant._id}>
                   <td align="center">{index + 1}</td>

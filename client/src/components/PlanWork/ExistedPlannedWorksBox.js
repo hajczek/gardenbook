@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { GlobalContext } from "../../context/GlobalState";
-import GetUserLoggedId from "../../common/GetUserLoggedId";
+import { userId } from "../../common/GetUserLoggedId";
 import addedDateFunction from "../../common/AddedDateFunction";
 
 const ExistedPlannedWorksBox = () => {
@@ -19,7 +19,7 @@ const ExistedPlannedWorksBox = () => {
         {works
           .filter(
             (plannedWork) =>
-              plannedWork.userId === GetUserLoggedId() &&
+              plannedWork.userId === userId &&
               plannedWork.workTerm >= addedDateFunction()
           )
           .map((plannedWork) => (

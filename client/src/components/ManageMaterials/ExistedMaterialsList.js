@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { GlobalContext } from "../../context/GlobalState";
-import GetUserLoggedId from "../../common/GetUserLoggedId";
+import { userId } from "../../common/GetUserLoggedId";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 import ExistedMaterialsListHead from "./ExistedMaterialsListHead";
@@ -43,7 +43,7 @@ const ExistedMaterialsList = (props) => {
           <tbody>
             <ExistedMaterialsListHead />
             {filteredMaterials
-              .filter((material) => material.userId === GetUserLoggedId())
+              .filter((material) => material.userId === userId)
               .map((material, index) => (
                 <tr key={material._id}>
                   <td id="material-id" align="center">

@@ -3,7 +3,7 @@ import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
 import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 import DisplayInfo from "../../common/DisplayInfo";
-import GetUserLoggedId from "../../common/GetUserLoggedId";
+import { userId } from "../../common/GetUserLoggedId";
 
 export const PlanWorkForm = () => {
   const { addWork } = useContext(GlobalContext);
@@ -36,8 +36,6 @@ export const PlanWorkForm = () => {
     setWorkMatUnit("");
     setWorkDetails("");
   };
-
-  const userId = GetUserLoggedId();
 
   function onSubmit(e) {
     const newWork = {

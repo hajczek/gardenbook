@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
-import GetUserLoggedId from "../../common/GetUserLoggedId";
+import { userId } from "../../common/GetUserLoggedId";
 import addedDateFunction from "../../common/AddedDateFunction";
 import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 import DisplayInfo from "../../common/DisplayInfo";
@@ -29,8 +29,6 @@ const AddMaterialForm = () => {
     setMaterialUnit("");
     setMaterialPrice(0);
   };
-
-  const userId = GetUserLoggedId();
 
   function onSubmit(e) {
     const newMaterial = {

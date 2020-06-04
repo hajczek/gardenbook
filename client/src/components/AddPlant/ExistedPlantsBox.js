@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { GlobalContext } from "../../context/GlobalState";
-import GetUserLoggedId from "../../common/GetUserLoggedId";
+import { userId } from "../../common/GetUserLoggedId";
 
 const ExistedPlantsBox = () => {
   const { plants, getPlants } = useContext(GlobalContext);
@@ -16,7 +16,7 @@ const ExistedPlantsBox = () => {
       <h2>ISTNIEJĄCE ROŚLINY</h2>
       <ol>
         {plants
-          .filter((plant) => plant.userId === GetUserLoggedId())
+          .filter((plant) => plant.userId === userId)
           .map((plant) => (
             <li key={plant.id}>
               <NavLink
