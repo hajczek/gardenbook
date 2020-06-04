@@ -93,8 +93,12 @@
 }
 
 @media screen and (max-width: 1050px) {
-  .userSection .contentUser {
+  .userSection .user-content {
     padding: 2rem 5vw 0 5vw;
+
+    .content {
+      padding: 1rem;
+    }
 
     #alerts {
       padding-left: 2rem;
@@ -113,12 +117,12 @@
 
 @media screen and (max-width: 950px) {
   .userSection {
-    height: calc(100vh - 164px);
-    .contentUser {
+    min-height: calc(100vh - 164px);
+    .user-content {
       height: 100%;
-      width: calc(100vw -5.9rem);
+      width: 85vw;
       padding-left: 2vw;
-      flex-direction: column;
+      flex-direction: column-reverse;
       margin-bottom: 2rem;
 
       #alerts,
@@ -130,8 +134,8 @@
 }
 
 @media screen and (max-width: 550px) {
-  .userSection .contentUser #alerts,
-  .userSection .contentUser .existed-box {
+  .userSection .user-content #alerts,
+  .userSection .user-content .existed-box {
     padding: 2rem 1rem 2rem 2rem;
 
     h2 {

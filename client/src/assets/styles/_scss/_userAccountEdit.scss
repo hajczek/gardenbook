@@ -44,7 +44,7 @@
 }
 
 @media screen and (max-width: 1600px) {
-  .user-data-box {
+  .user-right-box {
     form {
       label {
         span {
@@ -60,10 +60,17 @@
 }
 
 @media screen and (max-width: 500px) {
-  .user-data-box {
+  .user-right-box {
+    line-height: 1;
+    h2 {
+      margin-bottom: 0.5rem;
+    }
     form {
+      margin-top: 0.5rem;
       label {
         flex-direction: column;
+        font-weight: bold;
+        font-size: 1.2rem;
 
         span {
           display: flex;
@@ -75,6 +82,15 @@
         input {
           width: 100%;
         }
+      }
+
+      label[for="work-planner"],
+      label[for="garden-plan"],
+      label[for="garden-statistic"],
+      label[for="garden-history"],
+      label[for="search-workers"] {
+        width: 90%;
+        flex-direction: row;
       }
     }
   }

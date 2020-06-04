@@ -186,3 +186,22 @@
     width: auto;
   }
 }
+
+@media screen and (max-width: 950px) {
+  #add-post {
+    label {
+      font-size: 1.2rem;
+    }
+  }
+
+  .post-container {
+    .post-container-top {
+      .post-comments-box {
+        span,
+        a {
+          margin-left: 0.1rem;
+        }
+      }
+    }
+  }
+}

@@ -18,9 +18,15 @@
 }
 
 @media screen and (max-width: 950px) {
-  .searchForWorks #date-from,
-  .searchForWorks #date-to {
-    width: 8.5rem;
+  .searchForWorks {
+    display: flex;
+    flex-direction: column;
+
+    #date-from,
+    #date-to {
+      width: 100%;
+      margin: 0.5rem 0;
+    }
   }
 
   .inputSearch {

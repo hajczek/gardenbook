@@ -52,20 +52,28 @@
 }
 
 @media screen and (max-width: 950px) {
-  .user-right-box {
+  .user-left-box {
     width: 100%;
     padding-bottom: 10rem;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .user-right-box {
+  .user-left-box {
     padding: 1.5rem;
     font-size: 1.2rem;
     line-height: 1.2;
 
+    #search-form {
+      button {
+        width: 2rem;
+        height: 1.8rem;
+        border: 0;
+      }
+    }
+
     h2 {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
     }
 
     .text-info {
@@ -77,13 +85,13 @@
       line-height: 1.7;
     }
 
-    button {
-      width: 12rem;
-      padding: 1rem 0.5rem;
-      font-size: 1rem;
-      position: relative;
-      bottom: -0.5rem;
-      margin: 2rem 0;
-    }
+    // button {
+    //   width: 12rem;
+    //   padding: 0.5rem;
+    //   font-size: 1rem;
+    //   position: relative;
+    //   bottom: -0.5rem;
+    //   margin: 2rem 0;
+    // }
   }
 }
