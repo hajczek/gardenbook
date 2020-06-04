@@ -35,7 +35,7 @@ header {
       background-color: $luminescence-green;
       color: $green;
       font-weight: bold;
-      padding: 1px 6px;
+      padding: 1px 8px;
       border-radius: 50%;
       opacity: 1;
     }
@@ -64,9 +64,13 @@ header {
 }
 
 @media screen and (max-width: 550px) {
-  header nav a {
-    margin-left: 1.5rem;
-    opacity: 0.7;
+  header {
+    padding: 1rem;
+
+    nav a {
+      margin-left: 1.5rem;
+      opacity: 0.7;
+    }
   }
 }
 
