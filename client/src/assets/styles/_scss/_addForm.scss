@@ -27,7 +27,7 @@
       flex-wrap: wrap;
       flex-direction: row;
       font-size: 1.2rem;
-      width: 100%;      
+      width: 100%;
       margin-top: 1rem;
 
       label {
@@ -127,13 +127,20 @@
 
     .contentUserForm {
       width: 100%;
+      padding: 1rem;
+
       #add-plant,
       #add-material,
       #plan-work {
         width: 100%;
         flex-direction: row;
         label {
-          width: 15.5rem;
+          width: 100%;
+          input,
+          select,
+          textarea {
+            width: 100%;
+          }
         }
 
         button {
@@ -147,19 +154,12 @@
 @media screen and (max-width: 650px) {
   .contentUserFormBox .contentUserForm {
     width: 100%;
+
     #add-plant,
     #add-material,
     #plan-work {
-      label {
-        width: 90%;
-
-        select {
-          width: 90%;
-        }
-      }
-
       button {
-        width: 81%;
+        width: 100%;
         margin-top: 1rem;
         margin-bottom: 2rem;
       }

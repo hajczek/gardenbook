@@ -193,16 +193,6 @@
     }
   }
 
-  .content .existed-plant-table {
-    tr {
-      th:nth-child(9) {
-        display: none;
-      }
-      td:nth-child(10) {
-        display: none;
-      }
-    }
-  }
   .content table {
     overflow-x: scroll;
     width: auto !important;
