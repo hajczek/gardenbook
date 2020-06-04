@@ -23,7 +23,6 @@ if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
 
-// app.get("/", (req, res) => res.send("Hello"));
 app.use("/alerts", alerts);
 app.use("/users", users);
 app.use("/works", works);

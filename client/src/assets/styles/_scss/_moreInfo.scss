@@ -65,8 +65,18 @@
   }
 }
 
-@media screen and (max-width: 924px) {
+@media screen and (max-width: 1000px) {
   .more-info {
+    justify-content: space-around;
+    margin: 3rem auto;
+
+    a {
+      font-size: 1.3rem;
+      width: 8rem;
+      padding: 1rem;
+      line-height: 1.1;
+    }
+
     .title {
       padding: 15px;
     }
