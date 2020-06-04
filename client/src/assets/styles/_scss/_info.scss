@@ -1,5 +1,4 @@
-.right-box,
-.info {
+.right-box {
   padding: 2rem 3rem 3rem 2rem;
   background-color: $white-opacity-08;
   display: flex;
@@ -55,8 +54,7 @@
 }
 
 @media screen and (max-width: 1250px) {
-  .right-box,
-  .info {
+  .right-box {
     width: 80vw;
     margin: 3.7rem auto;
 
@@ -71,17 +69,13 @@
     margin: 2.5rem auto 1rem;
     padding: 2rem 3rem 2rem 2rem;
 
-    .info {
-      // height: auto;
-
-      .title {
-        #logo {
-          width: 3.1rem;
-          height: 3.2rem;
-        }
-        h1 {
-          font-size: 1.5rem;
-        }
+    .title {
+      #logo {
+        width: 3.1rem;
+        height: 3.2rem;
+      }
+      h1 {
+        font-size: 1.5rem;
       }
     }
 

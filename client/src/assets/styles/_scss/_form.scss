@@ -1,4 +1,4 @@
-.info form {
+.right-box form {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -50,7 +50,7 @@
 }
 
 @media screen and (max-width: 550px) {
-  .info form {
+  .right-box form {
     margin: 0;
 
     label {

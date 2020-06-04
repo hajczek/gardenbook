@@ -5,6 +5,15 @@ import Navigation from "./Navigation";
 
 const Footer = () => {
   const { users } = useContext(GlobalContext);
+
+  let loggedUser = 0;
+
+  for (let i = 0; i < users.length; i++) {
+    if (users[i].userLogged === true) {
+      loggedUser += 1;
+    }
+  }
+
   return (
     <footer key="footer">
       <p key="footerText">
@@ -16,9 +25,7 @@ const Footer = () => {
           Regulamin
         </NavLink>
       </p>
-      {users.map((data) =>
-        data.userLogged === false ? <Navigation key="navigacja-footer" /> : null
-      )}
+      {loggedUser === 0 ? <Navigation key="navigacja-footer" /> : <span></span>}
     </footer>
   );
 };
