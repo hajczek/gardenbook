@@ -21,7 +21,7 @@ const ExistedPlantsBox = () => {
         {plants
           .filter((plant) => plant.userId === userId)
           .map((plant) => (
-            <li key={plant.id}>
+            <li key={plant._id}>
               <NavLink
                 to="/zarzadzaj-roslinami"
                 title="Zarządzaj roslinami"
