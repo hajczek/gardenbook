@@ -2,10 +2,13 @@ import React, { useContext, Fragment } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import { maxDateFormatted } from "./AlertsFunction";
 import addedDateFunction from "../../common/AddedDateFunction";
-import { userId } from "../../common/GetUserLoggedId";
 
 export const CountAlerts = () => {
-  const { works } = useContext(GlobalContext);
+  const { works, users } = useContext(GlobalContext);
+
+  let userId = users
+    .filter((user) => user.userLogged === true)
+    .map((user) => user._id)[0];
 
   // Filter dates which needs alert
   let alertDates = works.filter(

@@ -1,6 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
 import { GlobalContext } from "../../context/GlobalState";
-import { userId } from "../../common/GetUserLoggedId";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 import EditedPlant from "./EditedPlant";
@@ -8,7 +7,7 @@ import ExistedPlantsListHead from "./ExistedPlantsListHead";
 import ExistedPlantsSummary from "./ExistedPlantsSummary";
 
 const ExistedPlantsList = (props) => {
-  const { plants, getPlants } = useContext(GlobalContext);
+  const { plants, getPlants, users } = useContext(GlobalContext);
   const { deletePlant } = useContext(GlobalContext);
   const [search, setSearch] = useState("");
   const [filteredPlants, setFilteredPlants] = useState([]);
@@ -27,6 +26,10 @@ const ExistedPlantsList = (props) => {
       )
     );
   }, [search, plants]);
+
+  let userId = users
+    .filter((user) => user.userLogged === true)
+    .map((user) => user._id)[0];
 
   return editPlant === false ? (
     <>

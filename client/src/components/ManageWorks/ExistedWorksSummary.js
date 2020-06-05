@@ -1,9 +1,12 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
-import { userId } from "../../common/GetUserLoggedId";
 
 const ExistedWorksSummary = () => {
-  const { works } = useContext(GlobalContext);
+  const { works, users } = useContext(GlobalContext);
+
+  let userId = users
+    .filter((user) => user.userLogged === true)
+    .map((user) => user._id)[0];
 
   /**
    * Returns number of done work

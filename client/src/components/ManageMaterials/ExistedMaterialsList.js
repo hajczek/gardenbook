@@ -1,6 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
 import { GlobalContext } from "../../context/GlobalState";
-import { userId } from "../../common/GetUserLoggedId";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 import ExistedMaterialsListHead from "./ExistedMaterialsListHead";
@@ -8,17 +7,17 @@ import EditedMaterial from "./EditedMaterial";
 import ExistedMaterialsSummary from "./ExistedMaterialsSummary";
 
 const ExistedMaterialsList = (props) => {
-  const { materials, getMaterials } = useContext(GlobalContext);
+  const { materials, getMaterials, users } = useContext(GlobalContext);
   const { deleteMaterial } = useContext(GlobalContext);
   const [search, setSearch] = useState("");
   const [filteredMaterials, setFilteredMaterials] = useState([]);
   const [editMaterial, setEditMaterial] = useState(false);
   const [materialId, setMaterialId] = useState();
 
-  // useEffect(() => {
-  //   getMaterials();
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, []);
+  useEffect(() => {
+    getMaterials();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     setFilteredMaterials(
@@ -27,6 +26,10 @@ const ExistedMaterialsList = (props) => {
       )
     );
   }, [search, materials]);
+
+  let userId = users
+    .filter((user) => user.userLogged === true)
+    .map((user) => user._id)[0];
 
   return editMaterial === false ? (
     <>

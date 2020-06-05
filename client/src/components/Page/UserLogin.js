@@ -40,6 +40,8 @@ const UserLogin = () => {
           ? editUserDetails(userExist._id, editUser)
           : null
       );
+
+    window.location.href = "/";
   }
 
   return (

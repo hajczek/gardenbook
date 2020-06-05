@@ -1,9 +1,12 @@
 import React, { useContext, useEffect } from "react";
 import { GlobalContext } from "../../context/GlobalState";
-import { userId } from "../../common/GetUserLoggedId";
 
 const ExistedPlantsSummary = () => {
-  const { plants } = useContext(GlobalContext);
+  const { plants, users } = useContext(GlobalContext);
+
+  let userId = users
+    .filter((user) => user.userLogged === true)
+    .map((user) => user._id)[0];
 
   /**
    * Returns number of plants

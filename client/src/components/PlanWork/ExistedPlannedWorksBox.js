@@ -1,16 +1,19 @@
 import React, { useContext, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { GlobalContext } from "../../context/GlobalState";
-import { userId } from "../../common/GetUserLoggedId";
 import addedDateFunction from "../../common/AddedDateFunction";
 
 const ExistedPlannedWorksBox = () => {
-  const { works, getWorks } = useContext(GlobalContext);
+  const { works, getWorks, users } = useContext(GlobalContext);
 
   useEffect(() => {
     getWorks();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  let userId = users
+    .filter((user) => user.userLogged === true)
+    .map((user) => user._id)[0];
 
   return (
     <div className="existed-box">
