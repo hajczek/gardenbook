@@ -22,8 +22,8 @@ const SectionToDisplay = () => {
 
   return (
     <>
-      {/* Display user page if length of logged array is 1 */}
-      {logged.length === 1 ? (
+      {/* Display user page if length of logged array is not equal 0 */}
+      {logged.length > 0 ? (
         <PageUser key="PageUser" />
       ) : (
         <PageCard key="PageCard" />

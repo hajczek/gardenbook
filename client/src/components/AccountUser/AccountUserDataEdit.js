@@ -70,6 +70,8 @@ const AccountUserDataEdit = (props) => {
   };
 
   function onSubmit(e) {
+    e.preventDefault();
+
     const userDataNew = {
       _id: props.userid,
       userName,
@@ -88,7 +90,6 @@ const AccountUserDataEdit = (props) => {
       },
     };
 
-    // users.map((user) => {
     // Check if input field for name is empty
     document.getElementById("user-name").value === "" ||
     document.getElementById("user-email").value === ""
@@ -99,10 +100,8 @@ const AccountUserDataEdit = (props) => {
       ? setErrorInfo(`Ten adres email już istnieje w naszej bazie.`)
       : // If yes, put new plant in database
         saveNewData();
-    // });
-    editUserDetails(props.userid, userDataNew);
 
-    e.preventDefault();
+    editUserDetails(props.userid, userDataNew);
   }
   return (
     <div className="user-right-box">
@@ -139,6 +138,7 @@ const AccountUserDataEdit = (props) => {
             id="user-pass"
             value={userPass}
             onChange={(e) => setUserPass(e.target.value)}
+            autocomplete="on"
           />
         </label>
         <label htmlFor="user-tel">
