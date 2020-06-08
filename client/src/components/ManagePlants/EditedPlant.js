@@ -83,7 +83,7 @@ const EditedPlant = (props) => {
 
     editPlant(props.plantid, editPlantDetails);
 
-    // e.preventDefault();
+    e.preventDefault();
   }
 
   return (

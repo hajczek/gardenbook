@@ -15,7 +15,7 @@ const UserLogin = () => {
   }, []);
 
   function login(e) {
-    // e.preventDefault();
+    e.preventDefault();
 
     const editUser = {
       userLogged: true,
