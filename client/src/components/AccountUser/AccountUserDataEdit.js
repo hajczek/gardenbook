@@ -70,8 +70,6 @@ const AccountUserDataEdit = (props) => {
   };
 
   function onSubmit(e) {
-    e.preventDefault();
-
     const userDataNew = {
       _id: props.userid,
       userName,
@@ -79,7 +77,7 @@ const AccountUserDataEdit = (props) => {
       userPass,
       userTel,
       userPlace,
-      userLogged,
+      userLogged: true,
       accountSets: {
         workPlanner,
         gardenPlan,
@@ -90,7 +88,7 @@ const AccountUserDataEdit = (props) => {
       },
     };
 
-    // Check if input field for name is empty
+    // Check if input fields for name and email are empty
     document.getElementById("user-name").value === "" ||
     document.getElementById("user-email").value === ""
       ? setErrorInfo("Uzupełnij wymagane pola")
@@ -98,11 +96,14 @@ const AccountUserDataEdit = (props) => {
       actualUserEmail !== document.getElementById("user-email").value &&
         document.getElementById("user-email").value === userEmail
       ? setErrorInfo(`Ten adres email już istnieje w naszej bazie.`)
-      : // If yes, put new plant in database
+      : // If yes, put new data in database
         saveNewData();
 
     editUserDetails(props.userid, userDataNew);
+
+    e.preventDefault();
   }
+
   return (
     <div className="user-right-box">
       <h2>Zmień wybrane dane</h2>
