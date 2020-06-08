@@ -51,7 +51,6 @@ const PageCard = () => {
             path="/znajdz-wykonawce"
             component={FindContractor}
           />
-          {/* <Route exact={true} path="/*" component={NotFound} /> */}
         </Switch>
         <Footer />
       </div>
