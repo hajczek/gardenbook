@@ -1,19 +1,19 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import HeaderUser from "./HeaderUser";
-import LeftMenuUser from "./LeftMenuUser";
-import DisplayMenu from "./DisplayMenu";
-import Footer from "../Page/Footer";
-import AlertsCard from "../Alerts/AlertsCard";
-import AccountUserCard from "../AccountUser/AccountUserCard";
-import ManageWorksCard from "../ManageWorks/ManageWorksCard";
-import ManageMaterialsCard from "../ManageMaterials/ManageMaterialsCard";
-import ManagePlantsCard from "../ManagePlants/ManagePlantsCard";
-import AddMaterialCard from "../AddMaterial/AddMaterialCard";
-import AddPlantCard from "../AddPlant/AddPlantCard";
-import PlanWorkCard from "../PlanWork/PlanWorkCard";
-import Help from "./Help";
-import WallUser from "../WallUser/WallUserCard";
+import HeaderUser from "../components/User/HeaderUser";
+import LeftMenuUser from "../components/User/LeftMenuUser";
+import DisplayMenu from "../components/User/DisplayMenu";
+import Footer from "../components/Page/Footer";
+import AlertsCard from "../components/Alerts/AlertsCard";
+import AccountUserCard from "../components/AccountUser/AccountUserCard";
+import ManageWorksCard from "../components/ManageWorks/ManageWorksCard";
+import ManageMaterialsCard from "../components/ManageMaterials/ManageMaterialsCard";
+import ManagePlantsCard from "../components/ManagePlants/ManagePlantsCard";
+import AddMaterialCard from "../components/AddMaterial/AddMaterialCard";
+import AddPlantCard from "../components/AddPlant/AddPlantCard";
+import PlanWorkCard from "../components/PlanWork/PlanWorkCard";
+import Help from "../components/User/Help";
+import WallUser from "../components/WallUser/WallUserCard";
 
 const PageUser = () => {
   return (

@@ -1,18 +1,18 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Header from "./Header";
-import Info from "./Info";
-import Footer from "./Footer";
+import Header from "../components/Page/Header";
+import Info from "../components/Page/Info";
+import Footer from "../components/Page/Footer";
 
-import UserLogin from "./UserLogin";
-import UserRegistration from "./UserRegistration";
-import GardensCommunity from "./MoreInfoComponents/GardensCommunity";
-import KnowledgeExchange from "./MoreInfoComponents/KnowledgeExchange";
-import UsefulTools from "./MoreInfoComponents/UsefulTools";
-import DataMagazine from "./MoreInfoComponents/DataMagazine";
-import GardenPlan from "./MoreInfoComponents/GardenPlan";
-import FindContractor from "./MoreInfoComponents/FindContractor";
-import Regulations from "./Regulations";
+import UserLogin from "../components/Page/UserLogin";
+import UserRegistration from "../components/Page/UserRegistration";
+import GardensCommunity from "../components/Page/MoreInfoComponents/GardensCommunity";
+import KnowledgeExchange from "../components/Page/MoreInfoComponents/KnowledgeExchange";
+import UsefulTools from "../components/Page/MoreInfoComponents/UsefulTools";
+import DataMagazine from "../components/Page/MoreInfoComponents/DataMagazine";
+import GardenPlan from "../components/Page/MoreInfoComponents/GardenPlan";
+import FindContractor from "../components/Page/MoreInfoComponents/FindContractor";
+import Regulations from "../components/Page/Regulations";
 // import NotFound from "./NotFound";
 
 const PageCard = () => {

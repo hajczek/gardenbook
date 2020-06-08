@@ -2,8 +2,6 @@ import React, { useState, useContext, useEffect } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 import MoreInfo from "./MoreInfo";
-import { Redirect } from "react-router";
-import PageUser from "../User/PageUser";
 
 const UserLogin = () => {
   const { users, getUsers, editUserDetails } = useContext(GlobalContext);

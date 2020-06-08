@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { GlobalContext } from "./../context/GlobalState";
-import PageCard from "../components/Page/PageCard";
-import PageUser from "../components/User/PageUser";
+import PageCard from "../views/PageCard";
+import PageUser from "../views/PageUser";
 
 const SectionToDisplay = () => {
   const { users, getUsers } = useContext(GlobalContext);

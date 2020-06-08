@@ -59,6 +59,7 @@ const AddMaterialForm = () => {
         addedMaterial();
 
     addMaterial(newMaterial);
+
     e.preventDefault();
   }
   return (
