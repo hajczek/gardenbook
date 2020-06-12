@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { GlobalContext } from "./../context/GlobalState";
 import PageCard from "../views/PageCard";
 import PageUser from "../views/PageUser";
+import { Redirect } from "react-router-dom";
 
 const SectionToDisplay = () => {
   const { users, getUsers } = useContext(GlobalContext);
@@ -24,7 +25,10 @@ const SectionToDisplay = () => {
     <>
       {/* Display user page if length of logged array is not equal 0 */}
       {logged.length > 0 ? (
-        <PageUser key="PageUser" />
+        <>
+          <PageUser key="PageUser" />
+          <Redirect push to="/konto" />
+        </>
       ) : (
         <PageCard key="PageCard" />
       )}
