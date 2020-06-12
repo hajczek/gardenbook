@@ -31,6 +31,10 @@ header {
     line-height: 2.5rem;
     font-size: 1.2rem;
 
+    span {
+      margin-left: 0.6rem;
+    }
+
     .greenAlert {
       background-color: $luminescence-green;
       color: $green;
@@ -75,6 +79,10 @@ header {
     nav a {
       margin-left: 1.5rem;
       opacity: 0.7;
+
+      span {
+        display: none;
+      }
     }
   }
 }

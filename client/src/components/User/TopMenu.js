@@ -39,6 +39,7 @@ const TopMenu = (props) => {
       >
         <CountAlerts />
         <FontAwesomeIcon icon={faBell} />
+        <span>Alerty</span>
       </NavLink>
       {/* <a href="#" title="Zestawienie prac">
           <FontAwesomeIcon icon={faCheck} />
@@ -50,6 +51,7 @@ const TopMenu = (props) => {
         activeClassName="is-active"
       >
         <FontAwesomeIcon icon={faDesktop} />
+        <span>Tablica</span>
       </NavLink>
       <NavLink
         to="/konto"
@@ -58,6 +60,7 @@ const TopMenu = (props) => {
         activeClassName="is-active"
       >
         <FontAwesomeIcon icon={faUser} />
+        <span>Konto</span>
       </NavLink>
       <NavLink
         to="/pomoc"
@@ -66,12 +69,14 @@ const TopMenu = (props) => {
         activeClassName="is-active"
       >
         <FontAwesomeIcon icon={faQuestion} />
+        <span> Pomoc</span>
       </NavLink>
       {/* <a href="#" title="Historia">
           <FontAwesomeIcon icon={faHistory} />
         </a> */}
       <NavLink to="/" title="Wyloguj" exact={true} onClick={logout}>
         <FontAwesomeIcon icon={faSignOutAlt} />
+        <span>Wyloguj</span>
       </NavLink>
     </nav>
   );
