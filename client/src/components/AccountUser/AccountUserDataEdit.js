@@ -67,6 +67,7 @@ const AccountUserDataEdit = (props) => {
     // Clear info about error
     setErrorInfo("");
     document.getElementById("user-data-edit").style.display = "none";
+    window.location.reload();
   };
 
   function onSubmit(e) {
