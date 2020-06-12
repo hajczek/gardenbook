@@ -19,17 +19,14 @@ const UserRegistration = () => {
   }, []);
 
   const registrationDone = () => {
+    // Hide form
+    document.getElementById("form").style.display = "none";
     // Clear error info
     setErrorInfo("");
     // Display info for user about registration
     setUserInfo(
       "Zostałeś zarejestrowany. Zaloguj się na swoje konto użytkownika."
     );
-    // Clear form fields
-    setUserName("");
-    setUserEmail("");
-    setUserPass("");
-    setUserPassAgain("");
   };
 
   function onSubmit(e) {
@@ -62,9 +59,8 @@ const UserRegistration = () => {
       : // Check if passwords are different
       userPass !== userPassAgain
       ? setErrorInfo("Hasła są różne.")
-      : // TODO - set new data to database
+      : // Set new data to database
         registrationDone();
-    // setUserInfo('Zostałeś zarejestrowany. Zaloguj się na swoje konto użytkownika.');
 
     addUser(newUser);
   }
@@ -75,7 +71,7 @@ const UserRegistration = () => {
         <h1>Panel rejestracji</h1>
         <DisplayErrorInfo info={errorInfo} />
         <DisplayInfo info={userInfo} />
-        <form action="" onSubmit={onSubmit}>
+        <form action="" onSubmit={onSubmit} id="form">
           <label htmlFor="user-name">
             <span>Imię</span>
             <input
