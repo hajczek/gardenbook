@@ -1,19 +1,28 @@
 import React, { useState, useContext, useEffect } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import DisplayErrorInfo from "../../common/DisplayErrorInfo";
+import DisplayInfo from "../../common/DisplayInfo";
 import MoreInfo from "./MoreInfo";
-// import { Router } from "react-router";
+import { Link } from "react-router-dom";
 
 const UserLogin = () => {
   const { users, getUsers, editUserDetails } = useContext(GlobalContext);
   const [userEmailLogin, setUserEmailLogin] = useState("");
   const [userPassLogin, setUserPassLogin] = useState("");
   const [errorInfo, setErrorInfo] = useState("");
+  const [loginInfo, setLoginInfo] = useState("");
 
   useEffect(() => {
     getUsers();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  function displayAfterLogin() {
+    document.getElementById("user-email-form").style.display = "none";
+    document.querySelector("h1").innerHTML = "WITAJ";
+    setLoginInfo("Zostałeś zalogowany :)");
+    window.location.reload();
+  }
 
   function login(e) {
     e.preventDefault();
@@ -38,7 +47,7 @@ const UserLogin = () => {
           ? setErrorInfo("Podane dane są nieprawidłowe.")
           : userExist.userPass ===
             document.getElementById("user-pass-login").value
-          ? editUserDetails(userExist._id, editUser)
+          ? editUserDetails(userExist._id, editUser) && displayAfterLogin()
           : null
       );
   }
@@ -48,6 +57,7 @@ const UserLogin = () => {
       <div className="right-box">
         <h1>Panel logowania</h1>
         <DisplayErrorInfo info={errorInfo} />
+        <DisplayInfo info={loginInfo} />
         <form onSubmit={login} id="user-email-form">
           <label htmlFor="user-email-login">
             <span>Email</span>
