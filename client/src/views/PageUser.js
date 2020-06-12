@@ -24,7 +24,7 @@ const PageUser = () => {
           <DisplayMenu />
           <LeftMenuUser />
           <Switch>
-            <Route exact={true} path="/" component={AlertsCard} />
+            <Route exact={true} path="/alerty" component={AlertsCard} />
             <Route exact={true} path="/konto" component={AccountUserCard} />
             <Route
               exact={true}

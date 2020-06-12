@@ -31,7 +31,12 @@ const TopMenu = (props) => {
 
   return (
     <nav>
-      <NavLink to="/" title="Alerty" exact={true} activeClassName="is-active">
+      <NavLink
+        to="/alerty"
+        title="Alerty"
+        exact={true}
+        activeClassName="is-active"
+      >
         <CountAlerts />
         <FontAwesomeIcon icon={faBell} />
       </NavLink>
