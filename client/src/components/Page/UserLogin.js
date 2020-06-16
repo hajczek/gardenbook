@@ -3,8 +3,11 @@ import { GlobalContext } from "../../context/GlobalState";
 import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 import DisplayInfo from "../../common/DisplayInfo";
 import MoreInfo from "./MoreInfo";
+import { useHistory } from "react-router-dom";
 
 const UserLogin = () => {
+  let history = useHistory();
+
   const { users, getUsers, editUserDetails } = useContext(GlobalContext);
   const [userEmailLogin, setUserEmailLogin] = useState("");
   const [userPassLogin, setUserPassLogin] = useState("");
@@ -20,6 +23,7 @@ const UserLogin = () => {
     document.getElementById("user-email-form").style.display = "none";
     document.querySelector("h1").innerHTML = "WITAJ";
     setLoginInfo("Zostałeś zalogowany :)");
+    history.push("/alerty");
     window.location.reload();
   }
 
