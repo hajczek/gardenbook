@@ -76,7 +76,6 @@ const PageUser = () => {
             <Route exact={true} path="/wall" component={WallUser} />
           </Switch>
         </section>
-        )
         <Footer />
       </div>
     </BrowserRouter>
