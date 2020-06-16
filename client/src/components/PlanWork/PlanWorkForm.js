@@ -99,7 +99,8 @@ export const PlanWorkForm = () => {
               .filter((material) => material.userId === userId)
               .map((material, index) => (
                 <option key={index} value={material.materialName}>
-                  {material.materialName}
+                  {material.materialName}, dostępna ilość:{" "}
+                  {material.materialQuant} {material.materialUnit}
                 </option>
               ))}
           </select>
