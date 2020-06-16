@@ -1,12 +1,9 @@
 .contentPage,
 .userPage {
-  // background: $green url("../../img/gardenbook-bg.jpg") no-repeat center center fixed;
-
   background-image: url("../../img/gardenbook-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-
   background-size: cover;
   height: 100vh;
   overflow: hidden;
