@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { GlobalContext } from "../context/GlobalState";
 import HeaderUser from "../components/User/HeaderUser";
 import LeftMenuUser from "../components/User/LeftMenuUser";
 import DisplayMenu from "../components/User/DisplayMenu";
@@ -16,9 +17,24 @@ import Help from "../components/User/Help";
 import WallUser from "../components/WallUser/WallUserCard";
 
 const PageUser = () => {
+  const { users, getUsers } = useContext(GlobalContext);
+
+  useEffect(() => {
+    getUsers();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  let userImageBg = users
+    .filter((user) => user.userLogged)
+    .map((user) => user.userBackgroundImage);
+
+  const divStyle = {
+    backgroundImage: "url(" + userImageBg + ")",
+  };
+
   return (
     <BrowserRouter>
-      <div className="userPage">
+      <div className="userPage" style={divStyle}>
         <HeaderUser />
         <section className="userSection">
           <DisplayMenu />
@@ -60,6 +76,7 @@ const PageUser = () => {
             <Route exact={true} path="/wall" component={WallUser} />
           </Switch>
         </section>
+        )
         <Footer />
       </div>
     </BrowserRouter>

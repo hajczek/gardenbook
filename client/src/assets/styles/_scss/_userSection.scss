@@ -1,8 +1,12 @@
 .userSection {
   display: flex;
-  background: $green url("../../img/gardenbook-bg.jpg") no-repeat center center
-    fixed;
-  background-size: cover;
+  // background-color: $green;
+  // // background-image: url("../../img/gardenbook-bg.jpg");
+  // background-image: url("");
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-attachment: fixed;
+  // background-size: cover;
 
   .user-content {
     display: flex;

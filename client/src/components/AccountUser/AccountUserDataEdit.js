@@ -18,6 +18,7 @@ const AccountUserDataEdit = (props) => {
   let actualUserPass;
   let actualUserTel;
   let actualUserPlace;
+  let actualUserBackgroundImage;
   // Handle for sets of user functionality
   let actualUserLogged;
   let actualWorkPlanner;
@@ -36,6 +37,7 @@ const AccountUserDataEdit = (props) => {
         actualUserPass = data.userPass;
         actualUserTel = data.userTel;
         actualUserPlace = data.userPlace;
+        actualUserBackgroundImage = data.userBackgroundImage;
         actualUserLogged = data.userLogged;
         actualWorkPlanner = data.accountSets.workPlanner;
         actualGardenPlan = data.accountSets.gardenPlan;
@@ -51,6 +53,9 @@ const AccountUserDataEdit = (props) => {
   const [userPass, setUserPass] = useState(actualUserPass);
   const [userTel, setUserTel] = useState(actualUserTel);
   const [userPlace, setUserPlace] = useState(actualUserPlace);
+  const [userBackgroundImage, setUserBackgroundImage] = useState(
+    actualUserBackgroundImage
+  );
   const [userLogged] = useState(actualUserLogged);
   const [workPlanner, setWorkPlanner] = useState(actualWorkPlanner);
   const [gardenPlan, setGardenPlan] = useState(actualGardenPlan);
@@ -78,6 +83,7 @@ const AccountUserDataEdit = (props) => {
       userPass,
       userTel,
       userPlace,
+      userBackgroundImage,
       userLogged: true,
       accountSets: {
         workPlanner,
@@ -159,6 +165,15 @@ const AccountUserDataEdit = (props) => {
             name="user-place"
             value={userPlace}
             onChange={(e) => setUserPlace(e.target.value)}
+          />
+        </label>
+        <label htmlFor="user-bg-image">
+          <span>Ścieżka do zdęcia w tle:</span>
+          <input
+            type="text"
+            name="user-bg-image"
+            value={userBackgroundImage}
+            onChange={(e) => setUserBackgroundImage(e.target.value)}
           />
         </label>
         <label htmlFor="work-planner">
