@@ -27,12 +27,14 @@ const PlannedWorkList = (props) => {
 
   useEffect(() => {
     setFilteredWorks(
-      works.filter(
-        (plannedWork) =>
-          plannedWork.userId === userId &&
-          new Date(plannedWork.workTerm) >= new Date(searchFrom) &&
-          new Date(plannedWork.workTerm) <= new Date(searchTo)
-      )
+      works
+        .sort((a, b) => new Date(a.workTerm) - new Date(b.workTerm))
+        .filter(
+          (plannedWork) =>
+            plannedWork.userId === userId &&
+            new Date(plannedWork.workTerm) >= new Date(searchFrom) &&
+            new Date(plannedWork.workTerm) <= new Date(searchTo)
+        )
     );
   }, [searchFrom, searchTo, works]);
 
