@@ -56,6 +56,7 @@ exports.addUser = async (req, res, next) => {
       userPass,
       userTel,
       userPlace,
+      userBackgroundImage,
       workPlanner,
       gardenPlan,
       gardenStatistic,

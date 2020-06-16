@@ -31,6 +31,11 @@ const UsersSchema = new mongoose.Schema({
     required: [true],
     default: false,
   },
+  userBackgroundImage: {
+    type: String,
+    required: false,
+    default: "gardenbook-bg.jpg",
+  },
   accountSets: {
     workPlanner: {
       type: Boolean,
