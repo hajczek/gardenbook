@@ -3,7 +3,6 @@ import { GlobalContext } from "../../context/GlobalState";
 import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 import DisplayInfo from "../../common/DisplayInfo";
 import MoreInfo from "./MoreInfo";
-import { Link } from "react-router-dom";
 
 const UserLogin = () => {
   const { users, getUsers, editUserDetails } = useContext(GlobalContext);
