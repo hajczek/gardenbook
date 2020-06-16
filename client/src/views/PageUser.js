@@ -28,13 +28,13 @@ const PageUser = () => {
     .filter((user) => user.userLogged)
     .map((user) => user.userBackgroundImage);
 
-  const divStyle = {
+  const userPageStyle = {
     backgroundImage: "url(" + userImageBg + ")",
   };
 
   return (
     <BrowserRouter>
-      <div className="userPage" style={divStyle}>
+      <div className="userPage" style={userPageStyle}>
         <HeaderUser />
         <section className="userSection">
           <DisplayMenu />
