@@ -1,11 +1,11 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
 import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 import DisplayInfo from "../../common/DisplayInfo";
 
 export const PlanWorkForm = () => {
-  const { addWork, users } = useContext(GlobalContext);
+  const { addWork, users, materials, getMaterials } = useContext(GlobalContext);
 
   const [workName, setWorkName] = useState("");
   const [workTerm, setWorkTerm] = useState("");
@@ -20,6 +20,11 @@ export const PlanWorkForm = () => {
   const [workValue] = useState(0);
   const [errorInfo, setErrorInfo] = useState("");
   const [userInfo, setUserInfo] = useState("");
+
+  useEffect(() => {
+    getMaterials();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const addedWork = () => {
     // Display info for user about added plant to list
@@ -89,9 +94,14 @@ export const PlanWorkForm = () => {
             onChange={(e) => setWorkMatName(e.target.value)}
           >
             <option value="wybierz">Wybierz materiał</option>
-            <option value="azofoska">Azofoska</option>
-            <option value="kora">Kora</option>
-            <option value="nawoz-do-trawnika">Nawóz do trawnika</option>
+
+            {materials
+              .filter((material) => material.userId === userId)
+              .map((material, index) => (
+                <option key={index} value={material.materialName}>
+                  {material.materialName}
+                </option>
+              ))}
           </select>
         </label>
         <label htmlFor="work-term">
@@ -145,7 +155,7 @@ export const PlanWorkForm = () => {
           <span>Uwagi</span>
           <textarea
             rows="4"
-            cols="91"
+            cols="58"
             id="work-details"
             name="work-details"
             value={workDetails}
