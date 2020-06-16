@@ -58,6 +58,7 @@ const EditedWork = (props) => {
     // Clear info about error
     setErrorInfo("");
     document.querySelector(".edit-form").style.display = "none";
+    window.location.reload();
   };
 
   function onSubmit(e) {
