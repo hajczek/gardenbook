@@ -28,7 +28,7 @@ const EditedPlant = (props) => {
         actualPlantPhoto = plant.plantPhoto;
         actualPlantQuant = plant.plantQuant;
         actualPlantPrice = plant.plantPrice;
-        actualPlantFetilizer = plant.lantFetilizer;
+        actualPlantFetilizer = plant.plantFetilizer;
         actualPlantFetilizerDose = plant.plantFetilizerDose;
         actualPlantFetilizerFreq = plant.plantFetilizerFreq;
         actualPlantWateringFreq = plant.plantWateringFreq;

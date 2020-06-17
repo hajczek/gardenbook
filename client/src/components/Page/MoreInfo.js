@@ -11,9 +11,6 @@ const MoreInfo = () => {
       >
         Społeczność ogrodników
       </NavLink>
-      <NavLink to="/historia-zmian" exact={true} activeClassName="is-active">
-        Historia zmian
-      </NavLink>
       <NavLink
         to="/przydatne-narzedzia"
         exact={true}
@@ -29,6 +26,9 @@ const MoreInfo = () => {
       </NavLink>
       <NavLink to="/znajdz-wykonawce" exact={true} activeClassName="is-active">
         Znajdź wykonawcę
+      </NavLink>
+      <NavLink to="/historia-zmian" exact={true} activeClassName="is-active">
+        Historia zmian
       </NavLink>
     </div>
   );

@@ -34,7 +34,7 @@ const ExistedPlantsListHead = () => {
           [ml lub gr]
         </th>
         <th colSpan="2" className="longTd">
-          Częstotość
+          Częstość
           <br /> nawożenia / podlewania
           <br />
           [na rok] / [na tydz.]
