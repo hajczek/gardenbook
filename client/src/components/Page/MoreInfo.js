@@ -18,10 +18,10 @@ const MoreInfo = () => {
       >
         Przydatne narzędzia
       </NavLink>
-      <NavLink to="/magazyn-danych" exact={true} activeClassName="is-active">
-        Magazyn danych
+      <NavLink to="/baza-danych" exact={true} activeClassName="is-active">
+        Baza danych
       </NavLink>
-      <NavLink to="/plan-ogrodu" exact={true} activeClassName="is-active">
+      <NavLink to="/projekt-ogrodu" exact={true} activeClassName="is-active">
         Projekt ogrodu
       </NavLink>
       <NavLink to="/znajdz-wykonawce" exact={true} activeClassName="is-active">

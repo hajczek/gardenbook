@@ -1,7 +1,7 @@
 import React from "react";
 import MoreInfo from "../MoreInfo";
 
-const KnowledgeExchange = () => {
+const ChangeHistory = () => {
   return (
     <>
       <div className="right-box">
@@ -10,9 +10,9 @@ const KnowledgeExchange = () => {
         </div>
         <div className="scrollBox">
           <p>
-            gardenbook umożliwia gromadzenie wprowadzanych w aplikacji zmian.
-            Dzięki temu użytkownik ma wgląd w historię swoich działań. Ta
-            funkcjonalność nie jest jeszcze wdrożona.
+            gardenbook umożliwi gromadzenie wprowadzanych w aplikacji zmian.
+            Dzięki temu użytkownik będzie miał wgląd w historię swoich działań.
+            Ta funkcjonalność nie jest jeszcze wdrożona.
           </p>
           <p className="slogan-green">
             <span>Założ konto!</span>
@@ -26,4 +26,4 @@ const KnowledgeExchange = () => {
   );
 };
 
-export default KnowledgeExchange;
+export default ChangeHistory;

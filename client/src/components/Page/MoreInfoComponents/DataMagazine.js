@@ -12,7 +12,7 @@ const DataMagazine = () => {
           <p>
             gardenbook oferuje swoim użytkownikom gromadzenie danych dotyczących
             ilości roślin i materiałów znajdujących się na stanie ogrodu.
-            Umożliwia to łatwe zardządzanie posiadanymi zasobami.
+            Umożliwia to łatwe zarzdządzanie posiadanymi zasobami.
           </p>
           <p className="slogan-green">
             <span>Założ konto!</span>

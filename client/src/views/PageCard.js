@@ -44,8 +44,8 @@ const PageCard = () => {
             path="/przydatne-narzedzia"
             component={UsefulTools}
           />
-          <Route exact={true} path="/magazyn-danych" component={DataMagazine} />
-          <Route exact={true} path="/plan-ogrodu" component={GardenPlan} />
+          <Route exact={true} path="/baza-danych" component={DataMagazine} />
+          <Route exact={true} path="/projekt-ogrodu" component={GardenPlan} />
           <Route
             exact={true}
             path="/znajdz-wykonawce"
