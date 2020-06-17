@@ -62,6 +62,8 @@ const UserRegistration = () => {
       : // Set new data to database
         registrationDone();
 
+    console.log(typeof userPass, userPass);
+
     addUser(newUser);
   }
 
@@ -95,7 +97,7 @@ const UserRegistration = () => {
           <label htmlFor="user-pass">
             <span>Hasło*</span>
             <input
-              type="text"
+              type="password"
               name="user-pass"
               value={userPass}
               id="user-pass"
@@ -105,7 +107,7 @@ const UserRegistration = () => {
           <label htmlFor="user-pass-again">
             <span>Powtórz hasło*</span>
             <input
-              type="text"
+              type="password"
               name="user-pass-again"
               value={userPassAgain}
               id="user-pass-again"
