@@ -15,7 +15,9 @@ const FindContractor = () => {
             lokalizacji. Ta funkcjonalność nie jest jeszcze wdrożona.
           </p>
           <p className="slogan-green">
-            Założ konto! Korzystaj z zasobów i narzędzi gardenbook'a.
+            <span>Założ konto!</span>
+            <br />
+            Korzystaj z zasobów i narzędzi gardenbook'a.
           </p>
         </div>
       </div>

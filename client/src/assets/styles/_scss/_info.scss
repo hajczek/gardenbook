@@ -49,7 +49,14 @@
   }
 
   .slogan-green {
-    color: $light-green;
+    color: $lighter-green;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+
+    span {
+      font-size: 1.7rem;
+    }
   }
 }
 
