@@ -30,7 +30,8 @@ const AccountUserDataBox = (props) => {
           <br /> */}
               <span key={data.userTel}>Telefon:</span> {data.userTel}
               <br />
-              <span key={data.userPlace}>Lokalizacja:</span> {data.userPlace}
+              <span key={data.userPlace}>Lokalizacja ogrodu:</span>{" "}
+              {data.userPlace}
               <br />
               <span key="bg">Zdjęcie tła:</span>{" "}
               {data.userBackgroundImage.slice(0, 30)} ...
