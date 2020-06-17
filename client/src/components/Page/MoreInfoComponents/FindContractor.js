@@ -10,10 +10,9 @@ const FindContractor = () => {
         </div>
         <div className="scrollBox">
           <p>
-            Dzięki tej funkcjonalności użytkownicy gardenbook'a będą mogli w
-            łatwy sposób wyszukać w pobliżu swojej lokalizacji wykonawców
-            interesujących ich prac ogrodniczych. Ta funkcjonalność nie jest
-            jeszcze wdrożona.
+            Funkcjonalność ta umożliwi użytkownikom gardenbook'a wyszukiwanie
+            wykonawców interesujących ich prac ogrodniczych w pobliżu ich
+            lokalizacji. Ta funkcjonalność nie jest jeszcze wdrożona.
           </p>
           <p className="slogan-green">
             Założ konto! Korzystaj z zasobów i narzędzi gardenbook'a.

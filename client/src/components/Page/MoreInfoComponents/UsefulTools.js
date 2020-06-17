@@ -10,11 +10,12 @@ const UsefulTools = () => {
         </div>
         <div className="scrollBox">
           <p>
-            gardenbook oferuje swoim użytkownikom wiele przydatnych narzędzi,
+            gardenbook oferuje swoim użytkownikom wiele przydatnych narzędzi
             ułatwiających zarządzanie ogrodem i organizację niezbędnych prac.
-            Podstawowe narzędzia to: planer prac, baza roślin i materiałów oraz
-            statystyki. Planowane jest wdrożenie kolejnych: historia, plan
-            ogrodu oraz wyszukiwarka wykonawców prac ogrodniczych w pobliżu.
+            Należą do nich: planer prac, baza roślin i materiałów oraz
+            statystyki. Planowane jest wdrożenie kolejnych: historia zmian, plan
+            ogrodu oraz wyszukiwarka wykonawców prac ogrodniczych świadczących
+            usługi w pobliżu lokalizacji użytkownika.
           </p>
           <p className="slogan-green">
             Założ konto! Korzystaj z zasobów i narzędzi gardenbook'a.

@@ -1,18 +1,18 @@
 import React from "react";
-import MoreInfo from "./../MoreInfo";
+import MoreInfo from "../MoreInfo";
 
-const DataMagazine = () => {
+const KnowledgeExchange = () => {
   return (
     <>
       <div className="right-box">
         <div className="title">
-          <h1>Baza Danych</h1>
+          <h1>Historia zmian</h1>
         </div>
         <div className="scrollBox">
           <p>
-            gardenbook oferuje swoim użytkownikom gromadzenie danych dotyczących
-            ilości roślin i materiałów znajdujących się na stanie ogrodu.
-            Umożliwia to łatwe zardządzanie posiadanymi zasobami.
+            gardenbook umożliwia gromadzenie wprowadzanych w aplikacji zmian.
+            Dzięki temu użytkownik ma wgląd w historię swoich działań. Ta
+            funkcjonalność nie jest jeszcze wdrożona.
           </p>
           <p className="slogan-green">
             Założ konto! Korzystaj z zasobów i narzędzi gardenbook'a.
@@ -24,4 +24,4 @@ const DataMagazine = () => {
   );
 };
 
-export default DataMagazine;
+export default KnowledgeExchange;

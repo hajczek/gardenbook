@@ -10,11 +10,10 @@ const GardenPlan = () => {
         </div>
         <div className="scrollBox">
           <p>
-            Funkjonalność ułatwijąca użytkownikom aplikacji zaprojektowanie
-            ogrodu i/lub jego poszczególnych części. Mając do dyspozycji proste
-            narzędzia do sporządzania schematycznych projektów, użytkownik
-            będzie mógł zaaranżować w aplikacji kształt swojego ogrodu. Ta
-            funkcjonalość nie jest jeszcze wdrożona.
+            Funkjonalność ułatwiająca użytkownikom aplikacji zaprojektowanie
+            ogrodu lub jego części. gardenbook oferuje proste narzędzia do
+            sporządzania schematycznych projektów. Ta funkcjonalość nie jest
+            jeszcze wdrożona.
           </p>
           <p className="slogan-green">
             Założ konto! Korzystaj z zasobów i narzędzi gardenbook'a.

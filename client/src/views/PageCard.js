@@ -7,7 +7,7 @@ import Footer from "../components/Page/Footer";
 import UserLogin from "../components/Page/UserLogin";
 import UserRegistration from "../components/Page/UserRegistration";
 import GardensCommunity from "../components/Page/MoreInfoComponents/GardensCommunity";
-import KnowledgeExchange from "../components/Page/MoreInfoComponents/KnowledgeExchange";
+import ChangeHistory from "../components/Page/MoreInfoComponents/ChangeHistory";
 import UsefulTools from "../components/Page/MoreInfoComponents/UsefulTools";
 import DataMagazine from "../components/Page/MoreInfoComponents/DataMagazine";
 import GardenPlan from "../components/Page/MoreInfoComponents/GardenPlan";
@@ -36,8 +36,8 @@ const PageCard = () => {
           />
           <Route
             exact={true}
-            path="/wymiana-wiedzy"
-            component={KnowledgeExchange}
+            path="/historia-zmian"
+            component={ChangeHistory}
           />
           <Route
             exact={true}
