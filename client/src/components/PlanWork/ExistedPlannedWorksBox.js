@@ -20,6 +20,7 @@ const ExistedPlannedWorksBox = () => {
       <h2>Zaplanowane</h2>
       <ol>
         {works
+          .sort((a, b) => new Date(a.workTerm) - new Date(b.workTerm))
           .filter(
             (plannedWork) =>
               plannedWork.userId === userId &&
