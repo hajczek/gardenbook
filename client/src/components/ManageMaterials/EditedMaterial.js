@@ -86,7 +86,7 @@ const EditedMaterial = (props) => {
               <tr key={props.materialid}>
                 <td>
                   <input
-                    type="string"
+                    type="text"
                     id="material-name"
                     name="material-name"
                     value={materialName}
@@ -117,13 +117,14 @@ const EditedMaterial = (props) => {
                     type="number"
                     id="material-quant"
                     name="material-quant"
+                    min="0"
                     value={materialQuant}
                     onChange={(e) => setMaterialQuant(e.target.value)}
                   />
                 </td>
                 <td>
                   <input
-                    type="string"
+                    type="text"
                     id="material-unit"
                     name="material-unit"
                     value={materialUnit}
@@ -137,6 +138,7 @@ const EditedMaterial = (props) => {
                     type="number"
                     id="material-price"
                     name="material-price"
+                    min="0"
                     value={materialPrice}
                     onChange={(e) => setMaterialPrice(e.target.value)}
                   />

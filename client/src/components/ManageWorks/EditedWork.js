@@ -104,7 +104,7 @@ const EditedWork = (props) => {
               <tr key={props.workid}>
                 <td>
                   <input
-                    type="string"
+                    type="text"
                     id="work-name"
                     name="work-name"
                     value={workName}
@@ -146,6 +146,7 @@ const EditedWork = (props) => {
                     id="work-time"
                     name="work-time"
                     value={workTime}
+                    min="0"
                     onChange={(e) => setWorkTime(e.target.value)}
                   />
                 </td>
@@ -156,13 +157,14 @@ const EditedWork = (props) => {
                     id="work-value"
                     name="work-value"
                     value={workValue}
+                    min="0"
                     onChange={(e) => setWorkValue(e.target.value)}
                   />
                 </td>
                 <td>
                   <label htmlFor="work-material">Nazwa</label>
                   <input
-                    type="string"
+                    type="text"
                     id="work-material"
                     name="work-material"
                     value={workMatName}
@@ -176,12 +178,13 @@ const EditedWork = (props) => {
                     id="work-mat-quant"
                     name="work-mat-quant"
                     value={workMatQuant}
+                    min="0"
                     onChange={(e) => setWorkMatQuant(e.target.value)}
                   />
                   <label htmlFor="work-mat-unit">Jedn.</label>
                   <input
                     className="inputNum"
-                    type="string"
+                    type="text"
                     id="work-mat-unit"
                     name="work-mat-unit"
                     value={workMatUnit}

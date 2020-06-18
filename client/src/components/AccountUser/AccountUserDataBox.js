@@ -33,7 +33,7 @@ const AccountUserDataBox = (props) => {
               <span key={data.userPlace}>Lokalizacja ogrodu:</span>{" "}
               {data.userPlace}
               <br />
-              <span key="bg">Zdjęcie tła:</span>{" "}
+              <span key="bg">Link do zdjęcia w tle:</span>{" "}
               {data.userBackgroundImage.slice(0, 30)} ...
             </p>
             <h2>Twoje ustawienia aplikacji:</h2>

@@ -100,7 +100,7 @@ const EditedPlant = (props) => {
               <tr key={props.plantid}>
                 <td>
                   <input
-                    type="string"
+                    type="text"
                     id="plant-name"
                     name="plant-name"
                     value={plantName}
@@ -132,6 +132,7 @@ const EditedPlant = (props) => {
                     id="plant-quant"
                     name="plant-quant"
                     value={plantQuant}
+                    min="0"
                     onChange={(e) => setPlantQuant(e.target.value)}
                     size="3"
                   />
@@ -143,12 +144,13 @@ const EditedPlant = (props) => {
                     id="plant-price"
                     name="plant-price"
                     value={plantPrice}
+                    min="0"
                     onChange={(e) => setPlantPrice(e.target.value)}
                   />
                 </td>
                 <td>
                   <input
-                    type="string"
+                    type="text"
                     id="plant-fetilizer"
                     name="plant-fetilizer"
                     value={plantFetilizer}
@@ -163,6 +165,7 @@ const EditedPlant = (props) => {
                     id="plant-fetilizer-dose"
                     name="plant-fetilizer-dose"
                     value={plantFetilizerDose}
+                    min="0"
                     onChange={(e) => setPlantFetilizerDose(e.target.value)}
                   />
                 </td>
@@ -173,6 +176,7 @@ const EditedPlant = (props) => {
                     id="plant-fetilizer-freq"
                     name="plant-fetilizer-freq"
                     value={plantFetilizerFreq}
+                    min="0"
                     onChange={(e) => setPlantFetilizerFreq(e.target.value)}
                   />
                 </td>
@@ -183,6 +187,7 @@ const EditedPlant = (props) => {
                     id="plant-watering-freq"
                     name="plant-watering-freq"
                     value={plantWateringFreq}
+                    min="0"
                     onChange={(e) => setPlantWateringFreq(e.target.value)}
                   />
                 </td>

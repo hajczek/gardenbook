@@ -94,6 +94,7 @@ const AddPlantForm = () => {
             type="number"
             name="plant-quant"
             id="plant-quant"
+            min="0"
             value={plantQuant}
             onChange={(e) => setPlantQuant(e.target.value)}
           />
