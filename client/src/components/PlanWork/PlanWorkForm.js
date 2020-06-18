@@ -140,7 +140,7 @@ export const PlanWorkForm = () => {
           {/* <span id="add-work-term">Dodaj termin do kalendarza &raquo;</span> */}
         </label>
         <label htmlFor="work-mat-unit">
-          <span>Jednostka maateriału</span>
+          <span>Jednostka materiału</span>
           <select
             name="work-mat-unit"
             id="work-mat-unit"
@@ -150,6 +150,7 @@ export const PlanWorkForm = () => {
             <option value="wybierz">Wybierz jednostkę</option>
             <option value="litr">Litr</option>
             <option value="kg">Kg</option>
+            <option value="kg">Szt.</option>
           </select>
         </label>
         <label htmlFor="work-details">

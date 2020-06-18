@@ -89,6 +89,7 @@ const AddMaterialForm = () => {
             <option value="wybierz">Wybierz</option>
             <option value="kg">kg</option>
             <option value="litr">litr</option>
+            <option value="litr">szt.</option>
           </select>
         </label>
         <label htmlFor="material-quant">
