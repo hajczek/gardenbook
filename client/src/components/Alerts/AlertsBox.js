@@ -26,7 +26,7 @@ const AlertsBox = () => {
       </h2>
       <ol id="alerts-list">
         {works
-          .reverse()
+          .sort((a, b) => new Date(a.workTerm) - new Date(b.workTerm))
           .filter(
             (plannedWork) =>
               plannedWork.userId === userId &&
