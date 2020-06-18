@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { GlobalContext } from "../../context/GlobalState";
+import { NavLink } from "react-router-dom";
 import { maxDateFormatted } from "./AlertsFunction";
 import CountAlerts from "./CountAlerts";
 import daysToAlert from "./CountDaysToAlert";
@@ -37,7 +38,10 @@ const AlertsBox = () => {
             return (
               <li key={alert.id}>
                 {alert.workName}:
-                <span
+                <NavLink
+                  to="/zarzadzaj-pracami"
+                  title="Zarządzaj pracami"
+                  exact={true}
                   className={
                     alert.workTerm === addedDateFunction() ? "redAlert" : null
                   }
@@ -52,7 +56,7 @@ const AlertsBox = () => {
                     ? ` dzisiaj o ${alert.workAlert} `
                     : null}
                   &raquo;
-                </span>
+                </NavLink>
               </li>
             );
           })}
