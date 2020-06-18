@@ -40,19 +40,15 @@ const UserLogin = () => {
       : setErrorInfo("");
 
     // Filter user
-    users
-      .filter(
-        (user) =>
-          user.userEmail === document.getElementById("user-email-login").value
-      )
-      .map((userExist) =>
-        userExist.userPass !== document.getElementById("user-pass-login").value
-          ? setErrorInfo("Podane dane są nieprawidłowe.")
-          : userExist.userPass ===
-            document.getElementById("user-pass-login").value
-          ? editUserDetails(userExist._id, editUser) && displayAfterLogin()
-          : null
-      );
+    users.map((userExist) =>
+      userExist.userPass !== document.getElementById("user-pass-login").value ||
+      userExist.userEmail !== document.getElementById("user-email-login").value
+        ? setErrorInfo("Podane dane są nieprawidłowe.")
+        : userExist.userPass ===
+          document.getElementById("user-pass-login").value
+        ? editUserDetails(userExist._id, editUser) && displayAfterLogin()
+        : null
+    );
   }
 
   return (
