@@ -101,7 +101,10 @@ const AccountUserDataEdit = (props) => {
       ? setErrorInfo("Uzupełnij wymagane pola")
       : // Check if email exists in database
       actualUserEmail !== document.getElementById("user-email").value &&
-        document.getElementById("user-email").value === userEmail
+        users.filter(
+          (user) =>
+            user.userEmail === document.getElementById("user-email").value
+        ) === true
       ? setErrorInfo(`Ten adres email już istnieje w naszej bazie.`)
       : // If yes, put new data in database
         saveNewData();
