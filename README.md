@@ -25,6 +25,7 @@ Portal społecznościowy dla osób zajmujących się ogrodnictwem zawodowo i hob
 - alerty,
 - baza roślin występujących w ogrodzie,
 - baza materiałów wykorzystywanych do prac w ogrodzie,
+- filtrowanie danych z bazy,
 - statystyki,
 
 ## Wykorzystane technologie
