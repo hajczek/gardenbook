@@ -7,6 +7,8 @@ import DisplayInfo from "../../common/DisplayInfo";
 const AccountUserDataEdit = (props) => {
   const { users, getUsers, editUserDetails } = useContext(GlobalContext);
 
+  const btoa = (string) => Buffer.from(string).toString("base64");
+
   useEffect(() => {
     getUsers();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -80,7 +82,7 @@ const AccountUserDataEdit = (props) => {
       _id: props.userid,
       userName,
       userEmail,
-      userPass,
+      userPass: btoa(userPass),
       userTel,
       userPlace,
       userBackgroundImage,
