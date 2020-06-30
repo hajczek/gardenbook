@@ -13,6 +13,9 @@ const UserRegistration = () => {
   const [errorInfo, setErrorInfo] = useState("");
   const [userInfo, setUserInfo] = useState("");
 
+  // base64 coded pass
+  const btoa = (string) => Buffer.from(string).toString("base64");
+
   useEffect(() => {
     getUsers();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -35,7 +38,7 @@ const UserRegistration = () => {
     const newUser = {
       userName,
       userEmail,
-      userPass,
+      userPass: btoa(userPass),
       userTel: "",
       userPlace: "",
       isLogged: false,

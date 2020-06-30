@@ -14,6 +14,9 @@ const UserLogin = () => {
   const [errorInfo, setErrorInfo] = useState("");
   const [loginInfo, setLoginInfo] = useState("");
 
+  // base64 encoded pass
+  const atob = (encoded) => Buffer.from(encoded, "base64").toString();
+
   useEffect(() => {
     getUsers();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -41,10 +44,11 @@ const UserLogin = () => {
 
     // Filter user
     users.map((userExist) =>
-      userExist.userPass !== document.getElementById("user-pass-login").value ||
+      atob(userExist.userPass) !==
+        document.getElementById("user-pass-login").value ||
       userExist.userEmail !== document.getElementById("user-email-login").value
         ? setErrorInfo("Podane dane są nieprawidłowe.")
-        : userExist.userPass ===
+        : atob(userExist.userPass) ===
           document.getElementById("user-pass-login").value
         ? editUserDetails(userExist._id, editUser) && displayAfterLogin()
         : null

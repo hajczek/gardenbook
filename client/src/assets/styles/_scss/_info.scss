@@ -10,6 +10,7 @@
   margin-right: 5vw;
   margin-top: 3.7rem;
   width: 40vw;
+  position: relative;
 
   .title {
     display: flex;
@@ -26,7 +27,6 @@
   h1 {
     text-transform: uppercase;
     color: $lighter-green;
-    padding-top: 1rem;
   }
 
   ul {
@@ -50,9 +50,9 @@
 
   .slogan-green {
     color: $lighter-green;
-    position: absolute;
-    bottom: 0;
-    margin: 0;
+    // position: absolute;
+    // bottom: 0;
+    // margin: 0;
 
     span {
       font-size: 1.7rem;
@@ -60,20 +60,29 @@
   }
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1700px) {
   .right-box {
-    width: 80vw;
-    margin: 3.7rem auto;
+    width: 52vw;
+    margin: 3.7rem 5vw 3.7rem 0;
 
     ul {
+      font-size: 1.7rem;
       margin: 1.2rem 0 2rem 8%;
     }
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1600px) {
   .right-box {
-    margin: 2.5rem auto 1rem;
+    width: 50vw;
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .right-box {
+    height: 50vh;
+    width: 50vw;
+    margin: 2.5rem 5vw 1rem 0;
     padding: 2rem 3rem 2rem 2rem;
 
     .title {
@@ -82,8 +91,12 @@
         height: 3.2rem;
       }
       h1 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
       }
+    }
+
+    h1 {
+      font-size: 1.3rem;
     }
 
     ul {
@@ -94,6 +107,15 @@
     p {
       font-size: 1.3rem;
     }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .right-box {
+    height: 60vh;
+    width: 60vw;
+    margin: 1.5rem 5vw 0 0;
+    padding: 2rem 3rem 2rem 2rem;
   }
 }
 
