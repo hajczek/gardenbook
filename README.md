@@ -16,11 +16,11 @@ Portal społecznościowy dla osób zajmujących się ogrodnictwem zawodowo i hob
 - filtrowanie danych z bazy,
 - statystyki,
 - plan ogrodu,
-- wyszukiwrka wykonawców prac ogrodniczych w pobliżu,
-- ustawienie wybranego zdjęcia w tle.
+- wyszukiwrka wykonawców prac ogrodniczych w pobliżu.
 
 2. Nawiązywanie kontaktów z innymi użytkownikami portalu.
 3. Wymiana informacji, wiedzy i doświadczeń pomiędzy użytkownikami.
+4. Personalizacja wyglądu konta: ustawienie wybranego zdjęcia w tle.
 
 ## Wdrożona funkcjonalność
 
