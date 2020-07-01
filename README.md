@@ -6,18 +6,21 @@ Portal społecznościowy dla osób zajmujących się ogrodnictwem zawodowo i hob
 
 ## Docelowa funkcjonalność
 
-1. Nawiązywanie kontaktów z innymi użytkownikami portalu.
-2. Wymiana informacji, wiedzy i doświadczeń pomiędzy użytkownikami.
-3. Dostęp do narzędzi ułatwiających zarządzanie pracami w ogrodzie. Zaprojektowane zostały następujące narzędzia:
+1. Dostęp do narzędzi ułatwiających zarządzanie pracami w ogrodzie. Zaprojektowane zostały następujące narzędzia:
 
 - planner prac,
 - alerty,
 - baza roślin występujących w ogrodzie,
 - baza materiałów wykorzystywanych do prac w ogrodzie,
 - historia zmian,
+- filtrowanie danych z bazy,
 - statystyki,
 - plan ogrodu,
-- wyszukiwrka wykonawców prac ogrodniczych w pobliżu.
+- wyszukiwrka wykonawców prac ogrodniczych w pobliżu,
+- ustawienie wybranego zdjęcia w tle.
+
+2. Nawiązywanie kontaktów z innymi użytkownikami portalu.
+3. Wymiana informacji, wiedzy i doświadczeń pomiędzy użytkownikami.
 
 ## Wdrożona funkcjonalność
 
@@ -27,15 +30,18 @@ Portal społecznościowy dla osób zajmujących się ogrodnictwem zawodowo i hob
 - baza materiałów wykorzystywanych do prac w ogrodzie,
 - filtrowanie danych z bazy,
 - statystyki,
+- ustawienie wybranego zdjęcia w tle.
 
 ## Wykorzystane technologie
+
+Aplikacja została wykonana w oparciu o stos technologiczny MERN, z wykorzystaniem:
 
 - HTML5
 - CSS3 / SASS
 - JavaScript (ES6)
-- React
 - Mongo DB
 - Express
+- React
 - Node.js
 
 ## Planowane technologie do wdrożenia
