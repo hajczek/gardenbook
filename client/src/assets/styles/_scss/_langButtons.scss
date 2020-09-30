@@ -1,0 +1,15 @@
+.langButtons {
+  display: block;
+  width: 100%;
+  position: fixed;
+  text-align: right;
+  padding-top: 10px;
+
+  button {
+    margin-right: 10px;
+    background-color: $lightest-grey;
+    border: none;
+    font-size: 0.7rem;
+    padding: 4px;
+  }
+}

@@ -2,7 +2,7 @@ header {
   width: 100vw;
   background-color: $green;
   // height: 6.4rem;
-  height: 5rem;
+  height: 6rem;
   display: flex;
   justify-content: space-between;
   padding: 0 5vw;
@@ -27,13 +27,18 @@ header {
     top: 0.5rem;
   }
 
-  nav a {
-    color: $white;
-    text-decoration: none;
-    margin-left: 2rem;
-    opacity: 0.7;
-    line-height: 2.5rem;
-    font-size: 1.2rem;
+  nav {
+    position: relative;
+    top: 10px;
+
+    a {
+      color: $white;
+      text-decoration: none;
+      margin-left: 2rem;
+      opacity: 0.7;
+      line-height: 2.5rem;
+      font-size: 1.2rem;
+    }
 
     span {
       margin-left: 0.6rem;

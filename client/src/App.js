@@ -13,8 +13,10 @@ const App = () => {
       <BrowserRouter>
         <GlobalProvider>
           <div className="App">
-            <button onClick={() => setLocale(LOCALES.POLISH)}>PL</button>
-            <button onClick={() => setLocale(LOCALES.ENGLISH)}>EN</button>
+            <div className="langButtons">
+              <button onClick={() => setLocale(LOCALES.POLISH)}>PL</button>
+              <button onClick={() => setLocale(LOCALES.ENGLISH)}>EN</button>
+            </div>
             <SectionToDisplay />
           </div>
         </GlobalProvider>
