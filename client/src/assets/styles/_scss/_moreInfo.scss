@@ -78,16 +78,16 @@
 
 @media screen and (max-width: 1100px) {
   .more-info {
-    justify-content: space-around;
+    justify-content: center;
     margin: 3rem auto;
-    width: 90vw;
+    width: 100vw;
 
     a {
       font-size: 1.2rem;
       width: 8rem;
       padding: 1rem 1rem 1.2rem 1rem;
       line-height: 1.1;
-      margin-bottom: 1rem;
+      margin: 0.5rem;
     }
 
     .title {
