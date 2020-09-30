@@ -1,6 +1,7 @@
-import React from "react";
-import logo from "../../assets/img/lotus.png";
-import MoreInfo from "./MoreInfo";
+import React from 'react';
+import logo from '../../assets/img/lotus.png';
+import MoreInfo from './MoreInfo';
+import translate from '../../i18n/translate';
 
 const Info = () => {
   return (
@@ -8,7 +9,7 @@ const Info = () => {
       <div className="right-box">
         <div className="title">
           <img id="logo" src={logo} alt="gardenbook logo" />
-          <h1>Ogrodniczy serwis społecznościowy</h1>
+          <h1>{translate('portal-title')}</h1>
         </div>
         <ul>
           <li>

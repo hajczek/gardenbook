@@ -1,7 +1,7 @@
-import React from "react";
-import Navigation from "./Navigation";
-import { NavLink } from "react-router-dom";
-import logo from "../../assets/img/gardenbook-logo.png";
+import React from 'react';
+import Navigation from './Navigation';
+import { NavLink } from 'react-router-dom';
+import logo from '../../assets/img/gardenbook-logo.png';
 
 const Header = () => {
   return (
