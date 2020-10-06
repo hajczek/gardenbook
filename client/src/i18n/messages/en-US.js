@@ -55,6 +55,11 @@ export default {
     "email-term": "E-mail",
     "repeat-passwors": "Repeat password",
     "required-fields": "required fields",
+    "after-registration":
+      "You have been registered. Log in to your user account.",
+    "fill-required-fields": "Fill required fields.",
+    "existed-email": "This email already exists in our base.",
+    "different-passwords": "Passwords are different.",
     /***************** ALERTS PAGE *****************/
   },
 };

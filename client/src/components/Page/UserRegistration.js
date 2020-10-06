@@ -28,9 +28,7 @@ const UserRegistration = () => {
     // Clear error info
     setErrorInfo("");
     // Display info for user about registration
-    setUserInfo(
-      "Zostałeś zarejestrowany. Zaloguj się na swoje konto użytkownika."
-    );
+    setUserInfo(translate("after-registration"));
   };
 
   function onSubmit(e) {
@@ -52,17 +50,17 @@ const UserRegistration = () => {
 
     // Check if input fields are empty
     userEmail === "" || userPass === "" || userPassAgain === ""
-      ? setErrorInfo("Uzupełnij wymagane pola.")
+      ? setErrorInfo(translate("fill-required-fields"))
       : // Check if email is on database
       users.some(
           (user) =>
             (user.userEmail === document.getElementById("user-email").value) ===
             true
         )
-      ? setErrorInfo("Ten email już istnieje w naszej bazie.")
+      ? setErrorInfo(translate("existed-email"))
       : // Check if passwords are different
       userPass !== userPassAgain
-      ? setErrorInfo("Hasła są różne.")
+      ? setErrorInfo(translate("different-passwords"))
       : // Set new data to database
         registrationDone();
 
