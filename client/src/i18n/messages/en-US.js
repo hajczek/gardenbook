@@ -7,7 +7,7 @@ export default {
     "register-term": "Registration",
     "login-term": "Login",
     "regulations-term": "Regulations",
-    "copyright-term": "gardenbook © 2020",
+    "copyright-term": " © 2020",
     /***************** MAIN PAGE *****************/
     "portal-title": "gardeners social network",
     "enables-term": "enables",

@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import { NavLink } from "react-router-dom";
 import Navigation from "./Navigation";
+import translate from "../../i18n/translate";
 
 const Footer = () => {
   const { users } = useContext(GlobalContext);
@@ -22,9 +23,9 @@ const Footer = () => {
         <NavLink to="/" exact={true} activeClassName="is-active">
           gardenbook
         </NavLink>{" "}
-        &copy; 2020 |{" "}
+        {translate("copyright-term")} |{" "}
         <NavLink to="/regulamin" exact={true} activeClassName="is-active">
-          Regulamin
+          {translate("regulations-term")}
         </NavLink>
       </p>
       {/* If loggedUser is equal 0 display menu in footer other wise not */}
