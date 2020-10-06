@@ -4,6 +4,7 @@ import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 import DisplayInfo from "../../common/DisplayInfo";
 import MoreInfo from "./MoreInfo";
 import { useHistory } from "react-router-dom";
+import translate from "../../i18n/translate";
 
 const UserLogin = () => {
   let history = useHistory();
@@ -58,12 +59,12 @@ const UserLogin = () => {
   return (
     <>
       <div className="right-box">
-        <h1>Panel logowania</h1>
+        <h1>{translate("login-panel")}</h1>
         <DisplayErrorInfo info={errorInfo} />
         <DisplayInfo info={loginInfo} />
         <form onSubmit={login} id="user-email-form">
           <label htmlFor="user-email-login">
-            <span>Email</span>
+            <span>{translate("email-term")}</span>
             <input
               type="email"
               name="user-email-login"
@@ -73,7 +74,7 @@ const UserLogin = () => {
             />
           </label>
           <label htmlFor="user-pass-login">
-            <span>Hasło</span>
+            <span>{translate("password-term")}</span>
             <input
               type="password"
               name="user-pass-login"
@@ -82,7 +83,7 @@ const UserLogin = () => {
               onChange={(e) => setUserPassLogin(e.target.value)}
             />
           </label>
-          <button id="login-btn">Zaloguj</button>
+          <button id="login-btn">{translate("login-term")}</button>
         </form>
       </div>
       <MoreInfo />
