@@ -1,7 +1,7 @@
-import React from 'react';
-import logo from '../../assets/img/lotus.png';
-import MoreInfo from './MoreInfo';
-import translate from '../../i18n/translate';
+import React from "react";
+import logo from "../../assets/img/lotus.png";
+import MoreInfo from "./MoreInfo";
+import translate from "../../i18n/translate";
 
 const Info = () => {
   return (
@@ -9,26 +9,24 @@ const Info = () => {
       <div className="right-box">
         <div className="title">
           <img id="logo" src={logo} alt="gardenbook logo" />
-          <h1>{translate('portal-title')}</h1>
+          <h1>{translate("portal-title")}</h1>
         </div>
         <ul>
           <li>
-            <span className="important">umożliwia</span> łatwą wymianę wiedzy i
-            doświadczeń
+            <span className="important">{translate("enables-term")}</span>{" "}
+            {translate("enables-text")}
           </li>
           <li>
-            <span className="important">ułatwia</span> nawiązanie kontaktów z
-            innymi ogrodnikami
+            <span className="important">{translate("allows-term")}</span>{" "}
+            {translate("allows-text")}
           </li>
           <li>
-            <span className="important">udostępnia</span> narzędzia przydatne w
-            zarządzaniu ogrodem
+            <span className="important">{translate("provides-term")}</span>{" "}
+            {translate("provides-text")}
           </li>
         </ul>
-        <p>Wszystko w jednym miejscu!</p>
-        <p className="slogan-green">
-          Założ konto! Korzystaj z zasobów i narzędzi gardenbook'a.
-        </p>
+        <p>{translate("all-in-one")}</p>
+        <p className="slogan-green">{translate("create-an-acconut")}</p>
       </div>
       <MoreInfo />
     </>
