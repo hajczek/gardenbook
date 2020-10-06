@@ -4,8 +4,8 @@ export default {
   [LOCALES.POLISH]: {
     /* MENU */
     "home-term": "Home",
-    "register-term": "Rejestracja",
-    "login-term": "Login",
+    "register-term": "Zarejestruj",
+    "login-term": "Zaloguj",
     "regulations-term": "Regulamin",
     "copyright-term": "gardenbook © 2020",
     /***************** MAIN PAGE *****************/
@@ -46,9 +46,9 @@ export default {
     "function-history-text":
       "gardenbook umożliwi gromadzenie wprowadzanych w aplikacji zmian. Dzięki temu użytkownik będzie miał wgląd w historię swoich działań. Ta funkcjonalność nie jest jeszcze wdrożona.",
     /***************** LOGIN PAGE *****************/
-    "login-panel": "",
-    "login-term": "",
-    "password-term": "",
+    "login-panel": "Panel logowania",
+    "login-panel-term": "Zaloguj",
+    "password-term": "Hasło",
     /***************** REGISTRATION PAGE *****************/
     "register-panel": "Panel rejestracji",
     "name-term": "Imię",

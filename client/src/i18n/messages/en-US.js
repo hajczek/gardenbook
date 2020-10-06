@@ -47,7 +47,7 @@ export default {
       "The gardenbook will allow you to collect changes made to the application. Thanks to this, the user will have access to the history of their activities. This functionality is not implemented yet.",
     /***************** LOGIN PAGE *****************/
     "login-panel": "Login Panel",
-    "login-term": "Login",
+    "login-panel-term": "Login",
     "password-term": "Password",
     /***************** REGISTRATION PAGE *****************/
     "register-panel": "Registration Panel",
