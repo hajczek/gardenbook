@@ -25,8 +25,8 @@ const UserLogin = () => {
 
   function displayAfterLogin() {
     document.getElementById("user-email-form").style.display = "none";
-    document.querySelector("h1").innerHTML = "WITAJ";
-    setLoginInfo("Zostałeś zalogowany :)");
+    document.querySelector("h1").innerHTML = translate("welcome-term");
+    setLoginInfo(translate("after-login"));
     history.push("/alerty");
     window.location.reload();
   }
@@ -40,7 +40,7 @@ const UserLogin = () => {
 
     // Check if input fields are empty
     userEmailLogin === "" || userPassLogin === ""
-      ? setErrorInfo("Uzupełnij wymagane pola.")
+      ? setErrorInfo(translate("fill-required-fields"))
       : setErrorInfo("");
 
     // Filter user
@@ -48,7 +48,7 @@ const UserLogin = () => {
       atob(userExist.userPass) !==
         document.getElementById("user-pass-login").value ||
       userExist.userEmail !== document.getElementById("user-email-login").value
-        ? setErrorInfo("Podane dane są nieprawidłowe.")
+        ? setErrorInfo(translate("wrong-data"))
         : atob(userExist.userPass) ===
           document.getElementById("user-pass-login").value
         ? editUserDetails(userExist._id, editUser) && displayAfterLogin()

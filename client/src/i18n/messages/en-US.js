@@ -49,6 +49,9 @@ export default {
     "login-panel": "Login Panel",
     "login-panel-term": "Login",
     "password-term": "Password",
+    "welcome-term": "WELCOME",
+    "after-login": "You have been logged in :)",
+    "wrong-data": "The given data is incorrect.",
     /***************** REGISTRATION PAGE *****************/
     "register-panel": "Registration Panel",
     "name-term": "Name",
