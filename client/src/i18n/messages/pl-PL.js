@@ -53,8 +53,8 @@ export default {
     "register-panel": "Panel rejestracji",
     "name-term": "Imię",
     "email-term": "E-mail",
-    "repeat-passwors": "",
-    "required-fields": "",
+    "repeat-passwors": "Powtórz hasło",
+    "required-fields": "pola wymagane",
     /***************** ALERTS PAGE *****************/
   },
 };

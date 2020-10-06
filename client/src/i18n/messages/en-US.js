@@ -9,7 +9,7 @@ export default {
     "regulations-term": "Regulations",
     "copyright-term": "gardenbook © 2020",
     /***************** MAIN PAGE *****************/
-    "portal-title": "gardeners social service",
+    "portal-title": "gardeners social network",
     "enables-term": "enables",
     "allows-term": "allows",
     "provides-term": "provides",
@@ -21,7 +21,7 @@ export default {
       "Create an account! Use gardenbook resources and tools.",
     "btn-title-first": "Gardeners community",
     "btn-title-second": "Useful tools",
-    "btn-title-third": "Data-storage",
+    "btn-title-third": "Data storage",
     "btn-title-fourth": "Active plan of garden",
     "btn-title-fifth": "Contractors nearby",
     "btn-title-sixth": "History of changes",
