@@ -3,6 +3,7 @@ import { GlobalContext } from "../../context/GlobalState";
 import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 import DisplayInfo from "../../common/DisplayInfo";
 import MoreInfo from "./MoreInfo";
+import translate from "../../i18n/translate";
 
 const UserRegistration = () => {
   const { users, getUsers, addUser } = useContext(GlobalContext);
@@ -73,12 +74,12 @@ const UserRegistration = () => {
   return (
     <>
       <div className="right-box">
-        <h1>Panel rejestracji</h1>
+        <h1>{translate("register-panel")}</h1>
         <DisplayErrorInfo info={errorInfo} />
         <DisplayInfo info={userInfo} />
         <form action="" onSubmit={onSubmit} id="form">
           <label htmlFor="user-name">
-            <span>Imię</span>
+            <span>{translate("name-term")}</span>
             <input
               type="text"
               name="user-name"
@@ -88,7 +89,7 @@ const UserRegistration = () => {
             />
           </label>
           <label htmlFor="user-email">
-            <span>E-mail*</span>
+            <span>{translate("email-term")}*</span>
             <input
               type="text"
               name="user-email"
@@ -98,7 +99,7 @@ const UserRegistration = () => {
             />
           </label>
           <label htmlFor="user-pass">
-            <span>Hasło*</span>
+            <span>{translate("password-term")}*</span>
             <input
               type="password"
               name="user-pass"
@@ -108,7 +109,7 @@ const UserRegistration = () => {
             />
           </label>
           <label htmlFor="user-pass-again">
-            <span>Powtórz hasło*</span>
+            <span>{translate("repeat-passwors")}*</span>
             <input
               type="password"
               name="user-pass-again"
@@ -117,7 +118,7 @@ const UserRegistration = () => {
               onChange={(e) => setUserPassAgain(e.target.value)}
             />
           </label>
-          <button id="register-btn">Zarejestruj</button>
+          <button id="register-btn">{translate("register-term")}</button>
         </form>
       </div>
       <MoreInfo />

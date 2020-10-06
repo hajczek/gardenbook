@@ -4,7 +4,7 @@ export default {
   [LOCALES.ENGLISH]: {
     /* MENU */
     "home-term": "Home",
-    "register-term": "Registration",
+    "register-term": "Register",
     "login-term": "Login",
     "regulations-term": "Regulations",
     "copyright-term": " © 2020",
