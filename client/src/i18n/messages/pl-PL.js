@@ -48,6 +48,7 @@ export default {
     /***************** LOGIN PAGE *****************/
     "login-panel": "Panel logowania",
     "login-panel-term": "Zaloguj",
+    "logout-term": "Wyloguj",
     "password-term": "Hasło",
     "welcome-term": "WITAJ",
     "after-login": "Zostałeś zalogowany :)",
@@ -64,5 +65,9 @@ export default {
     "existed-email": "Ten email już istnieje w naszej bazie.",
     "different-passwords": "Hasła są różne.",
     /***************** ALERTS PAGE *****************/
+    "alerts-term": "Alerty",
+    "table-term": "Tablica",
+    "account-term": "Konto",
+    "help-term": "Pomoc",
   },
 };

@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { GlobalContext } from "../../context/GlobalState";
 import CountAlerts from "../Alerts/CountAlerts";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import translate from "../../i18n/translate";
 import {
   faBell,
   faCheck,
@@ -39,7 +40,7 @@ const TopMenu = (props) => {
       >
         <CountAlerts />
         <FontAwesomeIcon icon={faBell} />
-        <span>Alerty</span>
+        <span>{translate("alerts-term")}</span>
       </NavLink>
       {/* <a href="#" title="Zestawienie prac">
           <FontAwesomeIcon icon={faCheck} />
@@ -51,7 +52,7 @@ const TopMenu = (props) => {
         activeClassName="is-active"
       >
         <FontAwesomeIcon icon={faDesktop} />
-        <span>Tablica</span>
+        <span>{translate("table-term")}</span>
       </NavLink>
       <NavLink
         to="/konto"
@@ -60,7 +61,7 @@ const TopMenu = (props) => {
         activeClassName="is-active"
       >
         <FontAwesomeIcon icon={faUser} />
-        <span>Konto</span>
+        <span>{translate("account-term")}</span>
       </NavLink>
       <NavLink
         to="/pomoc"
@@ -69,14 +70,14 @@ const TopMenu = (props) => {
         activeClassName="is-active"
       >
         <FontAwesomeIcon icon={faQuestion} />
-        <span> Pomoc</span>
+        <span>{translate("help-term")}</span>
       </NavLink>
       {/* <a href="#" title="Historia">
           <FontAwesomeIcon icon={faHistory} />
         </a> */}
       <NavLink to="/" title="Wyloguj" exact={true} onClick={logout}>
         <FontAwesomeIcon icon={faSignOutAlt} />
-        <span>Wyloguj</span>
+        <span>{translate("logout-term")}</span>
       </NavLink>
     </nav>
   );
