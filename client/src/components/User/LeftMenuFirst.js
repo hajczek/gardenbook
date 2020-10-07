@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import translate from "../../i18n/translate";
 import {
   faSpa,
   faPen,
@@ -25,53 +26,51 @@ const LeftMenuFirst = (props) => {
         className="closeMenu"
         icon={faTimes}
         fixedWidth
-        title="Zamknij"
         onClick={closeLeftMenu}
       />
       <NavLink
         to="/zarzadzaj-pracami"
-        title="Zarządzaj pracami"
         exact={true}
         activeClassName="is-active"
         id="works"
         className="menuLeftBtn"
       >
-        <FontAwesomeIcon
-          icon={faCalendarAlt}
-          fixedWidth
-          title="Zarządzaj pracami"
-        />
+        <FontAwesomeIcon icon={faCalendarAlt} fixedWidth />
+        <span>{translate("manage-jobs")}</span>
       </NavLink>
       <NavLink
         to="/zarzadzaj-roslinami"
-        title="Zarządzaj roslinami"
         exact={true}
         activeClassName="is-active"
         id="plants"
         className="menuLeftBtn"
       >
-        <FontAwesomeIcon icon={faSpa} fixedWidth title="Rośliny" />
+        <FontAwesomeIcon icon={faSpa} fixedWidth />
+        <span>{translate("manage-plants")}</span>
       </NavLink>
       <NavLink
         to="/zarzadzaj-materialami"
-        title="Zarządzaj materiałami"
         exact={true}
         activeClassName="is-active"
         id="materials"
         className="menuLeftBtn"
       >
-        <FontAwesomeIcon icon={faPen} fixedWidth title="Materiały" />
+        <FontAwesomeIcon icon={faPen} fixedWidth />
+        <span>{translate("manage-materials")}</span>
       </NavLink>
 
-      {/* <a id="plan" href="#" className="menuLeftBtn notActive">
-          <FontAwesomeIcon icon={faMap} fixedWidth title="Plan ogrodu" />
-        </a>
-        <a id="statistic" href="#" className="menuLeftBtn notActive">
-          <FontAwesomeIcon icon={faChartLine} fixedWidth title="Statystyki" />
-        </a>
-        <a id="search" href="#" className="menuLeftBtn notActive">
-          <FontAwesomeIcon icon={faEye} fixedWidth title="Znajdź wykonawcę" />
-        </a> */}
+      <a id="plan" href="#" className="menuLeftBtn notActive">
+        <FontAwesomeIcon icon={faMap} fixedWidth />
+        <span>{translate("garden-plan")}</span>
+      </a>
+      <a id="statistic" href="#" className="menuLeftBtn notActive">
+        <FontAwesomeIcon icon={faChartLine} fixedWidth />
+        <span>{translate("statistic-term")}</span>
+      </a>
+      <a id="search" href="#" className="menuLeftBtn notActive">
+        <FontAwesomeIcon icon={faEye} fixedWidth />
+        <span>{translate("find-contractor")}</span>
+      </a>
     </div>
   );
 };

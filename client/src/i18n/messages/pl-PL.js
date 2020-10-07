@@ -50,7 +50,7 @@ export default {
     "login-panel-term": "Zaloguj",
     "logout-term": "Wyloguj",
     "password-term": "Hasło",
-    "welcome-term": "WITAJ",
+    "welcome-term": "Witaj",
     "after-login": "Zostałeś zalogowany :)",
     "wrong-data": "Podane dane są nieprawidłowe.",
     /***************** REGISTRATION PAGE *****************/
@@ -64,10 +64,18 @@ export default {
     "fill-required-fields": "Uzupełnij wymagane pola.",
     "existed-email": "Ten email już istnieje w naszej bazie.",
     "different-passwords": "Hasła są różne.",
-    /***************** ALERTS PAGE *****************/
+    /***************** USER MENU TOP *****************/
     "alerts-term": "Alerty",
     "table-term": "Tablica",
     "account-term": "Konto",
     "help-term": "Pomoc",
+    /***************** USER MENU LEFT *****************/
+    "close-term": "Zamknij",
+    "manage-jobs": "Zarządzaj pracami",
+    "manage-plants": "Zarządzaj roślinami",
+    "manage-materials": "Zarządzaj materiałami",
+    "garden-plan": "Plan ogrodu",
+    "statistic-term": "Statystyki",
+    "find-contractor": "Znajdź wykonawcę",
   },
 };

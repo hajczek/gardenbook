@@ -3,6 +3,7 @@ import { GlobalContext } from "../../context/GlobalState";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/img/gardenbook-logo.png";
 import TopMenu from "./TopMenu";
+import translate from "../../i18n/translate";
 
 const HeaderUser = () => {
   const { users } = useContext(GlobalContext);
@@ -18,7 +19,7 @@ const HeaderUser = () => {
         .map((user, index) => (
           <>
             <span key={index} className="welcomeText">
-              Witaj {user.userName} !
+              {translate("welcome-term")} {user.userName} !
             </span>
             <TopMenu key={user.name} userid={user._id} />
           </>
