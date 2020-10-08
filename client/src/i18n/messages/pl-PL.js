@@ -77,5 +77,8 @@ export default {
     "garden-plan": "Plan ogrodu",
     "statistic-term": "Statystyki",
     "find-contractor": "Znajdź wykonawcę",
+    "add-job": "Dodaj pracę",
+    "add-plant": "Dodaj roślinę",
+    "add-material": "Dodaj materiał",
   },
 };

@@ -77,5 +77,8 @@ export default {
     "garden-plan": "Garden plan",
     "statistic-term": "Statistics",
     "find-contractor": "Find contractor",
+    "add-job": "Add job",
+    "add-plant": "Add plant",
+    "add-material": "Add material",
   },
 };
