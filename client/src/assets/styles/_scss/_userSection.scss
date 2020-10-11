@@ -43,6 +43,10 @@
             color: $orange;
           }
 
+          .thin-span {
+            font-weight: normal;
+          }
+
           &:hover {
             cursor: pointer;
             opacity: 0.7;
