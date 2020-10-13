@@ -66,7 +66,7 @@ export default {
     'different-passwords': 'Passwords are different.',
     /***************** USER MENU TOP *****************/
     'alerts-term': 'Alerts',
-    'table-term': 'Table',
+    'table-term': 'Wall',
     'account-term': 'Account',
     'help-term': 'Help',
     /***************** USER MENU LEFT *****************/
@@ -85,5 +85,8 @@ export default {
     'days-term': 'days',
     'at-term': 'at',
     'actual-alerts': 'Actual alerts',
+    /***************** WALL PAGE *****************/
+    'add-entry': 'Add entry',
+    'hours-term': 'hrs',
   },
 };

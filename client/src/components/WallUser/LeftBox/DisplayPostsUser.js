@@ -1,6 +1,7 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArchive } from "@fortawesome/free-solid-svg-icons";
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArchive } from '@fortawesome/free-solid-svg-icons';
+import translate from '../../../i18n/translate';
 
 const DisplayPostsUser = () => {
   return (
@@ -8,7 +9,7 @@ const DisplayPostsUser = () => {
       <div className="post-container-top">
         <h2>User1</h2>
         <div className="post-comments-box">
-          <span id="time">1 godz.</span>
+          <span id="time">1 {translate('hours-term')}</span>
           <a href="#" id="comments-link">
             5 komentarzy
           </a>
@@ -45,7 +46,7 @@ const DisplayPostsUser = () => {
       <div className="comment-box">
         <p>
           <span className="comment-author">User2</span>Maecenas tristique, risus
-          eget lacinia{" "}
+          eget lacinia{' '}
         </p>
         <p className="time">30 min.</p>
       </div>

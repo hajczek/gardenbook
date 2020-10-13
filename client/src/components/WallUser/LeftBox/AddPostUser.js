@@ -1,22 +1,14 @@
-import React from "react";
+import React from 'react';
+import translate from '../../../i18n/translate';
 
 const AddPostUser = () => {
   return (
     <form id="add-post">
-      <label htmlFor="newPost">Dodaj wpis</label>
-      <textarea
-        id="new-post"
-        name="newPost"
-        placeholder="Napisz coś ... "
-      ></textarea>
+      <label htmlFor="newPost">{translate('add-entry')}</label>
+      <textarea id="new-post" name="newPost"></textarea>
       <div class="add-post-buttons">
         <input className="add-file-btn" type="file" />
-        <input
-          className="add-post-btn"
-          type="submit"
-          value="+"
-          title="Dodaj post"
-        />
+        <input className="add-post-btn" type="submit" value="+" />
       </div>
     </form>
   );

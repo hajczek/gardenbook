@@ -85,5 +85,8 @@ export default {
     'days-term': 'dni',
     'at-term': 'at',
     'actual-alerts': 'Aktualne alerty',
+    /***************** WALL PAGE *****************/
+    'add-entry': 'Dodaj wpis',
+    'hours-term': 'godz.',
   },
 };
