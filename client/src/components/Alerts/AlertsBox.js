@@ -21,8 +21,6 @@ const AlertsBox = () => {
     .filter((user) => user.userLogged === true)
     .map((user) => user._id)[0];
 
-  console.log(translate());
-
   return (
     <div id="alerts">
       <h2>

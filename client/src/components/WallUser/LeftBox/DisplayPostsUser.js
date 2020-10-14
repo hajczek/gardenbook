@@ -11,7 +11,7 @@ const DisplayPostsUser = () => {
         <div className="post-comments-box">
           <span id="time">1 {translate('hours-term')}</span>
           <a href="#" id="comments-link">
-            5 komentarzy
+            5 {translate('comments-term')}
           </a>
           <a href="#" className="archive-post" title="Zarchiwizuj">
             <FontAwesomeIcon icon={faArchive} />

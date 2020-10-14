@@ -88,5 +88,6 @@ export default {
     /***************** WALL PAGE *****************/
     'add-entry': 'Dodaj wpis',
     'hours-term': 'godz.',
+    'comments-term': 'komentarzy',
   },
 };
