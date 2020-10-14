@@ -1,15 +1,19 @@
 import React from 'react';
+import { useIntl } from 'react-intl';
 import translate from '../../../i18n/translate';
 
 const AddPostUser = () => {
+  const intl = useIntl();
 
   return (
     <form id="add-post">
       <label htmlFor="newPost">{translate('add-entry')}</label>
-      <textarea id="new-post" name="newPost" placeholder={(`${translate('add-entry')}`)}></textarea>
+      <textarea id="new-post" name="newPost" placeholder={intl.formatMessage({ id: 'write-here' })}></textarea>
       <div class="add-post-buttons">
-        <input className="add-file-btn" type="file" />
-        <input className="add-post-btn" type="submit" value="+" />
+
+      <label className="add-file-label" for="upload">{intl.formatMessage({ id: 'choose-file' })}</label>
+        <input id="upload" className="add-file-btn" type="file" style={{ visibility: 'hidden' }} />
+        <input className="add-post-btn" type="submit" value="+" title={intl.formatMessage({ id: 'add-comment' })} />
       </div>
     </form>
   );

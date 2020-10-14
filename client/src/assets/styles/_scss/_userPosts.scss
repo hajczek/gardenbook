@@ -8,6 +8,14 @@
   -ms-flex-direction: column;
   flex-direction: column;
 
+  .add-file-label {
+    font-size: 1rem;
+    width: 9rem;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
   label {
     background-color: $limone;
     padding: 0.3rem 0.5rem;
@@ -145,6 +153,16 @@
     justify-content: space-between;
     background-color: $limone;
     padding: 0.3rem 0.5rem;
+
+    label.add-file-label {
+      font-size: 1rem;
+      width: 9rem;
+      text-align: center;
+      cursor: pointer;
+      font-weight: bold;
+      position: relative;
+      top: 0.5rem;
+    }
 
     .add-file-btn {
       width: auto;

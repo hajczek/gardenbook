@@ -89,5 +89,11 @@ export default {
     'add-entry': 'Add entry',
     'hours-term': 'hrs',
     'comments-term': 'comments',
+    'write-here': 'Write here ...',
+    'archive-term': 'Archive',
+    'add-comment': 'Add comment',
+    'choose-file': 'Choose file',
+    'search-term': 'Search',
+    'write-search-term': 'Write search term ...'
   },
 };

@@ -1,9 +1,12 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArchive } from '@fortawesome/free-solid-svg-icons';
+import { useIntl } from 'react-intl';
 import translate from '../../../i18n/translate';
 
 const DisplayPostsUser = () => {
+  const intl = useIntl();
+
   return (
     <div className="post-container">
       <div className="post-container-top">
@@ -13,7 +16,7 @@ const DisplayPostsUser = () => {
           <a href="#" id="comments-link">
             5 {translate('comments-term')}
           </a>
-          <a href="#" className="archive-post" title="Zarchiwizuj">
+          <a href="#" className="archive-post" title={intl.formatMessage({ id: 'archive-term' })}>
             <FontAwesomeIcon icon={faArchive} />
           </a>
         </div>
@@ -30,16 +33,17 @@ const DisplayPostsUser = () => {
         <input
           type="text"
           name="new-comment"
-          placeholder="Napisz komentarz ... "
+          placeholder={intl.formatMessage({ id: 'add-comment' })}
           className="new-comment"
         />
         <div className="add-comment-buttons">
-          <input type="file" className="add-file-btn" title="Dodaj zdjęcie" />
+          <label className="add-file-label" for="upload">{intl.formatMessage({ id: 'choose-file' })}</label>
+          <input id="upload" className="add-file-btn" type="file" style={{ visibility: 'hidden' }} />
           <input
             className="add-comment-btn"
             type="submit"
             value="+"
-            title="Dodaj komentarz"
+            title={intl.formatMessage({ id: 'add-comment' })}
           />
         </div>
       </form>
