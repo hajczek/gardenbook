@@ -1,10 +1,12 @@
 import React from "react";
+import { useIntl } from 'react-intl';
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import translate from "../../i18n/translate";
 
 const LeftMenuSecond = () => {
+  const intl = useIntl();
+
   return (
     <div id="left-menu-second">
       <NavLink
@@ -13,10 +15,10 @@ const LeftMenuSecond = () => {
         activeClassName="is-active"
         id="add-work"
         className="addBtn"
+        title={intl.formatMessage({ id: 'add-job' })}
       >
         <div>
           <FontAwesomeIcon icon={faPlus} fixedWidth />
-          <span>{translate("add-job")}</span>
         </div>
       </NavLink>
       <NavLink
@@ -25,10 +27,10 @@ const LeftMenuSecond = () => {
         activeClassName="is-active"
         id="add-plant"
         className="addBtn"
+        title={intl.formatMessage({ id: 'add-plant' })}
       >
         <div>
           <FontAwesomeIcon icon={faPlus} fixedWidth />
-          <span>{translate("add-plant")}</span>
         </div>
       </NavLink>
       <NavLink
@@ -37,10 +39,10 @@ const LeftMenuSecond = () => {
         activeClassName="is-active"
         id="add-material"
         className="addBtn"
+        title={intl.formatMessage({ id: 'add-material' })}
       >
         <div>
           <FontAwesomeIcon icon={faPlus} fixedWidth />
-          <span>{translate("add-material")}</span>
         </div>
       </NavLink>
     </div>

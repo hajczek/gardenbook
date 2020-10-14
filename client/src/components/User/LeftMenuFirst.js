@@ -1,7 +1,7 @@
 import React from "react";
+import { useIntl } from 'react-intl';
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import translate from "../../i18n/translate";
 import {
   faSpa,
   faPen,
@@ -13,6 +13,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const LeftMenuFirst = (props) => {
+  const intl = useIntl();
+
   function closeLeftMenu(e) {
     document.getElementById("left-menu").style.display = "none";
     document.querySelector(".displayMenu").style.display = "flex";
@@ -34,9 +36,9 @@ const LeftMenuFirst = (props) => {
         activeClassName="is-active"
         id="works"
         className="menuLeftBtn"
+        title={intl.formatMessage({ id: 'manage-jobs' })}
       >
         <FontAwesomeIcon icon={faCalendarAlt} fixedWidth />
-        <span>{translate("manage-jobs")}</span>
       </NavLink>
       <NavLink
         to="/zarzadzaj-roslinami"
@@ -44,9 +46,9 @@ const LeftMenuFirst = (props) => {
         activeClassName="is-active"
         id="plants"
         className="menuLeftBtn"
+        title={intl.formatMessage({ id: 'manage-plants' })}
       >
         <FontAwesomeIcon icon={faSpa} fixedWidth />
-        <span>{translate("manage-plants")}</span>
       </NavLink>
       <NavLink
         to="/zarzadzaj-materialami"
@@ -54,22 +56,19 @@ const LeftMenuFirst = (props) => {
         activeClassName="is-active"
         id="materials"
         className="menuLeftBtn"
+        title={intl.formatMessage({ id: 'manage-materials' })}
       >
         <FontAwesomeIcon icon={faPen} fixedWidth />
-        <span>{translate("manage-materials")}</span>
       </NavLink>
 
-      <a id="plan" href="#" className="menuLeftBtn notActive">
+      <a id="plan" href="#" className="menuLeftBtn notActive" title={intl.formatMessage({ id: 'garden-plan' })}>
         <FontAwesomeIcon icon={faMap} fixedWidth />
-        <span>{translate("garden-plan")}</span>
       </a>
-      <a id="statistic" href="#" className="menuLeftBtn notActive">
+      <a id="statistic" href="#" className="menuLeftBtn notActive" title={intl.formatMessage({ id: 'statistic-term' })}>
         <FontAwesomeIcon icon={faChartLine} fixedWidth />
-        <span>{translate("statistic-term")}</span>
       </a>
-      <a id="search" href="#" className="menuLeftBtn notActive">
+      <a id="search" href="#" className="menuLeftBtn notActive" title={intl.formatMessage({ id: 'find-contractor' })}>
         <FontAwesomeIcon icon={faEye} fixedWidth />
-        <span>{translate("find-contractor")}</span>
       </a>
     </div>
   );
