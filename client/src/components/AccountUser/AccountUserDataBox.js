@@ -3,6 +3,7 @@ import { GlobalContext } from "../../context/GlobalState";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit } from "@fortawesome/free-solid-svg-icons";
 import AccountUserDataEdit from "./AccountUserDataEdit";
+import translate from "../../i18n/translate";
 
 const AccountUserDataBox = (props) => {
   const { users, getUsers } = useContext(GlobalContext);
@@ -16,42 +17,56 @@ const AccountUserDataBox = (props) => {
 
   return editData === false ? (
     <div className="user-right-box">
-      <h2>Twoje dane:</h2>
+      <h2>{translate("your-data")}</h2>
       {users
         .filter((user) => user.userLogged === true)
         .map((data) => (
           <>
             <p key="user-data">
-              <span key={data.userName}>Imię:</span> {data.userName}
+              <span key={data.userName}>{translate("name-term")}: </span>{" "}
+              {data.userName}
               <br />
               <span key={data.userEmail}>Email (login):</span> {data.userEmail}
               <br />
               {/* <span>Aktualne hasło:</span> {data.userPass}
           <br /> */}
-              <span key={data.userTel}>Telefon:</span> {data.userTel}
+              <span key={data.userTel}>{translate("phone-term")}: </span>{" "}
+              {data.userTel}
               <br />
-              <span key={data.userPlace}>Lokalizacja ogrodu:</span>{" "}
+              <span key={data.userPlace}>
+                {translate("garden-localization")}:
+              </span>{" "}
               {data.userPlace}
               <br />
-              <span key="bg">Link do zdjęcia w tle:</span>{" "}
+              <span key="bg">{translate("path-to-bg")}: </span>{" "}
               {data.userBackgroundImage.slice(0, 30)} ...
             </p>
-            <h2>Twoje ustawienia aplikacji:</h2>
+            <h2>{translate("app-sets")}</h2>
             <p key="user-func">
-              <span>Planner prac: </span>
-              {data.accountSets.workPlanner === false ? "wył." : "wł."}
+              <span>{translate("work-planner")}: </span>
+              {data.accountSets.workPlanner === false
+                ? translate("off-term")
+                : translate("on-term")}
               <br />
-              <span>Plan ogrodu: </span>
-              {data.accountSets.gardenPlan === false ? "wył." : "wł."}
+              <span>{translate("garden-plan")}: </span>
+              {data.accountSets.gardenPlan === false
+                ? translate("off-term")
+                : translate("on-term")}
               <br />
-              <span>Statystyki: </span>
-              {data.accountSets.gardenStatistic === false ? "wył." : "wł."}
+              <span>{translate("statistic-term")}: </span>
+              {data.accountSets.gardenStatistic === false
+                ? translate("off-term")
+                : translate("on-term")}
               <br />
-              <span>Historia: </span>
-              {data.accountSets.gardenHistory === false ? "wył." : "wł."}
+              <span>{translate("function-history-title")}: </span>
+              {data.accountSets.gardenHistory === false
+                ? translate("off-term")
+                : translate("on-term")}
               <br />
-              <span>Wyszukiwarka wykonawców: </span>
-              {data.accountSets.searchWorkers === false ? "wył." : "wł."}
+              <span>{translate("contractors-search")}: </span>
+              {data.accountSets.searchWorkers === false
+                ? translate("off-term")
+                : translate("on-term")}
               <br />
             </p>
             <button
@@ -60,7 +75,8 @@ const AccountUserDataBox = (props) => {
                 setUserId(data._id);
               }}
             >
-              <FontAwesomeIcon id="edit-plant" icon={faEdit} /> Zmień
+              <FontAwesomeIcon id="edit-plant" icon={faEdit} />{" "}
+              {translate("change-term")}
             </button>
           </>
         ))}

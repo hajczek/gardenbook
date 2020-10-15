@@ -1,15 +1,12 @@
 import React from "react";
+import translate from "../../i18n/translate";
 
 const Help = () => {
   return (
     <div className="user-content">
       <div className="user-right-box">
-        <h2>Pomoc</h2>
-        <p>
-          W tym dziale znajdą się wskazówki w jaki sposób korzystać z aplikacji.
-          Jak dodawać nowe elementy do aplikacji, w jaki sposób zarządzać jej
-          funkcjonalnością. Strona w przygotowaniu.
-        </p>
+        <h2>{translate("help-term")}</h2>
+        <p>{translate("help-text")}</p>
       </div>
     </div>
   );
