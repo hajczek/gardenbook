@@ -3,9 +3,12 @@ import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
 import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 import DisplayInfo from "../../common/DisplayInfo";
+import { useIntl } from "react-intl";
+import translate from "../../i18n/translate";
 
 export const PlanWorkForm = () => {
   const { addWork, users, materials, getMaterials } = useContext(GlobalContext);
+  const intl = useIntl();
 
   const [workName, setWorkName] = useState("");
   const [workTerm, setWorkTerm] = useState("");
@@ -62,7 +65,7 @@ export const PlanWorkForm = () => {
     // Check if input field for name and term is empty
     workName === "" || workTerm === ""
       ? // If no, set info about error
-        setErrorInfo("Uzupełnij wymagane pola")
+        setErrorInfo(intl.formatMessage({ id: "fill-required-fields" }))
       : // If yes, put new plant in database
         addedWork();
 
@@ -72,12 +75,12 @@ export const PlanWorkForm = () => {
   }
   return (
     <>
-      <span className="neededFields">Pola oznaczone * są wymagane.</span>
+      <span className="neededFields">{translate("fields-info")}</span>
       <DisplayErrorInfo info={errorInfo} />
       <DisplayInfo info={userInfo} />
       <form id="plan-work" action="#" onSubmit={onSubmit}>
         <label htmlFor="work-name">
-          <span>Tytuł planowanej pracy *</span>
+          <span>{translate("work-title")} *</span>
           <input
             type="text"
             name="work-name"
@@ -86,14 +89,16 @@ export const PlanWorkForm = () => {
           />
         </label>
         <label htmlFor="work-material">
-          <span>Potrzebny materiał</span>
+          <span>{translate("needed-material")}</span>
           <select
             name="work-material"
             id="work-material"
             value={workMatName}
             onChange={(e) => setWorkMatName(e.target.value)}
           >
-            <option value="wybierz">Wybierz materiał</option>
+            <option value="wybierz">
+              {intl.formatMessage({ id: "choose-material" })}
+            </option>
 
             {materials
               .filter((material) => material.userId === userId)
@@ -106,7 +111,7 @@ export const PlanWorkForm = () => {
           </select>
         </label>
         <label htmlFor="work-term">
-          <span>Termin realizacji *</span>
+          <span>{translate("Realization term")} *</span>
           <input
             type="date"
             name="work-term"
@@ -117,7 +122,7 @@ export const PlanWorkForm = () => {
           {/* <span id="add-work-term">Dodaj termin do kalendarza &raquo;</span> */}
         </label>
         <label htmlFor="work-mat-quant">
-          <span>Ilość potrzebnego materiału</span>
+          <span>{translate("material-amount")}</span>
           <input
             type="number"
             name="work-mat-quant"
@@ -129,7 +134,7 @@ export const PlanWorkForm = () => {
           />
         </label>
         <label htmlFor="work-alert">
-          <span>Czas alarmu</span>
+          <span>{translate("alert-time")}</span>
           <input
             type="time"
             name="work-alert"
@@ -140,21 +145,25 @@ export const PlanWorkForm = () => {
           {/* <span id="add-work-term">Dodaj termin do kalendarza &raquo;</span> */}
         </label>
         <label htmlFor="work-mat-unit">
-          <span>Jednostka materiału</span>
+          <span>{translate("material-unit")}</span>
           <select
             name="work-mat-unit"
             id="work-mat-unit"
             value={workMatUnit}
             onChange={(e) => setWorkMatUnit(e.target.value)}
           >
-            <option value="wybierz">Wybierz jednostkę</option>
-            <option value="litr">Litr</option>
-            <option value="kg">Kg</option>
-            <option value="kg">Szt.</option>
+            <option value="wybierz">
+              {intl.formatMessage({ id: "select-unit" })}
+            </option>
+            <option value="litr">
+              {intl.formatMessage({ id: "liter-term" })}
+            </option>
+            <option value="kg">kg</option>
+            <option value="kg">{intl.formatMessage({ id: "pcs-term" })}</option>
           </select>
         </label>
         <label htmlFor="work-details">
-          <span>Uwagi</span>
+          <span>{translate("add-info")}</span>
           <textarea
             rows="4"
             cols="58"
@@ -164,7 +173,7 @@ export const PlanWorkForm = () => {
             onChange={(e) => setWorkDetails(e.target.value)}
           ></textarea>
         </label>
-        <button id="plan-work-btn">Zapisz</button>
+        <button id="plan-work-btn">{translate("save-term")}</button>
       </form>
     </>
   );

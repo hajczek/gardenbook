@@ -2,9 +2,12 @@ import React, { useContext, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
+import { useIntl } from "react-intl";
+import translate from "../../i18n/translate";
 
 const ExistedPlannedWorksBox = () => {
   const { works, getWorks, users } = useContext(GlobalContext);
+  const intl = useIntl();
 
   useEffect(() => {
     getWorks();
@@ -17,7 +20,7 @@ const ExistedPlannedWorksBox = () => {
 
   return (
     <div className="existed-box">
-      <h2>Zaplanowane</h2>
+      <h2>{translate("planned-term")}</h2>
       <ol>
         {works
           .sort((a, b) => new Date(a.workTerm) - new Date(b.workTerm))
@@ -31,7 +34,7 @@ const ExistedPlannedWorksBox = () => {
               {plannedWork.workName}:{" "}
               <NavLink
                 to="/zarzadzaj-pracami"
-                title="Zarządzaj pracami"
+                title={intl.formatMessage({ id: "manage-jobs" })}
                 exact={true}
                 activeClassName="is-active"
                 id="works"
