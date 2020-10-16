@@ -85,6 +85,8 @@ export default {
     "days-term": "days",
     "at-term": "at",
     "actual-alerts": "Actual alerts",
+    "tomorrow-term": "tomorrow",
+    "today-term": "today",
     /***************** WALL PAGE *****************/
     "add-entry": "Add entry",
     "hours-term": "hrs",
