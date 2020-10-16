@@ -110,5 +110,13 @@ export default {
     "on-term": "on",
     "off-term": "off",
     "change-term": "Change",
+    /***************** ACCOUNT USER PAGE EDIT *****************/
+    "change-data": "Change choosen data",
+    "fields-info": "Fields signed by * can't be empty.",
+    "new-password": "New password",
+    "localization-term": "Localization",
+    "save-changes": "Save changes",
+    "data-updated": "The data has been updated.",
+    "existed-mail-info": "This email exist in our datadase.",
   },
 };

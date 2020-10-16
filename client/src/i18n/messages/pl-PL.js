@@ -110,5 +110,13 @@ export default {
     "on-term": "wł.",
     "off-term": "wył.",
     "change-term": "Zmień",
+    /***************** ACCOUNT USER PAGE EDIT *****************/
+    "change-data": "Zmień wybrane dane",
+    "fields-info": "Pola oznaczone * nie mogą być puste.",
+    "new-password": "Nowe hasło",
+    "localization-term": "Lokalizacja",
+    "save-changes": "Zapisz zmiany",
+    "data-updated": "Dane zostały zaktualizowane.",
+    "existed-mail-info": "Ten adres email już istnieje w naszej bazie.",
   },
 };
