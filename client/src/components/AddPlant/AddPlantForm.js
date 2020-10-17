@@ -3,9 +3,12 @@ import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
 import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 import DisplayInfo from "../../common/DisplayInfo";
+import { useIntl } from "react-intl";
+import translate from "../../i18n/translate";
 
 const AddPlantForm = () => {
   const { plants, addPlant, users } = useContext(GlobalContext);
+  const intl = useIntl();
 
   const [plantName, setPlantName] = useState("");
   const [plantQuant, setPlantQuant] = useState(0);
@@ -21,7 +24,7 @@ const AddPlantForm = () => {
 
   const addedPlant = () => {
     // Display info for user about added plant to list
-    setUserInfo("Dodano roślinę do spisu.");
+    setUserInfo(intl.formatMessage({ id: "added-plant" }));
     // Clear info about error
     setErrorInfo("");
     // Clear all fields of form
@@ -56,14 +59,14 @@ const AddPlantForm = () => {
     // Check if input field for name is empty
     plantName === ""
       ? // If no, set info about error
-        setErrorInfo("Wpisz nazwę dodawanej rośliny.")
+        setErrorInfo(intl.formatMessage({ id: "add-plant-name" }))
       : plants.some(
           (plant) =>
             (plant.plantName ===
               document.getElementById("plant-name").value) ===
             true
         )
-      ? setErrorInfo("Ta roślina jest już na liście.")
+      ? setErrorInfo(intl.formatMessage({ id: "existing-plant" }))
       : // If yes, put new plant in database
         addedPlant();
 
@@ -74,12 +77,12 @@ const AddPlantForm = () => {
 
   return (
     <>
-      <span className="neededFields">Pola oznaczone * są wymagane.</span>
+      <span className="neededFields">{translate("fields-info")}</span>
       <DisplayErrorInfo info={errorInfo} />
       <DisplayInfo info={userInfo} />
       <form id="add-plant" action="" onSubmit={onSubmit}>
         <label htmlFor="plant-name">
-          <span>Nazwa rośliny *</span>
+          <span>{translate("plant-name")}*</span>
           <input
             type="text"
             name="plant-name"
@@ -89,7 +92,7 @@ const AddPlantForm = () => {
           />
         </label>
         <label htmlFor="plant-quant">
-          <span>Ilość szt.</span>
+          <span>{translate("pcs-nb")}</span>
           <input
             type="number"
             name="plant-quant"
@@ -100,7 +103,7 @@ const AddPlantForm = () => {
           />
         </label>
         <label htmlFor="plant-price">
-          <span>Cena jednej rośliny [zł]</span>
+          <span>{translate("plant-price")}</span>
           <input
             type="number"
             name="plant-price"
@@ -112,7 +115,7 @@ const AddPlantForm = () => {
           />
         </label>
         <label htmlFor="plant-photo" className="labelForInputFile">
-          Dodaj link do zdjęcia rośliny
+          {translate("plant-img")}
           <input
             type="text"
             name="plant-photo"
@@ -133,7 +136,7 @@ const AddPlantForm = () => {
           <span>Wybierz plik</span> */}
         </label>
         <label htmlFor="plant-fetilizer">
-          <span>Nawóz</span>
+          <span>{translate("fertilizer-term")}</span>
           <input
             type="text"
             name="plant-fetilizer"
@@ -143,7 +146,7 @@ const AddPlantForm = () => {
           />
         </label>
         <label htmlFor="plant-fetilizer-freq">
-          <span>Częstość nawożenia [na rok]:</span>
+          <span>{translate("fert-freq")}</span>
           <input
             type="number"
             name="plant-fetilizer-freq"
@@ -154,7 +157,7 @@ const AddPlantForm = () => {
           />
         </label>
         <label htmlFor="plant-fertilizer-dose">
-          <span>Zalecana dawka nawozu [gr lub ml]</span>
+          <span>{translate("fert-dose")}</span>
           <input
             type="number"
             name="plant-fertilizer-dose"
@@ -165,7 +168,7 @@ const AddPlantForm = () => {
           />
         </label>
         <label htmlFor="plant-watering-freq">
-          <span>Częstość podlewania [co ile dni]:</span>
+          <span>{translate("water-freq")}</span>
           <input
             type="number"
             name="plant-watering-freq"
@@ -176,7 +179,7 @@ const AddPlantForm = () => {
           />
         </label>
 
-        <button id="add-plant-btn">Zapisz</button>
+        <button id="add-plant-btn">{translate("save-term")}</button>
       </form>
     </>
   );
