@@ -3,9 +3,12 @@ import { GlobalContext } from "../../context/GlobalState";
 import addedDateFunction from "../../common/AddedDateFunction";
 import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 import DisplayInfo from "../../common/DisplayInfo";
+import { useIntl } from "react-intl";
+import translate from "../../i18n/translate";
 
 const AddMaterialForm = () => {
   const { materials, addMaterial, users } = useContext(GlobalContext);
+  const intl = useIntl();
 
   const [materialName, setMaterialName] = useState("");
   const [materialPhoto, setMaterialPhoto] = useState("");
@@ -18,7 +21,7 @@ const AddMaterialForm = () => {
 
   const addedMaterial = () => {
     // Display info for user about added material to list
-    setUserInfo("Dodano materiał do spisu.");
+    setUserInfo(intl.formatMessage({ id: "added-material" }));
     // Clear info about error
     setErrorInfo("");
     // Clear all fields of form
@@ -47,14 +50,14 @@ const AddMaterialForm = () => {
     // Check if input field for name is empty
     materialName === ""
       ? // If no, set info about error
-        setErrorInfo("Wpisz nazwę dodawanego materiału.")
+        setErrorInfo(intl.formatMessage({ id: "add-material-name" }))
       : materials.some(
           (material) =>
             (material.materialName ===
               document.getElementById("material-name").value) ===
             true
         )
-      ? setErrorInfo("Ten materiał jest już na liście.")
+      ? setErrorInfo(intl.formatMessage({ id: "existing-material" }))
       : // If material is not on a list it in database
         addedMaterial();
 
@@ -64,12 +67,12 @@ const AddMaterialForm = () => {
   }
   return (
     <>
-      <span className="neededFields">Pola oznaczone * są wymagane.</span>
+      <span className="neededFields">{translate("fields-info")}</span>
       <DisplayErrorInfo info={errorInfo} />
       <DisplayInfo info={userInfo} />
       <form id="add-material" action="" onSubmit={onSubmit}>
         <label htmlFor="material-name">
-          <span>Nazwa materiału *</span>
+          <span>{translate("material-name")} *</span>
           <input
             type="text"
             name="material-name"
@@ -79,21 +82,27 @@ const AddMaterialForm = () => {
           />
         </label>
         <label htmlFor="unit">
-          <span>Jednostka</span>
+          <span>{translate("unit-term")}</span>
           <select
             name="material-unit"
             id="material-unit"
             value={materialUnit}
             onChange={(e) => setMaterialUnit(e.target.value)}
           >
-            <option value="wybierz">Wybierz</option>
+            <option value="wybierz">
+              {intl.formatMessage({ id: "select-unit" })}
+            </option>
             <option value="kg">kg</option>
-            <option value="litr">litr</option>
-            <option value="litr">szt.</option>
+            <option value="litr">
+              {intl.formatMessage({ id: "liter-term" })}
+            </option>
+            <option value="litr">
+              {intl.formatMessage({ id: "pcs-term" })}
+            </option>
           </select>
         </label>
         <label htmlFor="material-quant">
-          <span>Ilość</span>
+          <span>{translate("quantity-term")}</span>
           <input
             type="number"
             name="material-quant"
@@ -104,7 +113,7 @@ const AddMaterialForm = () => {
           />
         </label>
         <label htmlFor="material-pricer">
-          <span>Cena jedn. [zł]</span>
+          <span>{translate("unit-price")}</span>
           <input
             type="number"
             name="material-price"
@@ -116,7 +125,7 @@ const AddMaterialForm = () => {
           />
         </label>
         <label htmlFor="material-photo" className="labelForInputFile">
-          Dodaj link do zdjęcia materiału
+          {translate("material-img")}
           <input
             type="text"
             name="material-photo"
@@ -135,7 +144,7 @@ const AddMaterialForm = () => {
           /> 
           <span>Wybierz plik</span> */}
         </label>
-        <button id="add-material-btn">Dodaj</button>
+        <button id="add-material-btn">{translate("save-term")}</button>
       </form>
     </>
   );
