@@ -6,6 +6,7 @@ import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 import EditedWork from "./EditedWork";
 import ExistedWorksListHead from "./ExistedWorksListHead";
 import ExistedWorksSummary from "./ExistedWorksSummary";
+import translate from "../../i18n/translate";
 
 const PlannedWorkList = (props) => {
   const { works, getWorks, users } = useContext(GlobalContext);
@@ -40,16 +41,16 @@ const PlannedWorkList = (props) => {
 
   return editWork === false ? (
     <>
-      <p>Edytuj lub usuń wybrane zadania.</p>
+      <p>{translate("edit-task-title")}</p>
       <div className="contentList">
         <div className="searchForWorks">
-          Wybierz okres od
+          {translate("select-term-from")}
           <input
             id="date-from"
             type="date"
             onChange={(e) => setSearchFrom(e.target.value)}
           />
-          do
+          {translate("to-term")}
           <input
             type="date"
             id="date-to"

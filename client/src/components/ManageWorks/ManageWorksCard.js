@@ -1,13 +1,14 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import ExistedWorksList from "./ExistedWorksList";
+import translate from "../../i18n/translate";
 
 const ManageWorksCard = () => {
   return (
     <div className="user-content">
       <div className="content">
         <div className="top-box">
-          <h2>Zarządzaj zadaniami</h2>
+          <h2>{translate("manage-jobs")}</h2>
           <NavLink
             to="/zaplanuj-prace"
             exact={true}
@@ -15,7 +16,7 @@ const ManageWorksCard = () => {
             id="plan-work-link"
             className="plus-link"
           >
-            + Zaplanuj pracę
+            + {translate("plan-work")}
           </NavLink>
         </div>
         <ExistedWorksList />

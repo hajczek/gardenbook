@@ -1,29 +1,29 @@
 import React from "react";
+import translate from "../../i18n/translate";
 
 const EditedWorkHead = () => {
   return (
     <>
       <tr>
         <td colSpan="10">
-          <h3>Edycja zadania</h3>
+          <h3>{translate("edit-task")}</h3>
         </td>
       </tr>
       <tr>
-        <th className="longTd">Tytuł</th>
+        <th className="longTd">{translate("title-term")}</th>
         <th>Termin</th>
         <th>Alarm</th>
         <th align="center">Status</th>
         <th>
-          Czas pracy
-          <br />[ il. godz. ]
+          {translate("work-time")}
+          <br />[ {translate("hours-quant")} ]
         </th>
         <th>
-          Wartość
-          <br />
-          [zł.]
+          {translate("value-term")}
+          <br />[{translate("currency-sign")}]
         </th>
-        <th className="longTd">Materiał</th>
-        <th>Uwagi</th>
+        <th className="longTd">{translate("material-term")}</th>
+        <th>{translate("add-info")}</th>
         <th></th>
       </tr>
     </>

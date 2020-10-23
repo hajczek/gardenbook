@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
+import translate from "../../i18n/translate";
 
 const ExistedWorksSummary = () => {
   const { works, users } = useContext(GlobalContext);
@@ -60,10 +61,16 @@ const ExistedWorksSummary = () => {
 
   return (
     <div className="summaryBox">
-      <h3>RAZEM PRAC:</h3>{" "}
-      <span>Niewykonanych: {countNumOfNotDoneWork()} | </span>
-      <span>Wykonanych: {countNumOfDoneWork()} | </span>
-      <span>Do wykonania: {countNumOfPlannedWork()} </span>
+      <h3>{translate("all-works")}:</h3>{" "}
+      <span>
+        {translate("not-completed")}: {countNumOfNotDoneWork()} |{" "}
+      </span>
+      <span>
+        {translate("completed-term")}: {countNumOfDoneWork()} |{" "}
+      </span>
+      <span>
+        {translate("to-complete")}: {countNumOfPlannedWork()}{" "}
+      </span>
     </div>
   );
 };

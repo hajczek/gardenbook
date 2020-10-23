@@ -1,32 +1,32 @@
 import React from "react";
+import translate from "../../i18n/translate";
 
 const ExistedWorksListHead = () => {
   return (
     <>
       <tr>
         <td colSpan="10">
-          <h3>Lista zadań</h3>
+          <h3>{translate("tasks-list")}</h3>
         </td>
       </tr>
       <tr>
-        <th className="shortTd">Lp.</th>
-        <th className="longTd">Tytuł</th>
-        <th className="longTd">Termin</th>
-        <th>Alarm</th>
-        <th>Status</th>
+        <th className="shortTd">{translate("lp-term")}</th>
+        <th className="longTd">{translate("title-term")}</th>
+        <th className="longTd">{translate("term-term")}</th>
+        <th>{translate("alert-term")}</th>
+        <th>{translate("status-term")}</th>
         <th className="longTd">
-          Czas pracy
-          <br />[ il. godz.]
+          {translate("work-time")}
+          <br />[{translate("hours-quant")}]
         </th>
         <th className="longTd">
-          Wartość
-          <br />
-          [zł.]
+          {translate("value-term")}
+          <br />[{translate("currency-sign")}]
         </th>
-        <th className="longTd">Materiał</th>
-        <th className="longTd">Uwagi</th>
-        <th>Edytuj</th>
-        <th>Usuń</th>
+        <th className="longTd">{translate("material-term")}</th>
+        <th className="longTd">{translate("add-info")}</th>
+        <th>{translate("edit-term")}</th>
+        <th>{translate("delete-term")}</th>
       </tr>
     </>
   );

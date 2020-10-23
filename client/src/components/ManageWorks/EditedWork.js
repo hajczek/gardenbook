@@ -4,9 +4,12 @@ import EditedWorkHead from "./EditedWorkHead";
 import addedDateFunction from "../../common/AddedDateFunction";
 import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 import DisplayInfo from "../../common/DisplayInfo";
+import { useIntl } from "react-intl";
+import translate from "../../i18n/translate";
 
 const EditedWork = (props) => {
   const { works, editWork } = useContext(GlobalContext);
+  const intl = useIntl();
 
   // Handle for actual data
   let actualWorkName;
@@ -54,7 +57,7 @@ const EditedWork = (props) => {
 
   const saveNewData = () => {
     // Info about set new data in database
-    setUserInfo("Dane zostały zaktualizowane.");
+    setUserInfo(intl.formatMessage({ id: "data-updated" }));
     // Clear info about error
     setErrorInfo("");
     document.querySelector(".edit-form").style.display = "none";
@@ -82,7 +85,7 @@ const EditedWork = (props) => {
     // Check if input field for name or term is empty
     document.getElementById("work-name").value === "" ||
     document.getElementById("work-term").value === ""
-      ? setErrorInfo("Uzupełnij wymagane pola: tytuł, termin")
+      ? setErrorInfo(intl.formatMessage({ id: "fill-needed-fields" }))
       : // If yes, put new date for work in database
         saveNewData();
 
@@ -162,7 +165,9 @@ const EditedWork = (props) => {
                   />
                 </td>
                 <td>
-                  <label htmlFor="work-material">Nazwa</label>
+                  <label htmlFor="work-material">
+                    {translate("name-term")}
+                  </label>
                   <input
                     type="text"
                     id="work-material"
@@ -171,7 +176,9 @@ const EditedWork = (props) => {
                     onChange={(e) => setWorkMatName(e.target.value)}
                     size="15"
                   />
-                  <label htmlFor="work-mat-quant">Ilość</label>
+                  <label htmlFor="work-mat-quant">
+                    {translate("quantity-term")}
+                  </label>
                   <input
                     className="inputNum"
                     type="number"
@@ -181,7 +188,9 @@ const EditedWork = (props) => {
                     min="0"
                     onChange={(e) => setWorkMatQuant(e.target.value)}
                   />
-                  <label htmlFor="work-mat-unit">Jedn.</label>
+                  <label htmlFor="work-mat-unit">
+                    {translate("unit-term")}
+                  </label>
                   <input
                     className="inputNum"
                     type="text"
@@ -201,7 +210,7 @@ const EditedWork = (props) => {
                 </td>
                 <td align="center">
                   <button className="editBtn" id="change-works-btn">
-                    Zapisz
+                    {translate("save-term")}
                   </button>
                 </td>
               </tr>
