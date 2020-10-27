@@ -1,37 +1,35 @@
-import React from "react";
+import React from 'react';
+import translate from '../../i18n/translate';
 
 const EditedPlantHead = () => {
   return (
     <>
       <tr>
         <td colSpan="10">
-          <h3>Edycja rośliny</h3>
+          <h3>{translate('edit-plant')}</h3>
         </td>
       </tr>
       <tr>
-        <th>Nazwa</th>
+        <th>{translate('plant-name')}</th>
         <th className="longTd">Zdjęcie</th>
         <th>
-          Ilość
-          <br />
-          [szt.]
+          {translate('quantity-term')}
+          <br />[{translate('pcs-term')}]
         </th>
         <th>
-          Cena jedn.
+          {translate('unit-price')}
           <br />
-          [zł.]
+          {translate('currency-sign')}
         </th>
-        <th>Nawóz</th>
+        <th>{translate('fertilizer-term')}</th>
         <th>
-          Dawka
-          <br />
-          [ml lub gr]
+          {translate('fert-dose')}
+          <br />[{translate('fert-unit')}]
         </th>
         <th colSpan="2" className="longTd">
-          Częstotość
-          <br /> nawożenia / podlewania
-          <br />
-          [na rok] / [na tydz.]
+          {translate('freq-term')}
+          <br /> {translate('fertil-water')}
+          <br />[{translate('per-year')}] / [{translate('per-week')}]
         </th>
         <th></th>
       </tr>

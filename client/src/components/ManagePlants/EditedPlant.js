@@ -1,13 +1,16 @@
-import React, { useState, useContext } from "react";
-import { GlobalContext } from "../../context/GlobalState";
-import EditedPlantHead from "./EditedPlantHead";
-import addedDateFunction from "../../common/AddedDateFunction";
-import DisplayErrorInfo from "../../common/DisplayErrorInfo";
-import DisplayInfo from "../../common/DisplayInfo";
+import React, { useState, useContext } from 'react';
+import { GlobalContext } from '../../context/GlobalState';
+import EditedPlantHead from './EditedPlantHead';
+import addedDateFunction from '../../common/AddedDateFunction';
+import DisplayErrorInfo from '../../common/DisplayErrorInfo';
+import DisplayInfo from '../../common/DisplayInfo';
+import { useIntl } from 'react-intl';
+import translate from '../../i18n/translate';
 
 const EditedPlant = (props) => {
   const { plants } = useContext(GlobalContext);
   const { editPlant } = useContext(GlobalContext);
+  const intl = useIntl();
 
   // Handle for actual data
   let actualPlantName;
@@ -50,15 +53,15 @@ const EditedPlant = (props) => {
     actualPlantWateringFreq
   );
   const [addedDate] = useState(addedDateFunction());
-  const [errorInfo, setErrorInfo] = useState("");
-  const [userInfo, setUserInfo] = useState("");
+  const [errorInfo, setErrorInfo] = useState('');
+  const [userInfo, setUserInfo] = useState('');
 
   const saveNewData = () => {
     // Info about set new data in database
-    setUserInfo("Dane zostały zaktualizowane.");
+    setUserInfo(intl.formatMessage({ id: 'data-updated' }));
     // Clear info about error
-    setErrorInfo("");
-    document.querySelector(".edit-form").style.display = "none";
+    setErrorInfo('');
+    document.querySelector('.edit-form').style.display = 'none';
     window.location.reload();
   };
 
@@ -77,8 +80,8 @@ const EditedPlant = (props) => {
     };
 
     // Check if input field for name is empty
-    document.getElementById("plant-name").value === ""
-      ? setErrorInfo("Uzupełnij wymagane pola: nazwa rośliny")
+    document.getElementById('plant-name').value === ''
+      ? setErrorInfo(intl.formatMessage({ id: 'fill-needed-fields-plants' }))
       : // If yes, put new plant in database
         saveNewData();
 
@@ -89,7 +92,7 @@ const EditedPlant = (props) => {
 
   return (
     <>
-      <p>Zmień dane wybranej rośliny.</p>
+      <p>{translate('change-plant-data')}</p>
       <DisplayErrorInfo info={errorInfo} />
       <DisplayInfo info={userInfo} />
       <div className="contentEdit">
@@ -116,7 +119,7 @@ const EditedPlant = (props) => {
                     style={{ maxHeight: 100 }}
                   />
                   <br />
-                  Wprowadź link do nowego zdjęcia
+                  {translate('new-photo-link')}
                   <input
                     type="text"
                     name="plant-photo"
@@ -193,7 +196,7 @@ const EditedPlant = (props) => {
                 </td>
                 <td align="center">
                   <button className="editBtn" id="changes-plants-btn">
-                    Zapisz
+                    {translate('save-term')}
                   </button>
                 </td>
               </tr>

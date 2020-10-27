@@ -1,46 +1,42 @@
-import React from "react";
+import React from 'react';
+import translate from '../../i18n/translate';
 
 const ExistedPlantsListHead = () => {
   return (
     <>
       <tr>
         <td colSpan="11">
-          <h3>Lista roślin</h3>
+          <h3>{translate('plant-list')}</h3>
         </td>
       </tr>
       <tr>
-        <th className="shortTd">Lp.</th>
-        <th className="longTd">Nazwa</th>
-        <th className="longTd">Zdjęcie</th>
+        <th className="shortTd">{translate('lp-term')}</th>
+        <th className="longTd">{translate('plant-name')}</th>
+        <th className="longTd">{translate('photo-term')}</th>
         <th>
-          Ilość
-          <br />
-          [szt.]
+          {translate('quantity-term')}
+          <br />[{translate('pcs-term')}]
         </th>
         <th>
-          Cena jedn.
-          <br />
-          [zł.]
+          {translate('unit-price')}
+          <br />[{translate('currency-sign')}]
         </th>
         <th>
-          Wartość
-          <br />
-          [zł]
+          {translate('value-term')}
+          <br />[{translate('currency-sign')}]
         </th>
-        <th>Nawóz</th>
+        <th>{translate('fertilizer-term')}</th>
         <th>
-          Dawka
-          <br />
-          [ml lub gr]
+          {translate('fert-dose')}
+          <br />[{translate('fert-unit')}]
         </th>
         <th colSpan="2" className="longTd">
-          Częstość
-          <br /> nawożenia / podlewania
-          <br />
-          [na rok] / [na tydz.]
+          {translate('freq-term')}
+          <br /> {translate('fertil-water')}
+          <br />[{translate('per-year')}] / [{translate('per-week')}]
         </th>
-        <th>Edytuj</th>
-        <th>Usuń</th>
+        <th>{translate('edit-term')}</th>
+        <th>{translate('delete-term')}</th>
       </tr>
     </>
   );

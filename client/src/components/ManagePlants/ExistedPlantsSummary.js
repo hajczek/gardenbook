@@ -1,5 +1,6 @@
-import React, { useContext, useEffect } from "react";
-import { GlobalContext } from "../../context/GlobalState";
+import React, { useContext } from 'react';
+import { GlobalContext } from '../../context/GlobalState';
+import translate from '../../i18n/translate';
 
 const ExistedPlantsSummary = () => {
   const { plants, users } = useContext(GlobalContext);
@@ -55,9 +56,16 @@ const ExistedPlantsSummary = () => {
 
   return (
     <div className="summaryBox">
-      <h3>RAZEM:</h3> <span>Gatunków: {countNumOfTypePlants()} |</span>
-      <span>Sztuk: {countNumOfPlants()} |</span>
-      <span>Wartość: {countValueOfAllPlants()}</span>
+      <h3>{translate('all-term')}: </h3>{' '}
+      <span>
+        {translate('species-term')}: {countNumOfTypePlants()} |
+      </span>
+      <span>
+        {translate('pieces-term')}: {countNumOfPlants()} |
+      </span>
+      <span>
+        {translate('value-term')}: {countValueOfAllPlants()}
+      </span>
     </div>
   );
 };
