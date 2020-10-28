@@ -63,9 +63,6 @@ const UserRegistration = () => {
       ? setErrorInfo(translate("different-passwords"))
       : // Set new data to database
         registrationDone();
-
-    console.log(typeof userPass, userPass);
-
     addUser(newUser);
   }
 

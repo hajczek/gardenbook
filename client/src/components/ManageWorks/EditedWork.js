@@ -96,7 +96,7 @@ const EditedWork = (props) => {
 
   return (
     <>
-      <p>Zmień ustawienia wybranego zadania.</p>
+      <p>{translate("edit-task-info")}.</p>
       <DisplayErrorInfo info={errorInfo} />
       <DisplayInfo info={userInfo} />
       <div className="contentEdit">

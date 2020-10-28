@@ -171,6 +171,7 @@ export default {
     "currency-sign": "zł.",
     "material-term": "Materiał",
     "edit-task-title": "Edytuj lub usuń wybrane zadania.",
+    "edit-task-info": "Zmień ustawienia wybranego zadania",
     "select-term-from": "Wybierz okres od",
     "to-term": "do",
     "tasks-list": "Lista zadań",
@@ -184,6 +185,7 @@ export default {
     "not-completed": "Niewykonanych",
     "completed-term": "Wykonanych",
     "to-complete": "Do wykonania",
+    "quant-available": "dostępna ilość",
     /***************** MANAGE PLANTS CARD *****************/
     "fill-needed-fields-plants": "Uzupełnij wymagane pola: nazwa rośliny",
     "change-plant-data": "Zmień dane wybranej rośliny",
@@ -207,5 +209,6 @@ export default {
     "edit-material-info": "Edytuj lub usuń wybrane materiały",
     "quant-mat": "Il. materiałów",
     "material-list": "Lista materiałów",
+    "search-material": "Wyszukaj materiał po nazwie",
   },
 };

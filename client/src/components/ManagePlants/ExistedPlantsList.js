@@ -1,17 +1,17 @@
-import React, { useContext, useState, useEffect } from 'react';
-import { GlobalContext } from '../../context/GlobalState';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
-import EditedPlant from './EditedPlant';
-import ExistedPlantsListHead from './ExistedPlantsListHead';
-import ExistedPlantsSummary from './ExistedPlantsSummary';
-import { useIntl } from 'react-intl';
-import translate from '../../i18n/translate';
+import React, { useContext, useState, useEffect } from "react";
+import { GlobalContext } from "../../context/GlobalState";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
+import EditedPlant from "./EditedPlant";
+import ExistedPlantsListHead from "./ExistedPlantsListHead";
+import ExistedPlantsSummary from "./ExistedPlantsSummary";
+import { useIntl } from "react-intl";
+import translate from "../../i18n/translate";
 
-const ExistedPlantsList = (props) => {
+const ExistedPlantsList = () => {
   const { plants, getPlants, users } = useContext(GlobalContext);
   const { deletePlant } = useContext(GlobalContext);
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState("");
   const [filteredPlants, setFilteredPlants] = useState([]);
   const [editPlant, setEditPlant] = useState(false);
   const [plantId, setPlantId] = useState();
@@ -36,13 +36,13 @@ const ExistedPlantsList = (props) => {
 
   return editPlant === false ? (
     <>
-      <p>{translate('edit-plant-info')}</p>
+      <p>{translate("edit-plant-info")}</p>
       <div className="contentList">
         <input
           id="search-plant"
           type="text"
           onChange={(e) => setSearch(e.target.value)}
-          placeholder={intl.formatMessage({ id: 'search-plant' })}
+          placeholder={intl.formatMessage({ id: "search-plant" })}
           className="inputSearch"
         />
         <table className="existed-plant-table">

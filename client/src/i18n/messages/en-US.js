@@ -171,6 +171,7 @@ export default {
     "currency-sign": "$",
     "material-term": "Material",
     "edit-task-title": "Edit or delete choosen tasks.",
+    "edit-task-info": "Change settings of selected task",
     "select-term-from": "Select term from",
     "to-term": "to",
     "tasks-list": "Tasks list",
@@ -184,6 +185,7 @@ export default {
     "not-completed": "Not completed",
     "completed-term": "Completed",
     "to-complete": "To complete",
+    "quant-available": "quantity available",
     /***************** MANAGE PLANTS CARD *****************/
     "fill-needed-fields-plants": "Fill needed fields: plant name",
     "change-plant-data": "Change the data of selected plant",
@@ -207,5 +209,6 @@ export default {
     "edit-material-info": "Edit or delete selected material",
     "quant-mat": "Quantity",
     "material-list": "Material list",
+    "search-material": "Search for a material by name",
   },
 };

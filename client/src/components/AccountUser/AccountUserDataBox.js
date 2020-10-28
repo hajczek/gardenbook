@@ -5,7 +5,7 @@ import { faEdit } from "@fortawesome/free-solid-svg-icons";
 import AccountUserDataEdit from "./AccountUserDataEdit";
 import translate from "../../i18n/translate";
 
-const AccountUserDataBox = (props) => {
+const AccountUserDataBox = () => {
   const { users, getUsers } = useContext(GlobalContext);
   const [editData, setEditData] = useState(false);
   const [userId, setUserId] = useState();

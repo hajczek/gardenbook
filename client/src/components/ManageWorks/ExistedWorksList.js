@@ -8,7 +8,7 @@ import ExistedWorksListHead from "./ExistedWorksListHead";
 import ExistedWorksSummary from "./ExistedWorksSummary";
 import translate from "../../i18n/translate";
 
-const PlannedWorkList = (props) => {
+const PlannedWorkList = () => {
   const { works, getWorks, users } = useContext(GlobalContext);
   const { deleteWork } = useContext(GlobalContext);
   const [searchFrom, setSearchFrom] = useState("2020-01-31");

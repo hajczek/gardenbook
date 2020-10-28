@@ -104,14 +104,15 @@ export const PlanWorkForm = () => {
               .filter((material) => material.userId === userId)
               .map((material, index) => (
                 <option key={index} value={material.materialName}>
-                  {material.materialName}, dostępna ilość:{" "}
+                  {material.materialName},{" "}
+                  {intl.formatMessage({ id: "quant-available" })}:{" "}
                   {material.materialQuant} {material.materialUnit}
                 </option>
               ))}
           </select>
         </label>
         <label htmlFor="work-term">
-          <span>{translate("Realization term")} *</span>
+          <span>{translate("realization-term")} *</span>
           <input
             type="date"
             name="work-term"

@@ -5,6 +5,7 @@ import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 import ExistedMaterialsListHead from "./ExistedMaterialsListHead";
 import EditedMaterial from "./EditedMaterial";
 import ExistedMaterialsSummary from "./ExistedMaterialsSummary";
+import { useIntl } from "react-intl";
 import translate from "../../i18n/translate";
 
 const ExistedMaterialsList = (props) => {
@@ -14,6 +15,7 @@ const ExistedMaterialsList = (props) => {
   const [filteredMaterials, setFilteredMaterials] = useState([]);
   const [editMaterial, setEditMaterial] = useState(false);
   const [materialId, setMaterialId] = useState();
+  const intl = useIntl();
 
   useEffect(() => {
     getMaterials();
@@ -40,7 +42,7 @@ const ExistedMaterialsList = (props) => {
           id="search-material"
           type="text"
           onChange={(e) => setSearch(e.target.value)}
-          placeholder="Wyszukaj materiał po nazwie"
+          placeholder={intl.formatMessage({ id: "search-material" })}
           className="inputSearch"
         />
         <table>
