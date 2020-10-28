@@ -206,5 +206,6 @@ export default {
     "edit-material": "Editing the material",
     "edit-material-info": "Edit or delete selected material",
     "quant-mat": "Quantity",
+    "material-list": "Material list",
   },
 };

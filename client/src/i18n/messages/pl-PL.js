@@ -206,5 +206,6 @@ export default {
     "edit-material": "Edycja materiału",
     "edit-material-info": "Edytuj lub usuń wybrane materiały",
     "quant-mat": "Il. materiałów",
+    "material-list": "Lista materiałów",
   },
 };

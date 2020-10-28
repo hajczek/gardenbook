@@ -6,7 +6,7 @@ const ExistedMaterialsListHead = () => {
     <>
       <tr>
         <td colSpan="6">
-          <h3>Lista materiałów</h3>
+          <h3>{translate("material-list")}</h3>
         </td>
       </tr>
       <tr>
