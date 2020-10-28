@@ -4,9 +4,12 @@ import EditedMaterialHead from "./EditedMaterialHead";
 import addedDateFunction from "../../common/AddedDateFunction";
 import DisplayErrorInfo from "../../common/DisplayErrorInfo";
 import DisplayInfo from "../../common/DisplayInfo";
+import { useIntl } from "react-intl";
+import translate from "../../i18n/translate";
 
 const EditedMaterial = (props) => {
   const { materials, getMaterials, editMaterial } = useContext(GlobalContext);
+  const intl = useIntl();
 
   useEffect(() => {
     getMaterials();
@@ -44,7 +47,7 @@ const EditedMaterial = (props) => {
 
   const saveNewData = () => {
     // Info about set new data in database
-    setUserInfo("Dane zostały zaktualizowane.");
+    setUserInfo(intl.formatMessage({ id: "data-updated" }));
     // Clear info about error
     setErrorInfo("");
     document.querySelector(".edit-form").style.display = "none";
@@ -64,7 +67,7 @@ const EditedMaterial = (props) => {
 
     // Check if input field for name or term is empty
     document.getElementById("material-name").value === ""
-      ? setErrorInfo("Uzupełnij wymagane pola: nazwa materiału")
+      ? setErrorInfo(intl.formatMessage({ id: "fill-needed-fields-material" }))
       : // If yes, put new date for material in database
         saveNewData();
 
@@ -75,7 +78,7 @@ const EditedMaterial = (props) => {
 
   return (
     <>
-      <p>Zmień dane wybranego materiału.</p>
+      <p>{translate("change-material-data")}</p>
       <DisplayErrorInfo info={errorInfo} />
       <DisplayInfo info={userInfo} />
       <div className="contentEdit">
@@ -102,7 +105,7 @@ const EditedMaterial = (props) => {
                     style={{ maxHeight: 100 }}
                   />
                   <br />
-                  Wprowadź link do nowego zdjęcia
+                  {translate("new-photo-link")}
                   <input
                     type="text"
                     name="material-photo"
@@ -118,6 +121,7 @@ const EditedMaterial = (props) => {
                     id="material-quant"
                     name="material-quant"
                     min="0"
+                    step="0.01"
                     value={materialQuant}
                     onChange={(e) => setMaterialQuant(e.target.value)}
                   />
@@ -139,13 +143,14 @@ const EditedMaterial = (props) => {
                     id="material-price"
                     name="material-price"
                     min="0"
+                    step="0.01"
                     value={materialPrice}
                     onChange={(e) => setMaterialPrice(e.target.value)}
                   />
                 </td>
                 <td align="center">
                   <button className="editBtn" id="changes-materials-btn">
-                    Zapisz
+                    {translate("save-term")}
                   </button>
                 </td>
               </tr>

@@ -1,4 +1,5 @@
 import React from "react";
+import translate from "../../i18n/translate";
 
 const ExistedMaterialsListHead = () => {
   return (
@@ -9,15 +10,19 @@ const ExistedMaterialsListHead = () => {
         </td>
       </tr>
       <tr>
-        <th className="shortTd">Lp.</th>
-        <th className="longTd">Nazwa</th>
-        <th className="longTd">Zdjęcie</th>
-        <th className="longTd">Ilość</th>
-        <th>Jedn.</th>
-        <th className="longTd">Cena jedn. [zł.]</th>
-        <th className="longTd">Wartość [zł.]</th>
-        <th>Edytuj</th>
-        <th>Usuń</th>
+        <th className="shortTd">{translate("lp-term")}</th>
+        <th className="longTd">{translate("material-name")}</th>
+        <th className="longTd">{translate("photo-term")}</th>
+        <th className="longTd">{translate("quantity-term")}</th>
+        <th>{translate("unit-term")}</th>
+        <th className="longTd">
+          {translate("unit-price")} [{translate("currency-sign")}]
+        </th>
+        <th className="longTd">
+          {translate("value-term")} [{translate("currency-sign")}]
+        </th>
+        <th>{translate("edit-term")}</th>
+        <th>{translate("delete-term")}</th>
       </tr>
     </>
   );

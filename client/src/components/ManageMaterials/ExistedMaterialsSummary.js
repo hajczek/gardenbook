@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
+import translate from "../../i18n/translate";
 
 const ExistedMaterialsSummary = () => {
   const { materials, users } = useContext(GlobalContext);
@@ -41,9 +42,14 @@ const ExistedMaterialsSummary = () => {
 
   return (
     <div className="summaryBox">
-      <h3>RAZEM:</h3>
-      <span>Il. materiałów: {countNumOfMaterials()} |</span>
-      <span>Wartość: {countValueOfAllMaterials()} zł</span>
+      <h3>{translate("all-term")}:</h3>
+      <span>
+        {translate("quant-mat")}: {countNumOfMaterials()} |
+      </span>
+      <span>
+        {translate("value-term")}: {countValueOfAllMaterials()}{" "}
+        {translate("currency-sign")}
+      </span>
     </div>
   );
 };

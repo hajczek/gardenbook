@@ -5,6 +5,7 @@ import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 import ExistedMaterialsListHead from "./ExistedMaterialsListHead";
 import EditedMaterial from "./EditedMaterial";
 import ExistedMaterialsSummary from "./ExistedMaterialsSummary";
+import translate from "../../i18n/translate";
 
 const ExistedMaterialsList = (props) => {
   const { materials, getMaterials, users } = useContext(GlobalContext);
@@ -33,7 +34,7 @@ const ExistedMaterialsList = (props) => {
 
   return editMaterial === false ? (
     <>
-      <p>Edytuj lub usuń wybrane materiały.</p>
+      <p>{translate("edit-material-info")}</p>
       <div className="contentList">
         <input
           id="search-material"

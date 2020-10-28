@@ -1,19 +1,22 @@
 import React from "react";
+import translate from "../../i18n/translate";
 
 const EditedMaterialHead = () => {
   return (
     <>
       <tr>
         <td colSpan="10">
-          <h3>Edycja materiału</h3>
+          <h3>{translate("edit-material")}</h3>
         </td>
       </tr>
       <tr>
-        <th className="longTd">Nazwa</th>
-        <th className="longTd">Zdjęcie</th>
-        <th>Ilość</th>
-        <th>Jedn.</th>
-        <th>Cena jedn. [zł.]</th>
+        <th className="longTd">{translate("material-name")}</th>
+        <th className="longTd">{translate("photo-term")}</th>
+        <th>{translate("quantity-term")}</th>
+        <th>{translate("unit-term")}</th>
+        <th>
+          {translate("unit-price")} [{translate("currency-sign")}]
+        </th>
         <th></th>
       </tr>
     </>
