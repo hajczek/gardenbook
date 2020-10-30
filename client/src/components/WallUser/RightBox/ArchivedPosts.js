@@ -1,13 +1,14 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArchive } from "@fortawesome/free-solid-svg-icons";
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArchive } from '@fortawesome/free-solid-svg-icons';
+import translate from '../../../i18n/translate';
 
 const ArchivedPosts = () => {
   return (
     <div className="archived-posts">
       <div className="archived-posts-top">
         <FontAwesomeIcon icon={faArchive} />
-        <h3>Zarchiwizowane</h3>
+        <h3>{translate('archived-term')}</h3>
       </div>
       <ul id="archived-posts-list">
         <li>

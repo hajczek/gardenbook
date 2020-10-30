@@ -1,7 +1,7 @@
-import React from "react";
-import logo from "../../assets/img/lotus.png";
-import MoreInfo from "./MoreInfo";
-import translate from "../../i18n/translate";
+import React from 'react';
+import logo from '../../assets/img/lotus.png';
+import MoreInfo from './MoreInfo';
+import translate from '../../i18n/translate';
 
 const Info = () => {
   return (
@@ -9,24 +9,26 @@ const Info = () => {
       <div className="right-box">
         <div className="title">
           <img id="logo" src={logo} alt="gardenbook logo" />
-          <h1>{translate("portal-title")}</h1>
+          <h1>{translate('portal-title')}</h1>
         </div>
-        <ul>
-          <li>
-            <span className="important">{translate("enables-term")}</span>{" "}
-            {translate("enables-text")}
-          </li>
-          <li>
-            <span className="important">{translate("allows-term")}</span>{" "}
-            {translate("allows-text")}
-          </li>
-          <li>
-            <span className="important">{translate("provides-term")}</span>{" "}
-            {translate("provides-text")}
-          </li>
-        </ul>
-        <p>{translate("all-in-one")}</p>
-        <p className="slogan-green">{translate("create-an-acconut")}</p>
+        <div className="scrollBox">
+          <ul>
+            <li>
+              <span className="important">{translate('enables-term')}</span>{' '}
+              {translate('enables-text')}
+            </li>
+            <li>
+              <span className="important">{translate('allows-term')}</span>{' '}
+              {translate('allows-text')}
+            </li>
+            <li>
+              <span className="important">{translate('provides-term')}</span>{' '}
+              {translate('provides-text')}
+            </li>
+          </ul>
+          <p>{translate('all-in-one')}</p>
+          <p className="slogan-green">{translate('create-an-acconut')}</p>
+        </div>
       </div>
       <MoreInfo />
     </>

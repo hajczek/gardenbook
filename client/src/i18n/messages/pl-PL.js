@@ -91,6 +91,9 @@ export default {
     'chose-file': 'Wybierz plik',
     'search-term': 'Szukaj',
     'write-search-term': 'Wpisz szukaną frazę ...',
+    'archived-term': 'Zarchiwizowane',
+    'contacts-term': 'Kontakty',
+    'new-posts': 'nowe wpisy',
     /***************** HELP PAGE *****************/
     'help-term': 'Pomoc',
     'help-text':
