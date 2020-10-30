@@ -204,5 +204,9 @@ export default {
     'quant-mat': 'Il. materiałów',
     'material-list': 'Lista materiałów',
     'search-material': 'Wyszukaj materiał po nazwie',
+    /***************** MREGULATIONS CARD *****************/
+    'regulations-term': 'Regulamin',
+    'regulations-text':
+      'Tutaj znajdzie się treść regulaminu dla użytkowników aplikacji. Strona w przygotowaniu.',
   },
 };

@@ -1,16 +1,16 @@
-import React from "react";
-import MoreInfo from "./MoreInfo";
+import React from 'react';
+import translate from '../../i18n/translate';
+import MoreInfo from './MoreInfo';
 
 const Regulations = () => {
   return (
     <>
-      <div className="info">
-        <h1>Regulamin</h1>
+      <div className="right-box">
+        <div className="title">
+          <h1>{translate('regulations-term')}</h1>
+        </div>
         <div className="scrollBox">
-          <p>
-            Tutaj znajdzie się treść regulaminu dla użytkowników aplikacji.
-            Strona w przygotowaniu.
-          </p>
+          <p>{translate('regulations-text')}</p>
         </div>
       </div>
       <MoreInfo />

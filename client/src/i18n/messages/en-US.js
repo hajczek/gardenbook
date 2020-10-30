@@ -204,5 +204,9 @@ export default {
     'quant-mat': 'Quantity',
     'material-list': 'Material list',
     'search-material': 'Search for a material by name',
+    /***************** MREGULATIONS CARD *****************/
+    'regulations-term': 'Regulations',
+    'regulations-text':
+      'In this place will be the regulations text for the user of gardenbook. Text in progress.',
   },
 };
