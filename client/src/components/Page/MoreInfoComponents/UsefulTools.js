@@ -1,5 +1,6 @@
-import React from "react";
-import MoreInfo from "./../MoreInfo";
+import React from 'react';
+import MoreInfo from './../MoreInfo';
+import translate from '../../../i18n/translate';
 
 const UsefulTools = () => {
   return (
@@ -9,19 +10,8 @@ const UsefulTools = () => {
           <h1>Przydatne narzędzia</h1>
         </div>
         <div className="scrollBox">
-          <p>
-            gardenbook oferuje swoim użytkownikom wiele przydatnych narzędzi
-            ułatwiających zarządzanie ogrodem i organizację niezbędnych prac.
-            Należą do nich: planer prac, baza roślin i materiałów oraz
-            statystyki. Planowane jest wdrożenie kolejnych: historia zmian, plan
-            ogrodu oraz wyszukiwarka wykonawców prac ogrodniczych świadczących
-            usługi w pobliżu lokalizacji użytkownika.
-          </p>
-          <p className="slogan-green">
-            <span>Założ konto!</span>
-            <br />
-            Korzystaj z zasobów i narzędzi gardenbook'a.
-          </p>
+          <p>{translate('function-useful-tools-text')}</p>
+          <p className="slogan-green">{translate('create-an-acconut')}</p>
         </div>
       </div>
       <MoreInfo />

@@ -1,24 +1,17 @@
-import React from "react";
-import MoreInfo from "../MoreInfo";
+import React from 'react';
+import MoreInfo from '../MoreInfo';
+import translate from '../../../i18n/translate';
 
 const ChangeHistory = () => {
   return (
     <>
       <div className="right-box">
         <div className="title">
-          <h1>Historia zmian</h1>
+          <h1>{translate('btn-title-sixth')}</h1>
         </div>
         <div className="scrollBox">
-          <p>
-            gardenbook umożliwi gromadzenie wprowadzanych w aplikacji zmian.
-            Dzięki temu użytkownik będzie miał wgląd w historię swoich działań.
-            Ta funkcjonalność nie jest jeszcze wdrożona.
-          </p>
-          <p className="slogan-green">
-            <span>Założ konto!</span>
-            <br />
-            Korzystaj z zasobów i narzędzi gardenbook'a.
-          </p>
+          <p>{translate('function-history-text')}</p>
+          <p className="slogan-green">{translate('create-an-acconut')}</p>
         </div>
       </div>
       <MoreInfo />

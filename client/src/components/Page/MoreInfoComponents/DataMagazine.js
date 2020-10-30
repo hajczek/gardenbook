@@ -1,24 +1,17 @@
-import React from "react";
-import MoreInfo from "./../MoreInfo";
+import React from 'react';
+import MoreInfo from './../MoreInfo';
+import translate from '../../../i18n/translate';
 
 const DataMagazine = () => {
   return (
     <>
       <div className="right-box">
         <div className="title">
-          <h1>Baza Danych</h1>
+          <h1>{translate('btn-title-third')}</h1>
         </div>
         <div className="scrollBox">
-          <p>
-            gardenbook oferuje swoim użytkownikom gromadzenie danych dotyczących
-            ilości roślin i materiałów znajdujących się na stanie ogrodu.
-            Umożliwia to łatwe zarzdządzanie posiadanymi zasobami.
-          </p>
-          <p className="slogan-green">
-            <span>Założ konto!</span>
-            <br />
-            Korzystaj z zasobów i narzędzi gardenbook'a.
-          </p>
+          <p>{translate('function-data-storage-text')}</p>
+          <p className="slogan-green">{translate('create-an-acconut')}</p>
         </div>
       </div>
       <MoreInfo />
