@@ -17,6 +17,8 @@
 
     #logo {
       width: 5.2rem;
+      position: relative;
+      top: -1rem;
     }
 
     h1 {
@@ -90,6 +92,26 @@
 
       li {
         line-height: 1;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 600px) {
+  .right-box {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1.2rem;
+    .title {
+      #logo {
+        width: 3rem;
+        height: 3rem;
+        position: relative;
+        top: 0;
+      }
+      h1 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
       }
     }
   }
