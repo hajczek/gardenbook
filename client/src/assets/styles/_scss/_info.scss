@@ -4,12 +4,12 @@
   display: flex;
   flex-direction: column;
   font-weight: bold;
-  height: 50vh;
+  height: auto;
   color: $grey;
   align-self: flex-end;
   margin-right: 5vw;
   margin-top: 3.7rem;
-  width: 40vw;
+  width: 45vw;
   position: relative;
 
   .title {
@@ -32,10 +32,11 @@
   ul {
     font-size: 1.5rem;
     width: 90%;
-    margin: 2rem 0 3rem 8%;
+    margin: 2rem 0 0 8%;
 
     li {
-      line-height: 2;
+      line-height: 1.2;
+      margin-bottom: 1rem;
 
       .important {
         color: $light-green;
@@ -48,115 +49,48 @@
     padding: 0 0 0.6rem 1.2rem;
   }
 
+  .slogan {
+    margin: 0;
+  }
+
   .slogan-green {
     color: $lighter-green;
-    position: absolute;
-    bottom: 0;
     margin: 0;
-
     span {
       font-size: 1.7rem;
     }
   }
 }
 
-@media screen and (max-width: 1700px) {
-  .right-box {
-    width: 52vw;
-    margin: 3.7rem 5vw 3.7rem 0;
-
-    ul {
-      font-size: 1.7rem;
-      margin: 1.2rem 0 2rem 8%;
-    }
-  }
-}
-
 @media screen and (max-width: 1600px) {
   .right-box {
-    width: 50vw;
+    width: 55vw;
+    margin: 3.7rem 5vw 3.7rem 0;
   }
 }
 
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 1400px) {
   .right-box {
-    height: 50vh;
-    width: 50vw;
-    margin: 2.5rem 5vw 1rem 0;
-    padding: 2rem 3rem 2rem 2rem;
+    width: 65vw;
+  }
+}
 
-    .title {
-      #logo {
-        width: 3.1rem;
-        height: 3.2rem;
-      }
-      h1 {
-        font-size: 1.3rem;
-      }
-    }
+@media screen and (max-width: 900px) {
+  .right-box {
+    width: 90vw;
 
     h1 {
-      font-size: 1.3rem;
+      padding-left: 0;
+      font-size: 1.5rem;
     }
 
     ul {
       font-size: 1.2rem;
-      margin: 1.2rem 0 2rem 8%;
-    }
+      margin: 0 0 0 8%;
 
-    p {
-      font-size: 1.3rem;
-    }
-  }
-}
-
-@media screen and (max-width: 1100px) {
-  .right-box {
-    height: 60vh;
-    width: 60vw;
-    margin: 1.5rem 5vw 0 0;
-    padding: 2rem 3rem 2rem 2rem;
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .right-box {
-    height: auto;
-    padding: 1rem;
-    margin: 1rem auto;
-
-    .title h1 {
-      font-size: 1.2rem;
-      padding-top: 0;
-    }
-    ul {
-      margin-bottom: 1.2rem;
       li {
-        line-height: 1.6rem;
+        line-height: 1;
       }
-    }
-    p {
-      font-size: 1.1rem;
-    }
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .right-box {
-    h1 {
-      font-size: 1.16rem;
-      padding: 1rem 0;
-    }
-    ul {
-      margin-bottom: 1.2rem;
-      margin: 0 0 1.5rem 8%;
-      li {
-        font-size: 1.06rem;
-        line-height: 1.2;
-      }
-    }
-    p {
-      font-size: 1.06rem;
     }
   }
 }

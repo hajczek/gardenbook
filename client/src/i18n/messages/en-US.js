@@ -20,8 +20,8 @@ export default {
     'create-an-acconut':
       'Create an account! Use gardenbook resources and tools.',
     'btn-title-first': 'Gardeners community',
-    'btn-title-second': 'Useful tools',
-    'btn-title-third': 'Data storage',
+    'btn-title-second': 'Many useful tools',
+    'btn-title-third': 'Storage for data',
     'btn-title-fourth': 'Active plan of garden',
     'btn-title-fifth': 'Contractors nearby',
     'btn-title-sixth': 'History of changes',

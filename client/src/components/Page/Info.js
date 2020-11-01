@@ -26,8 +26,12 @@ const Info = () => {
               {translate('provides-text')}
             </li>
           </ul>
-          <p>{translate('all-in-one')}</p>
-          <p className="slogan-green">{translate('create-an-acconut')}</p>
+          <p className="slogan">
+            {translate('all-in-one')}{' '}
+            <span className="slogan-green">
+              {translate('create-an-acconut')}
+            </span>
+          </p>
         </div>
       </div>
       <MoreInfo />

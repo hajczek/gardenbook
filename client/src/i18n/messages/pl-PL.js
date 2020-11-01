@@ -21,7 +21,7 @@ export default {
       "Założ konto! Korzystaj z zasobów i narzędzi gardenbook'a.",
     'btn-title-first': 'Społeczność ogrodników',
     'btn-title-second': 'Przydatne narzędzia',
-    'btn-title-third': 'Baza danych',
+    'btn-title-third': 'Miejsce na dane',
     'btn-title-fourth': 'Projekt ogrodu',
     'btn-title-fifth': 'Znajdź wykonawcę',
     'btn-title-sixth': 'Historia zmian',
