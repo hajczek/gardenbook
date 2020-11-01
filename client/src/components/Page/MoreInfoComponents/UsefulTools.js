@@ -7,7 +7,7 @@ const UsefulTools = () => {
     <>
       <div className="right-box">
         <div className="title">
-          <h1>Przydatne narzędzia</h1>
+          <h1>{translate('btn-title-second')}</h1>
         </div>
         <div className="scrollBox">
           <p>{translate('function-useful-tools-text')}</p>

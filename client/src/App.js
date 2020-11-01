@@ -14,8 +14,11 @@ const App = () => {
         <GlobalProvider>
           <div className="App">
             <div className="langButtons">
-              <button onClick={() => setLocale(LOCALES.POLISH)}>PL</button>
-              <button onClick={() => setLocale(LOCALES.ENGLISH)}>EN</button>
+              {locale === LOCALES.POLISH ? (
+                <button onClick={() => setLocale(LOCALES.ENGLISH)}>EN</button>
+              ) : (
+                <button onClick={() => setLocale(LOCALES.POLISH)}>PL</button>
+              )}
             </div>
             <SectionToDisplay />
           </div>

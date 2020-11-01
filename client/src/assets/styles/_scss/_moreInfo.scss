@@ -14,7 +14,7 @@
     font-weight: bold;
     width: 14rem;
     text-align: center;
-    padding: 2rem 2.5rem;
+    padding: 2rem;
     justify-content: center;
     color: $strong-grey;
     text-decoration: none;
@@ -47,7 +47,16 @@
   .more-info {
     a {
       width: 10rem;
-      padding: 1.5rem;
+      padding: 1.5rem 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .more-info {
+    a {
+      width: 10rem;
+      padding: 1rem;
     }
   }
 }
