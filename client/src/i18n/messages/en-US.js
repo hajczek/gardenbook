@@ -69,8 +69,17 @@ export default {
     'manage-plants': 'Manage plants',
     'manage-materials': 'Manage materials',
     'garden-plan': 'Garden plan',
+    'garden-plan-text':
+      'Ultimately, in this place, the user will be able to create a development plan for his garden. Functionality in preparation.',
     'statistic-term': 'Statistics',
+    'statistic-term-text':
+      "Ultimately, this is where you will find statistics on the activity and changes in the user's account. Functionality in preparation.",
     'find-contractor': 'Find contractor',
+    'find-contractor-text':
+      'Ultimately, in this tab, you will be able to find the contractor of selected gardening works near to you, using the built-in Google Maps application. Functionality in preparation.',
+    'watering-on': 'Plug in the watering system',
+    'watering-on-text':
+      'Ultimately, in this tab there will be an option to connect the irrigation system and control it from here. Functionality in preparation.',
     'add-job': 'Add job',
     'add-plant': 'Add plant',
     'add-material': 'Add material',
@@ -92,7 +101,10 @@ export default {
     'search-term': 'Search',
     'write-search-term': 'Write search term ...',
     'archived-term': 'Archived',
+    'advertisement-text':
+      'In this place, ads will appear. Functionality in preparation.',
     'contacts-term': 'Contacts',
+    'advertisement-term': 'Advertisement',
     'new-posts': 'new posts',
     /***************** HELP PAGE *****************/
     'help-term': 'Help',

@@ -1,0 +1,48 @@
+.advertisement-box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: $orange;
+  padding: 1rem;
+  margin-top: 1.5rem;
+
+  .advertisement-box-top {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+
+    h3 {
+      margin-left: 0;
+      color: $white;
+      margin-bottom: 1rem;
+    }
+  }
+
+  p {
+    line-height: 1.2;
+    margin-left: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: $white;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .advertisement-box {
+    .advertisement-box-top {
+      h3 {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

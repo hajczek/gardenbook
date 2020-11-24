@@ -1,20 +1,24 @@
-import React, { useContext, useEffect } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { GlobalContext } from "../context/GlobalState";
-import HeaderUser from "../components/User/HeaderUser";
-import LeftMenuUser from "../components/User/LeftMenuUser";
-import DisplayMenu from "../components/User/DisplayMenu";
-import Footer from "../components/Page/Footer";
-import AlertsCard from "../components/Alerts/AlertsCard";
-import AccountUserCard from "../components/AccountUser/AccountUserCard";
-import ManageWorksCard from "../components/ManageWorks/ManageWorksCard";
-import ManageMaterialsCard from "../components/ManageMaterials/ManageMaterialsCard";
-import ManagePlantsCard from "../components/ManagePlants/ManagePlantsCard";
-import AddMaterialCard from "../components/AddMaterial/AddMaterialCard";
-import AddPlantCard from "../components/AddPlant/AddPlantCard";
-import PlanWorkCard from "../components/PlanWork/PlanWorkCard";
-import Help from "../components/User/Help";
-import WallUser from "../components/WallUser/WallUserCard";
+import React, { useContext, useEffect } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { GlobalContext } from '../context/GlobalState';
+import HeaderUser from '../components/User/HeaderUser';
+import LeftMenuUser from '../components/User/LeftMenuUser';
+import DisplayMenu from '../components/User/DisplayMenu';
+import Footer from '../components/Page/Footer';
+import AlertsCard from '../components/Alerts/AlertsCard';
+import AccountUserCard from '../components/AccountUser/AccountUserCard';
+import ManageWorksCard from '../components/ManageWorks/ManageWorksCard';
+import ManageMaterialsCard from '../components/ManageMaterials/ManageMaterialsCard';
+import ManagePlantsCard from '../components/ManagePlants/ManagePlantsCard';
+import GardenPlanPage from './GardenPlanPage';
+import StatisticPage from './StatisticPage';
+import FindContractorPage from './FindContractorPage';
+import WateringPage from './WateringPage';
+import AddMaterialCard from '../components/AddMaterial/AddMaterialCard';
+import AddPlantCard from '../components/AddPlant/AddPlantCard';
+import PlanWorkCard from '../components/PlanWork/PlanWorkCard';
+import Help from '../components/User/Help';
+import WallUser from '../components/WallUser/WallUserCard';
 
 const PageUser = () => {
   const { users, getUsers } = useContext(GlobalContext);
@@ -29,7 +33,7 @@ const PageUser = () => {
     .map((user) => user.userBackgroundImage);
 
   const userPageStyle = {
-    backgroundImage: "url(" + userImageBg + ")",
+    backgroundImage: 'url(' + userImageBg + ')',
   };
 
   return (
@@ -62,6 +66,14 @@ const PageUser = () => {
               path="/dodaj-material"
               component={AddMaterialCard}
             />
+            <Route exact={true} path="/plan" component={GardenPlanPage} />
+            <Route exact={true} path="/statistic" component={StatisticPage} />
+            <Route
+              exact={true}
+              path="/find-contractor"
+              component={FindContractorPage}
+            />
+            <Route exact={true} path="/watering" component={WateringPage} />
             <Route
               exact={true}
               path="/dodaj-rosline"

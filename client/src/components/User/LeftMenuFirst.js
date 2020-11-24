@@ -61,8 +61,48 @@ const LeftMenuFirst = () => {
       >
         <FontAwesomeIcon icon={faPen} fixedWidth />
       </NavLink>
+      <NavLink
+        to="/plan"
+        exact={true}
+        activeClassName="is-active"
+        id="plan"
+        className="menuLeftBtn"
+        title={intl.formatMessage({ id: 'garden-plan' })}
+      >
+        <FontAwesomeIcon icon={faMap} fixedWidth />
+      </NavLink>
+      <NavLink
+        to="/statistic"
+        exact={true}
+        activeClassName="is-active"
+        id="statistic"
+        className="menuLeftBtn"
+        title={intl.formatMessage({ id: 'statistic-term' })}
+      >
+        <FontAwesomeIcon icon={faChartLine} fixedWidth />
+      </NavLink>
+      <NavLink
+        to="/find-contractor"
+        exact={true}
+        activeClassName="is-active"
+        id="find-contractor"
+        className="menuLeftBtn"
+        title={intl.formatMessage({ id: 'find-contractor' })}
+      >
+        <FontAwesomeIcon icon={faEye} fixedWidth />
+      </NavLink>
+      <NavLink
+        to="/watering"
+        exact={true}
+        activeClassName="is-active"
+        id="watering"
+        className="menuLeftBtn"
+        title={intl.formatMessage({ id: 'watering-on' })}
+      >
+        <FontAwesomeIcon icon={faShower} fixedWidth />
+      </NavLink>
 
-      <a
+      {/* <a
         id="plan"
         href="#"
         className="menuLeftBtn notActive"
@@ -87,13 +127,13 @@ const LeftMenuFirst = () => {
         <FontAwesomeIcon icon={faEye} fixedWidth />
       </a>
       <a
-        id="search"
+        id="watering"
         href="#"
         className="menuLeftBtn notActive"
         title={intl.formatMessage({ id: 'watering-on' })}
       >
         <FontAwesomeIcon icon={faShower} fixedWidth />
-      </a>
+      </a> */}
     </div>
   );
 };
