@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 import { useIntl } from 'react-intl';
-import { NavLink } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faSpa,
   faPen,
@@ -10,14 +10,15 @@ import {
   faChartLine,
   faEye,
   faTimes,
-} from "@fortawesome/free-solid-svg-icons";
+  faShower,
+} from '@fortawesome/free-solid-svg-icons';
 
-const LeftMenuFirst = (props) => {
+const LeftMenuFirst = () => {
   const intl = useIntl();
 
   function closeLeftMenu(e) {
-    document.getElementById("left-menu").style.display = "none";
-    document.querySelector(".displayMenu").style.display = "flex";
+    document.getElementById('left-menu').style.display = 'none';
+    document.querySelector('.displayMenu').style.display = 'flex';
 
     e.preventDefault();
   }
@@ -61,14 +62,37 @@ const LeftMenuFirst = (props) => {
         <FontAwesomeIcon icon={faPen} fixedWidth />
       </NavLink>
 
-      <a id="plan" href="#" className="menuLeftBtn notActive" title={intl.formatMessage({ id: 'garden-plan' })}>
+      <a
+        id="plan"
+        href="#"
+        className="menuLeftBtn notActive"
+        title={intl.formatMessage({ id: 'garden-plan' })}
+      >
         <FontAwesomeIcon icon={faMap} fixedWidth />
       </a>
-      <a id="statistic" href="#" className="menuLeftBtn notActive" title={intl.formatMessage({ id: 'statistic-term' })}>
+      <a
+        id="statistic"
+        href="#"
+        className="menuLeftBtn notActive"
+        title={intl.formatMessage({ id: 'statistic-term' })}
+      >
         <FontAwesomeIcon icon={faChartLine} fixedWidth />
       </a>
-      <a id="search" href="#" className="menuLeftBtn notActive" title={intl.formatMessage({ id: 'find-contractor' })}>
+      <a
+        id="search"
+        href="#"
+        className="menuLeftBtn notActive"
+        title={intl.formatMessage({ id: 'find-contractor' })}
+      >
         <FontAwesomeIcon icon={faEye} fixedWidth />
+      </a>
+      <a
+        id="search"
+        href="#"
+        className="menuLeftBtn notActive"
+        title={intl.formatMessage({ id: 'watering-on' })}
+      >
+        <FontAwesomeIcon icon={faShower} fixedWidth />
       </a>
     </div>
   );
