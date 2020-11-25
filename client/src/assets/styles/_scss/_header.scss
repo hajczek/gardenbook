@@ -18,6 +18,13 @@ header {
     }
   }
 
+  .headerContent {
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    justify-content: flex-end;
+  }
+
   .welcomeText {
     font-weight: bold;
     color: $white;
@@ -29,7 +36,6 @@ header {
 
   nav {
     position: relative;
-    top: 10px;
 
     a {
       color: $white;
@@ -70,8 +76,12 @@ header {
     margin: 0 auto;
     height: 6rem;
 
+    .headerContent {
+      width: 100vw;
+    }
+
     .welcomeText {
-      top: 0;
+      top: 0.5rem;
       font-size: 1.1rem;
     }
 
