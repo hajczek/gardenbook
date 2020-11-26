@@ -11,6 +11,7 @@ import {
   faEye,
   faTimes,
   faShower,
+  faGraduationCap,
 } from '@fortawesome/free-solid-svg-icons';
 
 const LeftMenuFirst = () => {
@@ -100,6 +101,16 @@ const LeftMenuFirst = () => {
         title={intl.formatMessage({ id: 'watering-on' })}
       >
         <FontAwesomeIcon icon={faShower} fixedWidth />
+      </NavLink>
+      <NavLink
+        to="/expert"
+        exact={true}
+        activeClassName="is-active"
+        id="expert"
+        className="menuLeftBtn"
+        title={intl.formatMessage({ id: 'expert-advices' })}
+      >
+        <FontAwesomeIcon icon={faGraduationCap} fixedWidth />
       </NavLink>
 
       {/* <a

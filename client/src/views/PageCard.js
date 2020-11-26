@@ -1,18 +1,18 @@
-import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Header from "../components/Page/Header";
-import Info from "../components/Page/Info";
-import Footer from "../components/Page/Footer";
+import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Header from '../components/Page/Header';
+import Info from '../components/Page/Info';
+import Footer from '../components/Page/Footer';
 
-import UserLogin from "../components/Page/UserLogin";
-import UserRegistration from "../components/Page/UserRegistration";
-import GardensCommunity from "../components/Page/MoreInfoComponents/GardensCommunity";
-import ChangeHistory from "../components/Page/MoreInfoComponents/ChangeHistory";
-import UsefulTools from "../components/Page/MoreInfoComponents/UsefulTools";
-import DataMagazine from "../components/Page/MoreInfoComponents/DataMagazine";
-import GardenPlan from "../components/Page/MoreInfoComponents/GardenPlan";
-import FindContractor from "../components/Page/MoreInfoComponents/FindContractor";
-import Regulations from "../components/Page/Regulations";
+import UserLogin from '../components/Page/UserLogin';
+import UserRegistration from '../components/Page/UserRegistration';
+import GardensCommunity from '../components/Page/MoreInfoComponents/GardensCommunity';
+import GardenerAdvices from '../components/Page/MoreInfoComponents/GardenerAdvices';
+import UsefulTools from '../components/Page/MoreInfoComponents/UsefulTools';
+import DataMagazine from '../components/Page/MoreInfoComponents/DataMagazine';
+import GardenPlan from '../components/Page/MoreInfoComponents/GardenPlan';
+import FindContractor from '../components/Page/MoreInfoComponents/FindContractor';
+import Regulations from '../components/Page/Regulations';
 // import NotFound from "./NotFound";
 
 const PageCard = () => {
@@ -36,8 +36,8 @@ const PageCard = () => {
           />
           <Route
             exact={true}
-            path="/historia-zmian"
-            component={ChangeHistory}
+            path="/porady-experta"
+            component={GardenerAdvices}
           />
           <Route
             exact={true}

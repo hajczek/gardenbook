@@ -21,24 +21,24 @@ export default {
       'Create an account! Use gardenbook resources and tools.',
     'btn-title-first': 'Gardeners community',
     'btn-title-second': 'Many useful tools',
-    'btn-title-third': 'Storage for data',
-    'btn-title-fourth': 'Active plan of garden',
-    'btn-title-fifth': 'Contractors nearby',
-    'btn-title-sixth': 'History of changes',
+    'btn-title-third': 'Storage for Your data',
+    'btn-title-fourth': 'Active plan of Your garden',
+    'btn-title-fifth': 'Search for Contractors',
+    'btn-title-sixth': 'Gardener Expert advices',
     /* FUNCTIONS DESCRIPTIONS */
     'function-term': 'Function',
     'function-gardeners-community-text':
       'Thanks to the social networking site built into the application, users will be able to ease exchange knowledge, experience, and opinions. This functionality is not implemented yet.',
     'function-useful-tools-text':
-      'grdenbook offers its users a set of garden management tools, inc work planner, alerts, statistics, active garden plan, history of changes, plant base and materials. All tools are available from within the account. To be able to use the selected tool, just activate it in the user panel.',
+      "gardenbook offers its users many useful tools to help manage the garden and organize the necessary work. These include a work planner, plant and material database, and statistics. Further implementation is planning: a garden plan and a search engine for gardening contractors providing services near the user's location, as well as expert advice with the possibility of asking questions and a gardening calendar.",
     'function-data-storage-text':
       'The gardenbook offers its users to collect data on the number of plants and materials in the garden. That allows you to ease managed your resources.',
     'function-active-plan-text':
       'Functionality that allows application users to ease design a garden or a part of it. The garden book offers simple tools for drawing up schematic projects. This functionality is not implemented yet.',
     'function-contractors-nearby-text':
       'This functionality will allow users of the garden book to search for contractors that interest them in gardening near their location. This functionality is not implemented yet.',
-    'function-history-text':
-      'The gardenbook will allow you to collect changes made to the application. Thanks to this, the user will have access to the history of their activities. This functionality is not implemented yet.',
+    'function-advices-text':
+      "gardenbook will provide its users with expert gardener's advice on current gardening matters. Users will also be able to ask questions to an expert. The Gardening Calendar will also be available in this section. This functionality is not implemented yet.",
     /***************** LOGIN PAGE *****************/
     'login-panel': 'Login Panel',
     'login-panel-term': 'Login',
@@ -73,13 +73,16 @@ export default {
       'Ultimately, in this place, the user will be able to create a development plan for his garden. Functionality in preparation.',
     'statistic-term': 'Statistics',
     'statistic-term-text':
-      "Ultimately, this is where you will find statistics on the activity and changes in the user's account. Functionality in preparation.",
+      'Ultimately, this is where you will find statistics on the amount of added and used materials and hours of work performed. Functionality in preparation.',
     'find-contractor': 'Find contractor',
     'find-contractor-text':
       'Ultimately, in this tab, you will be able to find the contractor of selected gardening works near to you, using the built-in Google Maps application. Functionality in preparation.',
     'watering-on': 'Plug in the watering system',
     'watering-on-text':
       'Ultimately, in this tab there will be an option to connect the irrigation system and control it from here. Functionality in preparation.',
+    'expert-advices': 'Expert advices',
+    'expert-advices-text':
+      "In this place, users will be able to read the expert's advice, ask him a question, and use the Gardener's Calendar. Functionality in preparation.",
     'add-job': 'Add job',
     'add-plant': 'Add plant',
     'add-material': 'Add material',
@@ -91,6 +94,8 @@ export default {
     'tomorrow-term': 'tomorrow',
     'today-term': 'today',
     /***************** WALL PAGE *****************/
+    'table-term-info':
+      "Here will be the users' social network. Functionality in preparation.",
     'add-entry': 'Add entry',
     'hours-term': 'hrs',
     'comments-term': 'comments',

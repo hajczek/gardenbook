@@ -1,11 +1,13 @@
-import React from "react";
-import SearchPostsUser from "./SearchPostsUser";
-import AddPostUser from "./AddPostUser";
-import DisplayPostsUser from "./DisplayPostsUser";
+import React from 'react';
+import WallInfo from './WallInfo';
+import SearchPostsUser from './SearchPostsUser';
+import AddPostUser from './AddPostUser';
+import DisplayPostsUser from './DisplayPostsUser';
 
 const LeftBoxUser = () => {
   return (
     <div class="user-left-box">
+      <WallInfo />
       <SearchPostsUser />
       <AddPostUser />
       <DisplayPostsUser />

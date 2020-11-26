@@ -21,24 +21,24 @@ export default {
       "Założ konto! Korzystaj z zasobów i narzędzi gardenbook'a.",
     'btn-title-first': 'Społeczność ogrodników',
     'btn-title-second': 'Przydatne narzędzia',
-    'btn-title-third': 'Miejsce na dane',
-    'btn-title-fourth': 'Projekt ogrodu',
-    'btn-title-fifth': 'Znajdź wykonawcę',
-    'btn-title-sixth': 'Historia zmian',
+    'btn-title-third': 'Baza Twoich danych',
+    'btn-title-fourth': 'Aktywny projekt ogrodu',
+    'btn-title-fifth': 'Wyszukiwarka wykonawców',
+    'btn-title-sixth': 'Porady Experta Ogrodnika',
     /* FUNCTIONS DESCRIPTIONS */
     'function-term': 'Funckja',
     'function-gardeners-community-text':
-      'Dzięki wbudowanemu w aplikację portalowi społecznościowemu użytkownicy będą mogli w łatwy sposób wymieniać się wiedzą, doswiadczeniem i opiniami. Ta funkcjonalność nie jest jeszcze wdrożona.',
+      'Dzięki wbudowanemu w aplikację portalowi społecznościowemu użytkownicy będą mogli w łatwy sposób wymieniać się wiedzą, doświadczeniem i opiniami. Ta funkcjonalność nie jest jeszcze wdrożona.',
     'function-useful-tools-text':
-      'gardenbook oferuje swoim użytkownikom wiele przydatnych narzędzi ułatwiających zarządzanie ogrodem i organizację niezbędnych prac. Należą do nich: planer prac, baza roślin i materiałów oraz statystyki. Planowane jest wdrożenie kolejnych: historia zmian, plan ogrodu oraz wyszukiwarka wykonawców prac ogrodniczych świadczących usługi w pobliżu lokalizacji użytkownika.',
+      'gardenbook oferuje swoim użytkownikom wiele przydatnych narzędzi ułatwiających zarządzanie ogrodem i organizację niezbędnych prac. Należą do nich: planer prac, baza roślin i materiałów oraz statystyki. Planowane jest wdrożenie kolejnych: plan ogrodu oraz wyszukiwarka wykonawców prac ogrodniczych świadczących usługi w pobliżu lokalizacji użytkownika oraz porady experta wraz z możliwością zadawania pytań i kalendarzem ogrodniczym.',
     'function-data-storage-text':
       'gardenbook oferuje swoim użytkownikom gromadzenie danych dotyczących ilości roślin i materiałów znajdujących się na stanie ogrodu. Umożliwia to łatwe zarzdządzanie posiadanymi zasobami.',
     'function-active-plan-text':
       'Funkjonalność uumożliwiająca użytkownikom aplikacji łatwe zaprojektowanie ogrodu lub jego części. gardenbook oferuje proste narzędzia do sporządzania schematycznych projektów. Ta funkcjonalość nie jest jeszcze wdrożona.',
     'function-contractors-nearby-text':
       "Funkcjonalność ta umożliwi użytkownikom gardenbook'a wyszukiwanie wykonawców interesujących ich prac ogrodniczych w pobliżu ich lokalizacji. Ta funkcjonalność nie jest jeszcze wdrożona.",
-    'function-history-text':
-      'gardenbook umożliwi gromadzenie wprowadzanych w aplikacji zmian. Dzięki temu użytkownik będzie miał wgląd w historię swoich działań. Ta funkcjonalność nie jest jeszcze wdrożona.',
+    'function-advices-text':
+      'gardenbook udostępni swoim użytkownikom porady experta ogrodnika dotyczące bieżących spraw ogrodniczych. Użytkownicy będą mieli także możliwość wysłania zapytania do experta. W tej seksji dostępny będzie także Kalendarz Ogrodniczy. Ta funkcjonalność nie jest jeszcze wdrożona.',
     /***************** LOGIN PAGE *****************/
     'login-panel': 'Panel logowania',
     'login-panel-term': 'Zaloguj',
@@ -73,13 +73,16 @@ export default {
       'Docelowo w tym miejscu użytkownik będzie mógł stworzyć projekt zagospodarowania swojego ogrodu. Funkcjonalność w przygotowaniu.',
     'statistic-term': 'Statystyki',
     'statistic-term-text':
-      'Docelowo w tym miejscu znajdą się statystyki dotyczące aktywności i zmian na koncie użytkownika. Funkcjonalność w przygotowaniu.',
+      'Docelowo w tym miejscu znajdą się statystyki dotyczące ilości dodanych i zużytych materiałów oraz godzin wykonanych prac. Funkcjonalność w przygotowaniu.',
     'find-contractor': 'Znajdź wykonawcę',
     'find-contractor-text':
       'Docelowo w tej zakładce będzie można wyszukać wykonawcę wybranych prac ogrodniczych w bliskiej odległości od użytkownika, za pomocą wbudowanej aplikacji Google Maps. Funkcjonalność w przygotowaniu.',
     'watering-on': 'Podłącz system podlewania',
     'watering-on-text':
       'Docelowo w tej zakładce znajdzie się opcja podłączania systemu nawadniającego i sterowania nim z tego miejsca. Funkcjonalność w przygotowaniu.',
+    'expert-advices': 'Porady eksperta',
+    'expert-advices-text':
+      'W tym miejscu użytkownicy będą mogi zapoznać się z poradami eksperta, zadać mu pytanie i skorzystać z Kalendarza Ogrodnika. Funkcjonalność w przygotowaniu.',
     'add-job': 'Dodaj pracę',
     'add-plant': 'Dodaj roślinę',
     'add-material': 'Dodaj materiał',
@@ -91,6 +94,8 @@ export default {
     'tomorrow-term': 'jutro',
     'today-term': 'dzisiaj',
     /***************** WALL PAGE *****************/
+    'table-term-info':
+      'Tutaj będzie portal społecznościowy użytkowników. Ta funkcjonalność nie jest jeszcze wdrożona.',
     'add-entry': 'Dodaj wpis',
     'hours-term': 'godz.',
     'comments-term': 'komentarzy',

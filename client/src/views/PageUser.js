@@ -14,6 +14,7 @@ import GardenPlanPage from './GardenPlanPage';
 import StatisticPage from './StatisticPage';
 import FindContractorPage from './FindContractorPage';
 import WateringPage from './WateringPage';
+import ExpertPage from './ExpertPage';
 import AddMaterialCard from '../components/AddMaterial/AddMaterialCard';
 import AddPlantCard from '../components/AddPlant/AddPlantCard';
 import PlanWorkCard from '../components/PlanWork/PlanWorkCard';
@@ -74,6 +75,7 @@ const PageUser = () => {
               component={FindContractorPage}
             />
             <Route exact={true} path="/watering" component={WateringPage} />
+            <Route exact={true} path="/expert" component={ExpertPage} />
             <Route
               exact={true}
               path="/dodaj-rosline"

@@ -2,7 +2,7 @@ import React from 'react';
 import MoreInfo from '../MoreInfo';
 import translate from '../../../i18n/translate';
 
-const ChangeHistory = () => {
+const GardenerAdvices = () => {
   return (
     <>
       <div className="right-box">
@@ -10,7 +10,7 @@ const ChangeHistory = () => {
           <h1>{translate('btn-title-sixth')}</h1>
         </div>
         <div className="scrollBox">
-          <p>{translate('function-history-text')}</p>
+          <p>{translate('function-advices-text')}</p>
           <p className="slogan-green">{translate('create-an-acconut')}</p>
         </div>
       </div>
@@ -19,4 +19,4 @@ const ChangeHistory = () => {
   );
 };
 
-export default ChangeHistory;
+export default GardenerAdvices;

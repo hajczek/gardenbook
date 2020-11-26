@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import { GlobalContext } from '../../context/GlobalState';
 import CountAlerts from '../Alerts/CountAlerts';
@@ -10,7 +10,6 @@ import {
   faDesktop,
   faUser,
   faQuestion,
-  faHistory,
   faSignOutAlt,
 } from '@fortawesome/free-solid-svg-icons';
 
@@ -42,9 +41,6 @@ const TopMenu = (props) => {
         <FontAwesomeIcon icon={faBell} />
         <span>{translate('alerts-term')}</span>
       </NavLink>
-      {/* <a href="#" title="Zestawienie prac">
-          <FontAwesomeIcon icon={faCheck} />
-        </a> */}
       <NavLink
         to="/wall"
         title="Portal społecznościowy gardenBook"
