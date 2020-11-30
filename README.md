@@ -57,7 +57,7 @@ Wykonana w Adobe XD.
 
 ## Portal online
 
-[Link do portalu &raquo;](https://evening-depths-55548.herokuapp.com/)
+[Link do portalu &raquo;](https://gardenbook2.herokuapp.com/)
 
 ### Wersja
 
