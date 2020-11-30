@@ -7,10 +7,10 @@ import AdvertisementBox from './AdvertisementBox';
 const RightBoxUser = () => {
   return (
     <div class="user-wall-right-box">
+      <AdvertisementBox />
       <NewPosts />
       <ArchivedPosts />
       <ContactsBook />
-      <AdvertisementBox />
     </div>
   );
 };
