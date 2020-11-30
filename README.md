@@ -12,11 +12,12 @@ Portal społecznościowy dla osób zajmujących się ogrodnictwem zawodowo i hob
 - alerty,
 - baza roślin występujących w ogrodzie,
 - baza materiałów wykorzystywanych do prac w ogrodzie,
-- historia zmian,
-- filtrowanie danych z bazy,
+- filtrowanie danych,
 - statystyki,
 - plan ogrodu,
-- wyszukiwrka wykonawców prac ogrodniczych w pobliżu.
+- wyszukiwrka wykonawców prac ogrodniczych w pobliżu,
+- porady eksperta,
+- kalendarz ogrodniczy.
 
 2. Nawiązywanie kontaktów z innymi użytkownikami portalu.
 3. Wymiana informacji, wiedzy i doświadczeń pomiędzy użytkownikami.
