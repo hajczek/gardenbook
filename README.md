@@ -15,7 +15,7 @@ Portal społecznościowy dla osób zajmujących się ogrodnictwem zawodowo i hob
 - filtrowanie danych,
 - statystyki,
 - plan ogrodu,
-- wyszukiwrka wykonawców prac ogrodniczych w pobliżu,
+- wyszukiwarka wykonawców prac ogrodniczych w pobliżu,
 - porady eksperta,
 - kalendarz ogrodniczy.
 
