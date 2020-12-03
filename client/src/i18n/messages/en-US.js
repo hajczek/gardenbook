@@ -235,9 +235,23 @@ export default {
     'quant-mat': 'Quantity',
     'material-list': 'Material list',
     'search-material': 'Search for a material by name',
-    /***************** MREGULATIONS CARD *****************/
+    /***************** REGULATIONS CARD *****************/
     'regulations-term': 'Regulations',
     'regulations-text':
       'In this place will be the regulations text for the user of gardenbook. Text in progress.',
+    /***************** GARDEN PLAN CARD *****************/
+    'tools-term': 'Tools',
+    'line-term': 'Line',
+    'circle-term': 'Circle',
+    'square-term': 'Square',
+    'rectangle-term': 'Rectangle',
+    'leafy-tree': 'Leafy tree',
+    'conifer-tree': 'Conifer',
+    'deciduous-shrumb': 'Deciduous shrumb',
+    'coniferous-shrumb': 'Coniferous shrumb',
+    'perennials-term': 'Perennials',
+    'annual-plants': 'Annual-plants',
+    'text-term': 'Text',
+    'grid-term': 'Grid',
   },
 };

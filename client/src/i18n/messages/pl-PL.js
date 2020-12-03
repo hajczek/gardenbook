@@ -235,9 +235,23 @@ export default {
     'quant-mat': 'Il. materiałów',
     'material-list': 'Lista materiałów',
     'search-material': 'Wyszukaj materiał po nazwie',
-    /***************** MREGULATIONS CARD *****************/
+    /***************** REGULATIONS CARD *****************/
     'regulations-term': 'Regulamin',
     'regulations-text':
       'Tutaj znajdzie się treść regulaminu dla użytkowników aplikacji. Strona w przygotowaniu.',
+    /***************** GARDEN PLAN CARD *****************/
+    'tools-term': 'Narzędzia',
+    'line-term': 'Linia',
+    'circle-term': 'Koło',
+    'square-term': 'Kwadrat',
+    'rectangle-term': 'Prostokąt',
+    'leafy-tree': 'Drzewo liściaste',
+    'conifer-tree': 'Drzewo iglaste',
+    'deciduous-shrumb': 'Krzew liściasty',
+    'coniferous-shrumb': 'Krzew iglasty',
+    'perennials-term': 'Byliny',
+    'annual-plants': 'Rośliny jednoroczne',
+    'text-term': 'Tekst',
+    'grid-term': 'Siatka',
   },
 };
