@@ -15,7 +15,10 @@ import FindContractor from '../components/Page/MoreInfoComponents/FindContractor
 import Regulations from '../components/Page/Regulations';
 // import NotFound from "./NotFound";
 
+// import { useIntl } from 'react-intl';
+
 const PageCard = () => {
+  // const intl = useIntl();
   return (
     <BrowserRouter>
       <div className="contentPage">

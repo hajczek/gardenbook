@@ -1,18 +1,20 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import translate from "../../i18n/translate";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import translate from '../../i18n/translate';
+// import { useIntl } from 'react-intl';
 
 const Navigation = () => {
+  // const intl = useIntl();
   return (
     <nav>
       <NavLink to="/" exact={true} activeClassName="is-active">
-        {translate("home-term")}
+        {translate('home-term')}
       </NavLink>
       <NavLink to="/zarejestruj" exact={true} activeClassName="is-active">
-        {translate("register-term")}
+        {translate('register-term')}
       </NavLink>
       <NavLink to="/zaloguj" exact={true} activeClassName="is-active">
-        {translate("login-term")}
+        {translate('login-term')}
       </NavLink>
     </nav>
   );

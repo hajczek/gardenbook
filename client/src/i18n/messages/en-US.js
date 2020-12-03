@@ -1,5 +1,6 @@
 import { LOCALES } from '../locales';
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   [LOCALES.ENGLISH]: {
     /* MENU */
@@ -8,6 +9,16 @@ export default {
     'login-term': 'Login',
     'regulations-term': 'Regulations',
     'copyright-term': ' © 2020',
+    /* LINKS - HOME PAGE */
+    'login-link': '/login',
+    'register-link': 'register',
+    'regulations-link': 'regulations',
+    'social-link': 'community-gardeners',
+    'expert-link': 'expert-advice',
+    'tools-link': 'useful-tools',
+    'data-link': 'databaze',
+    'project-link': 'garden-project',
+    'contractor-link': 'find-contractor',
     /***************** MAIN PAGE *****************/
     'portal-title': 'gardeners social network',
     'enables-term': 'enables',
@@ -30,15 +41,15 @@ export default {
     'function-gardeners-community-text':
       'Thanks to the social networking site built into the application, users will be able to ease exchange knowledge, experience, and opinions. This functionality is not implemented yet.',
     'function-useful-tools-text':
-      "gardenbook offers its users many useful tools to help manage the garden and organize the necessary work. These include a work planner, plant and material database, and statistics. Further implementation is planning: a garden plan and a search engine for gardening contractors providing services near the user's location, as well as expert advice with the possibility of asking questions and a gardening calendar.",
+      "offers its users many useful tools to help manage the garden and organize the necessary work. These include a work planner, plant and material database, and statistics. Further implementation is planning: a garden plan and a search engine for gardening contractors providing services near the user's location, as well as expert advice with the possibility of asking questions and a gardening calendar.",
     'function-data-storage-text':
-      'The gardenbook offers its users to collect data on the number of plants and materials in the garden. That allows you to ease managed your resources.',
+      'offers its users to collect data on the number of plants and materials in the garden. That allows you to ease managed your resources.',
     'function-active-plan-text':
-      'Functionality that allows application users to ease design a garden or a part of it. The garden book offers simple tools for drawing up schematic projects. This functionality is not implemented yet.',
+      'offers simple tools for drawing up schematic projects. Functionality that allows application users to ease design a garden or a part of it. This functionality is not implemented yet.',
     'function-contractors-nearby-text':
       'This functionality will allow users of the garden book to search for contractors that interest them in gardening near their location. This functionality is not implemented yet.',
     'function-advices-text':
-      "gardenbook will provide its users with expert gardener's advice on current gardening matters. Users will also be able to ask questions to an expert. The Gardening Calendar will also be available in this section. This functionality is not implemented yet.",
+      "will provide its users with expert gardener's advice on current gardening matters. Users will also be able to ask questions to an expert. The Gardening Calendar will also be available in this section. This functionality is not implemented yet.",
     /***************** LOGIN PAGE *****************/
     'login-panel': 'Login Panel',
     'login-panel-term': 'Login',

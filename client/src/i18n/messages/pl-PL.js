@@ -1,5 +1,6 @@
 import { LOCALES } from '../locales';
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   [LOCALES.POLISH]: {
     /* MENU */
@@ -8,6 +9,16 @@ export default {
     'login-term': 'Zaloguj',
     'regulations-term': 'Regulamin',
     'copyright-term': ' © 2020',
+    /* LINKS - HOME PAGE */
+    'login-link': '/zaloguj',
+    'register-link': 'zarejesrtruj',
+    'regulations-link': 'regulamin',
+    'social-link': 'spolecznosc-ogrodnikow',
+    'expert-link': 'porady-experta',
+    'tools-link': 'przydatne-narzedzia',
+    'data-link': 'baza-danych',
+    'project-link': 'projekt-ogrodu',
+    'contractor-link': 'znajdz-wykonawce',
     /***************** MAIN PAGE *****************/
     'portal-title': 'ogrodniczy serwis społecznościowy',
     'enables-term': 'umożliwia',
@@ -30,15 +41,15 @@ export default {
     'function-gardeners-community-text':
       'Dzięki wbudowanemu w aplikację portalowi społecznościowemu użytkownicy będą mogli w łatwy sposób wymieniać się wiedzą, doświadczeniem i opiniami. Ta funkcjonalność nie jest jeszcze wdrożona.',
     'function-useful-tools-text':
-      'gardenbook oferuje swoim użytkownikom wiele przydatnych narzędzi ułatwiających zarządzanie ogrodem i organizację niezbędnych prac. Należą do nich: planer prac, baza roślin i materiałów oraz statystyki. Planowane jest wdrożenie kolejnych: plan ogrodu oraz wyszukiwarka wykonawców prac ogrodniczych świadczących usługi w pobliżu lokalizacji użytkownika oraz porady experta wraz z możliwością zadawania pytań i kalendarzem ogrodniczym.',
+      'oferuje swoim użytkownikom wiele przydatnych narzędzi ułatwiających zarządzanie ogrodem i organizację niezbędnych prac. Należą do nich: planer prac, baza roślin i materiałów oraz statystyki. Planowane jest wdrożenie kolejnych: plan ogrodu oraz wyszukiwarka wykonawców prac ogrodniczych świadczących usługi w pobliżu lokalizacji użytkownika oraz porady experta wraz z możliwością zadawania pytań i kalendarzem ogrodniczym.',
     'function-data-storage-text':
-      'gardenbook oferuje swoim użytkownikom gromadzenie danych dotyczących ilości roślin i materiałów znajdujących się na stanie ogrodu. Umożliwia to łatwe zarzdządzanie posiadanymi zasobami.',
+      'oferuje swoim użytkownikom gromadzenie danych dotyczących ilości roślin i materiałów znajdujących się na stanie ogrodu. Umożliwia to łatwe zarzdządzanie posiadanymi zasobami.',
     'function-active-plan-text':
-      'Funkjonalność uumożliwiająca użytkownikom aplikacji łatwe zaprojektowanie ogrodu lub jego części. gardenbook oferuje proste narzędzia do sporządzania schematycznych projektów. Ta funkcjonalość nie jest jeszcze wdrożona.',
+      'oferuje proste narzędzia do sporządzania schematycznych projektów. Funkjonalność uumożliwiająca użytkownikom aplikacji łatwe zaprojektowanie ogrodu lub jego części. Ta funkcjonalość nie jest jeszcze wdrożona.',
     'function-contractors-nearby-text':
       "Funkcjonalność ta umożliwi użytkownikom gardenbook'a wyszukiwanie wykonawców interesujących ich prac ogrodniczych w pobliżu ich lokalizacji. Ta funkcjonalność nie jest jeszcze wdrożona.",
     'function-advices-text':
-      'gardenbook udostępni swoim użytkownikom porady experta ogrodnika dotyczące bieżących spraw ogrodniczych. Użytkownicy będą mieli także możliwość wysłania zapytania do experta. W tej seksji dostępny będzie także Kalendarz Ogrodniczy. Ta funkcjonalność nie jest jeszcze wdrożona.',
+      'udostępni swoim użytkownikom porady ogrodnika-experta, dotyczące bieżących spraw ogrodniczych. Użytkownicy będą mieli także możliwość wysłania zapytania do experta. W tej seksji dostępny będzie także Kalendarz Ogrodniczy. Ta funkcjonalność nie jest jeszcze wdrożona.',
     /***************** LOGIN PAGE *****************/
     'login-panel': 'Panel logowania',
     'login-panel-term': 'Zaloguj',

@@ -10,7 +10,10 @@ const UsefulTools = () => {
           <h1>{translate('btn-title-second')}</h1>
         </div>
         <div className="scrollBox">
-          <p>{translate('function-useful-tools-text')}</p>
+          <p>
+            <span style={{ color: 'green' }}>grdenbook </span>
+            {translate('function-useful-tools-text')}
+          </p>
           <p className="slogan-green">{translate('create-an-acconut')}</p>
         </div>
       </div>
