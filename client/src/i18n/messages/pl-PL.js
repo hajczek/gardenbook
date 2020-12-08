@@ -93,7 +93,7 @@ export default {
       'Docelowo w tej zakładce znajdzie się opcja podłączania systemu nawadniającego i sterowania nim z tego miejsca. Funkcjonalność w przygotowaniu.',
     'expert-advices': 'Porady eksperta',
     'expert-advices-text':
-      'W tym miejscu użytkownicy będą mogi zapoznać się z poradami eksperta, zadać mu pytanie i skorzystać z Kalendarza Ogrodnika. Funkcjonalność w przygotowaniu.',
+      'Tutaj będzie wyświetlana porada experta-ogrodnika, np. w każdy poniedziałek. Funkcjonalność w przygotowaniu.',
     'add-job': 'Dodaj pracę',
     'add-plant': 'Dodaj roślinę',
     'add-material': 'Dodaj materiał',
@@ -106,7 +106,7 @@ export default {
     'today-term': 'dzisiaj',
     /***************** WALL PAGE *****************/
     'table-term-info':
-      'Tutaj będzie portal społecznościowy użytkowników. Ta funkcjonalność nie jest jeszcze wdrożona.',
+      'Tutaj będzie portal społecznościowy użytkowników. Funkcjonalność w przygotowaniu.',
     'add-entry': 'Dodaj wpis',
     'hours-term': 'godz.',
     'comments-term': 'komentarzy',
@@ -253,5 +253,12 @@ export default {
     'annual-plants': 'Rośliny jednoroczne',
     'text-term': 'Tekst',
     'grid-term': 'Siatka',
+    /***************** EXPERT CARD *****************/
+    'ask-expert': 'Zapytaj eksperta ogrodnika ...',
+    'send-term': 'Wyślij',
+    'monthly-calendar': 'Miesięczny kalendarz ogrodnika',
+    'actual-mounth': 'Aktualny miesiąc',
+    'actual-mounth-text':
+      'Tutaj będzie wyświetlana informacja z kalendarza ogrodniczego na dany miesiąc. Funkcjonalność w przygotowaniu.',
   },
 };

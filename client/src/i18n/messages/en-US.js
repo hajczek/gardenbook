@@ -93,7 +93,7 @@ export default {
       'Ultimately, in this tab there will be an option to connect the irrigation system and control it from here. Functionality in preparation.',
     'expert-advices': 'Expert advices',
     'expert-advices-text':
-      "In this place, users will be able to read the expert's advice, ask him a question, and use the Gardener's Calendar. Functionality in preparation.",
+      "The expert gardener's advice will be displayed here, e.g. every Monday. Functionality in preparation.",
     'add-job': 'Add job',
     'add-plant': 'Add plant',
     'add-material': 'Add material',
@@ -253,5 +253,12 @@ export default {
     'annual-plants': 'Annual-plants',
     'text-term': 'Text',
     'grid-term': 'Grid',
+    /***************** EXPERT CARD *****************/
+    'ask-expert': 'Ask expert gardener ...',
+    'send-term': 'Send',
+    'monthly-calendar': 'Monthly Gardener Calendar',
+    'actual-mounth': 'Actual mounth',
+    'actual-mounth-text':
+      'The information from the gardening calendar for that month will be displayed here. Functionality in preparation.',
   },
 };
