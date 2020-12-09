@@ -58,7 +58,7 @@ Wykonana w Adobe XD.
 
 ## Portal online
 
-[Link do portalu &raquo;](https://gardenbook2.herokuapp.com/)
+[Link do portalu &raquo;](https://garden-book.herokuapp.com/)
 
 ### Wersja
 
