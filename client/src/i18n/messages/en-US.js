@@ -81,7 +81,9 @@ export default {
     'manage-materials': 'Manage materials',
     'garden-plan': 'Garden plan',
     'garden-plan-text':
-      'Ultimately, in this place, the user will be able to create a development plan for his garden. Functionality in preparation.',
+      'is an application that will allow you to create a design for your garden:',
+    'garden-plan-text-info':
+      'The application also allows you to save the created project locally or directly in the application.',
     'statistic-term': 'Statistics',
     'statistic-term-text':
       'Ultimately, this is where you will find statistics on the amount of added and used materials and hours of work performed. Functionality in preparation.',
@@ -253,6 +255,8 @@ export default {
     'annual-plants': 'Annual-plants',
     'text-term': 'Text',
     'grid-term': 'Grid',
+    /***************** WATERING SYSTEM CARD *****************/
+    'watering-on-button': 'Turn on the watering system',
     /***************** EXPERT CARD *****************/
     'ask-expert': 'Ask expert gardener ...',
     'send-term': 'Send',

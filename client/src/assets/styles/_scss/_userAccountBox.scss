@@ -22,6 +22,17 @@
     span {
       margin-left: 1rem;
       color: $strong-green;
+      a {
+        font-weight: bold;
+        color: $strong-green;
+        text-decoration: underline;
+        opacity: 1;
+
+        &:hover {
+          text-decoration: none;
+          opacity: 0.7;
+        }
+      }
     }
   }
   button {

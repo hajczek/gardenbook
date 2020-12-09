@@ -2,12 +2,26 @@ import React from 'react';
 import translate from '../i18n/translate';
 
 function GardenPlanPage() {
+  const excalidraw =
+    '<a href="https://excalidraw.com/">excalidraw.com &raquo;</a>';
   return (
     <div className="user-content">
-      <div className="content">
+      <div className="user-right-box">
         <h2>{translate('garden-plan')}</h2>
-        <p>{translate('garden-plan-text')}</p>
-        <div className="plan-wrapper">
+        <p>
+          <strong>excalidraw</strong> {translate('garden-plan-text')}
+          <br />
+          <br />
+          <span
+            dangerouslySetInnerHTML={{
+              __html: excalidraw.replace(/href/g, "target='_blank' href"),
+            }}
+          ></span>
+          <br />
+          <br />
+          {translate('garden-plan-text-info')}
+        </p>
+        {/* <div className="plan-wrapper">
           <h3>{translate('tools-term')}</h3>
           <div className="plan-tools">
             <ul>
@@ -29,7 +43,7 @@ function GardenPlanPage() {
         </div>
         <button type="button" className="plan-btn">
           {translate('save-term')}
-        </button>
+        </button> */}
       </div>
     </div>
   );

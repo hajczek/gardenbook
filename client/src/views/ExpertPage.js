@@ -22,7 +22,9 @@ function ExpertPage() {
               className="ask-input"
             />
           </label>
-          <button type="button">{translate('send-term')}</button>
+          <button style={{ width: '40%', marginTop: '0.5rem' }} type="button">
+            {translate('send-term')}
+          </button>
         </form>
         <br />
         <br />

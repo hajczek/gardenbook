@@ -1,11 +1,11 @@
-import React, { useState, useContext } from "react";
-import { GlobalContext } from "../../context/GlobalState";
-import EditedWorkHead from "./EditedWorkHead";
-import addedDateFunction from "../../common/AddedDateFunction";
-import DisplayErrorInfo from "../../common/DisplayErrorInfo";
-import DisplayInfo from "../../common/DisplayInfo";
-import { useIntl } from "react-intl";
-import translate from "../../i18n/translate";
+import React, { useState, useContext } from 'react';
+import { GlobalContext } from '../../context/GlobalState';
+import EditedWorkHead from './EditedWorkHead';
+import addedDateFunction from '../../common/AddedDateFunction';
+import DisplayErrorInfo from '../../common/DisplayErrorInfo';
+import DisplayInfo from '../../common/DisplayInfo';
+import { useIntl } from 'react-intl';
+import translate from '../../i18n/translate';
 
 const EditedWork = (props) => {
   const { works, editWork } = useContext(GlobalContext);
@@ -24,9 +24,11 @@ const EditedWork = (props) => {
   let actualWorkMatUnit;
 
   // Get actual user data and sets for works
+  // eslint-disable-next-line no-lone-blocks
   {
     works
       .filter((work) => work._id === props.workid)
+      // eslint-disable-next-line array-callback-return
       .map((work) => {
         actualWorkName = work.workName;
         actualWorkTerm = work.workTerm;
@@ -52,15 +54,15 @@ const EditedWork = (props) => {
   const [workMatQuant, setWorkMatQuant] = useState(actualWorkMatQuant);
   const [workMatUnit, setWorkMatUnit] = useState(actualWorkMatUnit);
   const [addedDate] = useState(addedDateFunction());
-  const [errorInfo, setErrorInfo] = useState("");
-  const [userInfo, setUserInfo] = useState("");
+  const [errorInfo, setErrorInfo] = useState('');
+  const [userInfo, setUserInfo] = useState('');
 
   const saveNewData = () => {
     // Info about set new data in database
-    setUserInfo(intl.formatMessage({ id: "data-updated" }));
+    setUserInfo(intl.formatMessage({ id: 'data-updated' }));
     // Clear info about error
-    setErrorInfo("");
-    document.querySelector(".edit-form").style.display = "none";
+    setErrorInfo('');
+    document.querySelector('.edit-form').style.display = 'none';
     window.location.reload();
   };
 
@@ -83,9 +85,9 @@ const EditedWork = (props) => {
     };
 
     // Check if input field for name or term is empty
-    document.getElementById("work-name").value === "" ||
-    document.getElementById("work-term").value === ""
-      ? setErrorInfo(intl.formatMessage({ id: "fill-needed-fields" }))
+    document.getElementById('work-name').value === '' ||
+    document.getElementById('work-term').value === ''
+      ? setErrorInfo(intl.formatMessage({ id: 'fill-needed-fields' }))
       : // If yes, put new date for work in database
         saveNewData();
 
@@ -96,7 +98,7 @@ const EditedWork = (props) => {
 
   return (
     <>
-      <p>{translate("edit-task-info")}.</p>
+      <p>{translate('edit-task-info')}.</p>
       <DisplayErrorInfo info={errorInfo} />
       <DisplayInfo info={userInfo} />
       <div className="contentEdit">
@@ -166,7 +168,7 @@ const EditedWork = (props) => {
                 </td>
                 <td>
                   <label htmlFor="work-material">
-                    {translate("name-term")}
+                    {translate('name-term')}
                   </label>
                   <input
                     type="text"
@@ -177,7 +179,7 @@ const EditedWork = (props) => {
                     size="15"
                   />
                   <label htmlFor="work-mat-quant">
-                    {translate("quantity-term")}
+                    {translate('quantity-term')}
                   </label>
                   <input
                     className="inputNum"
@@ -189,7 +191,7 @@ const EditedWork = (props) => {
                     onChange={(e) => setWorkMatQuant(e.target.value)}
                   />
                   <label htmlFor="work-mat-unit">
-                    {translate("unit-term")}
+                    {translate('unit-term')}
                   </label>
                   <input
                     className="inputNum"
@@ -210,7 +212,7 @@ const EditedWork = (props) => {
                 </td>
                 <td align="center">
                   <button className="editBtn" id="change-works-btn">
-                    {translate("save-term")}
+                    {translate('save-term')}
                   </button>
                 </td>
               </tr>

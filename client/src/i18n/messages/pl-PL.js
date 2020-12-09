@@ -81,7 +81,9 @@ export default {
     'manage-materials': 'Zarządzaj materiałami',
     'garden-plan': 'Plan ogrodu',
     'garden-plan-text':
-      'Docelowo w tym miejscu użytkownik będzie mógł stworzyć projekt zagospodarowania swojego ogrodu. Funkcjonalność w przygotowaniu.',
+      'to aplikacja w która pozoli Ci stworzyć projekt swojego ogrodu: ',
+    'garden-plan-text-info':
+      'Aplikacja pozwala także zapisać stworzony projekt lokalnie lub bezpośrednio w aplikacji.',
     'statistic-term': 'Statystyki',
     'statistic-term-text':
       'Docelowo w tym miejscu znajdą się statystyki dotyczące ilości dodanych i zużytych materiałów oraz godzin wykonanych prac. Funkcjonalność w przygotowaniu.',
@@ -253,6 +255,8 @@ export default {
     'annual-plants': 'Rośliny jednoroczne',
     'text-term': 'Tekst',
     'grid-term': 'Siatka',
+    /***************** WATERING SYSTEM CARD *****************/
+    'watering-on-button': 'Włącz system nawadniania',
     /***************** EXPERT CARD *****************/
     'ask-expert': 'Zapytaj eksperta ogrodnika ...',
     'send-term': 'Wyślij',
