@@ -1,8 +1,8 @@
-import React, { useContext, useEffect } from "react";
-import { NavLink } from "react-router-dom";
-import { GlobalContext } from "../../context/GlobalState";
-import { useIntl } from "react-intl";
-import translate from "../../i18n/translate";
+import React, { useContext, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
+import { GlobalContext } from '../../context/GlobalState';
+import { useIntl } from 'react-intl';
+import translate from '../../i18n/translate';
 
 const ExistedMaterialsBox = () => {
   const { materials, getMaterials, users } = useContext(GlobalContext);
@@ -19,21 +19,21 @@ const ExistedMaterialsBox = () => {
 
   return (
     <div className="existed-box">
-      <h2>{translate("existed-materials")}</h2>
+      <h2>{translate('existed-materials')}</h2>
       <ol>
         {materials
           .filter((material) => material.userId === userId)
           .map((material) => (
             <li key={material._id}>
               <NavLink
-                to="/zarzadzaj-materialami"
-                title={intl.formatMessage({ id: "manage-materials" })}
+                to="/manage-materials"
+                title={intl.formatMessage({ id: 'manage-materials' })}
                 exact={true}
                 activeClassName="is-active"
                 id="materials"
                 className="greenText"
               >
-                {material.materialName}: {material.materialQuant}{" "}
+                {material.materialName}: {material.materialQuant}{' '}
                 {material.materialUnit} &raquo;
               </NavLink>
             </li>

@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 import { useIntl } from 'react-intl';
-import { NavLink } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 const LeftMenuSecond = () => {
   const intl = useIntl();
@@ -10,7 +10,7 @@ const LeftMenuSecond = () => {
   return (
     <div id="left-menu-second">
       <NavLink
-        to="/zaplanuj-prace"
+        to="/plan-work"
         exact={true}
         activeClassName="is-active"
         id="add-work"
@@ -22,7 +22,7 @@ const LeftMenuSecond = () => {
         </div>
       </NavLink>
       <NavLink
-        to="/dodaj-rosline"
+        to="/add-plant"
         exact={true}
         activeClassName="is-active"
         id="add-plant"
@@ -34,7 +34,7 @@ const LeftMenuSecond = () => {
         </div>
       </NavLink>
       <NavLink
-        to="/dodaj-material"
+        to="/add-material"
         exact={true}
         activeClassName="is-active"
         id="add-material"

@@ -1,15 +1,17 @@
-import React, { useState, useContext, useEffect } from "react";
-import { GlobalContext } from "../../context/GlobalState";
-import EditedMaterialHead from "./EditedMaterialHead";
-import addedDateFunction from "../../common/AddedDateFunction";
-import DisplayErrorInfo from "../../common/DisplayErrorInfo";
-import DisplayInfo from "../../common/DisplayInfo";
-import { useIntl } from "react-intl";
-import translate from "../../i18n/translate";
+import React, { useState, useContext, useEffect, useRef } from 'react';
+import { GlobalContext } from '../../context/GlobalState';
+import EditedMaterialHead from './EditedMaterialHead';
+import addedDateFunction from '../../common/AddedDateFunction';
+import DisplayErrorInfo from '../../common/DisplayErrorInfo';
+import DisplayInfo from '../../common/DisplayInfo';
+import { useIntl } from 'react-intl';
+import translate from '../../i18n/translate';
 
 const EditedMaterial = (props) => {
   const { materials, getMaterials, editMaterial } = useContext(GlobalContext);
   const intl = useIntl();
+
+  const inputMaterialName = useRef('');
 
   useEffect(() => {
     getMaterials();
@@ -42,15 +44,14 @@ const EditedMaterial = (props) => {
   const [materialUnit, setMaterialUnit] = useState(actualMaterialUnit);
   const [materialPrice, setMaterialPrice] = useState(actualMaterialPrice);
   const [addedDate] = useState(addedDateFunction());
-  const [errorInfo, setErrorInfo] = useState("");
-  const [userInfo, setUserInfo] = useState("");
+  const [errorInfo, setErrorInfo] = useState('');
+  const [userInfo, setUserInfo] = useState('');
 
   const saveNewData = () => {
     // Info about set new data in database
-    setUserInfo(intl.formatMessage({ id: "data-updated" }));
+    setUserInfo(intl.formatMessage({ id: 'data-updated' }));
     // Clear info about error
-    setErrorInfo("");
-    document.querySelector(".edit-form").style.display = "none";
+    setErrorInfo('');
     window.location.reload();
   };
 
@@ -66,8 +67,8 @@ const EditedMaterial = (props) => {
     };
 
     // Check if input field for name or term is empty
-    document.getElementById("material-name").value === ""
-      ? setErrorInfo(intl.formatMessage({ id: "fill-needed-fields-material" }))
+    inputMaterialName.current.value === ''
+      ? setErrorInfo(intl.formatMessage({ id: 'fill-needed-fields-material' }))
       : // If yes, put new date for material in database
         saveNewData();
 
@@ -78,7 +79,7 @@ const EditedMaterial = (props) => {
 
   return (
     <>
-      <p>{translate("change-material-data")}</p>
+      <p>{translate('change-material-data')}</p>
       <DisplayErrorInfo info={errorInfo} />
       <DisplayInfo info={userInfo} />
       <div className="contentEdit">
@@ -93,6 +94,7 @@ const EditedMaterial = (props) => {
                     id="material-name"
                     name="material-name"
                     value={materialName}
+                    ref={inputMaterialName}
                     onChange={(e) => setMaterialName(e.target.value)}
                     size="15"
                   />
@@ -105,7 +107,7 @@ const EditedMaterial = (props) => {
                     style={{ maxHeight: 100 }}
                   />
                   <br />
-                  {translate("new-photo-link")}
+                  {translate('new-photo-link')}
                   <input
                     type="text"
                     name="material-photo"
@@ -150,7 +152,7 @@ const EditedMaterial = (props) => {
                 </td>
                 <td align="center">
                   <button className="editBtn" id="changes-materials-btn">
-                    {translate("save-term")}
+                    {translate('save-term')}
                   </button>
                 </td>
               </tr>

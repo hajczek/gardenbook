@@ -1,4 +1,5 @@
-const Users = require("../models/Users");
+const Users = require('../models/Users');
+const auth = require('../middleware/auth');
 
 // @desc Get all users
 // @route GET /users/
@@ -15,7 +16,7 @@ exports.getUsers = async (req, res, next) => {
   } catch (err) {
     return res.status(500).json({
       success: false,
-      error: "Błąd serwera",
+      error: 'Błąd serwera',
     });
   }
 };
@@ -30,7 +31,7 @@ exports.getUserDetails = async (req, res, next) => {
     if (!user) {
       return res.status(404).json({
         success: false,
-        error: "Nie ma takiego użytownika",
+        error: 'Nie ma takiego użytownika',
       });
     }
     return res.status(200).json({
@@ -40,7 +41,7 @@ exports.getUserDetails = async (req, res, next) => {
   } catch (err) {
     return res.status(500).json({
       success: false,
-      error: "Błąd serwera",
+      error: 'Błąd serwera',
     });
   }
 };
@@ -50,10 +51,11 @@ exports.getUserDetails = async (req, res, next) => {
 // @access Public
 exports.addUser = async (req, res, next) => {
   try {
-    const {
+    let {
       userName,
       userEmail,
       userPass,
+      userPassAgain,
       userTel,
       userPlace,
       userBackgroundImage,
@@ -72,7 +74,7 @@ exports.addUser = async (req, res, next) => {
       data: user,
     });
   } catch (err) {
-    if (err.name === "ValidationError") {
+    if (err.name === 'ValidationError') {
       const messages = Object.values(err.errors).map((val) => val.message);
 
       return res.status(400).json({
@@ -82,7 +84,7 @@ exports.addUser = async (req, res, next) => {
     } else {
       return res.status(500).json({
         success: false,
-        error: "Błąd serwera",
+        error: 'Błąd serwera',
       });
     }
   }
@@ -113,7 +115,7 @@ exports.editUserDetails = async (req, res, next) => {
     if (!user) {
       return res.status(404).json({
         success: false,
-        error: "Nie ma takiego użytownika",
+        error: 'Nie ma takiego użytownika',
       });
     }
 
@@ -124,7 +126,7 @@ exports.editUserDetails = async (req, res, next) => {
   } catch (err) {
     return res.status(500).json({
       success: false,
-      error: "Błąd serwera",
+      error: 'Błąd serwera',
     });
   }
 };
@@ -139,7 +141,7 @@ exports.deleteUser = async (req, res, next) => {
     if (!user) {
       return res.status(404).json({
         success: false,
-        error: "Nie ma takiego użytkownika",
+        error: 'Nie ma takiego użytkownika',
       });
     }
 
@@ -152,7 +154,7 @@ exports.deleteUser = async (req, res, next) => {
   } catch (err) {
     return res.status(500).json({
       success: false,
-      error: "Błąd serwera",
+      error: 'Błąd serwera',
     });
   }
 };

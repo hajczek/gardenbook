@@ -1,8 +1,8 @@
-import React, { useContext, useEffect } from "react";
-import { NavLink } from "react-router-dom";
-import { GlobalContext } from "../../context/GlobalState";
-import { useIntl } from "react-intl";
-import translate from "../../i18n/translate";
+import React, { useContext, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
+import { GlobalContext } from '../../context/GlobalState';
+import { useIntl } from 'react-intl';
+import translate from '../../i18n/translate';
 
 const ExistedPlantsBox = () => {
   const { plants, getPlants, users } = useContext(GlobalContext);
@@ -19,21 +19,21 @@ const ExistedPlantsBox = () => {
 
   return (
     <div className="existed-box">
-      <h2>{translate("existed-plants")}</h2>
+      <h2>{translate('existed-plants')}</h2>
       <ol>
         {plants
           .filter((plant) => plant.userId === userId)
           .map((plant) => (
             <li key={plant._id}>
               <NavLink
-                to="/zarzadzaj-roslinami"
-                title={intl.formatMessage({ id: "manage-plants" })}
+                to="/manage-plants"
+                title={intl.formatMessage({ id: 'manage-plants' })}
                 exact={true}
                 activeClassName="is-active"
                 id="plants"
                 className="greenText"
               >
-                {plant.plantName}: {plant.plantQuant} {translate("pcs-term")}{" "}
+                {plant.plantName}: {plant.plantQuant} {translate('pcs-term')}{' '}
                 &raquo;
               </NavLink>
             </li>

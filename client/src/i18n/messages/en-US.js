@@ -20,13 +20,13 @@ export default {
     'project-link': 'garden-project',
     'contractor-link': 'find-contractor',
     /***************** MAIN PAGE *****************/
-    'portal-title': 'gardeners social network',
+    'portal-title': "gardener's assistant",
     'enables-term': 'enables',
-    'allows-term': 'allows',
+    'allows-term': 'helps',
     'provides-term': 'provides',
-    'enables-text': 'easy exchange of knowledge and experience',
-    'allows-text': 'to establish contacts with people from the industry',
-    'provides-text': 'tools useful in garden management ',
+    'enables-text': 'easy exchange of data, knowledge and experience',
+    'allows-text': 'to do work in an ecological way',
+    'provides-text': 'helpful tools in garden management',
     'all-in-one': 'All in one place!',
     'create-an-acconut':
       'Create an account! Use gardenbook resources and tools.',
@@ -41,7 +41,7 @@ export default {
     'function-gardeners-community-text':
       'Thanks to the social networking site built into the application, users will be able to ease exchange knowledge, experience, and opinions. This functionality is not implemented yet.',
     'function-useful-tools-text':
-      "offers its users many useful tools to help manage the garden and organize the necessary work. These include a work planner, plant and material database, and statistics. Further implementation is planning: a garden plan and a search engine for gardening contractors providing services near the user's location, as well as expert advice with the possibility of asking questions and a gardening calendar.",
+      "offers its users many useful, smart tools to help manage the garden and organize the necessary work. These include a work planner, plant and material database, and statistics. Further implementation is planned: a smart system for watering and fertilization, an active garden plan and a search engine for gardening contractors providing services near the user's location, as well as expert advice with the possibility of asking questions and a gardening calendar.",
     'function-data-storage-text':
       'offers its users to collect data on the number of plants and materials in the garden. That allows you to ease managed your resources.',
     'function-active-plan-text':
@@ -68,6 +68,7 @@ export default {
       'You have been registered. Log in to your user account.',
     'fill-required-fields': 'Fill required fields.',
     'existed-email': 'This email already exists in our base.',
+    'toshort-password': 'Password is too short, min length 8 signs.',
     'different-passwords': 'Passwords are different.',
     /***************** USER MENU TOP *****************/
     'alerts-term': 'Alerts',

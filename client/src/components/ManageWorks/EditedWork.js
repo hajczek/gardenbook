@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useRef } from 'react';
 import { GlobalContext } from '../../context/GlobalState';
 import EditedWorkHead from './EditedWorkHead';
 import addedDateFunction from '../../common/AddedDateFunction';
@@ -10,6 +10,9 @@ import translate from '../../i18n/translate';
 const EditedWork = (props) => {
   const { works, editWork } = useContext(GlobalContext);
   const intl = useIntl();
+
+  const inputWorkName = useRef('');
+  const inputWorkTerm = useRef('');
 
   // Handle for actual data
   let actualWorkName;
@@ -62,7 +65,6 @@ const EditedWork = (props) => {
     setUserInfo(intl.formatMessage({ id: 'data-updated' }));
     // Clear info about error
     setErrorInfo('');
-    document.querySelector('.edit-form').style.display = 'none';
     window.location.reload();
   };
 
@@ -85,8 +87,7 @@ const EditedWork = (props) => {
     };
 
     // Check if input field for name or term is empty
-    document.getElementById('work-name').value === '' ||
-    document.getElementById('work-term').value === ''
+    inputWorkName.current.value === '' || inputWorkTerm.current.value === ''
       ? setErrorInfo(intl.formatMessage({ id: 'fill-needed-fields' }))
       : // If yes, put new date for work in database
         saveNewData();
@@ -113,6 +114,7 @@ const EditedWork = (props) => {
                     id="work-name"
                     name="work-name"
                     value={workName}
+                    ref={inputWorkName}
                     onChange={(e) => setWorkName(e.target.value)}
                     size="15"
                   />
@@ -123,6 +125,7 @@ const EditedWork = (props) => {
                     id="work-term"
                     name="work-term"
                     value={workTerm}
+                    ref={inputWorkTerm}
                     onChange={(e) => setWorkTerm(e.target.value)}
                   />
                 </td>

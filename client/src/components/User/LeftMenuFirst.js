@@ -33,7 +33,7 @@ const LeftMenuFirst = () => {
         onClick={closeLeftMenu}
       />
       <NavLink
-        to="/zarzadzaj-pracami"
+        to="/manage-works"
         exact={true}
         activeClassName="is-active"
         id="works"
@@ -43,7 +43,7 @@ const LeftMenuFirst = () => {
         <FontAwesomeIcon icon={faCalendarAlt} fixedWidth />
       </NavLink>
       <NavLink
-        to="/zarzadzaj-roslinami"
+        to="/manage-plants"
         exact={true}
         activeClassName="is-active"
         id="plants"
@@ -53,7 +53,7 @@ const LeftMenuFirst = () => {
         <FontAwesomeIcon icon={faSpa} fixedWidth />
       </NavLink>
       <NavLink
-        to="/zarzadzaj-materialami"
+        to="/manage-materials"
         exact={true}
         activeClassName="is-active"
         id="materials"

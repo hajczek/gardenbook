@@ -1,16 +1,16 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const WorksSchema = new mongoose.Schema({
   workName: {
     type: String,
     trim: true,
-    required: [true, "Dodaj tytuł pracy"],
+    required: true,
   },
   workMaterial: {
     workMatName: {
       type: String,
       required: [false],
-      default: "",
+      default: '',
     },
     workMatQuant: {
       type: Number,
@@ -26,17 +26,17 @@ const WorksSchema = new mongoose.Schema({
   workTerm: {
     type: String,
     trim: true,
-    required: [true, "Wybierz termin pracy"],
+    required: true,
   },
   workAlert: {
     type: String,
     required: [false],
-    default: "",
+    default: '',
   },
   workDetails: {
     type: String,
     required: [false],
-    default: "",
+    default: '',
   },
   workDone: {
     type: Boolean,
@@ -62,4 +62,4 @@ const WorksSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("Works", WorksSchema);
+module.exports = mongoose.model('Works', WorksSchema);

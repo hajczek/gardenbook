@@ -10,7 +10,7 @@ const ManagePlantsCard = () => {
         <div className="top-box">
           <h2>{translate('manage-plants')}</h2>
           <NavLink
-            to="/dodaj-rosline"
+            to="/add-plant"
             exact={true}
             activeClassName="is-active"
             id="add-plant-link"

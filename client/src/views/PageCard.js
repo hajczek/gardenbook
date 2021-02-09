@@ -25,35 +25,15 @@ const PageCard = () => {
         <Header />
         <Switch>
           <Route exact={true} path="/" component={Info} />
-          <Route exact={true} path="/zaloguj" component={UserLogin} />
-          <Route
-            exact={true}
-            path="/zarejestruj"
-            component={UserRegistration}
-          />
+          <Route exact={true} path="/login" component={UserLogin} />
+          <Route exact={true} path="/register" component={UserRegistration} />
           <Route exact={true} path="/regulamin" component={Regulations} />
-          <Route
-            exact={true}
-            path="/spolecznosc-ogrodnikow"
-            component={GardensCommunity}
-          />
-          <Route
-            exact={true}
-            path="/porady-experta"
-            component={GardenerAdvices}
-          />
-          <Route
-            exact={true}
-            path="/przydatne-narzedzia"
-            component={UsefulTools}
-          />
-          <Route exact={true} path="/baza-danych" component={DataMagazine} />
-          <Route exact={true} path="/projekt-ogrodu" component={GardenPlan} />
-          <Route
-            exact={true}
-            path="/znajdz-wykonawce"
-            component={FindContractor}
-          />
+          <Route exact={true} path="/community" component={GardensCommunity} />
+          <Route exact={true} path="/advices" component={GardenerAdvices} />
+          <Route exact={true} path="/tools" component={UsefulTools} />
+          <Route exact={true} path="/database" component={DataMagazine} />
+          <Route exact={true} path="/project" component={GardenPlan} />
+          <Route exact={true} path="/search" component={FindContractor} />
         </Switch>
         <Footer />
       </div>

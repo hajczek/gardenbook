@@ -1,16 +1,20 @@
-import React, { useState, useContext, useEffect } from "react";
-import { GlobalContext } from "../../context/GlobalState";
-import addedDateFunction from "../../common/AddedDateFunction";
-import DisplayErrorInfo from "../../common/DisplayErrorInfo";
-import DisplayInfo from "../../common/DisplayInfo";
-import { useIntl } from "react-intl";
-import translate from "../../i18n/translate";
+import React, { useState, useContext, useEffect, useRef } from 'react';
+import { GlobalContext } from '../../context/GlobalState';
+import addedDateFunction from '../../common/AddedDateFunction';
+import DisplayErrorInfo from '../../common/DisplayErrorInfo';
+import DisplayInfo from '../../common/DisplayInfo';
+import { useIntl } from 'react-intl';
+import translate from '../../i18n/translate';
 
 const AccountUserDataEdit = (props) => {
   const { users, getUsers, editUserDetails } = useContext(GlobalContext);
   const intl = useIntl();
 
-  const btoa = (string) => Buffer.from(string).toString("base64");
+  const userDataEdit = useRef('');
+  const inputUserName = useRef('');
+  const inputUserEmail = useRef('');
+
+  const btoa = (string) => Buffer.from(string).toString('base64');
 
   useEffect(() => {
     getUsers();
@@ -68,15 +72,15 @@ const AccountUserDataEdit = (props) => {
   const [gardenHistory, setGardenHistory] = useState(actualGardenHistory);
   const [searchWorkers, setSearchWorkers] = useState(actualSearchWorkers);
   const [addedDate] = useState(addedDateFunction());
-  const [errorInfo, setErrorInfo] = useState("");
-  const [userInfo, setUserInfo] = useState("");
+  const [errorInfo, setErrorInfo] = useState('');
+  const [userInfo, setUserInfo] = useState('');
 
   const saveNewData = () => {
     // Info about set new data in database
-    setUserInfo(intl.formatMessage({ id: "data-updated" }));
+    setUserInfo(intl.formatMessage({ id: 'data-updated' }));
     // Clear info about error
-    setErrorInfo("");
-    document.getElementById("user-data-edit").style.display = "none";
+    setErrorInfo('');
+    userDataEdit.current.style.display = 'none';
     window.location.reload();
   };
 
@@ -101,16 +105,12 @@ const AccountUserDataEdit = (props) => {
     };
 
     // Check if input fields for name and email are empty
-    document.getElementById("user-name").value === "" ||
-    document.getElementById("user-email").value === ""
-      ? setErrorInfo("Uzupełnij wymagane pola")
+    inputUserName.current.value === '' || inputUserEmail.current.value === ''
+      ? setErrorInfo('Uzupełnij wymagane pola')
       : // Check if email exists in database
-      actualUserEmail !== document.getElementById("user-email").value &&
-        users.filter(
-          (user) =>
-            user.userEmail === document.getElementById("user-email").value
-        ) === true
-      ? setErrorInfo(intl.formatMessage({ id: "existed-mail-info" }))
+      actualUserEmail !== inputUserEmail.current.value &&
+        users.filter((user) => user.userEmail === inputUserEmail.current.value)
+      ? setErrorInfo(intl.formatMessage({ id: 'existed-mail-info' }))
       : // If yes, put new data in database
         saveNewData();
 
@@ -121,17 +121,18 @@ const AccountUserDataEdit = (props) => {
 
   return (
     <div className="user-right-box">
-      <h2>{translate("change-data")}</h2>
-      <span className="neededFields">{translate("fields-info")}</span>
+      <h2>{translate('change-data')}</h2>
+      <span className="neededFields">{translate('fields-info')}</span>
       <DisplayErrorInfo info={errorInfo} />
       <DisplayInfo info={userInfo} />
-      <form id="user-data-edit" onSubmit={onSubmit}>
+      <form id="user-data-edit" onSubmit={onSubmit} ref={userDataEdit}>
         <label htmlFor="user-name">
-          <span>{translate("name-term")}*</span>
+          <span>{translate('name-term')}*</span>
           <input
             type="text"
             name="user-name"
             value={userName}
+            ref={inputUserName}
             id="user-name"
             onChange={(e) => setUserName(e.target.value)}
           />
@@ -142,12 +143,13 @@ const AccountUserDataEdit = (props) => {
             type="email"
             name="user-email"
             value={userEmail}
+            ref={inputUserEmail}
             id="user-email"
             onChange={(e) => setUserEmail(e.target.value)}
           />
         </label>
         <label htmlFor="user-pass">
-          <span>{translate("new-password")}</span>
+          <span>{translate('new-password')}</span>
           <input
             type="password"
             name="user-pass"
@@ -158,7 +160,7 @@ const AccountUserDataEdit = (props) => {
           />
         </label>
         <label htmlFor="user-tel">
-          <span>{translate("phone-term")}</span>
+          <span>{translate('phone-term')}</span>
           <input
             type="phone"
             name="user-tel"
@@ -167,7 +169,7 @@ const AccountUserDataEdit = (props) => {
           />
         </label>
         <label htmlFor="user-place">
-          <span>{translate("localization-term")}:</span>
+          <span>{translate('localization-term')}:</span>
           <input
             type="text"
             name="user-place"
@@ -176,7 +178,7 @@ const AccountUserDataEdit = (props) => {
           />
         </label>
         <label htmlFor="user-bg-image">
-          <span>{translate("path-to-bg")}:</span>
+          <span>{translate('path-to-bg')}:</span>
           <input
             type="text"
             name="user-bg-image"
@@ -185,7 +187,7 @@ const AccountUserDataEdit = (props) => {
           />
         </label>
         <label htmlFor="work-planner">
-          <span>{translate("work-planner")}:</span>
+          <span>{translate('work-planner')}:</span>
           <input
             name="work-planner"
             type="checkbox"
@@ -194,7 +196,7 @@ const AccountUserDataEdit = (props) => {
           />
         </label>
         <label htmlFor="garden-plan">
-          <span>{translate("garden-plan")}:</span>
+          <span>{translate('garden-plan')}:</span>
           <input
             name="garden-plan"
             type="checkbox"
@@ -203,7 +205,7 @@ const AccountUserDataEdit = (props) => {
           />
         </label>
         <label htmlFor="garden-statistic">
-          <span>{translate("statistic-term")}:</span>
+          <span>{translate('statistic-term')}:</span>
           <input
             name="garden-statistic"
             type="checkbox"
@@ -212,7 +214,7 @@ const AccountUserDataEdit = (props) => {
           />
         </label>
         <label htmlFor="garden-history">
-          <span>{translate("function-history-title")}:</span>
+          <span>{translate('function-history-title')}:</span>
           <input
             name="garden-history"
             type="checkbox"
@@ -221,7 +223,7 @@ const AccountUserDataEdit = (props) => {
           />
         </label>
         <label htmlFor="search-workers">
-          <span>{translate("find-contractor")}:</span>
+          <span>{translate('find-contractor')}:</span>
           <input
             name="search-workers"
             type="checkbox"
@@ -229,7 +231,7 @@ const AccountUserDataEdit = (props) => {
             onChange={(e) => setSearchWorkers(e.target.checked)}
           />
         </label>
-        <button id="change-btn">{translate("save-changes")}</button>
+        <button id="change-btn">{translate('save-changes')}</button>
       </form>
     </div>
   );

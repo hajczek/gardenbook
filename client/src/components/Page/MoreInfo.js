@@ -5,31 +5,23 @@ import translate from '../../i18n/translate';
 const MoreInfo = () => {
   return (
     <div className="more-info">
-      <NavLink
-        to="/spolecznosc-ogrodnikow"
-        exact={true}
-        activeClassName="is-active"
-      >
-        {translate('btn-title-first')}
-      </NavLink>
-      <NavLink
-        to="/przydatne-narzedzia"
-        exact={true}
-        activeClassName="is-active"
-      >
+      <NavLink to="/tools" exact={true} activeClassName="is-active">
         {translate('btn-title-second')}
       </NavLink>
-      <NavLink to="/baza-danych" exact={true} activeClassName="is-active">
+      <NavLink to="/database" exact={true} activeClassName="is-active">
         {translate('btn-title-third')}
       </NavLink>
-      <NavLink to="/projekt-ogrodu" exact={true} activeClassName="is-active">
+      <NavLink to="/project" exact={true} activeClassName="is-active">
         {translate('btn-title-fourth')}
       </NavLink>
-      <NavLink to="/znajdz-wykonawce" exact={true} activeClassName="is-active">
+      <NavLink to="/search" exact={true} activeClassName="is-active">
         {translate('btn-title-fifth')}
       </NavLink>
-      <NavLink to="/porady-experta" exact={true} activeClassName="is-active">
+      <NavLink to="/advices" exact={true} activeClassName="is-active">
         {translate('btn-title-sixth')}
+      </NavLink>
+      <NavLink to="/community" exact={true} activeClassName="is-active">
+        {translate('btn-title-first')}
       </NavLink>
     </div>
   );

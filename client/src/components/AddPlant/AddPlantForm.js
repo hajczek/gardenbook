@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useRef } from 'react';
 import { GlobalContext } from '../../context/GlobalState';
 import addedDateFunction from '../../common/AddedDateFunction';
 import DisplayErrorInfo from '../../common/DisplayErrorInfo';
@@ -21,6 +21,8 @@ const AddPlantForm = () => {
   const [addedDate] = useState(addedDateFunction());
   const [errorInfo, setErrorInfo] = useState('');
   const [userInfo, setUserInfo] = useState('');
+
+  const inputPlantName = useRef('');
 
   const addedPlant = () => {
     // Display info for user about added plant to list
@@ -60,12 +62,7 @@ const AddPlantForm = () => {
     plantName === ''
       ? // If no, set info about error
         setErrorInfo(intl.formatMessage({ id: 'add-plant-name' }))
-      : plants.some(
-          (plant) =>
-            (plant.plantName ===
-              document.getElementById('plant-name').value) ===
-            true
-        )
+      : plants.some((plant) => plant.plantName === inputPlantName.current.value)
       ? setErrorInfo(intl.formatMessage({ id: 'existing-plant' }))
       : // If yes, put new plant in database
         addedPlant();
@@ -87,6 +84,7 @@ const AddPlantForm = () => {
             type="text"
             name="plant-name"
             id="plant-name"
+            ref={inputPlantName}
             value={plantName}
             onChange={(e) => setPlantName(e.target.value)}
           />

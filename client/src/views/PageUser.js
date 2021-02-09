@@ -45,26 +45,26 @@ const PageUser = () => {
           <DisplayMenu />
           <LeftMenuUser />
           <Switch>
-            <Route exact={true} path="/alerty" component={AlertsCard} />
-            <Route exact={true} path="/konto" component={AccountUserCard} />
+            <Route exact={true} path="/alerts" component={AlertsCard} />
+            <Route exact={true} path="/account" component={AccountUserCard} />
             <Route
               exact={true}
-              path="/zarzadzaj-pracami"
+              path="/manage-works"
               component={ManageWorksCard}
             />
             <Route
               exact={true}
-              path="/zarzadzaj-materialami"
+              path="/manage-materials"
               component={ManageMaterialsCard}
             />
             <Route
               exact={true}
-              path="/zarzadzaj-roslinami"
+              path="/manage-plants"
               component={ManagePlantsCard}
             />
             <Route
               exact={true}
-              path="/dodaj-material"
+              path="/add-material"
               component={AddMaterialCard}
             />
             <Route exact={true} path="/plan" component={GardenPlanPage} />
@@ -76,18 +76,10 @@ const PageUser = () => {
             />
             <Route exact={true} path="/watering" component={WateringPage} />
             <Route exact={true} path="/expert" component={ExpertPage} />
-            <Route
-              exact={true}
-              path="/dodaj-rosline"
-              component={AddPlantCard}
-            />
-            <Route
-              exact={true}
-              path="/zaplanuj-prace"
-              component={PlanWorkCard}
-            />
-            <Route exact={true} path="/pomoc" component={Help} />
-            <Route exact={true} path="/wall" component={WallUser} />
+            <Route exact={true} path="/add-plant" component={AddPlantCard} />
+            <Route exact={true} path="/plan-work" component={PlanWorkCard} />
+            <Route exact={true} path="/help" component={Help} />
+            <Route exact={true} path="/posts" component={WallUser} />
           </Switch>
         </section>
         <Footer />

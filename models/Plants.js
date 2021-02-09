@@ -1,20 +1,20 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
-const PlantsSchema = mongoose.Schema({
+const PlantsSchema = new mongoose.Schema({
   plantName: {
     type: String,
     trim: true,
-    required: [true, "Podaj nazwę rośliny"],
+    required: true,
   },
   plantPhoto: {
     type: String,
     trim: true,
     required: [false],
-    default: "",
+    default: '',
   },
   plantQuant: {
     type: Number,
-    required: [true, "Podaj ilość roślin"],
+    required: true,
   },
   plantWateringFreq: {
     type: Number,
@@ -25,7 +25,7 @@ const PlantsSchema = mongoose.Schema({
     type: String,
     trim: true,
     required: [false],
-    default: "",
+    default: '',
   },
   plantFetilizerFreq: {
     type: Number,
@@ -51,4 +51,4 @@ const PlantsSchema = mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("Plants", PlantsSchema);
+module.exports = mongoose.model('Plants', PlantsSchema);

@@ -32,8 +32,8 @@ const TopMenu = (props) => {
   return (
     <nav>
       <NavLink
-        to="/alerty"
-        title="Alerty"
+        to="/alerts"
+        title="Alerts"
         exact={true}
         activeClassName="is-active"
       >
@@ -42,8 +42,8 @@ const TopMenu = (props) => {
         <span>{translate('alerts-term')}</span>
       </NavLink>
       <NavLink
-        to="/wall"
-        title="Portal społecznościowy gardenBook"
+        to="/posts"
+        title="Posts"
         exact={true}
         activeClassName="is-active"
       >
@@ -51,20 +51,15 @@ const TopMenu = (props) => {
         <span>{translate('table-term')}</span>
       </NavLink>
       <NavLink
-        to="/konto"
-        title="Konto"
+        to="/account"
+        title="account"
         exact={true}
         activeClassName="is-active"
       >
         <FontAwesomeIcon icon={faUser} />
         <span>{translate('account-term')}</span>
       </NavLink>
-      <NavLink
-        to="/pomoc"
-        title="Pomoc"
-        exact={true}
-        activeClassName="is-active"
-      >
+      <NavLink to="/help" title="Help" exact={true} activeClassName="is-active">
         <FontAwesomeIcon icon={faQuestion} />
         <span>{translate('help-term')}</span>
       </NavLink>

@@ -1,29 +1,29 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const MaterialsSchema = new mongoose.Schema({
   materialName: {
     type: String,
     trim: true,
-    required: [true, "Podaj nazwę materiału"],
+    required: true,
   },
   materialPhoto: {
     type: String,
     trim: true,
     required: [false],
-    default: "",
+    default: '',
   },
   materialQuant: {
     type: Number,
-    required: [true, "Podaj ilość materiału"],
+    required: true,
   },
   materialUnit: {
     type: String,
     trim: true,
-    required: [true, "Podaj jednostkę dla tego materiału"],
+    required: true,
   },
   materialPrice: {
     type: Number,
-    required: [true, "Podaj jednostkową cenę materiału"],
+    required: true,
   },
   addedDate: {
     type: Date,
@@ -34,4 +34,4 @@ const MaterialsSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("Materials", MaterialsSchema);
+module.exports = mongoose.model('Materials', MaterialsSchema);

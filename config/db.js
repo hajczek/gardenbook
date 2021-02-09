@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const connectDB = async () => {
   try {
@@ -8,9 +8,11 @@ const connectDB = async () => {
       useUnifiedTopology: true,
     });
     console.log(
+      // @ts-ignore
       `MongoDB Connected: ${conn.connection.host}`.cyan.underline.bold
     );
   } catch (err) {
+    // @ts-ignore
     console.log(`Error ${err.message}`.red);
     process.exit(1);
   }

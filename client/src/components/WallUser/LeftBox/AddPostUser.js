@@ -8,12 +8,27 @@ const AddPostUser = () => {
   return (
     <form id="add-post">
       <label htmlFor="newPost">{translate('add-entry')}</label>
-      <textarea id="new-post" name="newPost" placeholder={intl.formatMessage({ id: 'write-here' })}></textarea>
+      <textarea
+        id="new-post"
+        name="newPost"
+        placeholder={intl.formatMessage({ id: 'write-here' })}
+      ></textarea>
       <div class="add-post-buttons">
-
-      <label className="add-file-label" for="upload">{intl.formatMessage({ id: 'choose-file' })}</label>
-        <input id="upload" className="add-file-btn" type="file" style={{ visibility: 'hidden' }} />
-        <input className="add-post-btn" type="submit" value="+" title={intl.formatMessage({ id: 'add-comment' })} />
+        <label className="add-file-label" htmlFor="upload">
+          {intl.formatMessage({ id: 'choose-file' })}
+        </label>
+        <input
+          id="upload"
+          className="add-file-btn"
+          type="file"
+          style={{ visibility: 'hidden' }}
+        />
+        <input
+          className="add-post-btn"
+          type="submit"
+          value="+"
+          title={intl.formatMessage({ id: 'add-comment' })}
+        />
       </div>
     </form>
   );

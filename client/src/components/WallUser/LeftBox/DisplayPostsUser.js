@@ -16,7 +16,11 @@ const DisplayPostsUser = () => {
           <a href="#" id="comments-link">
             5 {translate('comments-term')}
           </a>
-          <a href="#" className="archive-post" title={intl.formatMessage({ id: 'archive-term' })}>
+          <a
+            href="#"
+            className="archive-post"
+            title={intl.formatMessage({ id: 'archive-term' })}
+          >
             <FontAwesomeIcon icon={faArchive} />
           </a>
         </div>
@@ -37,8 +41,15 @@ const DisplayPostsUser = () => {
           className="new-comment"
         />
         <div className="add-comment-buttons">
-          <label className="add-file-label" for="upload">{intl.formatMessage({ id: 'choose-file' })}</label>
-          <input id="upload" className="add-file-btn" type="file" style={{ visibility: 'hidden' }} />
+          <label className="add-file-label" htmlFor="upload">
+            {intl.formatMessage({ id: 'choose-file' })}
+          </label>
+          <input
+            id="upload"
+            className="add-file-btn"
+            type="file"
+            style={{ visibility: 'hidden' }}
+          />
           <input
             className="add-comment-btn"
             type="submit"

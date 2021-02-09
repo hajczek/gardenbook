@@ -1,9 +1,9 @@
-import React, { useContext, useEffect } from "react";
-import { NavLink } from "react-router-dom";
-import { GlobalContext } from "../../context/GlobalState";
-import addedDateFunction from "../../common/AddedDateFunction";
-import { useIntl } from "react-intl";
-import translate from "../../i18n/translate";
+import React, { useContext, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
+import { GlobalContext } from '../../context/GlobalState';
+import addedDateFunction from '../../common/AddedDateFunction';
+import { useIntl } from 'react-intl';
+import translate from '../../i18n/translate';
 
 const ExistedPlannedWorksBox = () => {
   const { works, getWorks, users } = useContext(GlobalContext);
@@ -20,7 +20,7 @@ const ExistedPlannedWorksBox = () => {
 
   return (
     <div className="existed-box">
-      <h2>{translate("planned-term")}</h2>
+      <h2>{translate('planned-term')}</h2>
       <ol>
         {works
           .sort((a, b) => new Date(a.workTerm) - new Date(b.workTerm))
@@ -31,10 +31,10 @@ const ExistedPlannedWorksBox = () => {
           )
           .map((plannedWork) => (
             <li key={plannedWork.id}>
-              {plannedWork.workName}:{" "}
+              {plannedWork.workName}:{' '}
               <NavLink
-                to="/zarzadzaj-pracami"
-                title={intl.formatMessage({ id: "manage-jobs" })}
+                to="/manage-works"
+                title={intl.formatMessage({ id: 'manage-jobs' })}
                 exact={true}
                 activeClassName="is-active"
                 id="works"

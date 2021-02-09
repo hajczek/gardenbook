@@ -10,10 +10,10 @@ const Navigation = () => {
       <NavLink to="/" exact={true} activeClassName="is-active">
         {translate('home-term')}
       </NavLink>
-      <NavLink to="/zarejestruj" exact={true} activeClassName="is-active">
+      <NavLink to="/register" exact={true} activeClassName="is-active">
         {translate('register-term')}
       </NavLink>
-      <NavLink to="/zaloguj" exact={true} activeClassName="is-active">
+      <NavLink to="/login" exact={true} activeClassName="is-active">
         {translate('login-term')}
       </NavLink>
     </nav>

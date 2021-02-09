@@ -1,6 +1,6 @@
-import React from "react";
-import LeftMenuFirst from "./LeftMenuFirst";
-import LeftMenuSecond from "./LeftMenuSecond";
+import React from 'react';
+import LeftMenuFirst from './LeftMenuFirst';
+import LeftMenuSecond from './LeftMenuSecond';
 
 const LeftMenuUser = () => {
   return (

@@ -1,30 +1,32 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const UsersSchema = new mongoose.Schema({
   userName: {
     type: String,
     trim: true,
-    required: [true, "Podaj nazwę użytkownika"],
+    required: true,
   },
   userEmail: {
     type: String,
     trim: true,
-    required: [true, "Podaj adres e-mail"],
+    required: true,
+    unique: true,
   },
   userPass: {
     type: String,
     trim: true,
-    required: [true, "Podaj hasło"],
+    inlength: 8,
+    required: true,
   },
   userTel: {
     type: String,
     required: [false],
-    default: "",
+    default: '',
   },
   userPlace: {
     type: String,
     required: [false],
-    default: "",
+    default: '',
   },
   userLogged: {
     type: Boolean,
@@ -34,7 +36,7 @@ const UsersSchema = new mongoose.Schema({
   userBackgroundImage: {
     type: String,
     required: false,
-    default: "../gardenbook-bg.jpg",
+    default: '../gardenbook-bg.jpg',
   },
   accountSets: {
     workPlanner: {
@@ -69,4 +71,4 @@ const UsersSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("Users", UsersSchema);
+module.exports = mongoose.model('Users', UsersSchema);

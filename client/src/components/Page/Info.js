@@ -14,16 +14,16 @@ const Info = () => {
         <div className="scrollBox">
           <ul>
             <li>
-              <span className="important">{translate('enables-term')}</span>{' '}
-              {translate('enables-text')}
+              <span className="important">{translate('provides-term')}</span>{' '}
+              {translate('provides-text')}
             </li>
             <li>
               <span className="important">{translate('allows-term')}</span>{' '}
               {translate('allows-text')}
             </li>
             <li>
-              <span className="important">{translate('provides-term')}</span>{' '}
-              {translate('provides-text')}
+              <span className="important">{translate('enables-term')}</span>{' '}
+              {translate('enables-text')}
             </li>
           </ul>
           <p className="slogan">

@@ -20,13 +20,13 @@ export default {
     'project-link': 'projekt-ogrodu',
     'contractor-link': 'znajdz-wykonawce',
     /***************** MAIN PAGE *****************/
-    'portal-title': 'ogrodniczy serwis społecznościowy',
+    'portal-title': 'asystent ogrodnika',
     'enables-term': 'umożliwia',
-    'allows-term': 'ułatwia',
+    'allows-term': 'pomaga',
     'provides-term': 'udostępnia',
-    'enables-text': 'łatwą wymianę wiedzy i doświadczeń',
-    'allows-text': 'nawiązanie kontaktów z innymi ogrodnikami',
-    'provides-text': 'narzędzia przydatne w zarządzaniu ogrodem',
+    'enables-text': 'łatwą wymianę danych, wiedzy i doświadczeń',
+    'allows-text': 'realizować prace w ekologiczny sposób',
+    'provides-text': 'narzędzia pomocne w zarządzaniu ogrodem',
     'all-in-one': 'Wszystko w jednym miejscu!',
     'create-an-acconut':
       "Założ konto! Korzystaj z zasobów i narzędzi gardenbook'a.",
@@ -41,7 +41,7 @@ export default {
     'function-gardeners-community-text':
       'Dzięki wbudowanemu w aplikację portalowi społecznościowemu użytkownicy będą mogli w łatwy sposób wymieniać się wiedzą, doświadczeniem i opiniami. Ta funkcjonalność nie jest jeszcze wdrożona.',
     'function-useful-tools-text':
-      'oferuje swoim użytkownikom wiele przydatnych narzędzi ułatwiających zarządzanie ogrodem i organizację niezbędnych prac. Należą do nich: planer prac, baza roślin i materiałów oraz statystyki. Planowane jest wdrożenie kolejnych: plan ogrodu oraz wyszukiwarka wykonawców prac ogrodniczych świadczących usługi w pobliżu lokalizacji użytkownika oraz porady experta wraz z możliwością zadawania pytań i kalendarzem ogrodniczym.',
+      'oferuje swoim użytkownikom wiele przydatnych, inteligentnych narzędzi ułatwiających zarządzanie ogrodem i organizację niezbędnych prac. Należą do nich: planer prac, baza roślin i materiałów oraz statystyki. Planowane jest wdrożenie kolejnych: inteligentnego systemu nawadniania i nawożenia, aktywnego planu ogrodu, wyszukiwarki wykonawców prac ogrodniczych świadczących usługi w pobliżu lokalizacji użytkownika oraz porad experta wraz z możliwością zadawania pytań i kalendarzem ogrodniczym.',
     'function-data-storage-text':
       'oferuje swoim użytkownikom gromadzenie danych dotyczących ilości roślin i materiałów znajdujących się na stanie ogrodu. Umożliwia to łatwe zarzdządzanie posiadanymi zasobami.',
     'function-active-plan-text':
@@ -68,6 +68,7 @@ export default {
       'Zostałeś zarejestrowany. Zaloguj się na swoje konto użytkownika.',
     'fill-required-fields': 'Uzupełnij wymagane pola.',
     'existed-email': 'Ten email już istnieje w naszej bazie.',
+    'toshort-password': 'Hasło jest za krótkie, minimum 8 znaków.',
     'different-passwords': 'Hasła są różne.',
     /***************** USER MENU TOP *****************/
     'alerts-term': 'Alerty',
