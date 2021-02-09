@@ -1,8 +1,8 @@
-# gardenbook - Ogrodniczy Serwis Społecznościowy
+# gardenbook - Asystent Ogrodnika
 
 ### projekt w trakcie realizacji
 
-Portal społecznościowy dla osób zajmujących się ogrodnictwem zawodowo i hobbystycznie.
+Platforma dla osób zajmujących się ogrodnictwem zawodowo i hobbystycznie.
 
 ## Docelowa funkcjonalność
 
@@ -12,6 +12,8 @@ Portal społecznościowy dla osób zajmujących się ogrodnictwem zawodowo i hob
 - alerty,
 - baza roślin występujących w ogrodzie,
 - baza materiałów wykorzystywanych do prac w ogrodzie,
+- inteligentny system nawadniania,
+- inteligentny system nawożenia,
 - filtrowanie danych,
 - statystyki,
 - plan ogrodu,
@@ -49,6 +51,7 @@ Aplikacja została wykonana w oparciu o stos technologiczny MERN, z wykorzystani
 
 - Google Calendar API
 - Google Maps API
+- AI
 
 ## Makieta portalu
 
