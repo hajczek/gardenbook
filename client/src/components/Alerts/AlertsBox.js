@@ -42,7 +42,7 @@ const AlertsBox = () => {
             return (
               <li key={alert.id}>
                 '{alert.workName}'{' '}
-                <span class="thin-span">
+                <span className="thin-span">
                   {translate('in-term')} {daysToAlert(alert.workTerm)}{' '}
                   {translate('days-term')}:{' '}
                 </span>

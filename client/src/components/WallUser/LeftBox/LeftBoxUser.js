@@ -6,7 +6,7 @@ import DisplayPostsUser from './DisplayPostsUser';
 
 const LeftBoxUser = () => {
   return (
-    <div class="user-left-box">
+    <div className="user-left-box">
       <WallInfo />
       <SearchPostsUser />
       <AddPostUser />

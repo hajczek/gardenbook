@@ -13,7 +13,7 @@ const AddPostUser = () => {
         name="newPost"
         placeholder={intl.formatMessage({ id: 'write-here' })}
       ></textarea>
-      <div class="add-post-buttons">
+      <div className="add-post-buttons">
         <label className="add-file-label" htmlFor="upload">
           {intl.formatMessage({ id: 'choose-file' })}
         </label>
